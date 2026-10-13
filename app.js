@@ -97,9 +97,9 @@ addSlide(
       <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
         <div style="display:flex; align-items:center; gap:8px;">
           <span style="font-size:20px;">👥</span>
-          <h3 class="c-card-h" style="color:var(--blue); font-size:17px; margin:0;">${tr('Research & Engineering Team', 'فريق البحث والتطوير')}</h3>
+          <h3 class="c-card-h" style="color:var(--blue); font-size:18px; margin:0;">${tr('Research & Engineering Team', 'فريق البحث والتطوير')}</h3>
         </div>
-        <span class="status-badge badge-sec" style="font-size:10.5px;">Cybersecurity & Networking</span>
+        <span class="status-badge badge-sec" style="font-size:11.5px;">Cybersecurity & Networking</span>
       </div>
 
       <div class="c-col" style="gap:7px;">
@@ -144,7 +144,7 @@ addSlide(
         <div class="stat-num">20%</div>
         <div class="stat-txt"><b>${tr('Initial Access Vector', 'مدخل الاختراق الأولي')}</b><br>${tr('+34% Year-over-Year', '+34% زيادة سنوية')}</div>
       </div>
-      <div style="font-size:10px; color:var(--text-dim); margin-top:6px;">
+      <div style="font-size:11.5px; color:var(--text-dim); margin-top:6px;">
         * ${tr('Source: Verizon DBIR 2025 (concerns analyzed breach sample rather than all web attacks).', 'المصدر: تقرير DBIR 2025 (يخص عينة الاختراقات المحللة في التقرير ولا يعمم على كافة الهجمات).')}
       </div>`, 'c-card c-violet')}
   </div>`
@@ -159,7 +159,7 @@ addSlide(
    'معالجة تشتت أدوات الفحص، تباين المخرجات، ومحدودية السياق التحليلي لإرشاد المعالجة.'],
   () => `<div style="display:flex; flex-direction:column; gap:12px; width:100%;">
     ${A(0, `
-      <div style="background:rgba(20,184,166,0.08); border:1px solid rgba(20,184,166,0.3); border-radius:12px; padding:12px 18px; font-size:14px; line-height:1.55; color:#f1f5f9; display:flex; align-items:center; gap:12px;">
+      <div style="background:rgba(20,184,166,0.08); border:1px solid rgba(20,184,166,0.3); border-radius:12px; padding:12px 18px; font-size:15px; line-height:1.55; color:#f1f5f9; display:flex; align-items:center; gap:12px;">
         <span style="font-size:20px; flex-shrink:0;">💡</span>
         <span>${tr('“YemScan addresses the fragmented coordination of multiple security tools, heterogeneous scanning outputs, and the effort required to interpret findings and prepare actionable reports.”',
                   '“تعالج منصة YemScan تشتت التنسيق بين أدوات الأمان المتعددة، وتباين مخرجات الفحص، والجهد المطلوب لتفسير النتائج وإعداد تقارير قابلة للتنفيذ.”')}</span>
@@ -169,31 +169,31 @@ addSlide(
     <div class="c-grid-3">
       ${A(1, `
         <span class="c-card-ic">⚙️</span>
-        <h3 class="c-card-h" style="font-size:16.5px;">${tr('1. Fragmented Tool Coordination', '1. تشتت تنسيق الأدوات')}</h3>
-        <p class="c-card-p" style="font-size:13.5px; line-height:1.55;">${tr('“Operating several discovery and security scanning tools separately requires manual coordination and repeated transfer of outputs between tools.”',
+        <h3 class="c-card-h" style="font-size:18px;">${tr('1. Fragmented Tool Coordination', '1. تشتت تنسيق الأدوات')}</h3>
+        <p class="c-card-p" style="font-size:14.5px; line-height:1.55;">${tr('“Operating several discovery and security scanning tools separately requires manual coordination and repeated transfer of outputs between tools.”',
           '“تشغيل عدة أدوات للاستكشاف والفحص الأمني بشكل منفصل يتطلب تنسيقاً يدوياً ونقلاً متكرراً للمخرجات بين الأدوات.”')}</p>
         <div class="stat-box" style="border-color:rgba(245,158,11,0.25); background:rgba(245,158,11,0.06); padding:8px 12px; margin-top:12px;">
-          <span style="font-size:12px; color:var(--amber);"><b>${tr('Challenge:', 'التحدي:')}</b> ${tr('Manual data piping & operational fragmentation.', 'تشتت مسارات العمل واستهلاك الجهد اليدوي.')}</span>
+          <span style="font-size:13px; color:var(--amber);"><b>${tr('Challenge:', 'التحدي:')}</b> ${tr('Manual data piping & operational fragmentation.', 'تشتت مسارات العمل واستهلاك الجهد اليدوي.')}</span>
         </div>
       `, 'c-card')}
 
       ${A(2, `
         <span class="c-card-ic">📑</span>
-        <h3 class="c-card-h" style="font-size:16.5px;">${tr('2. Heterogeneous Scanning Outputs', '2. تباين مخرجات الفحص')}</h3>
-        <p class="c-card-p" style="font-size:13.5px; line-height:1.55;">${tr('“Different tools produce outputs with different formats, structures, and levels of detail, which complicates their collection and comparison.”',
+        <h3 class="c-card-h" style="font-size:18px;">${tr('2. Heterogeneous Scanning Outputs', '2. تباين مخرجات الفحص')}</h3>
+        <p class="c-card-p" style="font-size:14.5px; line-height:1.55;">${tr('“Different tools produce outputs with different formats, structures, and levels of detail, which complicates their collection and comparison.”',
           '“تنتج الأدوات المختلفة مخرجات بصيغ وهياكل ومستويات تفصيل متباينة، مما يعقّد تجميعها والمقارنة بينها.”')}</p>
         <div class="stat-box" style="border-color:rgba(56,189,248,0.25); background:rgba(56,189,248,0.06); padding:8px 12px; margin-top:12px;">
-          <span style="font-size:12px; color:var(--blue);"><b>${tr('Challenge:', 'التحدي:')}</b> ${tr('Inconsistent schemas & consolidation obstacles.', 'صعوبة دمج النتائج ومقارنتها دون توحيد.')}</span>
+          <span style="font-size:13px; color:var(--blue);"><b>${tr('Challenge:', 'التحدي:')}</b> ${tr('Inconsistent schemas & consolidation obstacles.', 'صعوبة دمج النتائج ومقارنتها دون توحيد.')}</span>
         </div>
       `, 'c-card c-blue')}
 
       ${A(3, `
         <span class="c-card-ic">⚠️</span>
-        <h3 class="c-card-h" style="font-size:16.5px;">${tr('3. Limited Analytical Context', '3. محدودية السياق التحليلي')}</h3>
-        <p class="c-card-p" style="font-size:13.5px; line-height:1.55;">${tr('“Raw technical outputs may be difficult to interpret and may not provide sufficient context for prioritizing remediation activities.”',
+        <h3 class="c-card-h" style="font-size:18px;">${tr('3. Limited Analytical Context', '3. محدودية السياق التحليلي')}</h3>
+        <p class="c-card-p" style="font-size:14.5px; line-height:1.55;">${tr('“Raw technical outputs may be difficult to interpret and may not provide sufficient context for prioritizing remediation activities.”',
           '“قد يصعب تفسير المخرجات التقنية الخام، وقد لا توفر سياقاً كافياً لتحديد أولويات المعالجة والإصلاح.”')}</p>
         <div class="stat-box" style="border-color:rgba(244,63,94,0.25); background:rgba(244,63,94,0.06); padding:8px 12px; margin-top:12px;">
-          <span style="font-size:12px; color:var(--red);"><b>${tr('Challenge:', 'التحدي:')}</b> ${tr('Lack of actionable remediation prioritization.', 'صعوبة ترتيب أولويات المعالجة واتخاذ القرارات.')}</span>
+          <span style="font-size:13px; color:var(--red);"><b>${tr('Challenge:', 'التحدي:')}</b> ${tr('Lack of actionable remediation prioritization.', 'صعوبة ترتيب أولويات المعالجة واتخاذ القرارات.')}</span>
         </div>
       `, 'c-card c-red')}
     </div>
@@ -209,7 +209,7 @@ addSlide(
    'نهج موحد ومهيكل لتقييم أصول وخدمات الويب المكشوفة خارجياً ضمن نطاق مصرح به.'],
   () => `<div style="display:flex; flex-direction:column; gap:12px; width:100%;">
     ${A(0, `
-      <div style="background:rgba(56,189,248,0.08); border:1px solid rgba(56,189,248,0.3); border-radius:12px; padding:12px 18px; font-size:14px; line-height:1.55; color:#f1f5f9; display:flex; align-items:center; gap:12px;">
+      <div style="background:rgba(56,189,248,0.08); border:1px solid rgba(56,189,248,0.3); border-radius:12px; padding:12px 18px; font-size:15px; line-height:1.55; color:#f1f5f9; display:flex; align-items:center; gap:12px;">
         <span style="font-size:20px; flex-shrink:0;">🎯</span>
         <span>${tr('“YemScan is significant because it provides a unified and structured approach to assessing externally exposed web assets and services within a defined and authorized scope.”',
                   '“تكمن أهمية YemScan في توفير نهج موحد ومهيكل لتقييم أصول وخدمات الويب المكشوفة خارجياً ضمن نطاق محدد ومصرح به.”')}</span>
@@ -219,35 +219,35 @@ addSlide(
     <div class="c-grid-4">
       ${A(1, `
         <span class="c-card-ic">🛡️</span>
-        <h3 class="c-card-h" style="font-size:15.5px;">${tr('1. Security Significance', '1. الأهمية الأمنية')}</h3>
-        <p class="c-card-p" style="font-size:13px; line-height:1.5;">${tr('“Improves visibility of externally exposed assets, services, ports, subdomains, and relevant API paths.”',
+        <h3 class="c-card-h" style="font-size:17px;">${tr('1. Security Significance', '1. الأهمية الأمنية')}</h3>
+        <p class="c-card-p" style="font-size:14px; line-height:1.5;">${tr('“Improves visibility of externally exposed assets, services, ports, subdomains, and relevant API paths.”',
           '“تحسين الرؤية الشاملة للأصول والخدمات والمنافذ والنطاقات الفرعية ومسارات واجهات البرمجة (APIs) المكشوفة خارجياً.”')}</p>
       `, 'c-card')}
 
       ${A(2, `
         <span class="c-card-ic">⚙️</span>
-        <h3 class="c-card-h" style="font-size:15.5px;">${tr('2. Technical Significance', '2. الأهمية التقنية')}</h3>
-        <p class="c-card-p" style="font-size:13px; line-height:1.5;">${tr('“Integrates multiple open-source tools within an organized external black-box scanning workflow.”',
+        <h3 class="c-card-h" style="font-size:17px;">${tr('2. Technical Significance', '2. الأهمية التقنية')}</h3>
+        <p class="c-card-p" style="font-size:14px; line-height:1.5;">${tr('“Integrates multiple open-source tools within an organized external black-box scanning workflow.”',
           '“دمج وتنسيق أدوات مفتوحة المصدر متعددة ضمن سير عمل منظم لفحص الصندوق الأسود الخارجي.”')}</p>
       `, 'c-card c-blue')}
 
       ${A(3, `
         <span class="c-card-ic">🧠</span>
-        <h3 class="c-card-h" style="font-size:15.5px;">${tr('3. Analytical Significance', '3. الأهمية التحليلية')}</h3>
-        <p class="c-card-p" style="font-size:13px; line-height:1.5;">${tr('“Supports the processing, enrichment, interpretation, and prioritization of security findings using structured data and AI-assisted analysis.”',
+        <h3 class="c-card-h" style="font-size:17px;">${tr('3. Analytical Significance', '3. الأهمية التحليلية')}</h3>
+        <p class="c-card-p" style="font-size:14px; line-height:1.5;">${tr('“Supports the processing, enrichment, interpretation, and prioritization of security findings using structured data and AI-assisted analysis.”',
           '“دعم معالجة وإثراء وتفسير وتحديد أولويات النتائج الأمنية باستخدام البيانات المهيكلة والتحليل المعزز بالذكاء الاصطناعي.”')}</p>
       `, 'c-card c-violet')}
 
       ${A(4, `
         <span class="c-card-ic">📋</span>
-        <h3 class="c-card-h" style="font-size:15.5px;">${tr('4. Practical Significance', '4. الأهمية التطبيقية')}</h3>
-        <p class="c-card-p" style="font-size:13px; line-height:1.5;">${tr('“Helps reduce the effort required to operate separate tools and supports the preparation of Executive and Technical Reports.”',
+        <h3 class="c-card-h" style="font-size:17px;">${tr('4. Practical Significance', '4. الأهمية التطبيقية')}</h3>
+        <p class="c-card-p" style="font-size:14px; line-height:1.5;">${tr('“Helps reduce the effort required to operate separate tools and supports the preparation of Executive and Technical Reports.”',
           '“المساعدة في تقليص الجهد المبذول لتشغيل الأدوات المنفصلة ودعم إعداد التقارير التنفيذية والفنية.”')}</p>
       `, 'c-card c-amber')}
     </div>
 
     ${A(5, `
-      <div style="background:rgba(15,23,42,0.7); border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:8px 16px; font-size:12.5px; color:#cbd5e1; display:flex; align-items:center; gap:10px;">
+      <div style="background:rgba(15,23,42,0.7); border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:8px 16px; font-size:13.5px; color:#cbd5e1; display:flex; align-items:center; gap:10px;">
         <span style="font-size:16px; color:var(--teal);">🔒</span>
         <span><b>${tr('Proposed Protection Control:', 'ضوابط الحماية المقترحة:')}</b> ${tr('AES-256-GCM authenticated encryption is designed to protect sensitive scanning data and reports at rest (decrypted only during authorized access).',
           'تم تصميم النظام لحماية بيانات الفحص والتقارير الحساسة أثناء التخزين (Data at Rest) باستخدام التشفير الموثق AES-256-GCM (ويتم فك التشفير فقط أثناء الوصول المصرح به).')}</span>
@@ -264,16 +264,16 @@ addSlide(
   ['One primary goal supported by six measurable operational objectives; reference associations depend on available evidence.',
    'هدف رئيسي واحد مدعوم بستة أهداف تشغيلية محددة؛ ربط المراجع القياسية مشروط بوجود أدلة ومراجع مناسبة.'],
   () => `<div class="c-grid-2">
-    ${A(0, `<h3 class="c-card-h" style="color:var(--teal); font-size:19px;">🎯 ${tr('Primary Project Objective', 'الهدف العام للمشروع')}</h3>
-      <p class="c-card-p" style="font-size:14px; line-height:1.65; margin-bottom:12px;">${tr('To design and build the YemScan platform for discovering and inventorying externally exposed digital assets and services, conducting black-box security scans, and processing, enriching, and analyzing results in a structured manner to support remediation recommendations and dual-tier reports.',
+    ${A(0, `<h3 class="c-card-h" style="color:var(--teal); font-size:20px;">🎯 ${tr('Primary Project Objective', 'الهدف العام للمشروع')}</h3>
+      <p class="c-card-p" style="font-size:15px; line-height:1.65; margin-bottom:12px;">${tr('To design and build the YemScan platform for discovering and inventorying externally exposed digital assets and services, conducting black-box security scans, and processing, enriching, and analyzing results in a structured manner to support remediation recommendations and dual-tier reports.',
         'تطوير منصة YemScan لاكتشاف وحصر الأصول والخدمات الرقمية المكشوفة خارجياً، وإجراء الفحوصات الأمنية بنهج الصندوق الأسود، ومعالجة وإثراء وتحليل النتائج بأسلوب مهيكل لدعم تقديم التوصيات وإنتاج التقارير التنفيذية والفنية.')}</p>
       <div class="stat-box">
         <span style="font-size:24px;">🔐</span>
         <div class="stat-txt"><b>${tr('Security by Design:', 'الأمان كمعيار تصميمي:')}</b> ${tr('AES-256-GCM envelope encryption protecting stored telemetry and reports at rest.', 'تشفير المغلف AES-256-GCM لحماية السجلات والتقارير أثناء التخزين (Data at Rest).')}</div>
       </div>`, 'c-card')}
 
-    ${A(1, `<h3 class="c-card-h" style="color:var(--blue); font-size:19px;">📋 ${tr('Specific Operational Objectives', 'الأهداف التشغيلية التفصيلية')}</h3>
-      <ul class="c-card-list" style="font-size:12.5px; line-height:1.65;">
+    ${A(1, `<h3 class="c-card-h" style="color:var(--blue); font-size:20px;">📋 ${tr('Specific Operational Objectives', 'الأهداف التشغيلية التفصيلية')}</h3>
+      <ul class="c-card-list" style="font-size:14px; line-height:1.65;">
         <li><b>1. ${tr('Asset & Service Discovery:', 'اكتشاف الأصول والخدمات:')}</b> ${tr('Discover and inventory external assets, ports, and services.', 'حصر النطاقات والمنافذ والخدمات وواجهات API.')}</li>
         <li><b>2. ${tr('Black-Box Scanning Execution:', 'تنفيذ الفحص الخارجي:')}</b> ${tr('Coordinate sequential and independent black-box scans.', 'تنسيق الفحص بنمطي التشغيل المتسلسل والمستقل.')}</li>
         <li><b>3. ${tr('Normalization & References:', 'التوحيد والربط المرجعي:')}</b> ${tr('Normalize findings and associate supported security references.', 'توحيد المخرجات وربط المراجع القياسية (CVE/CWE/CVSS/OWASP).')}</li>
@@ -293,7 +293,7 @@ addSlide(
    'الفحص الخارجي المصرح به بنهج الصندوق الأسود فقط؛ مع تحديد حدود تقنية وتشغيلية صارمة.'],
   () => `<div style="display:flex; flex-direction:column; gap:10px; width:100%;">
     ${A(0, `
-      <div style="background:rgba(20,184,166,0.08); border:1px solid rgba(20,184,166,0.3); border-radius:10px; padding:9px 16px; font-size:13.5px; line-height:1.5; color:#f1f5f9; display:flex; align-items:center; gap:10px;">
+      <div style="background:rgba(20,184,166,0.08); border:1px solid rgba(20,184,166,0.3); border-radius:10px; padding:9px 16px; font-size:14.5px; line-height:1.5; color:#f1f5f9; display:flex; align-items:center; gap:10px;">
         <span style="font-size:18px; color:var(--teal); flex-shrink:0;">🎯</span>
         <span>${tr('“YemScan focuses on authorized external black-box scanning of web assets and services.”',
                   '“يركز مشروع YemScan على الفحص الخارجي بنهج الصندوق الأسود والمصرح به لأصول وخدمات الويب.”')}</span>
@@ -304,9 +304,9 @@ addSlide(
       ${A(1, `
         <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
           <span style="color:var(--teal); font-size:18px; font-weight:900;">✔</span>
-          <h3 class="c-card-h" style="color:var(--teal); font-size:16px; margin:0;">${tr('In Scope (Covered in YemScan)', 'داخل نطاق العمل (In-Scope)')}</h3>
+          <h3 class="c-card-h" style="color:var(--teal); font-size:17.5px; margin:0;">${tr('In Scope (Covered in YemScan)', 'داخل نطاق العمل (In-Scope)')}</h3>
         </div>
-        <ul class="c-card-list" style="font-size:12.5px; line-height:1.55; margin-top:4px;">
+        <ul class="c-card-list" style="font-size:13.5px; line-height:1.55; margin-top:4px;">
           <li><b>${tr('External Web Assets:', 'أصول الويب المصرح بها:')}</b> ${tr('Subdomains, accessible IPs, open ports, live HTTP/HTTPS services, and relevant API paths within authorized scope.', 'النطاقات الفرعية، عناوين IP، المنافذ المفتوحة، خدمات الويب، ومسارات API المصرح بها.')}</li>
           <li><b>${tr('Supported Tools (6 Only):', 'الأدوات الست المعتمدة فقط:')}</b> <code>Subfinder</code>, <code>Naabu</code>, <code>httpx</code>, <code>Kiterunner</code>, <code>Nuclei</code>, <code>Wapiti</code>.</li>
           <li><b>${tr('Scanning Approach:', 'نهج الفحص الخارجي:')}</b> ${tr('External black-box scanning without requiring source code or internal network access.', 'فحص الصندوق الأسود الخارجي دون الحاجة لكود مصدري أو وصول داخلي.')}</li>
@@ -320,9 +320,9 @@ addSlide(
       ${A(2, `
         <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
           <span style="color:var(--red); font-size:18px; font-weight:900;">✖</span>
-          <h3 class="c-card-h" style="color:var(--red); font-size:16px; margin:0;">${tr('Out of Scope (Delimitations)', 'خارج نطاق العمل والمحددات')}</h3>
+          <h3 class="c-card-h" style="color:var(--red); font-size:17.5px; margin:0;">${tr('Out of Scope (Delimitations)', 'خارج نطاق العمل والمحددات')}</h3>
         </div>
-        <ul class="c-card-list" style="font-size:12.5px; line-height:1.55; margin-top:4px;">
+        <ul class="c-card-list" style="font-size:13.5px; line-height:1.55; margin-top:4px;">
           <li><b>${tr('Internal Network Scanning:', 'الشبكات والأنظمة الداخلية:')}</b> ${tr('Does not scan internal LAN/VLANs, local endpoints, or internal host configurations.', 'استبعاد فحص الشبكات الداخلية، الأجهزة المحلية، وإعدادات الأنظمة.')}</li>
           <li><b>${tr('Source Code Analysis:', 'الفحص المصدري:')}</b> ${tr('Excludes static code analysis (SAST) and white-box/gray-box testing.', 'استبعاد الفحص المصدري (White-Box / SAST) كلياً.')}</li>
           <li><b>${tr('Active Exploitation:', 'الاستغلال الهجومي الفعلي:')}</b> ${tr('No penetration, database dumping, destructive payloads, or Denial of Service (DoS/DDoS).', 'لا استغلال هجومي، لا سحب قواعد بيانات، ولا هجمات حجب خدمة.')}</li>
@@ -332,7 +332,7 @@ addSlide(
           <li><b>${tr('Remediation & Ticketing:', 'إدارة التذاكر والإصلاح:')}</b> ${tr('Excludes vulnerability lifecycle tracking, patch management, and developer ticketing.', 'لا يشمل تتبع دورة معالجة الثغرات أو إدارة التذاكر للمطورين.')}</li>
           <li><b>${tr('Other Scanners:', 'أدوات الفحص الأخرى:')}</b> ${tr('No scanner tools supported beyond the six explicitly listed.', 'لا يدعم أدوات فحص أخرى غير الأدوات الست المحددة.')}</li>
         </ul>
-        <div style="font-size:11.5px; color:var(--amber); margin-top:6px; border-top:1px dashed rgba(245,158,11,0.25); padding-top:5px;">
+        <div style="font-size:12.5px; color:var(--amber); margin-top:6px; border-top:1px dashed rgba(245,158,11,0.25); padding-top:5px;">
           ⚠️ ${tr('Delimitation Note: Any tools not explicitly listed above are outside the current project scope.', 'ملاحظة محددات: أي أدوات لم تُذكر صراحة أعلاه تقع خارج نطاق المشروع الحالي.')}
         </div>
       `, 'c-card c-red')}
@@ -385,13 +385,13 @@ addSlide(
     ];
 
     return `<div style="display:flex; flex-direction:column; gap:9px; width:100%;">
-      <div style="font-size:13px; font-weight:700; color:var(--teal); margin-bottom:-2px;">
+      <div style="font-size:14.5px; font-weight:700; color:var(--teal); margin-bottom:-2px;">
         ${tr('Table 2.2: Comparison of Related Systems and Tools with the Proposed YemScan Platform', 'جدول 2.2: مقارنة الأنظمة والأدوات ذات الصلة مع منصة YemScan المقترحة')}
       </div>
 
       ${A(0, `
         <div style="overflow-x:auto;">
-          <table class="comp-table" style="font-size:12px;">
+          <table class="comp-table" style="font-size:13.5px;">
             <thead>
               <tr>
                 <th style="width:40%;">${headers[0]}</th>
@@ -408,11 +408,11 @@ addSlide(
                   <td style="font-weight:${r[6] ? '800' : '600'}; color:${r[6] ? 'var(--teal)' : '#e2e8f0'}; padding:6px 10px;">
                     ${r[6] ? '⭐ ' : ''}${r[0]}
                   </td>
-                  <td class="center" style="font-size:13.5px; padding:6px 4px;">${r[1]}</td>
-                  <td class="center" style="font-size:13.5px; padding:6px 4px;">${r[2]}</td>
-                  <td class="center" style="font-size:13.5px; padding:6px 4px;">${r[3]}</td>
-                  <td class="center" style="font-size:13.5px; padding:6px 4px;">${r[4]}</td>
-                  <td class="center" style="font-size:14.5px; font-weight:800; background:rgba(45,212,191,0.06); border-left:1px solid rgba(45,212,191,0.2); border-right:1px solid rgba(45,212,191,0.2); color:var(--teal); padding:6px 4px;">${r[5]}</td>
+                  <td class="center" style="font-size:14px; padding:6px 4px;">${r[1]}</td>
+                  <td class="center" style="font-size:14px; padding:6px 4px;">${r[2]}</td>
+                  <td class="center" style="font-size:14px; padding:6px 4px;">${r[3]}</td>
+                  <td class="center" style="font-size:14px; padding:6px 4px;">${r[4]}</td>
+                  <td class="center" style="font-size:15px; font-weight:800; background:rgba(45,212,191,0.06); border-left:1px solid rgba(45,212,191,0.2); border-right:1px solid rgba(45,212,191,0.2); color:var(--teal); padding:6px 4px;">${r[5]}</td>
                 </tr>
               `).join('')}
             </tbody>
@@ -421,7 +421,7 @@ addSlide(
       `)}
 
       ${A(1, `
-        <div style="display:flex; flex-direction:column; gap:5px; background:rgba(15,23,42,0.7); border:1px solid rgba(255,255,255,0.08); border-radius:10px; padding:8px 14px; font-size:11.5px; line-height:1.45; color:var(--text-muted);">
+        <div style="display:flex; flex-direction:column; gap:5px; background:rgba(15,23,42,0.7); border:1px solid rgba(255,255,255,0.08); border-radius:10px; padding:8px 14px; font-size:13px; line-height:1.5; color:var(--text-muted);">
           <div>
             <b>${tr('Note:', 'ملاحظة:')}</b>
             ${tr(' (✅) indicates capability is documented in reviewed source or proposed for YemScan; (❌) indicates complete defined criterion is not documented (does not mean total lack of related capability). Nuclei and Wapiti are compared as standalone scanners.',
@@ -447,7 +447,7 @@ addSlide(
    'معالجة تباين نطاق الأدوات، تشتت المخرجات، وغياب مرحلة الإثراء المرجعي الصريح قبل الذكاء.'],
   () => `<div style="display:flex; flex-direction:column; gap:10px; width:100%;">
     ${A(0, `
-      <div style="background:rgba(20,184,166,0.08); border:1px solid rgba(20,184,166,0.3); border-radius:10px; padding:8px 16px; font-size:13px; line-height:1.5; color:#f1f5f9; display:flex; align-items:center; gap:10px;">
+      <div style="background:rgba(20,184,166,0.08); border:1px solid rgba(20,184,166,0.3); border-radius:10px; padding:8px 16px; font-size:14.5px; line-height:1.5; color:#f1f5f9; display:flex; align-items:center; gap:10px;">
         <span style="font-size:18px; color:var(--teal); flex-shrink:0;">🎯</span>
         <span>${tr('“Existing solutions differ in functional scope and integration level. Operating multiple tools separately increases scanning complexity, causing fragmented outputs and difficult unified analysis.”',
                   '“تتباين الحلول الحالية في نطاقها الوظيفي ومستوى التكامل؛ حيث يزيد تشغيل الأدوات بشكل منفصل من تعقيد العمليات وتشتت المخرجات وصعوبة تنظيمها وتحليلها بشكل موحد.”')}</span>
@@ -458,11 +458,11 @@ addSlide(
       ${A(1, `
         <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;">
           <span style="font-size:18px; color:var(--teal);">🔄</span>
-          <h3 class="c-card-h" style="font-size:15.5px; margin:0;">${tr('1. Unified Workflow & Dual Modes', '1. سير عمل موحد ونمطان للفحص')}</h3>
+          <h3 class="c-card-h" style="font-size:17px; margin:0;">${tr('1. Unified Workflow & Dual Modes', '1. سير عمل موحد ونمطان للفحص')}</h3>
         </div>
-        <p class="c-card-p" style="font-size:12.5px; line-height:1.55; margin-bottom:6px;">${tr('Integrates external asset & service discovery with multiple vulnerability scanners, supporting both Sequential Scanning (automated stage handover) and Independent Scanning in a unified external black-box workflow.',
+        <p class="c-card-p" style="font-size:13.5px; line-height:1.55; margin-bottom:6px;">${tr('Integrates external asset & service discovery with multiple vulnerability scanners, supporting both Sequential Scanning (automated stage handover) and Independent Scanning in a unified external black-box workflow.',
           'دمج استكشاف الأصول والخدمات الرقمية مع أدوات فحص الثغرات المتعددة، مع دعم الفحص المتسلسل (تسليم آلي للمخرجات) والفحص المستقل ضمن سير عمل خارجي موحد بنهج الصندوق الأسود.')}</p>
-        <div style="font-size:11px; color:var(--teal); background:rgba(45,212,191,0.08); padding:3px 8px; border-radius:6px; display:inline-block;">
+        <div style="font-size:12px; color:var(--teal); background:rgba(45,212,191,0.08); padding:3px 8px; border-radius:6px; display:inline-block;">
           <b>${tr('Pillars:', 'الركائز:')}</b> ${tr('Discovery + Scanning integration · Sequential & Independent modes', 'دمج الاستكشاف والفحص · نمطا الفحص المتسلسل والمستقل')}
         </div>
       `, 'c-card')}
@@ -470,11 +470,11 @@ addSlide(
       ${A(2, `
         <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;">
           <span style="font-size:18px; color:var(--blue);">📑</span>
-          <h3 class="c-card-h" style="font-size:15.5px; margin:0;">${tr('2. Consolidation & Provenance', '2. توحيد المخرجات وإثبات المصدر')}</h3>
+          <h3 class="c-card-h" style="font-size:17px; margin:0;">${tr('2. Consolidation & Provenance', '2. توحيد المخرجات وإثبات المصدر')}</h3>
         </div>
-        <p class="c-card-p" style="font-size:12.5px; line-height:1.55; margin-bottom:6px;">${tr('Preserves raw tool outputs separately while normalizing and consolidating heterogeneous findings into structured records with full audit traceability back to source evidence.',
+        <p class="c-card-p" style="font-size:13.5px; line-height:1.55; margin-bottom:6px;">${tr('Preserves raw tool outputs separately while normalizing and consolidating heterogeneous findings into structured records with full audit traceability back to source evidence.',
           'الاحتفاظ بالمخرجات الخام بشكل منفصل مع توحيد وإلغاء تكرار النتائج المتباينة ضمن سجلات مهيكلة تحتفظ بروابط التدقيق للأدلة ومصادر الفحص الأصلية.')}</p>
-        <div style="font-size:11px; color:var(--blue); background:rgba(56,189,248,0.08); padding:3px 8px; border-radius:6px; display:inline-block;">
+        <div style="font-size:12px; color:var(--blue); background:rgba(56,189,248,0.08); padding:3px 8px; border-radius:6px; display:inline-block;">
           <b>${tr('Pillars:', 'الركائز:')}</b> ${tr('Heterogeneous normalization · Raw output preservation & auditability', 'معالجة تباين الصيغ · حفظ المخرجات الخام وقابلية التدقيق')}
         </div>
       `, 'c-card c-blue')}
@@ -482,11 +482,11 @@ addSlide(
       ${A(3, `
         <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;">
           <span style="font-size:18px; color:var(--violet);">🏷️</span>
-          <h3 class="c-card-h" style="font-size:15.5px; margin:0;">${tr('3. Pre-AI Reference Enrichment', '3. إثراء المراجع القياسية قبل الذكاء')}</h3>
+          <h3 class="c-card-h" style="font-size:17px; margin:0;">${tr('3. Pre-AI Reference Enrichment', '3. إثراء المراجع القياسية قبل الذكاء')}</h3>
         </div>
-        <p class="c-card-p" style="font-size:12.5px; line-height:1.55; margin-bottom:6px;">${tr('When an appropriate match is available, deterministically associates consolidated findings with relevant CVE identifiers, CWE classifications, CVSS scores, and OWASP Top 10 categories prior to AI interpretation.',
+        <p class="c-card-p" style="font-size:13.5px; line-height:1.55; margin-bottom:6px;">${tr('When an appropriate match is available, deterministically associates consolidated findings with relevant CVE identifiers, CWE classifications, CVSS scores, and OWASP Top 10 categories prior to AI interpretation.',
           'ربط قطعي للنتائج الموحدة بمعرّفات CVE وتصنيفات CWE ودرجات CVSS وفئات OWASP Top 10 عند توفر تطابق ملائم، وذلك قبل تقديمها لطبقة التحليل بالذكاء الاصطناعي.')}</p>
-        <div style="font-size:11px; color:var(--violet); background:rgba(167,139,250,0.08); padding:3px 8px; border-radius:6px; display:inline-block;">
+        <div style="font-size:12px; color:var(--violet); background:rgba(167,139,250,0.08); padding:3px 8px; border-radius:6px; display:inline-block;">
           <b>${tr('Pillars:', 'الركائز:')}</b> ${tr('Deterministic CVE/CWE/CVSS/OWASP association · Explicit pre-AI grounding', 'ربط قطعي بالمراجع القياسية · تثبيت المرجعية قبل الذكاء')}
         </div>
       `, 'c-card c-violet')}
@@ -494,18 +494,18 @@ addSlide(
       ${A(4, `
         <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;">
           <span style="font-size:18px; color:var(--amber);">🧠</span>
-          <h3 class="c-card-h" style="font-size:15.5px; margin:0;">${tr('4. AI Guidance & Dual Reports', '4. التفسير بالذكاء والتقارير التنفيذية/الفنية')}</h3>
+          <h3 class="c-card-h" style="font-size:17px; margin:0;">${tr('4. AI Guidance & Dual Reports', '4. التفسير بالذكاء والتقارير التنفيذية/الفنية')}</h3>
         </div>
-        <p class="c-card-p" style="font-size:12.5px; line-height:1.55; margin-bottom:6px;">${tr('Employs AI strictly as a supporting explanatory layer to interpret findings, assist remediation prioritization, and generate structured Executive and Technical Reports.',
+        <p class="c-card-p" style="font-size:13.5px; line-height:1.55; margin-bottom:6px;">${tr('Employs AI strictly as a supporting explanatory layer to interpret findings, assist remediation prioritization, and generate structured Executive and Technical Reports.',
           'توظيف الذكاء الاصطناعي كطبقة مساعدة فقط لتفسير النتائج واقتراح أولويات المعالجة ودعم إعداد التقارير التنفيذية والفنية المهيكلة (المحمية أثناء التخزين).')}</p>
-        <div style="font-size:11px; color:var(--amber); background:rgba(245,158,11,0.08); padding:3px 8px; border-radius:6px; display:inline-block;">
+        <div style="font-size:12px; color:var(--amber); background:rgba(245,158,11,0.08); padding:3px 8px; border-radius:6px; display:inline-block;">
           <b>${tr('Pillars:', 'الركائز:')}</b> ${tr('AI-assisted remediation context · Executive & Technical Reports', 'إرشاد وتفسير مدعوم بالذكاء · تقارير تنفيذية وفنية')}
         </div>
       `, 'c-card c-amber')}
     </div>
 
     ${A(5, `
-      <div style="background:rgba(15,23,42,0.7); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:6px 14px; font-size:11.5px; color:#cbd5e1; display:flex; align-items:center; gap:8px;">
+      <div style="background:rgba(15,23,42,0.7); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:6px 14px; font-size:13px; color:#cbd5e1; display:flex; align-items:center; gap:8px;">
         <span style="font-size:14px; color:var(--teal);">🔬</span>
         <span><b>${tr('Academic Verification Note:', 'ملاحظة التحقق الأكاديمي:')}</b> ${tr('These proposed functions represent a design-specific solution to the identified gap; their implementation and effectiveness will be verified during testing.',
           'تمثل هذه الوظائف حلاً تصميمياً للفجوة المحددة؛ وستخضع جميع هذه الميزات المقترحة للتحقق والتقييم التجريبي أثناء مرحلة التنفيذ والاختبار.')}</span>
@@ -531,7 +531,7 @@ addSlide(
         <div class="diag-img-box">
           <img src="./assets/workflow-diagram.png" alt="Figure 3.3: Proposed Scanning & Analysis Workflow" class="diag-img">
         </div>
-        <div style="font-size:11px; color:#475569; text-align:center; margin-top:4px; font-weight:700;">
+        <div style="font-size:12px; color:#475569; text-align:center; margin-top:4px; font-weight:700;">
           ${tr('Figure 3.3: Proposed Scanning & Analysis Workflow', 'مخطط 3.3: سير عمل الفحص والتحليل المقترح')}
         </div>
       </div>
@@ -539,26 +539,26 @@ addSlide(
 
     ${A(1, `
       <div style="display:flex; flex-direction:column; gap:8px; height:100%; justify-content:space-between;">
-        <div style="background:rgba(20,184,166,0.08); border:1px solid rgba(20,184,166,0.3); border-radius:10px; padding:7px 14px; font-size:12.5px; color:#f1f5f9; display:flex; align-items:center; gap:8px;">
+        <div style="background:rgba(20,184,166,0.08); border:1px solid rgba(20,184,166,0.3); border-radius:10px; padding:7px 14px; font-size:13.5px; color:#f1f5f9; display:flex; align-items:center; gap:8px;">
           <span style="color:var(--teal); font-size:16px;">🔄</span>
           <span><b>${tr('Workflow Stages (Chapter 3):', 'مراحل سير العمل (الفصل الثالث):')}</b> ${tr('From authorized target input to dual-tier encrypted report delivery.', 'من إدخال الهدف والتحقق من النطاق وحتى تسليم التقارير المشفرة.')}</span>
         </div>
 
         <div class="c-card" style="padding:10px 14px;">
           <div style="display:flex; align-items:center; gap:8px; margin-bottom:3px;">
-            <span style="color:var(--teal); font-weight:800; font-size:12px; font-family:var(--font-mono);">01</span>
-            <h4 class="c-card-h" style="font-size:14px; margin:0;">${tr('Target Input & Scope Validation', 'إدخال الهدف والتحقق من النطاق')}</h4>
+            <span style="color:var(--teal); font-weight:800; font-size:13px; font-family:var(--font-mono);">01</span>
+            <h4 class="c-card-h" style="font-size:15.5px; margin:0;">${tr('Target Input & Scope Validation', 'إدخال الهدف والتحقق من النطاق')}</h4>
           </div>
-          <p class="c-card-p" style="font-size:12px; line-height:1.45; margin:0;">${tr('Receives target domain/IP and scan settings; strictly verifies authorized scope boundaries before scheduling.',
+          <p class="c-card-p" style="font-size:13.5px; line-height:1.5; margin:0;">${tr('Receives target domain/IP and scan settings; strictly verifies authorized scope boundaries before scheduling.',
             'استقبال النطاق/الهدف وإعدادات الفحص مع التحقق الصارم من حدود النطاق المصرح به قبل التنفيذ.')}</p>
         </div>
 
         <div class="c-card c-blue" style="padding:10px 14px;">
           <div style="display:flex; align-items:center; gap:8px; margin-bottom:3px;">
-            <span style="color:var(--blue); font-weight:800; font-size:12px; font-family:var(--font-mono);">02</span>
-            <h4 class="c-card-h" style="font-size:14px; margin:0;">${tr('Dual Scanning Modes (Decision)', 'نمطا الفحص (متسلسل ومستقل)')}</h4>
+            <span style="color:var(--blue); font-weight:800; font-size:13px; font-family:var(--font-mono);">02</span>
+            <h4 class="c-card-h" style="font-size:15.5px; margin:0;">${tr('Dual Scanning Modes (Decision)', 'نمطا الفحص (متسلسل ومستقل)')}</h4>
           </div>
-          <div style="font-size:11.5px; line-height:1.45; color:var(--text-muted);">
+          <div style="font-size:13px; line-height:1.5; color:var(--text-muted);">
             <div><b>• ${tr('Sequential:', 'الفحص المتسلسل:')}</b> <code>Subfinder</code> ➜ <code>Naabu</code> ➜ <code>httpx</code> ➜ <code>Kiterunner</code> ➜ <code>Nuclei</code> / <code>Wapiti</code>.</div>
             <div><b>• ${tr('Independent:', 'الفحص المستقل:')}</b> ${tr('Ad-hoc standalone execution of selected tools with dedicated input validation.', 'تشغيل حر ومستقل للأدوات المختارة مع التحقق المخصص من المدخلات.')}</div>
           </div>
@@ -566,19 +566,19 @@ addSlide(
 
         <div class="c-card c-amber" style="padding:10px 14px;">
           <div style="display:flex; align-items:center; gap:8px; margin-bottom:3px;">
-            <span style="color:var(--amber); font-weight:800; font-size:12px; font-family:var(--font-mono);">03</span>
-            <h4 class="c-card-h" style="font-size:14px; margin:0;">${tr('Output Collection & Encrypted Storage', 'جمع المخرجات والتخزين المشفر')}</h4>
+            <span style="color:var(--amber); font-weight:800; font-size:13px; font-family:var(--font-mono);">03</span>
+            <h4 class="c-card-h" style="font-size:15.5px; margin:0;">${tr('Output Collection & Encrypted Storage', 'جمع المخرجات والتخزين المشفر')}</h4>
           </div>
-          <p class="c-card-p" style="font-size:12px; line-height:1.45; margin:0;">${tr('Collects raw outputs in File System; normalizes schema & deduplicates in PostgreSQL; sensitive data encrypted at rest via AES-256-GCM.',
+          <p class="c-card-p" style="font-size:13.5px; line-height:1.5; margin:0;">${tr('Collects raw outputs in File System; normalizes schema & deduplicates in PostgreSQL; sensitive data encrypted at rest via AES-256-GCM.',
             'حفظ المخرجات الخام في نظام الملفات، وتوحيد الصيغ وإلغاء التكرار في PostgreSQL، وتشفير البيانات أثناء التخزين بـ AES-256-GCM.')}</p>
         </div>
 
         <div class="c-card c-violet" style="padding:10px 14px;">
           <div style="display:flex; align-items:center; gap:8px; margin-bottom:3px;">
-            <span style="color:var(--violet); font-weight:800; font-size:12px; font-family:var(--font-mono);">04</span>
-            <h4 class="c-card-h" style="font-size:14px; margin:0;">${tr('Reference Enrichment & AI Reporting', 'إثراء المراجع القياسية والتحليل بالذكاء')}</h4>
+            <span style="color:var(--violet); font-weight:800; font-size:13px; font-family:var(--font-mono);">04</span>
+            <h4 class="c-card-h" style="font-size:15.5px; margin:0;">${tr('Reference Enrichment & AI Reporting', 'إثراء المراجع القياسية والتحليل بالذكاء')}</h4>
           </div>
-          <p class="c-card-p" style="font-size:12px; line-height:1.45; margin:0;">${tr('Deterministic pre-AI mapping to CVE/CWE/CVSS/OWASP; Gemini 3.8 Flash acts strictly as an explanatory co-pilot to compile Executive & Technical Reports.',
+          <p class="c-card-p" style="font-size:13.5px; line-height:1.5; margin:0;">${tr('Deterministic pre-AI mapping to CVE/CWE/CVSS/OWASP; Gemini 3.8 Flash acts strictly as an explanatory co-pilot to compile Executive & Technical Reports.',
             'ربط قطعي مسبق بالمراجع القياسية الدولية، ثم استدعاء Gemini 3.8 كمساعد تفسيري لإرشاد المعالجة وتوليد التقارير التنفيذية والفنية.')}</p>
         </div>
       </div>
@@ -603,7 +603,7 @@ addSlide(
         <div class="diag-img-box">
           <img src="./assets/architecture-diagram.png" alt="Figure 3.1: YemScan System Architecture" class="diag-img">
         </div>
-        <div style="font-size:11px; color:#475569; text-align:center; margin-top:4px; font-weight:700;">
+        <div style="font-size:12px; color:#475569; text-align:center; margin-top:4px; font-weight:700;">
           ${tr('Figure 3.1: System Architecture & Protected Data Flow', 'مخطط 3.1: معمارية النظام وتدفق البيانات المحمية')}
         </div>
       </div>
@@ -614,11 +614,11 @@ addSlide(
         <div class="arch-layer" style="padding:7px 12px; margin:0;">
           <div class="arch-layer-info" style="width:170px;">
             <span class="arch-layer-num">Layer 1</span>
-            <div class="arch-layer-name" style="font-size:12.5px;">${tr('Presentation Layer', 'طبقة العرض والواجهة')}</div>
-            <div class="arch-layer-tech">React & TypeScript <span class="badge-plan" style="font-size:9.5px; padding:1px 5px;">${tr('Target', 'مستهدف')}</span></div>
+            <div class="arch-layer-name" style="font-size:14px;">${tr('Presentation Layer', 'طبقة العرض والواجهة')}</div>
+            <div class="arch-layer-tech">React & TypeScript <span class="badge-plan" style="font-size:11px; padding:2px 6px;">${tr('Target', 'مستهدف')}</span></div>
           </div>
           <div class="arch-boxes">
-            <div class="arch-pill" style="font-size:11.5px; padding:4px 10px;">
+            <div class="arch-pill" style="font-size:13px; padding:5px 11px;">
               ${tr('Targets, scan selection, live dashboard, authorized report viewing via HTTPS.', 'إدخال الأهداف، اختيار نمط الفحص، لوحة المتابعة، وعرض التقارير عبر HTTPS.')}
             </div>
           </div>
@@ -627,11 +627,11 @@ addSlide(
         <div class="arch-layer" style="padding:7px 12px; margin:0;">
           <div class="arch-layer-info" style="width:170px;">
             <span class="arch-layer-num">Layer 2</span>
-            <div class="arch-layer-name" style="font-size:12.5px;">${tr('Application Layer', 'طبقة التطبيق والتنسيق')}</div>
+            <div class="arch-layer-name" style="font-size:14px;">${tr('Application Layer', 'طبقة التطبيق والتنسيق')}</div>
             <div class="arch-layer-tech">FastAPI Backend</div>
           </div>
           <div class="arch-boxes">
-            <div class="arch-pill blue" style="font-size:11.5px; padding:4px 10px;">
+            <div class="arch-pill blue" style="font-size:13px; padding:5px 11px;">
               ${tr('Authentication, RBAC, ownership checks, scan orchestration, key access authorization.', 'المصادقة، إدارة الأدوار (RBAC)، فحص الملكية، تنسيق الفحص، وإدارة مفاتيح التشفير.')}
             </div>
           </div>
@@ -640,11 +640,11 @@ addSlide(
         <div class="arch-layer" style="padding:7px 12px; margin:0;">
           <div class="arch-layer-info" style="width:170px;">
             <span class="arch-layer-num">Layer 3</span>
-            <div class="arch-layer-name" style="font-size:12.5px;">${tr('Security Execution Engine', 'محرك الفحص والتنفيذ')}</div>
+            <div class="arch-layer-name" style="font-size:14px;">${tr('Security Execution Engine', 'محرك الفحص والتنفيذ')}</div>
             <div class="arch-layer-tech">Docker Isolation</div>
           </div>
           <div class="arch-boxes">
-            <div class="arch-pill violet" style="font-size:11.5px; padding:4px 10px;">
+            <div class="arch-pill violet" style="font-size:13px; padding:5px 11px;">
               ${tr('Subfinder, Naabu, httpx, Kiterunner, Nuclei, Wapiti (Sequential & Independent execution).', 'تشغيل معزول للأدوات الست: Subfinder وNaabu وhttpx وKiterunner وNuclei وWapiti.')}
             </div>
           </div>
@@ -653,11 +653,11 @@ addSlide(
         <div class="arch-layer" style="padding:7px 12px; margin:0;">
           <div class="arch-layer-info" style="width:170px;">
             <span class="arch-layer-num">Layer 4</span>
-            <div class="arch-layer-name" style="font-size:12.5px;">${tr('Data Management Layer', 'طبقة إدارة البيانات')}</div>
+            <div class="arch-layer-name" style="font-size:14px;">${tr('Data Management Layer', 'طبقة إدارة البيانات')}</div>
             <div class="arch-layer-tech">PostgreSQL & File System</div>
           </div>
           <div class="arch-boxes">
-            <div class="arch-pill amber" style="font-size:11.5px; padding:4px 10px;">
+            <div class="arch-pill amber" style="font-size:13px; padding:5px 11px;">
               ${tr('Parsing, normalization, deduplication, reference enrichment. AES-256-GCM data at rest.', 'توحيد الصيغ، إلغاء التكرار، إثراء المراجع، وتشفير AES-256-GCM الموثق للبيانات أثناء التخزين.')}
             </div>
           </div>
@@ -666,17 +666,17 @@ addSlide(
         <div class="arch-layer" style="padding:7px 12px; margin:0;">
           <div class="arch-layer-info" style="width:170px;">
             <span class="arch-layer-num">Layer 5</span>
-            <div class="arch-layer-name" style="font-size:12.5px;">${tr('AI & Reporting Layer', 'طبقة الذكاء والتقارير')}</div>
-            <div class="arch-layer-tech">Gemini 3.8 Flash <span class="badge-plan" style="font-size:9.5px; padding:1px 5px;">${tr('Target', 'مستهدف')}</span></div>
+            <div class="arch-layer-name" style="font-size:14px;">${tr('AI & Reporting Layer', 'طبقة الذكاء والتقارير')}</div>
+            <div class="arch-layer-tech">Gemini 3.8 Flash <span class="badge-plan" style="font-size:11px; padding:2px 6px;">${tr('Target', 'مستهدف')}</span></div>
           </div>
           <div class="arch-boxes">
-            <div class="arch-pill" style="font-size:11.5px; padding:4px 10px;">
+            <div class="arch-pill" style="font-size:13px; padding:5px 11px;">
               ${tr('Authorized minimized findings via HTTPS; plain-language remediation; Executive & Technical Reports.', 'إرسال بيانات مقتضبة ومصرح بها؛ تفسير المعالجة؛ وتوليد التقارير التنفيذية والفنية.')}
             </div>
           </div>
         </div>
 
-        <div style="background:rgba(15,23,42,0.75); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:6px 12px; font-size:11.5px; color:#cbd5e1; display:flex; align-items:center; gap:8px;">
+        <div style="background:rgba(15,23,42,0.75); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:6px 12px; font-size:13px; color:#cbd5e1; display:flex; align-items:center; gap:8px;">
           <span style="color:var(--teal); font-size:14px;">🔒</span>
           <span><b>${tr('Cross-Cutting Security Controls:', 'ضوابط الأمان العابرة للطبقات:')}</b> ${tr('Envelope encryption · Controlled key access · Temporary plaintext in memory · No persistent plaintext keys · Admin restrictions.', 'تشفير المغلف · وصول محكوم للمفاتيح · معالجة مؤقتة في الذاكرة دون حفظ مفاتيح صريحة · قيود مشغل التطبيق.')}</span>
         </div>
@@ -697,14 +697,14 @@ addSlide(
       ${A(0, `
         <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
           <span style="font-size:20px; color:var(--teal);">🔄</span>
-          <h3 class="c-card-h" style="color:var(--teal); font-size:16.5px; margin:0;">${tr('Iterative Engineering Lifecycle', 'مبادئ دورة التطوير التكرارية والتزايدية')}</h3>
+          <h3 class="c-card-h" style="color:var(--teal); font-size:18px; margin:0;">${tr('Iterative Engineering Lifecycle', 'مبادئ دورة التطوير التكرارية والتزايدية')}</h3>
         </div>
-        <ul class="c-card-list" style="font-size:12.5px; line-height:1.6; margin-top:4px;">
+        <ul class="c-card-list" style="font-size:13.5px; line-height:1.6; margin-top:4px;">
           <li><b>${tr('Structured 2-Week Sprints:', 'دورات سبرنت منتظمة (أسبوعان):')}</b> ${tr('Divides development into phased iterations with bounded scope, specific engineering goals, and measurable progress milestones.', 'تقسيم العمل إلى دورات زمنية منضبطة ذات نطاق محدد وأهداف هندسية واضحة ومعالم إنجاز قابلة للقياس.')}</li>
           <li><b>${tr('Testable Working Increments:', 'زيادات برمجية قابلة للتحقق:')}</b> ${tr('Each sprint delivers a functional, tested component (e.g., containerized worker, encrypted storage, tool adapter) verified before closure.', 'يقدم كل سبرنت إضافة برمجية عاملة ومختبرة (مثل عزل الحاويات، التخزين المشفر، موحدات المخرجات) تخضع للتحقق العملي.')}</li>
           <li><b>${tr('Feedback-Driven Backlog Adaptation:', 'التكيف والتطوير المستمر:')}</b> ${tr('Empirical testing and supervisor review continuously refine priorities and task dependencies for subsequent sprints.', 'توظيف نتائج الاختبار والتغذية الراجعة من الإشراف لإعادة ضبط الأولويات والتبعيات البرمجية في السبرنتات التالية.')}</li>
         </ul>
-        <div style="font-size:11.5px; color:var(--text-dim); margin-top:10px; border-top:1px dashed rgba(255,255,255,0.08); padding-top:6px;">
+        <div style="font-size:12.5px; color:var(--text-dim); margin-top:10px; border-top:1px dashed rgba(255,255,255,0.08); padding-top:6px;">
           📌 ${tr('Development Scope: 10 planned sprints across Graduation Projects (1) and (2).', 'نطاق التطوير: 10 سبرنتات مجدولة موزعة بين مشروعي التخرج (1) و (2).')}
         </div>
       `, 'c-card')}
@@ -712,21 +712,21 @@ addSlide(
       ${A(1, `
         <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
           <span style="font-size:20px; color:var(--blue);">📋</span>
-          <h3 class="c-card-h" style="color:var(--blue); font-size:16.5px; margin:0;">${tr('Work Packages & Technical Definition of Done', 'هيكلة حزم العمل ومعايير القبول الفني')}</h3>
+          <h3 class="c-card-h" style="color:var(--blue); font-size:18px; margin:0;">${tr('Work Packages & Technical Definition of Done', 'هيكلة حزم العمل ومعايير القبول الفني')}</h3>
         </div>
         <div style="margin-bottom:8px;">
-          <div style="font-size:11.5px; font-weight:700; color:var(--teal); text-transform:uppercase; margin-bottom:4px;">
+          <div style="font-size:12.5px; font-weight:700; color:var(--teal); text-transform:uppercase; margin-bottom:4px;">
             ${tr('Product Backlog Work Packages (7 Clusters):', 'حزم عمل قائمة متطلبات المنتج (7 حزم رئيسية):')}
           </div>
-          <div style="font-size:11.5px; line-height:1.5; color:#cbd5e1; background:rgba(15,23,42,0.6); padding:6px 10px; border-radius:6px;">
+          <div style="font-size:12.5px; line-height:1.5; color:#cbd5e1; background:rgba(15,23,42,0.6); padding:6px 10px; border-radius:6px;">
             1. Core RBAC & Tenant Isolation · 2. Asynchronous Workers · 3. Reconnaissance Tools · 4. Vulnerability Scanners · 5. Schema Normalization & References · 6. AI Explanatory Pipeline · 7. Encrypted Reports
           </div>
         </div>
         <div>
-          <div style="font-size:11.5px; font-weight:700; color:var(--green); text-transform:uppercase; margin-bottom:4px;">
+          <div style="font-size:12.5px; font-weight:700; color:var(--green); text-transform:uppercase; margin-bottom:4px;">
             ${tr('Technical Definition of Done (DoD):', 'معايير القبول الفني والهندسي (Definition of Done):')}
           </div>
-          <ul class="c-card-list" style="font-size:12px; line-height:1.55; margin-top:2px;">
+          <ul class="c-card-list" style="font-size:13px; line-height:1.55; margin-top:2px;">
             <li>✔ ${tr('Docker container isolation & execution stability verified.', 'عزل بيئة التنفيذ داخل حاوية Docker والتحقق من استقرار التشغيل.')}</li>
             <li>✔ ${tr('AES-256-GCM encryption & integrity tags validated for data at rest.', 'التحقق من التشفير الموثق AES-256-GCM لسلامة البيانات أثناء التخزين.')}</li>
             <li>✔ ${tr('Schema normalization & provenance links preserved without data loss.', 'اكتمال توحيد صيغ المخرجات وحفظ روابط التدقيق للأدلة الأصلية دون فقدان.')}</li>
@@ -735,7 +735,7 @@ addSlide(
       `, 'c-card c-blue')}
     </div>
 
-    <div style="background:rgba(15,23,42,0.7); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:6px 14px; font-size:12px; color:#cbd5e1; display:flex; align-items:center; gap:8px;">
+    <div style="background:rgba(15,23,42,0.7); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:6px 14px; font-size:13px; color:#cbd5e1; display:flex; align-items:center; gap:8px;">
       <span style="font-size:14px; color:var(--teal);">💡</span>
       <span><b>${tr('Methodological Focus:', 'التركيز المنهجي:')}</b> ${tr('Agile application in YemScan focuses on systematic engineering progression, modular increments, and empirical verification rather than informal narrative storytelling.',
         'يركز تطبيق منهجية Agile في YemScan على الإنجاز الهندسي المنضبط وتطوير زيادات برمجية معيارية قابلة للاختبار والتحقق العلمي بدلاً من السرد القصصي غير الرسمي.')}</span>
@@ -765,11 +765,11 @@ addSlide(
     return `<div class="c-col" style="gap:10px;">
       ${sprints.map((s, idx) => A(idx, `
         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
-          <b style="font-size:15px; color:var(--teal);">${tr(s[0], s[1])}</b>
+          <b style="font-size:16px; color:var(--teal);">${tr(s[0], s[1])}</b>
           <span class="status-badge ${s[3]}">${s[2]}</span>
         </div>
-        <p class="c-card-p" style="font-size:12.5px;">${tr(s[4], s[5])}</p>`, 'c-card')).join('')}
-      <div style="font-size:11px; color:var(--amber); text-align:center; margin-top:2px;">
+        <p class="c-card-p" style="font-size:13.5px; line-height:1.55;">${tr(s[4], s[5])}</p>`, 'c-card')).join('')}
+      <div style="font-size:12.5px; color:var(--amber); text-align:center; margin-top:2px;">
         ⚠️ ${tr('Draft status for presentation preparation; operational acceptance evidence is pending and will be attached.',
                  'حالة مسودة تحريرية مؤقتة لأغراض إعداد العرض؛ أدلة القبول التشغيلي قيد المراجعة وسترفق لاحقاً.')}
       </div>
@@ -832,7 +832,7 @@ addSlide(
         <div class="diag-img-box">
           <img src="./assets/erd-diagram.png" alt="Figure 3.2: Database ERD Schema" class="diag-img">
         </div>
-        <div style="font-size:11px; color:#475569; text-align:center; margin-top:4px; font-weight:700;">
+        <div style="font-size:12px; color:#475569; text-align:center; margin-top:4px; font-weight:700;">
           ${tr('Figure 3.2: Relational Schema & Protected Attributes', 'مخطط 3.2: المخطط العلائقي والحقول المشفرة')}
         </div>
       </div>
@@ -841,26 +841,26 @@ addSlide(
     ${A(1, `
       <div style="display:flex; flex-direction:column; gap:8px; justify-content:space-between; height:100%;">
         <div class="c-card" style="padding:10px 14px;">
-          <h4 class="c-card-h" style="color:var(--teal); font-size:14px; margin-bottom:4px;">1. ${tr('Normalized 12-Table Structure', 'الهيكل العلائقي الموحد (12 جدولاً)')}</h4>
-          <p class="c-card-p" style="font-size:12px; line-height:1.45; margin:0;">${tr('Comprehensive schema spanning users, scan jobs, keys, stages, raw outputs, assets, findings, references, AI analyses, and reports.',
+          <h4 class="c-card-h" style="color:var(--teal); font-size:16.5px; margin-bottom:4px;">1. ${tr('Normalized 12-Table Structure', 'الهيكل العلائقي الموحد (12 جدولاً)')}</h4>
+          <p class="c-card-p" style="font-size:14px; line-height:1.5; margin:0; color:#f1f5f9;">${tr('Comprehensive schema spanning users, scan jobs, keys, stages, raw outputs, assets, findings, references, AI analyses, and reports.',
             'مخطط علائقي متكامل يشمل: المستخدمين، مهام الفحص، المفاتيح، المراحل، المخرجات الخام، الأصول، الثغرات، المراجع، تحليلات الذكاء، والتقارير.')}</p>
         </div>
 
         <div class="c-card c-blue" style="padding:10px 14px;">
-          <h4 class="c-card-h" style="color:var(--blue); font-size:14px; margin-bottom:4px;">2. ${tr('Schema-Level Cryptographic Protection', 'حماية التشفير المدمجة في قاعدة البيانات')}</h4>
-          <p class="c-card-p" style="font-size:12px; line-height:1.45; margin:0;">${tr('Sensitive attributes (target_enc, title_enc, description_enc, wrapped_dek) stored as ciphertext bytes; master KEK resides outside DB in an isolated vault.',
+          <h4 class="c-card-h" style="color:var(--blue); font-size:16.5px; margin-bottom:4px;">2. ${tr('Schema-Level Cryptographic Protection', 'حماية التشفير المدمجة في قاعدة البيانات')}</h4>
+          <p class="c-card-p" style="font-size:14px; line-height:1.5; margin:0; color:#f1f5f9;">${tr('Sensitive attributes (target_enc, title_enc, description_enc, wrapped_dek) stored as ciphertext bytes; master KEK resides outside DB in an isolated vault.',
             'الحقول الحساسة (الهدف، عنوان الثغرة، الوصف، مفتاح DEK) مخزنة كبايتات مشفرة؛ ومفتاح KEK الرئيسي معزول خارج قاعدة البيانات.')}</p>
         </div>
 
         <div class="c-card c-amber" style="padding:10px 14px;">
-          <h4 class="c-card-h" style="color:var(--amber); font-size:14px; margin-bottom:4px;">3. ${tr('Many-to-Many Audit & Evidence Traceability', 'تتبع الأدلة والمراجع عبر جداول الربط')}</h4>
-          <p class="c-card-p" style="font-size:12px; line-height:1.45; margin:0;">${tr('finding_sources links findings to raw output proofs; finding_references maps each finding to authoritative CVE/CWE codes without data loss.',
+          <h4 class="c-card-h" style="color:var(--amber); font-size:16.5px; margin-bottom:4px;">3. ${tr('Many-to-Many Audit & Evidence Traceability', 'تتبع الأدلة والمراجع عبر جداول الربط')}</h4>
+          <p class="c-card-p" style="font-size:14px; line-height:1.5; margin:0; color:#f1f5f9;">${tr('finding_sources links findings to raw output proofs; finding_references maps each finding to authoritative CVE/CWE codes without data loss.',
             'جدول finding_sources يربط الثغرة بالأدلة الخام؛ وجدول finding_references يربطها بالمعايير القياسية دون فقدان للمصداقية.')}</p>
         </div>
 
         <div class="c-card c-violet" style="padding:10px 14px;">
-          <h4 class="c-card-h" style="color:var(--violet); font-size:14px; margin-bottom:4px;">4. ${tr('Acyclic Hierarchical Asset Modeling', 'تمثيل شجري غير حلقي للأصول المستكشفة')}</h4>
-          <p class="c-card-p" style="font-size:12px; line-height:1.45; margin:0;">${tr('Recursive parent_asset_id hierarchy cleanly maps parent domains, subdomains, open ports, and discovered web endpoints in strict scope.',
+          <h4 class="c-card-h" style="color:var(--violet); font-size:16.5px; margin-bottom:4px;">4. ${tr('Acyclic Hierarchical Asset Modeling', 'تمثيل شجري غير حلقي للأصول المستكشفة')}</h4>
+          <p class="c-card-p" style="font-size:14px; line-height:1.5; margin:0; color:#f1f5f9;">${tr('Recursive parent_asset_id hierarchy cleanly maps parent domains, subdomains, open ports, and discovered web endpoints in strict scope.',
             'علاقة شجرية ذاتية عبر parent_asset_id لنمذجة النطاقات الفرعية، المنافذ، ونقاط النهاية بدقة وضمن النطاق المصرح به.')}</p>
         </div>
       </div>
@@ -880,45 +880,45 @@ addSlide(
       ${A(0, `
         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; padding-bottom:8px; border-bottom:1px solid rgba(45,212,191,0.25);">
           <div style="display:flex; align-items:center; gap:8px;">
-            <span style="font-size:20px; color:var(--teal);">🔐</span>
-            <h3 class="c-card-h" style="color:var(--teal); font-size:16px; margin:0;">
+            <span style="font-size:24px; color:var(--teal);">🔐</span>
+            <h3 class="c-card-h" style="color:var(--teal); font-size:19px; margin:0;">
               ${tr('Cryptographic Architecture (AES-256-GCM)', 'معمارية التشفير وحماية البيانات المخزنة')}
             </h3>
           </div>
-          <span class="status-badge badge-done" style="font-size:10.5px;">
+          <span class="status-badge badge-done" style="font-size:13px; padding:3px 10px;">
             ${tr('Data at Rest', 'بيانات التخزين')}
           </span>
         </div>
 
         <div style="display:flex; flex-direction:column; gap:8px;">
-          <div style="background:rgba(15,23,42,0.65); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:8px 12px;">
-            <div style="display:flex; align-items:center; gap:6px; margin-bottom:2px;">
-              <span style="font-size:14px;">🗝️</span>
-              <b style="font-size:13px; color:#ffffff;">${tr('Envelope Encryption Pattern (DEK / KEK):', 'نمط تشفير المغلف (Envelope Encryption):')}</b>
+          <div style="background:rgba(15,23,42,0.65); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:10px 14px;">
+            <div style="display:flex; align-items:center; gap:8px; margin-bottom:3px;">
+              <span style="font-size:17px;">🗝️</span>
+              <b style="font-size:15.5px; color:#ffffff;">${tr('Envelope Encryption Pattern (DEK / KEK):', 'نمط تشفير المغلف (Envelope Encryption):')}</b>
             </div>
-            <p class="c-card-p" style="font-size:11.5px; line-height:1.45; margin:0; color:#cbd5e1;">
+            <p class="c-card-p" style="font-size:14px; line-height:1.5; margin:0; color:#f1f5f9;">
               ${tr('Generates a dedicated Data Encryption Key (DEK) per scan job; master KEK resides securely in an isolated external vault outside the database.',
                    'توليد مفتاح تشفير مستقل (DEK) لكل فحص؛ ومفتاح التشفير الرئيسي (KEK) معزول خارج قاعدة البيانات تماماً.')}
             </p>
           </div>
 
-          <div style="background:rgba(15,23,42,0.65); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:8px 12px;">
-            <div style="display:flex; align-items:center; gap:6px; margin-bottom:2px;">
-              <span style="font-size:14px;">🛡️</span>
-              <b style="font-size:13px; color:#ffffff;">${tr('Authenticated Integrity (GCM Mode):', 'التوثيق الصارم ونزاهة البيانات (GCM Mode):')}</b>
+          <div style="background:rgba(15,23,42,0.65); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:10px 14px;">
+            <div style="display:flex; align-items:center; gap:8px; margin-bottom:3px;">
+              <span style="font-size:17px;">🛡️</span>
+              <b style="font-size:15.5px; color:#ffffff;">${tr('Authenticated Integrity (GCM Mode):', 'التوثيق الصارم ونزاهة البيانات (GCM Mode):')}</b>
             </div>
-            <p class="c-card-p" style="font-size:11.5px; line-height:1.45; margin:0; color:#cbd5e1;">
+            <p class="c-card-p" style="font-size:14px; line-height:1.5; margin:0; color:#f1f5f9;">
               ${tr('128-bit authentication tag guarantees confidentiality and integrity; immediately rejects tampered or forged ciphertexts before decryption.',
                    'وسام مصادقة 128 بت يضمن السرية التامة وسلامة المحتوى؛ ويرفض البيانات المتلاعب بها فوراً قبل محاولة فك التشفير.')}
             </p>
           </div>
 
-          <div style="background:rgba(15,23,42,0.65); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:8px 12px;">
-            <div style="display:flex; align-items:center; gap:6px; margin-bottom:2px;">
-              <span style="font-size:14px;">📁</span>
-              <b style="font-size:13px; color:#ffffff;">${tr('Comprehensive Protection Scope:', 'نطاق الأصول المحمية أثناء التخزين:')}</b>
+          <div style="background:rgba(15,23,42,0.65); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:10px 14px;">
+            <div style="display:flex; align-items:center; gap:8px; margin-bottom:3px;">
+              <span style="font-size:17px;">📁</span>
+              <b style="font-size:15.5px; color:#ffffff;">${tr('Comprehensive Protection Scope:', 'نطاق الأصول المحمية أثناء التخزين:')}</b>
             </div>
-            <p class="c-card-p" style="font-size:11.5px; line-height:1.45; margin:0; color:#cbd5e1;">
+            <p class="c-card-p" style="font-size:14px; line-height:1.5; margin:0; color:#f1f5f9;">
               ${tr('Secures retained raw tool outputs, generated reports, and sensitive database columns (target_enc, title_enc, description_enc).',
                    'حماية المخرجات الخام المخزنة، ملفات التقارير الصادرة، والأعمدة الحساسة في قاعدة البيانات (الهدف، عنوان ووصف الثغرة).')}
             </p>
@@ -929,45 +929,45 @@ addSlide(
       ${A(1, `
         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; padding-bottom:8px; border-bottom:1px solid rgba(56,189,248,0.25);">
           <div style="display:flex; align-items:center; gap:8px;">
-            <span style="font-size:20px; color:var(--blue);">🐳</span>
-            <h3 class="c-card-h" style="color:var(--blue); font-size:16px; margin:0;">
+            <span style="font-size:24px; color:var(--blue);">🐳</span>
+            <h3 class="c-card-h" style="color:var(--blue); font-size:19px; margin:0;">
               ${tr('Execution Isolation via Docker Sandboxing', 'عزل بيئة التنفيذ والأدوات بحاويات Docker')}
             </h3>
           </div>
-          <span class="status-badge badge-done" style="font-size:10.5px;">
+          <span class="status-badge badge-done" style="font-size:13px; padding:3px 10px;">
             ${tr('Runtime Sandbox', 'عزل بيئة التشغيل')}
           </span>
         </div>
 
         <div style="display:flex; flex-direction:column; gap:8px;">
-          <div style="background:rgba(15,23,42,0.65); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:8px 12px;">
-            <div style="display:flex; align-items:center; gap:6px; margin-bottom:2px;">
-              <span style="font-size:14px;">📦</span>
-              <b style="font-size:13px; color:#ffffff;">${tr('Core Defense-in-Depth Sandbox:', 'عزل كامل لكافة أدوات الفحص الست:')}</b>
+          <div style="background:rgba(15,23,42,0.65); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:10px 14px;">
+            <div style="display:flex; align-items:center; gap:8px; margin-bottom:3px;">
+              <span style="font-size:17px;">📦</span>
+              <b style="font-size:15.5px; color:#ffffff;">${tr('Core Defense-in-Depth Sandbox:', 'عزل كامل لكافة أدوات الفحص الست:')}</b>
             </div>
-            <p class="c-card-p" style="font-size:11.5px; line-height:1.45; margin:0; color:#cbd5e1;">
+            <p class="c-card-p" style="font-size:14px; line-height:1.5; margin:0; color:#f1f5f9;">
               ${tr('All 6 security tools (Subfinder, Naabu, httpx, Kiterunner, Nuclei, Wapiti) execute inside independent containerized sandboxes.',
                    'تشغيل جميع أدوات الفحص الست داخل حاويات Docker معزولة ومستقلة تماماً لمنع أي تداخل بين الأدوات والخادم.')}
             </p>
           </div>
 
-          <div style="background:rgba(15,23,42,0.65); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:8px 12px;">
-            <div style="display:flex; align-items:center; gap:6px; margin-bottom:2px;">
-              <span style="font-size:14px;">🧱</span>
-              <b style="font-size:13px; color:#ffffff;">${tr('Host OS Shield & Non-Root Execution:', 'حماية نظام التشغيل والتشغيل غير الجذري:')}</b>
+          <div style="background:rgba(15,23,42,0.65); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:10px 14px;">
+            <div style="display:flex; align-items:center; gap:8px; margin-bottom:3px;">
+              <span style="font-size:17px;">🧱</span>
+              <b style="font-size:15.5px; color:#ffffff;">${tr('Host OS Shield & Non-Root Execution:', 'حماية نظام التشغيل والتشغيل غير الجذري:')}</b>
             </div>
-            <p class="c-card-p" style="font-size:11.5px; line-height:1.45; margin:0; color:#cbd5e1;">
+            <p class="c-card-p" style="font-size:14px; line-height:1.5; margin:0; color:#f1f5f9;">
               ${tr('Unprivileged non-root execution prevents command injection, scanner vulnerabilities, or malicious targets from escaping to the host.',
                    'تشغيل بصلاحيات غير جذرية يمنع استغلال أوامر النظام أو ثغرات الأدوات أو الردود الخبيثة من النفاذ للسيرفر المضيف.')}
             </p>
           </div>
 
-          <div style="background:rgba(15,23,42,0.65); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:8px 12px;">
-            <div style="display:flex; align-items:center; gap:6px; margin-bottom:2px;">
-              <span style="font-size:14px;">⚙️</span>
-              <b style="font-size:13px; color:#ffffff;">${tr('Strict Resource Quotas (Anti-DoS):', 'تقييد الموارد وحصص المعالجة (Anti-DoS):')}</b>
+          <div style="background:rgba(15,23,42,0.65); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:10px 14px;">
+            <div style="display:flex; align-items:center; gap:8px; margin-bottom:3px;">
+              <span style="font-size:17px;">⚙️</span>
+              <b style="font-size:15.5px; color:#ffffff;">${tr('Strict Resource Quotas (Anti-DoS):', 'تقييد الموارد وحصص المعالجة (Anti-DoS):')}</b>
             </div>
-            <p class="c-card-p" style="font-size:11.5px; line-height:1.45; margin:0; color:#cbd5e1;">
+            <p class="c-card-p" style="font-size:14px; line-height:1.5; margin:0; color:#f1f5f9;">
               ${tr('Hard CPU and memory limits per container prevent aggressive scanning workloads from exhausting host server infrastructure.',
                    'تحديد سقوف صارمة للذاكرة والمعالج لكل حاوية لمنع استنزاف موارد الخادم وحماية المنصة من هجمات حجب الخدمة.')}
             </p>
@@ -976,18 +976,18 @@ addSlide(
       `, 'c-card c-blue')}
     </div>
 
-    <div class="stat-box" style="margin-top:2px; padding:8px 18px; border-color:var(--teal); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px;">
-      <div style="display:flex; align-items:center; gap:10px; flex:1; min-width:300px;">
-        <span style="font-size:22px;">🛡️</span>
-        <div class="stat-txt" style="font-size:12.5px; line-height:1.45;">
-          <b>${tr('Multi-Layered Defense-in-Depth Model:', 'نموذج الدفاع في العمق المتكامل:')}</b>
+    <div class="stat-box" style="margin-top:2px; padding:10px 18px; border-color:var(--teal); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px;">
+      <div style="display:flex; align-items:center; gap:12px; flex:1; min-width:300px;">
+        <span style="font-size:26px;">🛡️</span>
+        <div class="stat-txt" style="font-size:14.5px; line-height:1.5; color:#f8fafc;">
+          <b style="font-size:15px; color:#ffffff;">${tr('Multi-Layered Defense-in-Depth Model:', 'نموذج الدفاع في العمق المتكامل:')}</b>
           ${tr('Synergy between AES-256-GCM data at rest encryption and runtime Docker sandboxing guarantees both data confidentiality and host platform resilience.',
                'التكامل بين تشفير البيانات المخزنة بـ AES-256-GCM والعزل الصارم بحاويات Docker يحقق حماية مزدوجة للبيانات ولبيئة التشغيل معاً.')}
         </div>
       </div>
       <div style="display:flex; gap:8px; flex-shrink:0;">
-        <span class="status-badge badge-done" style="font-size:11px;">🔐 ${tr('Confidentiality: AES-256-GCM', 'السرية: AES-256-GCM')}</span>
-        <span class="status-badge badge-done" style="font-size:11px;">🐳 ${tr('Containment: Docker Sandbox', 'العزل: حاويات Docker')}</span>
+        <span class="status-badge badge-done" style="font-size:13px; padding:4px 12px;">🔐 ${tr('Confidentiality: AES-256-GCM', 'السرية: AES-256-GCM')}</span>
+        <span class="status-badge badge-done" style="font-size:13px; padding:4px 12px;">🐳 ${tr('Containment: Docker Sandbox', 'العزل: حاويات Docker')}</span>
       </div>
     </div>
   </div>`
@@ -1125,12 +1125,12 @@ addSlide(
       ${milestones.map((m, idx) => A(idx, `
         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:3px;">
           <div style="display:flex; align-items:center; gap:10px;">
-            <span style="font-family:var(--font-mono); font-size:12px; color:var(--blue); font-weight:700;">${m[2]}</span>
-            <b style="font-size:14.5px; color:#ffffff;">${tr(m[0], m[1])}</b>
+            <span style="font-family:var(--font-mono); font-size:13px; color:var(--blue); font-weight:700;">${m[2]}</span>
+            <b style="font-size:15.5px; color:#ffffff;">${tr(m[0], m[1])}</b>
           </div>
           <span class="status-badge ${m[4]}">${m[3]}</span>
         </div>
-        <p class="c-card-p" style="font-size:12px; margin:0;">${m[5]}</p>`, 'c-card')).join('')}
+        <p class="c-card-p" style="font-size:13.5px; line-height:1.5; margin:0;">${m[5]}</p>`, 'c-card')).join('')}
     </div>`;
   }
 );
@@ -1143,26 +1143,26 @@ addSlide(
   ['Midterm defense proves sound methodology, clear engineering progress, and a solid roadmap for completion.',
    'يؤكد العرض النصفي سلامة المنهجية، وضوح الإنجاز الهندسي، وجاهزية خطة استكمال المشروع في الفصل القادم.'],
   () => `<div class="c-col" style="align-items:center; gap:16px; text-align:center;">
-    <div style="font-size:48px; font-weight:900; letter-spacing:2px; line-height:1; background:linear-gradient(120deg, #ffffff, #2dd4bf, #38bdf8); -webkit-background-clip:text; background-clip:text; color:transparent;">
+    <div style="font-size:52px; font-weight:900; letter-spacing:2px; line-height:1; background:linear-gradient(120deg, #ffffff, #2dd4bf, #38bdf8); -webkit-background-clip:text; background-clip:text; color:transparent;">
       YemScan
     </div>
-    <div style="font-size:15px; color:#e2e8f0; max-width:900px; line-height:1.5;">
+    <div style="font-size:16px; color:#e2e8f0; max-width:920px; line-height:1.55;">
       ${tr('Midterm Evaluation Summary: The team has established a rigorous academic and theoretical foundation, designed the 5-layer modular architecture, built the containerized worker and encrypted storage baseline (Sprints 1–3), and formulated a clear roadmap for completion in Graduation Project (2).',
            'خلاصة التقييم النصفي: نجح الفريق في إرساء الأساس النظري والأكاديمي الرصين، وتصميم معمارية النظام ذات الـ 5 طبقات، وبناء بيئة تشغيل العمال المستقلين والتخزين المشفر (السبرنتات 1-3)، وصياغة خطة عمل واضحة لاستكمال المشروع في الفصل القادم.')}
     </div>
 
     <div class="c-grid-3" style="max-width:1100px; text-align:start;">
-      ${A(0, `<h4 class="c-card-h" style="color:var(--teal); font-size:14.5px;">1. ${tr('Methodological Rigor', 'انضباط المنهجية')}</h4>
-        <p class="c-card-p" style="font-size:12px;">${tr('Agile development with measurable engineering increments, verifiable technical criteria, and traceable progress.', 'تطبيق عملي لمنهجية Agile عبر زيادات برمجية هندسية قابلة للقياس ومعايير قبول فنية محددة.')}</p>`, 'c-card')}
-      ${A(1, `<h4 class="c-card-h" style="color:var(--blue); font-size:14.5px;">2. ${tr('Architectural Feasibility', 'جدوى المعمارية')}</h4>
-        <p class="c-card-p" style="font-size:12px;">${tr('Modular 5-layer design with Docker worker isolation and deterministic security reference grounding.', 'معمارية معيارية من 5 طبقات مع عزل بيئات التشغيل وتثبيت المرجعية القياسية.')}</p>`, 'c-card c-blue')}
-      ${A(2, `<h4 class="c-card-h" style="color:var(--violet); font-size:14.5px;">3. ${tr('Security & Data Protection', 'الأمان وحماية البيانات')}</h4>
-        <p class="c-card-p" style="font-size:12px;">${tr('AES-256-GCM envelope encryption protecting stored findings and reports at rest.', 'تشفير المغلف AES-256-GCM لحماية نتائج وتقارير الفحص أثناء التخزين (Data at Rest).')}</p>`, 'c-card c-violet')}
+      ${A(0, `<h4 class="c-card-h" style="color:var(--teal); font-size:16px;">1. ${tr('Methodological Rigor', 'انضباط المنهجية')}</h4>
+        <p class="c-card-p" style="font-size:13.5px; line-height:1.5;">${tr('Agile development with measurable engineering increments, verifiable technical criteria, and traceable progress.', 'تطبيق عملي لمنهجية Agile عبر زيادات برمجية هندسية قابلة للقياس ومعايير قبول فنية محددة.')}</p>`, 'c-card')}
+      ${A(1, `<h4 class="c-card-h" style="color:var(--blue); font-size:16px;">2. ${tr('Architectural Feasibility', 'جدوى المعمارية')}</h4>
+        <p class="c-card-p" style="font-size:13.5px; line-height:1.5;">${tr('Modular 5-layer design with Docker worker isolation and deterministic security reference grounding.', 'معمارية معيارية من 5 طبقات مع عزل بيئات التشغيل وتثبيت المرجعية القياسية.')}</p>`, 'c-card c-blue')}
+      ${A(2, `<h4 class="c-card-h" style="color:var(--violet); font-size:16px;">3. ${tr('Security & Data Protection', 'الأمان وحماية البيانات')}</h4>
+        <p class="c-card-p" style="font-size:13.5px; line-height:1.5;">${tr('AES-256-GCM envelope encryption protecting stored findings and reports at rest.', 'تشفير المغلف AES-256-GCM لحماية نتائج وتقارير الفحص أثناء التخزين (Data at Rest).')}</p>`, 'c-card c-violet')}
     </div>
 
     <div class="stat-box" style="margin-top:2px; border-color:var(--teal); padding:10px 24px;">
       <span style="font-size:24px;">🎓</span>
-      <div class="stat-txt" style="font-size:14.5px;">
+      <div class="stat-txt" style="font-size:15.5px;">
         <b>${tr('Thank you! We welcome all questions and constructive feedback from the examination committee.', 'شكراً لحسن استماعكم! نرحب بكافة أسئلة وملاحظات لجنة المناقشة والتقييم الكريمة.')}</b>
       </div>
     </div>
