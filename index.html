@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>YemScan — Yemeni Web Attack and Vulnerability Scanner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="viewport">
+  <div id="stage">
+    <!-- Header / Top Bar (Present on all slides) -->
+    <header id="presHeader">
+      <div class="h-brand">
+        <div class="h-logo">
+          <svg viewBox="0 0 100 100" width="30" height="30">
+            <circle cx="50" cy="50" r="42" fill="none" stroke="#2dd4bf" stroke-width="5"/>
+            <circle cx="50" cy="50" r="26" fill="none" stroke="#38bdf8" stroke-width="3" opacity=".6"/>
+            <path d="M50 50 L84 30" stroke="#2dd4bf" stroke-width="4" stroke-linecap="round"/>
+            <circle cx="50" cy="50" r="5" fill="#2dd4bf"/>
+          </svg>
+        </div>
+        <div class="h-titles">
+          <span class="h-name">YemScan</span>
+          <span class="h-sep">|</span>
+          <span class="h-context" data-i18n="headerContext">UST · Graduation Project 2026-2027</span>
+        </div>
+      </div>
+
+      <div class="h-pipeline-pill">
+        <span class="pipe-step">Discover</span><span class="p-arr">›</span>
+        <span class="pipe-step">Scan</span><span class="p-arr">›</span>
+        <span class="pipe-step">Process</span><span class="p-arr">›</span>
+        <span class="pipe-step">Enrich</span><span class="p-arr">›</span>
+        <span class="pipe-step">Analyze</span><span class="p-arr">›</span>
+        <span class="pipe-step">Report</span>
+      </div>
+
+      <div class="h-actions">
+        <button id="topLangBtn" class="pill-btn lang-pill">
+          <span class="l-en">EN</span><span class="l-divider">/</span><span class="l-ar">عربي</span>
+        </button>
+        <button id="topOvBtn" class="pill-btn" title="Overview (O)">▦ <span data-i18n="overview">Overview</span></button>
+        <button id="topFsBtn" class="pill-btn" title="Fullscreen (F)">⛶</button>
+      </div>
+    </header>
+
+    <!-- Slide Container (20 Slides) -->
+    <main id="slides"></main>
+
+    <!-- Footer Status / Navigation Bar (On All Slides) -->
+    <footer id="presFooter">
+      <div id="progTrack"><div id="progFill"></div></div>
+
+      <div class="f-left">
+        <button id="prevBtn" class="f-btn" title="Previous Slide (← / PageUp)">‹ <span data-i18n="prev">Prev</span></button>
+        <span id="slideCounter" class="f-counter">01 / 20</span>
+        <button id="nextBtn" class="f-btn f-btn-primary" title="Next Slide (→ / Space)"><span data-i18n="next">Next</span> ›</button>
+      </div>
+
+      <div class="f-center"></div>
+
+      <div class="f-right">
+        <button id="modeBtn" class="f-btn f-subtle" id="reduceMotionBtn" data-i18n="reduceMotion">Reduce Motion</button>
+        <div class="quick-jump">
+          <label for="jumpInput" data-i18n="jumpTo">Slide</label>
+          <input id="jumpInput" type="number" min="1" max="20" aria-label="Go to slide">
+        </div>
+        <button id="helpBtn" class="f-btn f-subtle" title="Help (?)">?</button>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Slide Overview Modal -->
+  <div id="overview" class="hidden" role="dialog" aria-modal="true" aria-label="Slide Overview">
+    <div class="ov-inner">
+      <div class="ov-head">
+        <div>
+          <h2 data-i18n="overviewTitle">Presentation Overview</h2>
+          <p class="ov-sub" data-i18n="overviewSub">Presentation organized according to UST Guidelines</p>
+        </div>
+        <button id="ovClose" class="pill-btn">✕ <span data-i18n="close">Close</span></button>
+      </div>
+      <div id="ovGrid" class="ov-grid"></div>
+    </div>
+  </div>
+
+  <!-- Keyboard Shortcuts Modal -->
+  <div id="helpModal" class="hidden" role="dialog" aria-modal="true">
+    <div class="help-inner">
+      <div class="help-head">
+        <h3 data-i18n="shortcutsTitle">Keyboard Navigation Shortcuts</h3>
+        <button id="helpClose" class="pill-btn">✕</button>
+      </div>
+      <div class="help-grid" id="helpContent"></div>
+    </div>
+  </div>
+
+  <!-- Diagram Zoom Lightbox Modal -->
+  <div id="imgModal" class="img-modal" onclick="closeImgModal()" role="dialog" aria-modal="true" aria-label="Diagram Lightbox">
+    <div class="img-modal-content" onclick="event.stopPropagation()">
+      <button class="img-modal-close" onclick="closeImgModal()" title="Close (Esc)">✕</button>
+      <img id="imgModalSrc" src="" alt="Enlarged Diagram">
+      <div id="imgModalCaption" class="img-modal-caption"></div>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
