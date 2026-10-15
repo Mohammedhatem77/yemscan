@@ -350,10 +350,10 @@ addSlide(
   () => {
     const headers = [
       tr('Comparison Criterion', 'معيار المقارنة'),
-      'Nuclei',
-      'Wapiti',
-      'reNgine',
-      'FortiScan',
+      'Nuclei (ProjectDiscovery)',
+      'Wapiti (Wapiti-Scanner)',
+      'reNgine (Ojha, n.d)',
+      'FortiScan (Al-Sharaf et al., 2024)',
       tr('YemScan (Proposed)', 'YemScan (مقترح)')
     ];
 
@@ -433,8 +433,8 @@ addSlide(
                  'يدعم reNgine قدرات مشتركة عدة (الاستكشاف، دمج الأدوات، ميزات الذكاء، التقارير). ويتمثل التميز التصميمي لـ YemScan في مرحلة إثراء النتائج الموحدة بالمراجع القياسية المعتمدة (CVE/CWE/CVSS/OWASP) قبل التحليل بالذكاء الاصطناعي (يخضع للتحقق أثناء الاختبار).')}
           </div>
           <div style="font-size:11.5px; color:var(--text-dim); border-top:1px dashed rgba(255,255,255,0.08); padding-top:4px; margin-top:2px;">
-            ${tr('FortiScan: unpublished graduation project (ref. per project bibliography). Verizon DBIR 2025 figures cited in Slide 2.',
-                 'FortiScan: مشروع تخرج غير منشور (المرجع وفق قائمة مراجع المشروع). أرقام تقرير Verizon DBIR 2025 مُستشهد بها في الشريحة 2.')}
+            ${tr('FortiScan: unpublished bachelor\'s graduation project, UST (Al-Sharaf et al., 2024).',
+                 'FortiScan: مشروع تخرج بكالوريوس غير منشور، جامعة العلوم والتكنولوجيا (Al-Sharaf et al., 2024).')}
           </div>
         </div>
       `)}
@@ -590,13 +590,13 @@ addSlide(
   </div>`
 );
 
-// 10. System Overview / Architecture: 5 Layers (الشريحة 10)
+// 10. System Overview / Architecture (الشريحة 10)
 addSlide(
-  ['Slide 10: System Architecture', 'الشريحة 10: معمارية النظام والتقنيات'],
-  ['5-Layer Modular Architecture & Protected Data Flow (Figure 3.1)', 'معمارية النظام ومخطط تدفق البيانات المحمية (مخطط 3.1)'],
+  ['Slide 10: System Architecture', 'الشريحة 10: معمارية النظام وتدفق البيانات'],
+  ['System Architecture and Protected Data Flow (Figure 3.1)', 'معمارية النظام وتدفق البيانات المحمية (مخطط 3.1)'],
   ['Architecture Flow', 'معمارية النظام'], 'tag-prop',
-  ['Figure 3.1: 5-layer modular architecture decoupling presentation, backend orchestration, isolated execution, protected data management, and external AI service integration.',
-   'مخطط 3.1: معمارية معيارية من 5 طبقات تفصل العرض، التطبيق، محرك الفحص المعزول، إدارة البيانات المحمية، والتكامل مع خدمة ذكاء اصطناعي خارجية.'],
+  ['Figure 3.1: Modular architecture integrating with an external AI service: decoupling presentation, backend orchestration, isolated execution, protected data management, and external AI analysis.',
+   'مخطط 3.1: معمارية معيارية تتكامل مع خدمة ذكاء اصطناعي خارجية: تفصل العرض، التطبيق، محرك الفحص المعزول، إدارة البيانات المحمية، والتحليل الخارجي بالذكاء.'],
   () => `<div style="display:grid; grid-template-columns: 460px 1fr; gap:16px; width:100%; align-items:stretch;">
     ${A(0, `
       <div class="diag-card" onclick="openImgModal('./assets/architecture-diagram.png', 'Figure 3.1: YemScan System Architecture and Protected Data Flow')" title="${tr('Click to view full-screen diagram', 'انقر لتكبير المخطط بحجم الشاشة')}">
@@ -669,7 +669,7 @@ addSlide(
 
         <div class="arch-layer" style="padding:7px 12px; margin:0;">
           <div class="arch-layer-info" style="width:170px;">
-            <span class="arch-layer-num">Layer 5</span>
+            <span class="arch-layer-num" style="background:rgba(168,85,247,0.25); color:#d8b4fe; font-size:11px; padding:2px 7px;">${tr('External Service', 'خدمة خارجية')}</span>
             <div class="arch-layer-name" style="font-size:14px;">${tr('External AI Service', 'خدمة الذكاء الاصطناعي الخارجية')}</div>
             <div class="arch-layer-tech">Gemini 3.8 Flash <span class="badge-plan" style="font-size:11px; padding:2px 6px;">${tr('Planned', 'مخطط')}</span></div>
           </div>
@@ -682,7 +682,7 @@ addSlide(
 
         <div style="background:rgba(15,23,42,0.75); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:6px 12px; font-size:13px; color:#cbd5e1; display:flex; align-items:center; gap:8px;">
           <span style="color:var(--teal); font-size:14px;">🔒</span>
-          <span><b>${tr('Cross-Cutting Security Controls:', 'ضوابط الأمان العابرة للطبقات:')}</b> ${tr('Envelope encryption · Controlled key access · Temporary plaintext in memory · No persistent plaintext keys · Platform admin restricted at application level.', 'تشفير المغلف · وصول محكوم للمفاتيح · معالجة مؤقتة في الذاكرة دون حفظ مفاتيح صريحة · قيود مدير المنصة على مستوى التطبيق.')}</span>
+          <span><b>${tr('Cross-Cutting Security Controls:', 'ضوابط الأمان العابرة للطبقات:')}</b> ${tr('Envelope encryption · Controlled key access · Temporary plaintext in memory · No plaintext keys stored in the application database or logs, with KEK managed in a protected secret store separate from the database · Platform admin restricted at application level.', 'تشفير المغلف · وصول محكوم للمفاتيح · معالجة مؤقتة في الذاكرة · عدم حفظ المفاتيح بصيغتها الصريحة في قاعدة بيانات التطبيق أو سجلاته، مع إدارة KEK في مخزن أسرار محمي منفصل عن قاعدة البيانات · قيود مدير المنصة على مستوى التطبيق.')}</span>
         </div>
       </div>
     `)}
@@ -694,8 +694,8 @@ addSlide(
   ['Slide 11: Development Methodology', 'الشريحة 11: منهجية التطوير الهندسية'],
   ['Iterative & Incremental Engineering Methodology (Agile)', 'منهجية التطوير: الهندسة التكرارية والتزايدية (منهجية Agile)'],
   ['Methodology', 'منهجية Agile'], 'tag-prop',
-  ['Structured Agile engineering framework: task decomposition, 2-week sprint cadences, and technical Definition of Done.',
-   'إطار هندسي لمنهجية Agile: تفكيك المتطلبات إلى مهام، دورات سبرنت من أسبوعين، وتعريف دقيق للإنجاز (DoD).'],
+  ['Decomposing requirements into tasks, executing iterative sprints, and validating against defined technical acceptance criteria.',
+   'تفكيك المتطلبات إلى مهام، وتنفيذ سبرنتات تكرارية، والتحقق وفق معايير قبول تقنية محددة.'],
   () => `<div style="display:flex; flex-direction:column; gap:12px; width:100%;">
     <div class="c-grid-2">
       ${A(0, `
@@ -745,8 +745,8 @@ addSlide(
 
     <div style="background:rgba(15,23,42,0.7); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:6px 14px; font-size:13px; color:#cbd5e1; display:flex; align-items:center; gap:8px;">
       <span style="font-size:14px; color:var(--teal);">💡</span>
-      <span><b>${tr('Methodological Focus:', 'التركيز المنهجي:')}</b> ${tr('Agile application in YemScan focuses on systematic engineering progression, modular increments, and empirical verification.',
-        'يركز تطبيق منهجية Agile في YemScan على التدرج الهندسي المنضبط، وتطوير زيادات برمجية معيارية قابلة للاختبار والتحقق العلمي.')}</span>
+      <span><b>${tr('Methodological Focus:', 'التركيز المنهجي:')}</b> ${tr('Decomposing requirements into tasks, executing iterative sprints, and validating against defined technical acceptance criteria.',
+        'تفكيك المتطلبات إلى مهام، وتنفيذ سبرنتات تكرارية، والتحقق وفق معايير قبول تقنية محددة.')}</span>
     </div>
   </div>`
 );
@@ -847,7 +847,7 @@ addSlide(
   ['Database Design & Relationships (Figure 3.2 ERD)', 'تصميم قاعدة البيانات ومخطط الكيانات والعلاقات (مخطط 3.2 ERD)'],
   ['Database ERD', 'مخطط العلاقات'], 'tag-prop',
   ['PostgreSQL relational schema: scans link to users; findings link via assets; reports link via AI analyses; finding_sources & finding_references resolve M:N.',
-   'مخطط علائقي: الفحص يتبع المستخدم؛ الثغرات ترتبط عبر الأصول؛ والتقارير ترتبط عبر التحليل الذكي؛ وجداول الربط تعالج علاقات متعدد إلى متعدد.'],
+   'مخطط علائقي: الفحص يتبع المستخدم؛ نتائج الفحص ترتبط عبر الأصول؛ والتقارير ترتبط عبر التحليل الذكي؛ وجداول الربط تعالج علاقات متعدد إلى متعدد.'],
   () => `<div style="display:grid; grid-template-columns: 480px 1fr; gap:16px; width:100%; align-items:stretch;">
     ${A(0, `
       <div class="diag-card" onclick="openImgModal('./assets/erd-diagram.png', 'Figure 3.2: YemScan Entity Relationship Diagram (ERD)')" title="${tr('Click to view full-screen diagram', 'انقر لتكبير المخطط بحجم الشاشة')}">
@@ -868,14 +868,14 @@ addSlide(
       <div style="display:flex; flex-direction:column; gap:8px; justify-content:space-between; height:100%;">
         <div class="c-card" style="padding:10px 14px;">
           <h4 class="c-card-h" style="color:var(--teal); font-size:16.5px; margin-bottom:4px;">1. ${tr('Normalized 12-Table Structure', 'الهيكل العلائقي الموحد (12 جدولاً)')}</h4>
-          <p class="c-card-p" style="font-size:14px; line-height:1.5; margin:0; color:#f1f5f9;">${tr('Comprehensive schema spanning users, scan jobs, keys, stages, raw outputs, assets, findings, references, AI analyses, and reports.',
-            'مخطط علائقي متكامل يشمل: المستخدمين، مهام الفحص، المفاتيح، المراحل، المخرجات الخام، الأصول، الثغرات، المراجع، تحليلات الذكاء، والتقارير.')}</p>
+          <p class="c-card-p" style="font-size:14px; line-height:1.5; margin:0; color:#f1f5f9;">${tr('Comprehensive schema spanning users, scan jobs, encryption keys, scan stages, raw outputs, assets, scan findings, finding sources, finding references, external references, AI analyses, and reports.',
+            'مخطط علائقي متكامل يشمل: المستخدمين، مهام الفحص، مفاتيح التشفير، المراحل، المخرجات الخام، الأصول، نتائج الفحص، مصادر النتائج، ربط المراجع، المراجع القياسية، تحليلات الذكاء، والتقارير.')}</p>
         </div>
 
         <div class="c-card c-blue" style="padding:10px 14px;">
-          <h4 class="c-card-h" style="color:var(--blue); font-size:16.5px; margin-bottom:4px;">2. ${tr('Application-Level Encryption of Sensitive Fields', 'تشفير الحقول الحساسة على مستوى التطبيق قبل التخزين')}</h4>
-          <p class="c-card-p" style="font-size:14px; line-height:1.5; margin:0; color:#f1f5f9;">${tr('Sensitive attributes (target_enc, title_enc, description_enc, wrapped_dek) encrypted by application before storage; master KEK resides outside DB in a separate protected store.',
-            'الحقول الحساسة (الهدف، عنوان ووصف نتيجة الفحص، مفتاح DEK المحمي) تُشفر على مستوى التطبيق قبل التخزين؛ ومفتاح KEK الرئيسي يُدار خارج قاعدة البيانات.')}</p>
+          <h4 class="c-card-h" style="color:var(--blue); font-size:16.5px; margin-bottom:4px;">2. ${tr('Application-Level Encryption of Sensitive Fields', 'تشفير الحقول الحساسة ومفتاح DEK المحمي')}</h4>
+          <p class="c-card-p" style="font-size:14px; line-height:1.5; margin:0; color:#f1f5f9;">${tr('Sensitive fields (target_enc, title_enc, description_enc) are encrypted at the application level using AES-256-GCM prior to storage. Meanwhile, wrapped_dek stores the data encryption key protected by KEK wrapping, without requiring an additional layer of field encryption.',
+            'تُشفّر الحقول الحساسة (target_enc وtitle_enc وdescription_enc) على مستوى التطبيق باستخدام خوارزمية AES-256-GCM قبل التخزين. أما wrapped_dek فهو مفتاح تشفير البيانات نفسه محفوظًا بعد لفه وحمايته باستخدام KEK، ولا يحتاج إلى طبقة تشفير حقول إضافية.')}</p>
         </div>
 
         <div class="c-card c-amber" style="padding:10px 14px;">
@@ -1167,9 +1167,9 @@ addSlide(
         'أثبتت الاختبارات الأولية للمحللات إمكانية دمج النتائج المتداخلة في جداول علائقية موحدة مع الحفاظ على أدلة الإثبات.')}</p>`, 'c-card c-blue')}
 
     ${A(2, `<div class="c-card-ic" style="color:var(--violet);">🏷️</div>
-      <h3 class="c-card-h" style="color:var(--violet);">${tr('Pre-AI Reference Grounding', 'ربط المراجع القياسية قبل استدعاء الذكاء')}</h3>
-      <p class="c-card-p">${tr('Rule-based pre-association with CVE identifiers and CWE classifications reduces reliance on the AI model for identifiers and severity scores; AI responses are validated against defined schemas to limit dependence on the model for conclusions.',
-        'الربط المسبق بالقواعد مع معرّفات CVE وتصنيفات CWE يقلل الاعتماد على الذكاء في استنتاج المعرّفات ودرجات الخطورة؛ ويتم التحقق من ردود الذكاء وفق قوالب مهيكلة للحد من الاعتماد على النموذج في الاستنتاج.')}</p>`, 'c-card c-violet')}
+      <h3 class="c-card-h" style="color:var(--violet);">${tr('AI Response Validation & Reference Grounding', 'التحقق من ردود الذكاء وربط المراجع القياسية')}</h3>
+      <p class="c-card-p">${tr('The model response is checked for structural validity, and its conclusions and referenced identifiers are reviewed against scan evidence and available security references before report content is accepted.',
+        'يُتحقق من بنية استجابة النموذج، وتُراجع استنتاجاته ومعرّفاته المرجعية مقابل نتائج الفحص والمراجع المتاحة قبل اعتماد محتوى التقرير.')}</p>`, 'c-card c-violet')}
   </div>`
 );
 
