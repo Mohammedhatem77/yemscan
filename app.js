@@ -1,6 +1,6 @@
 /* YemScan — Midterm Graduation Project Presentation Engine
    Follows Official UST Faculty Guidelines for Graduation Project (1)
-   20-Slide Standard Academic Template (Cybersecurity & Networking)
+   21-Slide Standard Academic Template (Cybersecurity & Networking)
    Supervised by: Dr. Aisha Al-Hadm · Academic Year: 2026-2027
    Team: Mohammed Saleh Hatem, Nassar Ahmed Al-Fattahi, Mohammed Abdulwahid Alrubaidi,
          Younes Mohammed Alsarory, Abdulmajid Abulkarim Anqa
@@ -10,7 +10,7 @@
 'use strict';
 
 let L = localStorage.getItem('ys_lang') || 'en';
-let cur = 0; // 0..19: 20 Slides (Slide 1 is the Title & Team Cover Slide)
+let cur = 0; // 0..20: 21 Slides (Slide 1 is the Title & Team Cover Slide)
 let simTimer = null;
 
 const tr = (en, ar) => (L === 'ar' ? ar : en);
@@ -22,7 +22,7 @@ const I18N = {
     ar: 'جامعة العلوم والتكنولوجيا · الأمن السيبراني والشبكات · مناقشة نصفية 2026-2027'
   },
   overview: { en: 'Overview', ar: 'الفهرس' },
-  overviewTitle: { en: 'Slide Overview & Navigation (20 Slides)', ar: 'فهرس شرائح العرض والتنقل السريع (20 شريحة)' },
+  overviewTitle: { en: 'Slide Overview & Navigation (21 Slides)', ar: 'فهرس شرائح العرض والتنقل السريع (21 شريحة)' },
   overviewSub: { en: 'Presentation organized according to UST Guidelines', ar: 'تنظيم العرض وفق محاور دليل الجامعة' },
   close: { en: 'Close', ar: 'إغلاق' },
   prev: { en: 'Prev', ar: 'السابق' },
@@ -33,7 +33,7 @@ const I18N = {
 };
 
 /* ============================================================
-   20 SLIDES COMPLIANT WITH UST MIDTERM GUIDELINES & REVIEW NOTES
+   21 SLIDES COMPLIANT WITH UST MIDTERM GUIDELINES & REVIEW NOTES
 ============================================================ */
 const S = [];
 const addSlide = (kicker, title, tagText, tagClass, note, renderFn) => {
@@ -71,8 +71,8 @@ addSlide(
       </div>
 
       <p class="c-card-p" style="font-size:14px; line-height:1.6; margin-bottom:12px;">
-        ${tr('An integrated external black-box reconnaissance and security scanning platform combining multi-tool orchestration, security-reference enrichment, AES-256-GCM envelope encryption, and Gemini AI-assisted remediation analysis.',
-             'منصة متكاملة ومؤتمتة لاستطلاع وفحص أمن تطبيقات الويب (Black-Box)، تجمع بين تنسيق الأدوات المتعددة، الإثراء المرجعي للثغرات، التخزين المشفر بـ AES-256-GCM، والتحليل المدعوم بذكاء Gemini.')}
+        ${tr('An integrated external black-box reconnaissance and security scanning platform combining multi-tool orchestration, security-reference enrichment, data encryption using AES-256-GCM with envelope encryption for key protection, and Gemini AI-assisted remediation analysis.',
+             'منصة متكاملة ومؤتمتة لاستطلاع وفحص أمن تطبيقات الويب (Black-Box)، تجمع بين تنسيق الأدوات المتعددة، الإثراء المرجعي للثغرات، تشفير البيانات باستخدام AES-256-GCM وحماية مفاتيحها باستخدام تشفير المغلف، والتحليل المدعوم بذكاء Gemini.')}
       </p>
 
       <div class="pipeline-badge" style="margin-bottom:10px;">
@@ -134,7 +134,7 @@ addSlide(
     ${A(1, `<span class="c-card-ic">🎯</span>
       <h3 class="c-card-h">${tr('External Black-Box Testing', 'منهج الفحص الصندوق الأسود')}</h3>
       <p class="c-card-p">${tr('External security scanning examines accessible interfaces without source code access, mimicking true adversary perspectives to identify exposed assets and security misconfigurations.',
-        'فحص المنظومة من الخارج بنهج الصندوق الأسود ودون الحاجة للكود المصدري يحاكي زاوية المهاجم الفعلي لاكتشاف الأصول المكشوفة وضبط التكوينات الأمنية.')}</p>`, 'c-card c-blue')}
+        'فحص المنظومة من الخارج بنهج الصندوق الأسود ودون الحاجة للكود المصدري يحاكي زاوية المهاجم الفعلي لاكتشاف الأصول المكشوفة واكتشاف أخطاء الإعدادات الأمنية.')}</p>`, 'c-card c-blue')}
 
     ${A(2, `<span class="c-card-ic">📊</span>
       <h3 class="c-card-h">${tr('Verizon DBIR 2025 Reality', 'واقع تقرير الاختراقات DBIR 2025')}</h3>
@@ -232,8 +232,8 @@ addSlide(
       `, 'c-card c-blue')}
 
       ${A(3, `
-        <span class="c-card-ic">🧠</span>
-        <h3 class="c-card-h" style="font-size:17px;">${tr('3. Analytical Significance', '3. الأهمية التحليلية')}</h3>
+        <span class="c-card-ic">🔬</span>
+        <h3 class="c-card-h" style="font-size:17px;">${tr('3. Research Significance', '3. الأهمية البحثية')}</h3>
         <p class="c-card-p" style="font-size:14px; line-height:1.5;">${tr('“Supports the processing, enrichment, interpretation, and prioritization of security findings using structured data and AI-assisted analysis.”',
           '“دعم معالجة وإثراء وتفسير وتحديد أولويات النتائج الأمنية باستخدام البيانات المهيكلة والتحليل المعزز بالذكاء الاصطناعي.”')}</p>
       `, 'c-card c-violet')}
@@ -269,16 +269,16 @@ addSlide(
         'تطوير منصة YemScan لاكتشاف وحصر الأصول والخدمات الرقمية المكشوفة خارجياً، وإجراء الفحوصات الأمنية بنهج الصندوق الأسود، ومعالجة وإثراء وتحليل النتائج بأسلوب مهيكل لدعم تقديم التوصيات وإنتاج التقارير التنفيذية والفنية.')}</p>
       <div class="stat-box">
         <span style="font-size:24px;">🔐</span>
-        <div class="stat-txt"><b>${tr('Security by Design:', 'الأمان كمعيار تصميمي:')}</b> ${tr('AES-256-GCM envelope encryption protecting stored telemetry and reports at rest.', 'تشفير المغلف AES-256-GCM لحماية السجلات والتقارير أثناء التخزين (Data at Rest).')}</div>
+         <div class="stat-txt"><b>${tr('Security by Design:', 'الأمان كمعيار تصميمي:')}</b> ${tr('Data encryption using AES-256-GCM, with envelope encryption for key protection, for stored telemetry and reports at rest.', 'تشفير البيانات باستخدام AES-256-GCM، وحماية مفاتيحها باستخدام تشفير المغلف، لحماية السجلات والتقارير أثناء التخزين (Data at Rest).')}</div>
       </div>`, 'c-card')}
 
     ${A(1, `<h3 class="c-card-h" style="color:var(--blue); font-size:20px;">📋 ${tr('Specific Operational Objectives', 'الأهداف التشغيلية التفصيلية')}</h3>
       <ul class="c-card-list" style="font-size:14px; line-height:1.65;">
         <li><b>1. ${tr('Asset & Service Discovery:', 'اكتشاف الأصول والخدمات:')}</b> ${tr('Discover and inventory external assets, ports, and services.', 'حصر النطاقات والمنافذ والخدمات وواجهات API.')}</li>
         <li><b>2. ${tr('Black-Box Scanning Execution:', 'تنفيذ الفحص الخارجي:')}</b> ${tr('Coordinate sequential and independent black-box scans.', 'تنسيق الفحص بنمطي التشغيل المتسلسل والمستقل.')}</li>
-        <li><b>3. ${tr('Normalization & References:', 'التوحيد والربط المرجعي:')}</b> ${tr('Normalize findings and associate supported security references.', 'توحيد المخرجات وربط المراجع القياسية (CVE/CWE/CVSS/OWASP).')}</li>
+        <li><b>3. ${tr('Normalization & Reference Enrichment:', 'التوحيد والإثراء المرجعي:')}</b> ${tr('Normalize findings and associate supported security references (CVE, CWE, CVSS, OWASP) using defined matching criteria.', 'توحيد المخرجات وربط المراجع القياسية (CVE/CWE/CVSS/OWASP) وفق معايير مطابقة محددة عند توفرها.')}</li>
         <li><b>4. ${tr('AI Remediation Guidance:', 'التحليل الذكي والإرشاد:')}</b> ${tr('Use AI to explain findings and suggest remediation priorities.', 'توظيف الذكاء لتفسير النتائج واقتراح أولويات المعالجة.')}</li>
-        <li><b>5. ${tr('Controlled Access & Storage:', 'التحكم بالوصول والتخزين المشفر:')}</b> ${tr('Provide controlled access (RBAC) and protected storage.', 'إدارة الصلاحيات وعزل بيانات المستخدمين والتخزين المشفر.')}</li>
+        <li><b>5. ${tr('Centralized Dashboard & Access Control:', 'لوحة التحكم والوصول الآمن:')}</b> ${tr('Provide a centralized web dashboard for managing scans and viewing findings and reports, with role-based access control and protected storage.', 'توفير لوحة تحكم ويب مركزية لإدارة الفحوصات واستعراض النتائج والتقارير، مع التحكم في الوصول المبني على الأدوار والتخزين المحمي.')}</li>
         <li><b>6. ${tr('Dual-Tier Report Generation:', 'توليد التقارير:')}</b> ${tr('Generate encrypted executive and technical reports.', 'إنتاج تقارير تنفيذية وفنية مشفرة ومؤتمتة.')}</li>
       </ul>`, 'c-card c-blue')}
   </div>`
@@ -312,7 +312,7 @@ addSlide(
           <li><b>${tr('Scanning Approach:', 'نهج الفحص الخارجي:')}</b> ${tr('External black-box scanning without requiring source code or internal network access.', 'فحص الصندوق الأسود الخارجي دون الحاجة لكود مصدري أو وصول داخلي.')}</li>
           <li><b>${tr('Execution Modes:', 'أنماط التشغيل:')}</b> ${tr('Sequential scanning with automated data handover between stages, and independent scanning for individual tools.', 'فحص متسلسل بتمرير آلي للمخرجات أو فحص مستقل لكل أداة منفردة.')}</li>
           <li><b>${tr('Main Outputs:', 'المخرجات الأساسية:')}</b> ${tr('Structured Executive and Technical Reports.', 'تقارير تنفيذية وفنية (Executive & Technical Reports) مهيكلة.')}</li>
-          <li><b>${tr('Processing & Analysis:', 'المعالجة والتحليل:')}</b> ${tr('Deterministic rule-based processing (deduplication, normalization, references) followed by AI-assisted analysis.', 'معالجة قطعية بالقواعد أولاً (توحيد وإلغاء تكرار وربط مراجع)، ثم تحليل معزز بالذكاء.')}</li>
+          <li><b>${tr('Processing & Analysis:', 'المعالجة والتحليل:')}</b> ${tr('Rule-based processing (deduplication, normalization, references) based on defined matching criteria, followed by AI-assisted analysis.', 'معالجة قائمة على القواعد (توحيد وإلغاء تكرار وربط مراجع) وفق معايير مطابقة محددة، متبوعة بتحليل معزز بالذكاء.')}</li>
           <li><b>${tr('Proposed Protection Controls:', 'ضوابط الحماية المصممة:')}</b> ${tr('Scope validation, RBAC, Docker isolation, HTTPS, password hashing, and AES-256-GCM data at rest.', 'التحقق من النطاق، RBAC، عزل Docker، تأمين HTTPS، وتشفير AES-256-GCM للبيانات المخزنة.')}</li>
         </ul>
       `, 'c-card')}
@@ -342,9 +342,9 @@ addSlide(
 
 // 7. Existing Systems / Related Work (الشريحة 7)
 addSlide(
-  ['Slide 07: Related Work', 'الشريحة 7: الدراسات السابقة'],
-  ['Literature Review (Related Work)', 'الدراسات السابقة (الأعمال ذات الصلة)'],
-  ['Related Work', 'الأعمال ذات الصلة'], 'tag-sec',
+  ['Slide 07: Related Systems & Tools', 'الشريحة 7: الأنظمة والأدوات ذات الصلة'],
+  ['Related Systems and Tools', 'الأنظمة والأدوات ذات الصلة'],
+  ['Related Systems & Tools', 'الأنظمة والأدوات ذات الصلة'], 'tag-sec',
   ['Table 2.2: Criterion-based comparison of reviewed systems with the proposed YemScan platform.',
    'جدول 2.2: مقارنة معيارية بين الأنظمة والأدوات المراجعة ومنصة YemScan المقترحة.'],
   () => {
@@ -424,13 +424,17 @@ addSlide(
         <div style="display:flex; flex-direction:column; gap:5px; background:rgba(15,23,42,0.7); border:1px solid rgba(255,255,255,0.08); border-radius:10px; padding:8px 14px; font-size:13px; line-height:1.5; color:var(--text-muted);">
           <div>
             <b>${tr('Note:', 'ملاحظة:')}</b>
-            ${tr(' (✅) indicates capability is documented in reviewed source or proposed for YemScan; (❌) indicates complete defined criterion is not documented (does not mean total lack of related capability). Nuclei and Wapiti are compared as standalone scanners.',
-                 ' تشير (✅) إلى أن الخاصية موثقة في النظام أو مقترحة لمنصة YemScan، بينما تشير (❌) إلى أن المعيار بصيغته المحددة غير موثق في المصدر المراجع. قورن Nuclei وWapiti كأدوات فحص مستقلة.')}
+            ${tr(' (✅) indicates the criterion is documented for a reviewed system or proposed for YemScan; (❌) indicates the complete criterion as defined is not documented in the reviewed source (does not mean the system lacks every related capability). Nuclei and Wapiti are compared as standalone open-source scanners.',
+                 ' تشير (✅) إلى أن المعيار موثق في النظام المراجع أو مقترح لمنصة YemScan؛ بينما تشير (❌) إلى أن المعيار بصيغته المحددة غير موثق في المصدر المراجع (ولا يعني بالضرورة انعدام كافة القدرات ذات الصلة). قورن Nuclei وWapiti كأداتي فحص مستقلتين مفتوحتي المصدر.')}
           </div>
           <div style="color:#cbd5e1; border-top:1px dashed rgba(255,255,255,0.08); padding-top:4px;">
             <b style="color:var(--teal);">${tr('Key Takeaway:', 'الاستنتاج الرئيسي:')}</b>
-            ${tr('reNgine already supports several shared capabilities (discovery, tool integration, LLMs, reporting). The principal distinction represented in this table is YemScan’s proposed stage for enriching consolidated findings with relevant security references (CVE, CWE, CVSS, OWASP) before AI-assisted interpretation (subject to verification during testing).',
+            ${tr('reNgine already supports several shared capabilities (discovery, tool integration, LLMs, reporting). The principal distinction represented in this table is YemScan\'s proposed stage for enriching consolidated findings with relevant security references (CVE, CWE, CVSS, OWASP) before AI-assisted interpretation (subject to verification during testing).',
                  'يدعم reNgine قدرات مشتركة عدة (الاستكشاف، دمج الأدوات، ميزات الذكاء، التقارير). ويتمثل التميز التصميمي لـ YemScan في مرحلة إثراء النتائج الموحدة بالمراجع القياسية المعتمدة (CVE/CWE/CVSS/OWASP) قبل التحليل بالذكاء الاصطناعي (يخضع للتحقق أثناء الاختبار).')}
+          </div>
+          <div style="font-size:11.5px; color:var(--text-dim); border-top:1px dashed rgba(255,255,255,0.08); padding-top:4px; margin-top:2px;">
+            ${tr('FortiScan: unpublished graduation project (ref. per project bibliography). Verizon DBIR 2025 figures cited in Slide 2.',
+                 'FortiScan: مشروع تخرج غير منشور (المرجع وفق قائمة مراجع المشروع). أرقام تقرير Verizon DBIR 2025 مُستشهد بها في الشريحة 2.')}
           </div>
         </div>
       `)}
@@ -484,10 +488,10 @@ addSlide(
           <span style="font-size:18px; color:var(--violet);">🏷️</span>
           <h3 class="c-card-h" style="font-size:17px; margin:0;">${tr('3. Pre-AI Reference Enrichment', '3. إثراء المراجع القياسية قبل الذكاء')}</h3>
         </div>
-        <p class="c-card-p" style="font-size:13.5px; line-height:1.55; margin-bottom:6px;">${tr('When an appropriate match is available, deterministically associates consolidated findings with relevant CVE identifiers, CWE classifications, CVSS scores, and OWASP Top 10 categories prior to AI interpretation.',
-          'ربط قطعي للنتائج الموحدة بمعرّفات CVE وتصنيفات CWE ودرجات CVSS وفئات OWASP Top 10 عند توفر تطابق ملائم، وذلك قبل تقديمها لطبقة التحليل بالذكاء الاصطناعي.')}</p>
+        <p class="c-card-p" style="font-size:13.5px; line-height:1.55; margin-bottom:6px;">${tr('When an appropriate match is available, associates consolidated findings with relevant CVE identifiers, CWE classifications, CVSS scores, and OWASP Top 10 categories prior to AI interpretation using defined matching criteria.',
+          'ربط النتائج الموحدة بمعرّفات CVE وتصنيفات CWE ودرجات CVSS وفئات OWASP Top 10 عند توفر تطابق ملائم وفق معايير مطابقة محددة، وذلك قبل تقديمها للذكاء الاصطناعي.')}</p>
         <div style="font-size:12px; color:var(--violet); background:rgba(167,139,250,0.08); padding:3px 8px; border-radius:6px; display:inline-block;">
-          <b>${tr('Pillars:', 'الركائز:')}</b> ${tr('Deterministic CVE/CWE/CVSS/OWASP association · Explicit pre-AI grounding', 'ربط قطعي بالمراجع القياسية · تثبيت المرجعية قبل الذكاء')}
+          <b>${tr('Pillars:', 'الركائز:')}</b> ${tr('Rule-based CVE/CWE/CVSS/OWASP association · Explicit pre-AI grounding', 'ربط المراجع القياسية بالقواعد · تثبيت المرجعية قبل الذكاء')}
         </div>
       `, 'c-card c-violet')}
 
@@ -541,7 +545,7 @@ addSlide(
       <div style="display:flex; flex-direction:column; gap:8px; height:100%; justify-content:space-between;">
         <div style="background:rgba(20,184,166,0.08); border:1px solid rgba(20,184,166,0.3); border-radius:10px; padding:7px 14px; font-size:13.5px; color:#f1f5f9; display:flex; align-items:center; gap:8px;">
           <span style="color:var(--teal); font-size:16px;">🔄</span>
-          <span><b>${tr('Workflow Stages (Chapter 3):', 'مراحل سير العمل (الفصل الثالث):')}</b> ${tr('From authorized target input to dual-tier encrypted report delivery.', 'من إدخال الهدف والتحقق من النطاق وحتى تسليم التقارير المشفرة.')}</span>
+          <span><b>${tr('Workflow Stages (Chapter 3):', 'مراحل سير العمل (الفصل الثالث):')}</b> ${tr('From authorized target input and scope validation to report generation, encrypted storage, and authorized delivery via HTTPS.', 'من إدخال الهدف والتحقق من النطاق إلى إنشاء التقارير وحفظها مشفرة وإتاحتها للمستخدم المصرح له عبر HTTPS.')}</span>
         </div>
 
         <div class="c-card" style="padding:10px 14px;">
@@ -549,8 +553,8 @@ addSlide(
             <span style="color:var(--teal); font-weight:800; font-size:13px; font-family:var(--font-mono);">01</span>
             <h4 class="c-card-h" style="font-size:15.5px; margin:0;">${tr('Target Input & Scope Validation', 'إدخال الهدف والتحقق من النطاق')}</h4>
           </div>
-          <p class="c-card-p" style="font-size:13.5px; line-height:1.5; margin:0;">${tr('Receives target domain/IP and scan settings; strictly verifies authorized scope boundaries before scheduling.',
-            'استقبال النطاق/الهدف وإعدادات الفحص مع التحقق الصارم من حدود النطاق المصرح به قبل التنفيذ.')}</p>
+          <p class="c-card-p" style="font-size:13.5px; line-height:1.5; margin:0;">${tr('Receives target domain or URL and scan settings; strictly verifies authorized scope boundaries before scheduling.',
+            'استقبال نطاق أو رابط URL الهدف وإعدادات الفحص مع التحقق الصارم من حدود النطاق المصرح به قبل الجدولة والتنفيذ.')}</p>
         </div>
 
         <div class="c-card c-blue" style="padding:10px 14px;">
@@ -559,8 +563,8 @@ addSlide(
             <h4 class="c-card-h" style="font-size:15.5px; margin:0;">${tr('Dual Scanning Modes (Decision)', 'نمطا الفحص (متسلسل ومستقل)')}</h4>
           </div>
           <div style="font-size:13px; line-height:1.5; color:var(--text-muted);">
-            <div><b>• ${tr('Sequential:', 'الفحص المتسلسل:')}</b> <code>Subfinder</code> ➜ <code>Naabu</code> ➜ <code>httpx</code> ➜ <code>Kiterunner</code> ➜ <code>Nuclei</code> / <code>Wapiti</code>.</div>
-            <div><b>• ${tr('Independent:', 'الفحص المستقل:')}</b> ${tr('Ad-hoc standalone execution of selected tools with dedicated input validation.', 'تشغيل حر ومستقل للأدوات المختارة مع التحقق المخصص من المدخلات.')}</div>
+            <div><b>• ${tr('Sequential:', 'الفحص المتسلسل:')}</b> ${tr('Prepared inputs passed between successive stages: Subfinder ➜ Naabu ➜ httpx ➜ Kiterunner ➜ Nuclei / Wapiti (scanners receive prepared inputs from suitable web targets and discovery findings).', 'تمرير المدخلات المجهزة بين المراحل المتعاقبة: Subfinder ➜ Naabu ➜ httpx ➜ Kiterunner ➜ Nuclei / Wapiti (تتلقى أدوات فحص الثغرات مدخلات مجهزة من أهداف الويب ونتائج الاستكشاف).')}</div>
+            <div><b>• ${tr('Independent:', 'الفحص المستقل:')}</b> ${tr('Independent execution of selected tools following dedicated input and scope validation.', 'تنفيذ مستقل للأدوات المختارة بعد التحقق المخصص من صحة المدخلات والنطاق المصرح به.')}</div>
           </div>
         </div>
 
@@ -569,8 +573,8 @@ addSlide(
             <span style="color:var(--amber); font-weight:800; font-size:13px; font-family:var(--font-mono);">03</span>
             <h4 class="c-card-h" style="font-size:15.5px; margin:0;">${tr('Output Collection & Encrypted Storage', 'جمع المخرجات والتخزين المشفر')}</h4>
           </div>
-          <p class="c-card-p" style="font-size:13.5px; line-height:1.5; margin:0;">${tr('Collects raw outputs in File System; normalizes schema & deduplicates in PostgreSQL; sensitive data encrypted at rest via AES-256-GCM.',
-            'حفظ المخرجات الخام في نظام الملفات، وتوحيد الصيغ وإلغاء التكرار في PostgreSQL، وتشفير البيانات أثناء التخزين بـ AES-256-GCM.')}</p>
+          <p class="c-card-p" style="font-size:13.5px; line-height:1.5; margin:0;">${tr('Platform components parse, validate, normalize schema, and deduplicate; raw outputs encrypted at rest in File System; sensitive fields encrypted before PostgreSQL persistence via AES-256-GCM.',
+            'تتولى مكونات المنصة استيعاب المخرجات والتحقق منها وتوحيد بنيتها وإلغاء التكرار؛ تُحفظ المخرجات الخام مشفرة في نظام الملفات، وتُشفر الحقول الحساسة قبل حفظها في PostgreSQL بـ AES-256-GCM.')}</p>
         </div>
 
         <div class="c-card c-violet" style="padding:10px 14px;">
@@ -578,8 +582,8 @@ addSlide(
             <span style="color:var(--violet); font-weight:800; font-size:13px; font-family:var(--font-mono);">04</span>
             <h4 class="c-card-h" style="font-size:15.5px; margin:0;">${tr('Reference Enrichment & AI Reporting', 'إثراء المراجع القياسية والتحليل بالذكاء')}</h4>
           </div>
-          <p class="c-card-p" style="font-size:13.5px; line-height:1.5; margin:0;">${tr('Deterministic pre-AI mapping to CVE/CWE/CVSS/OWASP; Gemini 3.8 Flash acts strictly as an explanatory co-pilot to compile Executive & Technical Reports.',
-            'ربط قطعي مسبق بالمراجع القياسية الدولية، ثم استدعاء Gemini 3.8 كمساعد تفسيري لإرشاد المعالجة وتوليد التقارير التنفيذية والفنية.')}</p>
+          <p class="c-card-p" style="font-size:13.5px; line-height:1.5; margin:0;">${tr('Rule-based association with CVE, CWE, and OWASP Top 10, utilizing CVSS scores when evidence matches exist; Gemini 3.8 Flash assists with interpretation, summarization, and remediation advice; reports compiled per approved template and stored encrypted.',
+            'ربط النتائج بالقواعد بمراجع CVE وCWE وOWASP Top 10 والاستفادة من درجات CVSS عند توفر تطابق مع الأدلة؛ يتولى Gemini 3.8 Flash المساعدة في تفسير النتائج وتلخيصها وتقديم نصائح المعالجة؛ وتُنشأ التقارير وفق قوالب معتمدة وتُخزن مشفرة.')}</p>
         </div>
       </div>
     `)}
@@ -591,8 +595,8 @@ addSlide(
   ['Slide 10: System Architecture', 'الشريحة 10: معمارية النظام والتقنيات'],
   ['5-Layer Modular Architecture & Protected Data Flow (Figure 3.1)', 'معمارية النظام ومخطط تدفق البيانات المحمية (مخطط 3.1)'],
   ['Architecture Flow', 'معمارية النظام'], 'tag-prop',
-  ['Figure 3.1: Decoupling presentation, backend application, worker execution, encrypted storage, and AI reporting.',
-   'مخطط 3.1: معمارية معيارية من 5 طبقات تفصل العرض، التطبيق، محرك الفحص المعزول، إدارة البيانات، وطبقة الذكاء.'],
+  ['Figure 3.1: 5-layer modular architecture decoupling presentation, backend orchestration, isolated execution, protected data management, and external AI service integration.',
+   'مخطط 3.1: معمارية معيارية من 5 طبقات تفصل العرض، التطبيق، محرك الفحص المعزول، إدارة البيانات المحمية، والتكامل مع خدمة ذكاء اصطناعي خارجية.'],
   () => `<div style="display:grid; grid-template-columns: 460px 1fr; gap:16px; width:100%; align-items:stretch;">
     ${A(0, `
       <div class="diag-card" onclick="openImgModal('./assets/architecture-diagram.png', 'Figure 3.1: YemScan System Architecture and Protected Data Flow')" title="${tr('Click to view full-screen diagram', 'انقر لتكبير المخطط بحجم الشاشة')}">
@@ -615,7 +619,7 @@ addSlide(
           <div class="arch-layer-info" style="width:170px;">
             <span class="arch-layer-num">Layer 1</span>
             <div class="arch-layer-name" style="font-size:14px;">${tr('Presentation Layer', 'طبقة العرض والواجهة')}</div>
-            <div class="arch-layer-tech">React & TypeScript <span class="badge-plan" style="font-size:11px; padding:2px 6px;">${tr('Target', 'مستهدف')}</span></div>
+            <div class="arch-layer-tech">React & TypeScript <span class="badge-plan" style="font-size:11px; padding:2px 6px;">${tr('Planned', 'مخطط')}</span></div>
           </div>
           <div class="arch-boxes">
             <div class="arch-pill" style="font-size:13px; padding:5px 11px;">
@@ -632,7 +636,7 @@ addSlide(
           </div>
           <div class="arch-boxes">
             <div class="arch-pill blue" style="font-size:13px; padding:5px 11px;">
-              ${tr('Authentication, RBAC, ownership checks, scan orchestration, key access authorization.', 'المصادقة، إدارة الأدوار (RBAC)، فحص الملكية، تنسيق الفحص، وإدارة مفاتيح التشفير.')}
+              ${tr('Authentication, RBAC, ownership checks, scan orchestration, coordinating external AI calls, validating responses, compiling reports.', 'المصادقة، إدارة الأدوار (RBAC)، فحص الملكية، تنسيق الفحص، تنسيق استدعاءات الذكاء الخارجية والتحقق من الردود وتجميع التقارير.')}
             </div>
           </div>
         </div>
@@ -658,7 +662,7 @@ addSlide(
           </div>
           <div class="arch-boxes">
             <div class="arch-pill amber" style="font-size:13px; padding:5px 11px;">
-              ${tr('Parsing, normalization, deduplication, reference enrichment. AES-256-GCM data at rest.', 'توحيد الصيغ، إلغاء التكرار، إثراء المراجع، وتشفير AES-256-GCM الموثق للبيانات أثناء التخزين.')}
+              ${tr('Parsing, normalization, deduplication, reference enrichment. Encrypts analyses, reports, and raw data prior to storage via AES-256-GCM.', 'توحيد الصيغ، إلغاء التكرار، إثراء المراجع، وتشفير التحليلات والتقارير والبيانات الخام قبل التخزين بـ AES-256-GCM.')}
             </div>
           </div>
         </div>
@@ -666,8 +670,8 @@ addSlide(
         <div class="arch-layer" style="padding:7px 12px; margin:0;">
           <div class="arch-layer-info" style="width:170px;">
             <span class="arch-layer-num">Layer 5</span>
-            <div class="arch-layer-name" style="font-size:14px;">${tr('AI & Reporting Layer', 'طبقة الذكاء والتقارير')}</div>
-            <div class="arch-layer-tech">Gemini 3.8 Flash <span class="badge-plan" style="font-size:11px; padding:2px 6px;">${tr('Target', 'مستهدف')}</span></div>
+            <div class="arch-layer-name" style="font-size:14px;">${tr('External AI Service', 'خدمة الذكاء الاصطناعي الخارجية')}</div>
+            <div class="arch-layer-tech">Gemini 3.8 Flash <span class="badge-plan" style="font-size:11px; padding:2px 6px;">${tr('Planned', 'مخطط')}</span></div>
           </div>
           <div class="arch-boxes">
             <div class="arch-pill" style="font-size:13px; padding:5px 11px;">
@@ -678,7 +682,7 @@ addSlide(
 
         <div style="background:rgba(15,23,42,0.75); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:6px 12px; font-size:13px; color:#cbd5e1; display:flex; align-items:center; gap:8px;">
           <span style="color:var(--teal); font-size:14px;">🔒</span>
-          <span><b>${tr('Cross-Cutting Security Controls:', 'ضوابط الأمان العابرة للطبقات:')}</b> ${tr('Envelope encryption · Controlled key access · Temporary plaintext in memory · No persistent plaintext keys · Admin restrictions.', 'تشفير المغلف · وصول محكوم للمفاتيح · معالجة مؤقتة في الذاكرة دون حفظ مفاتيح صريحة · قيود مشغل التطبيق.')}</span>
+          <span><b>${tr('Cross-Cutting Security Controls:', 'ضوابط الأمان العابرة للطبقات:')}</b> ${tr('Envelope encryption · Controlled key access · Temporary plaintext in memory · No persistent plaintext keys · Platform admin restricted at application level.', 'تشفير المغلف · وصول محكوم للمفاتيح · معالجة مؤقتة في الذاكرة دون حفظ مفاتيح صريحة · قيود مدير المنصة على مستوى التطبيق.')}</span>
         </div>
       </div>
     `)}
@@ -690,8 +694,8 @@ addSlide(
   ['Slide 11: Development Methodology', 'الشريحة 11: منهجية التطوير الهندسية'],
   ['Iterative & Incremental Engineering Methodology (Agile)', 'منهجية التطوير: الهندسة التكرارية والتزايدية (منهجية Agile)'],
   ['Methodology', 'منهجية Agile'], 'tag-prop',
-  ['Structured Agile engineering framework: 2-week sprint cadences, testable increments, and technical Definition of Done.',
-   'إطار هندسي لمنهجية Agile: دورات سبرنت منضبطة لمدة أسبوعين، زيادات برمجية قابلة للاختبار، ومعايير قبول فنية محددة.'],
+  ['Structured Agile engineering framework: task decomposition, 2-week sprint cadences, and technical Definition of Done.',
+   'إطار هندسي لمنهجية Agile: تفكيك المتطلبات إلى مهام، دورات سبرنت من أسبوعين، وتعريف دقيق للإنجاز (DoD).'],
   () => `<div style="display:flex; flex-direction:column; gap:12px; width:100%;">
     <div class="c-grid-2">
       ${A(0, `
@@ -700,36 +704,40 @@ addSlide(
           <h3 class="c-card-h" style="color:var(--teal); font-size:18px; margin:0;">${tr('Iterative Engineering Lifecycle', 'مبادئ دورة التطوير التكرارية والتزايدية')}</h3>
         </div>
         <ul class="c-card-list" style="font-size:13.5px; line-height:1.6; margin-top:4px;">
-          <li><b>${tr('Structured 2-Week Sprints:', 'دورات سبرنت منتظمة (أسبوعان):')}</b> ${tr('Divides development into phased iterations with bounded scope, specific engineering goals, and measurable progress milestones.', 'تقسيم العمل إلى دورات زمنية منضبطة ذات نطاق محدد وأهداف هندسية واضحة ومعالم إنجاز قابلة للقياس.')}</li>
-          <li><b>${tr('Testable Working Increments:', 'زيادات برمجية قابلة للتحقق:')}</b> ${tr('Each sprint delivers a functional, tested component (e.g., containerized worker, encrypted storage, tool adapter) verified before closure.', 'يقدم كل سبرنت إضافة برمجية عاملة ومختبرة (مثل عزل الحاويات، التخزين المشفر، موحدات المخرجات) تخضع للتحقق العملي.')}</li>
-          <li><b>${tr('Feedback-Driven Backlog Adaptation:', 'التكيف والتطوير المستمر:')}</b> ${tr('Empirical testing and supervisor review continuously refine priorities and task dependencies for subsequent sprints.', 'توظيف نتائج الاختبار والتغذية الراجعة من الإشراف لإعادة ضبط الأولويات والتبعيات البرمجية في السبرنتات التالية.')}</li>
+          <li><b>${tr('Requirements Breakdown & Prioritization:', 'تفكيك المتطلبات وترتيب الأولويات:')}</b> ${tr('Decomposing functional and security specifications into structured engineering tasks and prioritizing the product backlog.', 'تفكيك المواصفات الوظيفية والأمنية إلى مهام هندسية محددة وترتيب أولويات قائمة متطلبات المنتج.')}</li>
+          <li><b>${tr('Sprint Goal & 2-Week Cadences:', 'أهداف السبرنت والدورات المنتظمة (أسبوعان):')}</b> ${tr('Structuring development into phased 2-week iterations with clear technical goals and bounded scope.', 'تنظيم العمل في دورات زمنية مدتها أسبوعان ذات هدف تقني محدد ونطاق تسليم منضبط.')}</li>
+          <li><b>${tr('Incremental Engineering & Review:', 'التطوير التزايدي والمراجعة المستمرة:')}</b> ${tr('Delivering testable components incrementally, verified through testing and supervisor review to adapt subsequent sprints.', 'تسليم زيادات برمجية قابلة للاختبار مع التحقق المستمر ومراجعة الإشراف لإعادة ضبط أولويات السبرنتات اللاحقة.')}</li>
         </ul>
         <div style="font-size:12.5px; color:var(--text-dim); margin-top:10px; border-top:1px dashed rgba(255,255,255,0.08); padding-top:6px;">
-          📌 ${tr('Development Scope: 10 planned sprints across Graduation Projects (1) and (2).', 'نطاق التطوير: 10 سبرنتات مجدولة موزعة بين مشروعي التخرج (1) و (2).')}
+          📌 ${tr('Schedule Alignment: 10 planned sprints × 2 weeks = 20 work weeks across Projects (1) and (2) (submitted for supervisor review).', 'التوافق الزمني: 10 سبرنتات مخططة × أسبوعين = 20 أسبوع عمل موزعة على مشروعي (1) و (2) (خاضعة لمراجعة الإشراف).')}
         </div>
       `, 'c-card')}
 
       ${A(1, `
         <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
           <span style="font-size:20px; color:var(--blue);">📋</span>
-          <h3 class="c-card-h" style="color:var(--blue); font-size:18px; margin:0;">${tr('Work Packages & Technical Definition of Done', 'هيكلة حزم العمل ومعايير القبول الفني')}</h3>
+          <h3 class="c-card-h" style="color:var(--blue); font-size:18px; margin:0;">${tr('Work Packages & Acceptance Framework', 'هيكلة حزم العمل وإطار القبول والتحقق')}</h3>
         </div>
         <div style="margin-bottom:8px;">
           <div style="font-size:12.5px; font-weight:700; color:var(--teal); text-transform:uppercase; margin-bottom:4px;">
             ${tr('Product Backlog Work Packages (7 Clusters):', 'حزم عمل قائمة متطلبات المنتج (7 حزم رئيسية):')}
           </div>
           <div style="font-size:12.5px; line-height:1.5; color:#cbd5e1; background:rgba(15,23,42,0.6); padding:6px 10px; border-radius:6px;">
-            1. Core RBAC & Tenant Isolation · 2. Asynchronous Workers · 3. Reconnaissance Tools · 4. Vulnerability Scanners · 5. Schema Normalization & References · 6. AI Explanatory Pipeline · 7. Encrypted Reports
+            ${tr(
+              '1. Core RBAC & Tenant Isolation · 2. Asynchronous Workers · 3. Reconnaissance Tools · 4. Vulnerability Scanners · 5. Schema Normalization & References · 6. AI Explanatory Pipeline · 7. Encrypted Reports',
+              '1. الحسابات والصلاحيات وعزل بيانات المستخدمين · 2. المهام الخلفية والعامل المستقل · 3. اكتشاف الأصول والخدمات · 4. فحص الثغرات · 5. توحيد النتائج والإثراء المرجعي · 6. التحليل المساعد بالذكاء الاصطناعي · 7. التقارير المشفرة'
+            )}
           </div>
         </div>
         <div>
           <div style="font-size:12.5px; font-weight:700; color:var(--green); text-transform:uppercase; margin-bottom:4px;">
-            ${tr('Technical Definition of Done (DoD):', 'معايير القبول الفني والهندسي (Definition of Done):')}
+            ${tr('Examples of Task-Specific Technical Acceptance Criteria:', '«أمثلة لمعايير القبول التقنية بحسب المهمة»:')}
           </div>
           <ul class="c-card-list" style="font-size:13px; line-height:1.55; margin-top:2px;">
-            <li>✔ ${tr('Docker container isolation & execution stability verified.', 'عزل بيئة التنفيذ داخل حاوية Docker والتحقق من استقرار التشغيل.')}</li>
-            <li>✔ ${tr('AES-256-GCM encryption & integrity tags validated for data at rest.', 'التحقق من التشفير الموثق AES-256-GCM لسلامة البيانات أثناء التخزين.')}</li>
-            <li>✔ ${tr('Schema normalization & provenance links preserved without data loss.', 'اكتمال توحيد صيغ المخرجات وحفظ روابط التدقيق للأدلة الأصلية دون فقدان.')}</li>
+            <li><b>${tr('Task Criteria:', 'معايير المهام:')}</b> ${tr('Specific functional criteria defined for individual tasks (examples below).', 'شروط تحقق وظيفية محددة لكل مهمة برمجية (أمثلة مختارة).')}</li>
+            <li>✔ <b>${tr('Container Isolation Example:', 'مثال عزل الحاويات:')}</b> ${tr('Container isolation & execution stability verified.', 'عزل بيئة التنفيذ بحاويات Docker والتحقق من الاستقرار.')}</li>
+            <li>✔ ${tr('Encryption Example: AES-256-GCM encryption with 128-bit authentication tag validated at rest.', 'مثال التشفير: التحقق من تشفير AES-256-GCM ووسم المصادقة 128 بت أثناء التخزين.')}</li>
+            <li>✔ ${tr('Normalization Example: Schema normalization & audit provenance preserved without data loss.', 'مثال التوحيد: اكتمال توحيد الصيغ وحفظ روابط التدقيق للأدلة دون فقدان.')}</li>
           </ul>
         </div>
       `, 'c-card c-blue')}
@@ -737,8 +745,8 @@ addSlide(
 
     <div style="background:rgba(15,23,42,0.7); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:6px 14px; font-size:13px; color:#cbd5e1; display:flex; align-items:center; gap:8px;">
       <span style="font-size:14px; color:var(--teal);">💡</span>
-      <span><b>${tr('Methodological Focus:', 'التركيز المنهجي:')}</b> ${tr('Agile application in YemScan focuses on systematic engineering progression, modular increments, and empirical verification rather than informal narrative storytelling.',
-        'يركز تطبيق منهجية Agile في YemScan على الإنجاز الهندسي المنضبط وتطوير زيادات برمجية معيارية قابلة للاختبار والتحقق العلمي بدلاً من السرد القصصي غير الرسمي.')}</span>
+      <span><b>${tr('Methodological Focus:', 'التركيز المنهجي:')}</b> ${tr('Agile application in YemScan focuses on systematic engineering progression, modular increments, and empirical verification.',
+        'يركز تطبيق منهجية Agile في YemScan على التدرج الهندسي المنضبط، وتطوير زيادات برمجية معيارية قابلة للاختبار والتحقق العلمي.')}</span>
     </div>
   </div>`
 );
@@ -754,7 +762,7 @@ addSlide(
     const sprints = [
       ['Sprint 1: Backend Foundation & Access Control', 'السبرنت 1: تأسيس الخدمات الخلفية والحسابات والصلاحيات', 'Provisionally Complete', 'badge-draft',
        'FastAPI setup, PostgreSQL migrations, account registration, password hashing, session expiry, role and ownership checks, and owner-linked draft scan records (no real scanning in this sprint).',
-       'تهيئة بيئة FastAPI وترحيالت PostgreSQL، التسجيل والدخول، تجزئة كلمات المرور، انتهاء الجلسات، فحص الملكية، وسجلات تجريبية للمالك دون فحص فعلي.'],
+       'تهيئة بيئة FastAPI وترحيلات PostgreSQL، التسجيل والدخول، تجزئة كلمات المرور، انتهاء الجلسات، فحص الملكية، وسجلات تجريبية للمالك دون فحص فعلي.'],
       ['Sprint 2: Background Jobs & Encrypted Storage', 'السبرنت 2: العامل الخلفي والتشفير والتخزين', 'Provisionally Complete', 'badge-draft',
        'Independent worker execution with task status, cancellation, and recovery handling. Per-scan DEKs, key wrapping, and authenticated file/field encryption with mock tool validation.',
        'تنفيذ العامل الخلفي المستقل، تتبع الحالة والإلغاء والتعافي. تشفير المغلف بمفاتيح DEK لكل فحص، وتشفير موثق للملفات وقاعدة البيانات مع أداة تجريبية (Mock).'],
@@ -766,7 +774,7 @@ addSlide(
       ${sprints.map((s, idx) => A(idx, `
         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
           <b style="font-size:16px; color:var(--teal);">${tr(s[0], s[1])}</b>
-          <span class="status-badge ${s[3]}">${s[2]}</span>
+          <span class="status-badge ${s[3]}">${tr(s[2], s[2] === 'Provisionally Complete' ? 'مكتمل مبدئيًا' : s[2])}</span>
         </div>
         <p class="c-card-p" style="font-size:13.5px; line-height:1.55;">${tr(s[4], s[5])}</p>`, 'c-card')).join('')}
       <div style="font-size:12.5px; color:var(--amber); text-align:center; margin-top:2px;">
@@ -786,28 +794,46 @@ addSlide(
    'فصل اعتماد المتطلب عن اختباره؛ إضافة فحص الملكية لـ RBAC؛ والميزات بعد السبرنت 3 تظل ضمن المخطط.'],
   () => {
     const reqs = [
-      ['Access & Permissions', 'الوصول والصلاحيات', 'Registration, authentication, sessions, and owner-scoped retrieval.', 'Implemented (Sprint 1) · Acceptance Pending', 'badge-draft'],
-      ['Job Execution Lifecycle', 'إدارة تنفيذ المهام', 'Scan modes, stage status, cancellation, and controlled failure handling.', 'Implemented (Sprint 2) · Acceptance Pending', 'badge-draft'],
-      ['Asset Discovery', 'اكتشاف الأصول', 'Subdomain, port, and live service enumeration with scope enforcement.', 'Implemented (Sprint 3) · Acceptance Pending', 'badge-draft'],
-      ['Sensitive Data Protection', 'حماية وتشفير البيانات', 'AES-256-GCM encryption, key wrapping, and authorized decryption.', 'Implemented (Sprint 2) · Acceptance Pending', 'badge-draft'],
-      ['Vulnerability Scanners', 'فحص الثغرات (Nuclei, Wapiti)', 'API route discovery, YAML templates, and dynamic web crawl audits.', 'Planned (Sprints 4–5)', 'badge-plan'],
-      ['Reference Enrichment & AI', 'الإثراء المرجعي والذكاء', 'CVE/CWE/CVSS matching and Gemini remediation advice generation.', 'Planned (Sprints 6–7)', 'badge-plan']
+      ['Access & Permissions', 'الوصول والصلاحيات',
+       'Registration, authentication, sessions, role-based access, and owner-scoped retrieval.',
+       'التسجيل والمصادقة، الجلسات، إدارة الصلاحيات (RBAC)، والتحقق من ملكية المورد.',
+       'Implemented (Sprint 1) · Acceptance Pending', 'مُنفذ (السبرنت 1) · قيد قبول الأدلة', 'badge-draft'],
+      ['Job Execution Lifecycle', 'إدارة دورة تنفيذ المهام',
+       'Sequential and independent modes, stage tracking, cancellation, and recovery handling.',
+       'نمطا الفحص المتسلسل والمستقل، تتبع المراحل، إلغاء الفحص، ومعالجة التعافي.',
+       'Implemented (Sprint 2) · Acceptance Pending', 'مُنفذ (السبرنت 2) · قيد قبول الأدلة', 'badge-draft'],
+      ['Asset & Service Discovery', 'اكتشاف الأصول والخدمات',
+       'Subdomain, port, and live service enumeration with strict scope enforcement.',
+       'استكشاف النطاقات الفرعية والمنافذ والخدمات الحية وفرض حدود النطاق.',
+       'Implemented (Sprint 3) · Acceptance Pending', 'مُنفذ (السبرنت 3) · قيد قبول الأدلة', 'badge-draft'],
+      ['Sensitive Data Protection', 'حماية وتشفير البيانات',
+       'Data encryption using AES-256-GCM, with envelope encryption for key protection, and authorized decryption.',
+       'تشفير البيانات باستخدام AES-256-GCM، وحماية مفاتيحها باستخدام تشفير المغلف، وفك التشفير المصرح به فقط.',
+       'Implemented (Sprint 2) · Acceptance Pending', 'مُنفذ (السبرنت 2) · قيد قبول الأدلة', 'badge-draft'],
+      ['API Discovery & Vulnerability Scanners', 'اكتشاف مسارات API وفحص الثغرات',
+       'Kiterunner for API route discovery; Nuclei YAML templates and Wapiti dynamic audits for vulnerability scanning.',
+       'أداة Kiterunner لاكتشاف مسارات واجهات API؛ وقوالب Nuclei وفحص Wapiti الديناميكي لاكتشاف الثغرات.',
+       'Planned (Sprints 4–5)', 'مخطط (السبرنتات 4–5)', 'badge-plan'],
+      ['Reference Enrichment & AI Analysis', 'الإثراء المرجعي والتحليل بالذكاء',
+       'Associating findings with CVE identifiers, CWE classifications, and OWASP Top 10 categories, utilizing available CVSS severity scores when supporting evidence exists; Gemini 3.8 Flash remediation explanation.',
+       'ربط النتائج بمعرّفات CVE وتصنيفات CWE وفئات OWASP Top 10، والاستفادة من درجات CVSS المتاحة عند توفر أدلة مناسبة؛ وتفسير المعالجة بـ Gemini 3.8 Flash.',
+       'Planned (Sprints 6–7)', 'مخطط (السبرنتات 6–7)', 'badge-plan']
     ];
     return `<div class="c-col">
       <table class="comp-table">
         <thead>
           <tr>
-            <th>${tr('Requirement Category', 'فئة المتطلب')}</th>
-            <th>${tr('Specification Description', 'الوصف الوظيفي')}</th>
-            <th class="center">${tr('Verification Status', 'حالة التحقق')}</th>
+            <th style="width:28%;">${tr('Requirement Category', 'فئة المتطلب')}</th>
+            <th style="width:48%;">${tr('Specification Description', 'الوصف الوظيفي')}</th>
+            <th class="center" style="width:24%;">${tr('Verification Status', 'حالة التحقق')}</th>
           </tr>
         </thead>
         <tbody>
           ${reqs.map(r => `
             <tr>
               <td><b>${tr(r[0], r[1])}</b></td>
-              <td>${r[2]}</td>
-              <td class="center"><span class="status-badge ${r[4]}">${r[3]}</span></td>
+              <td>${tr(r[2], r[3])}</td>
+              <td class="center"><span class="status-badge ${r[6]}">${tr(r[4], r[5])}</span></td>
             </tr>`).join('')}
         </tbody>
       </table>
@@ -847,21 +873,21 @@ addSlide(
         </div>
 
         <div class="c-card c-blue" style="padding:10px 14px;">
-          <h4 class="c-card-h" style="color:var(--blue); font-size:16.5px; margin-bottom:4px;">2. ${tr('Schema-Level Cryptographic Protection', 'حماية التشفير المدمجة في قاعدة البيانات')}</h4>
-          <p class="c-card-p" style="font-size:14px; line-height:1.5; margin:0; color:#f1f5f9;">${tr('Sensitive attributes (target_enc, title_enc, description_enc, wrapped_dek) stored as ciphertext bytes; master KEK resides outside DB in an isolated vault.',
-            'الحقول الحساسة (الهدف، عنوان الثغرة، الوصف، مفتاح DEK) مخزنة كبايتات مشفرة؛ ومفتاح KEK الرئيسي معزول خارج قاعدة البيانات.')}</p>
+          <h4 class="c-card-h" style="color:var(--blue); font-size:16.5px; margin-bottom:4px;">2. ${tr('Application-Level Encryption of Sensitive Fields', 'تشفير الحقول الحساسة على مستوى التطبيق قبل التخزين')}</h4>
+          <p class="c-card-p" style="font-size:14px; line-height:1.5; margin:0; color:#f1f5f9;">${tr('Sensitive attributes (target_enc, title_enc, description_enc, wrapped_dek) encrypted by application before storage; master KEK resides outside DB in a separate protected store.',
+            'الحقول الحساسة (الهدف، عنوان ووصف نتيجة الفحص، مفتاح DEK المحمي) تُشفر على مستوى التطبيق قبل التخزين؛ ومفتاح KEK الرئيسي يُدار خارج قاعدة البيانات.')}</p>
         </div>
 
         <div class="c-card c-amber" style="padding:10px 14px;">
-          <h4 class="c-card-h" style="color:var(--amber); font-size:16.5px; margin-bottom:4px;">3. ${tr('Many-to-Many Audit & Evidence Traceability', 'تتبع الأدلة والمراجع عبر جداول الربط')}</h4>
-          <p class="c-card-p" style="font-size:14px; line-height:1.5; margin:0; color:#f1f5f9;">${tr('finding_sources links findings to raw output proofs; finding_references maps each finding to authoritative CVE/CWE codes without data loss.',
-            'جدول finding_sources يربط الثغرة بالأدلة الخام؛ وجدول finding_references يربطها بالمعايير القياسية دون فقدان للمصداقية.')}</p>
+          <h4 class="c-card-h" style="color:var(--amber); font-size:16.5px; margin-bottom:4px;">3. ${tr('Many-to-Many Audit & Evidence Traceability', 'تتبع نتائج الفحص والأدلة عبر جداول الربط')}</h4>
+          <p class="c-card-p" style="font-size:14px; line-height:1.5; margin:0; color:#f1f5f9;">${tr('finding_sources links scan findings to raw output proofs; finding_references maps each finding to authoritative CVE/CWE codes with complete provenance.',
+            'جدول finding_sources يربط نتائج الفحص بالأدلة الخام؛ وجدول finding_references يربط كل نتيجة بالمعايير القياسية مع حفظ مصدر الإثبات.')}</p>
         </div>
 
         <div class="c-card c-violet" style="padding:10px 14px;">
-          <h4 class="c-card-h" style="color:var(--violet); font-size:16.5px; margin-bottom:4px;">4. ${tr('Acyclic Hierarchical Asset Modeling', 'تمثيل شجري غير حلقي للأصول المستكشفة')}</h4>
-          <p class="c-card-p" style="font-size:14px; line-height:1.5; margin:0; color:#f1f5f9;">${tr('Recursive parent_asset_id hierarchy cleanly maps parent domains, subdomains, open ports, and discovered web endpoints in strict scope.',
-            'علاقة شجرية ذاتية عبر parent_asset_id لنمذجة النطاقات الفرعية، المنافذ، ونقاط النهاية بدقة وضمن النطاق المصرح به.')}</p>
+          <h4 class="c-card-h" style="color:var(--violet); font-size:16.5px; margin-bottom:4px;">4. ${tr('Hierarchical Asset Modeling & Acyclic Checks', 'نمذجة الأصول والتحقق البرمجي من البنية الشجرية')}</h4>
+          <p class="c-card-p" style="font-size:14px; line-height:1.5; margin:0; color:#f1f5f9;">${tr('Recursive parent_asset_id hierarchy models domains, subdomains, open ports, and web endpoints; application validation enforces an acyclic tree structure in strict scope.',
+            'علاقة شجرية ذاتية عبر parent_asset_id لنمذجة النطاقات والمنافذ ونقاط النهاية؛ ويتولى التطبيق التحقق البرمجي لضمان خلو الشجرة من الحلقات (Acyclic Tree).')}</p>
         </div>
       </div>
     `)}
@@ -870,159 +896,251 @@ addSlide(
 
 // 15. Data Protection & Execution Security: Cryptography & Docker Isolation (الشريحة 15)
 addSlide(
-  ['Slide 15: Security & Isolation', 'الشريحة 15: حماية البيانات وعزل الحاويات'],
-  ['Data Protection & Execution Security: Cryptography & Docker Isolation', 'حماية وتشفير البيانات وعزل بيئة التنفيذ بحاويات Docker'],
+  ['Slide 15: Security & Isolation', 'الشريحة 15: حماية البيانات وضبط بيئة التنفيذ'],
+  ['Data Protection & Execution Controls: Cryptography & Docker Sandboxing', 'حماية البيانات وضوابط التنفيذ: التشفير وعزل بيئة الفحص بحاويات Docker'],
   ['Security & Docker', 'الأمان والتشفير'], 'tag-sec',
-  ['Multi-tiered defense-in-depth: AES-256-GCM envelope encryption at rest combined with containerized Docker worker sandboxing.',
-   'منظومة دفاع متكاملة: تشفير المغلف الموثق AES-256-GCM أثناء التخزين مقترناً بالعزل الصارم لبيئات الفحص بحاويات Docker.'],
-  () => `<div class="c-col" style="gap:12px;">
+  ['Layered controls: AES-256-GCM encryption with 128-bit authentication tags, protected key wrapping, and containerized sandboxing.',
+   'ضوابط متعددة الطبقات: تشفير AES-256-GCM مع وسوم مصادقة 128 بت، حماية مفاتيح التشفير، وعزل بيئة الفحص بالحاويات.'],
+  () => `<div class="c-col" style="gap:11px;">
     <div class="c-grid-2" style="gap:16px; align-items:stretch;">
       ${A(0, `
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; padding-bottom:8px; border-bottom:1px solid rgba(45,212,191,0.25);">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; padding-bottom:6px; border-bottom:1px solid rgba(45,212,191,0.25);">
           <div style="display:flex; align-items:center; gap:8px;">
-            <span style="font-size:24px; color:var(--teal);">🔐</span>
-            <h3 class="c-card-h" style="color:var(--teal); font-size:19px; margin:0;">
-              ${tr('Cryptographic Architecture (AES-256-GCM)', 'معمارية التشفير وحماية البيانات المخزنة')}
+            <span style="font-size:22px; color:var(--teal);">🔐</span>
+            <h3 class="c-card-h" style="color:var(--teal); font-size:18px; margin:0;">
+              ${tr('Data Protection & Cryptography', 'تشفير البيانات والتحقق من سلامتها')}
             </h3>
           </div>
-          <span class="status-badge badge-done" style="font-size:13px; padding:3px 10px;">
-            ${tr('Data at Rest', 'بيانات التخزين')}
+          <span class="status-badge badge-done" style="font-size:12px; padding:2px 8px;">
+            ${tr('AES-256-GCM', 'AES-256-GCM')}
           </span>
         </div>
 
-        <div style="display:flex; flex-direction:column; gap:8px;">
-          <div style="background:rgba(15,23,42,0.65); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:10px 14px;">
-            <div style="display:flex; align-items:center; gap:8px; margin-bottom:3px;">
-              <span style="font-size:17px;">🗝️</span>
-              <b style="font-size:15.5px; color:#ffffff;">${tr('Envelope Encryption Pattern (DEK / KEK):', 'نمط تشفير المغلف (Envelope Encryption):')}</b>
+        <div style="display:flex; flex-direction:column; gap:7px;">
+          <div style="background:rgba(15,23,42,0.65); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:9px 12px;">
+            <div style="display:flex; align-items:center; gap:8px; margin-bottom:2px;">
+              <span style="font-size:16px;">🛡️</span>
+              <b style="font-size:14.5px; color:#ffffff;">${tr('Encryption & Tag Verification:', 'التشفير والتحقق من السلامة:')}</b>
             </div>
-            <p class="c-card-p" style="font-size:14px; line-height:1.5; margin:0; color:#f1f5f9;">
-              ${tr('Generates a dedicated Data Encryption Key (DEK) per scan job; master KEK resides securely in an isolated external vault outside the database.',
-                   'توليد مفتاح تشفير مستقل (DEK) لكل فحص؛ ومفتاح التشفير الرئيسي (KEK) معزول خارج قاعدة البيانات تماماً.')}
+            <p class="c-card-p" style="font-size:13.5px; line-height:1.5; margin:0; color:#f1f5f9;">
+              ${tr('Raw outputs, reports, and retrievable sensitive fields are encrypted using AES-256-GCM. The 128-bit authentication tag is verified before accepting or using decrypted data, with nonces never reused with the same encryption key; data is rejected upon verification failure without being accepted or used.',
+                   'تُشفّر المخرجات الخام والتقارير والحقول الحساسة القابلة للاسترجاع باستخدام AES-256-GCM. يُتحقق من وسم المصادقة بطول 128 بت قبل قبول البيانات المفكوكة أو استخدامها، مع عدم تكرار Nonce مع مفتاح التشفير نفسه، ورفض البيانات عند فشل التحقق وعدم قبولها أو استخدامها.')}
+              <span style="font-size:11px; color:var(--text-dim); display:block; margin-top:3px;">(NIST SP 800-38D)</span>
             </p>
           </div>
 
-          <div style="background:rgba(15,23,42,0.65); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:10px 14px;">
-            <div style="display:flex; align-items:center; gap:8px; margin-bottom:3px;">
-              <span style="font-size:17px;">🛡️</span>
-              <b style="font-size:15.5px; color:#ffffff;">${tr('Authenticated Integrity (GCM Mode):', 'التوثيق الصارم ونزاهة البيانات (GCM Mode):')}</b>
+          <div style="background:rgba(15,23,42,0.65); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:9px 12px;">
+            <div style="display:flex; align-items:center; gap:8px; margin-bottom:2px;">
+              <span style="font-size:16px;">🗝️</span>
+              <b style="font-size:14.5px; color:#ffffff;">${tr('Key Management (DEK / KEK):', 'إدارة المفاتيح وتشفير المغلف:')}</b>
             </div>
-            <p class="c-card-p" style="font-size:14px; line-height:1.5; margin:0; color:#f1f5f9;">
-              ${tr('128-bit authentication tag guarantees confidentiality and integrity; immediately rejects tampered or forged ciphertexts before decryption.',
-                   'وسام مصادقة 128 بت يضمن السرية التامة وسلامة المحتوى؛ ويرفض البيانات المتلاعب بها فوراً قبل محاولة فك التشفير.')}
+            <p class="c-card-p" style="font-size:13.5px; line-height:1.5; margin:0; color:#f1f5f9;">
+              ${tr('A dedicated DEK encrypts each scan\'s data and is stored in the database wrapped by a KEK. The KEK is managed in a protected secret store separate from the database, with restricted access and no plaintext copies in the application database or logs.',
+                   'يُستخدم DEK مستقل لكل فحص لتشفير بياناته، ويُحفظ في قاعدة البيانات بعد حمايته باستخدام KEK. يُدار KEK في مخزن أسرار محمي منفصل عن قاعدة البيانات، مع تقييد الوصول إليه وعدم نسخه بصيغة صريحة إلى قاعدة بيانات التطبيق أو سجلاته.')}
             </p>
           </div>
 
-          <div style="background:rgba(15,23,42,0.65); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:10px 14px;">
-            <div style="display:flex; align-items:center; gap:8px; margin-bottom:3px;">
-              <span style="font-size:17px;">📁</span>
-              <b style="font-size:15.5px; color:#ffffff;">${tr('Comprehensive Protection Scope:', 'نطاق الأصول المحمية أثناء التخزين:')}</b>
+          <div style="background:rgba(15,23,42,0.65); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:9px 12px;">
+            <div style="display:flex; align-items:center; gap:8px; margin-bottom:2px;">
+              <span style="font-size:16px;">📁</span>
+              <b style="font-size:14.5px; color:#ffffff;">${tr('Protected Data Scope:', 'نطاق البيانات المحمية بالتشفير:')}</b>
             </div>
-            <p class="c-card-p" style="font-size:14px; line-height:1.5; margin:0; color:#f1f5f9;">
-              ${tr('Secures retained raw tool outputs, generated reports, and sensitive database columns (target_enc, title_enc, description_enc).',
-                   'حماية المخرجات الخام المخزنة، ملفات التقارير الصادرة، والأعمدة الحساسة في قاعدة البيانات (الهدف، عنوان ووصف الثغرة).')}
+            <p class="c-card-p" style="font-size:13.5px; line-height:1.5; margin:0; color:#f1f5f9;">
+              ${tr('Retained raw tool outputs, generated technical and executive report files, and sensitive database columns (target_enc, title_enc, description_enc).',
+                   'المخرجات الخام المخزنة في نظام الملفات، ملفات التقارير الفنية والتنفيذية الناتجة، والأعمدة الحساسة في قاعدة البيانات (الهدف، عنوان ووصف نتيجة الفحص).')}
             </p>
           </div>
         </div>
       `, 'c-card')}
 
       ${A(1, `
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; padding-bottom:8px; border-bottom:1px solid rgba(56,189,248,0.25);">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; padding-bottom:6px; border-bottom:1px solid rgba(56,189,248,0.25);">
           <div style="display:flex; align-items:center; gap:8px;">
-            <span style="font-size:24px; color:var(--blue);">🐳</span>
-            <h3 class="c-card-h" style="color:var(--blue); font-size:19px; margin:0;">
-              ${tr('Execution Isolation via Docker Sandboxing', 'عزل بيئة التنفيذ والأدوات بحاويات Docker')}
+            <span style="font-size:22px; color:var(--blue);">🐳</span>
+            <h3 class="c-card-h" style="color:var(--blue); font-size:18px; margin:0;">
+              ${tr('Execution Isolation & Container Controls', 'عزل بيئة التنفيذ وضوابط الحاويات')}
             </h3>
           </div>
-          <span class="status-badge badge-done" style="font-size:13px; padding:3px 10px;">
-            ${tr('Runtime Sandbox', 'عزل بيئة التشغيل')}
+          <span class="status-badge badge-done" style="font-size:12px; padding:2px 8px;">
+            ${tr('Docker Sandboxing', 'عزل Docker')}
           </span>
         </div>
 
-        <div style="display:flex; flex-direction:column; gap:8px;">
-          <div style="background:rgba(15,23,42,0.65); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:10px 14px;">
-            <div style="display:flex; align-items:center; gap:8px; margin-bottom:3px;">
-              <span style="font-size:17px;">📦</span>
-              <b style="font-size:15.5px; color:#ffffff;">${tr('Core Defense-in-Depth Sandbox:', 'عزل كامل لكافة أدوات الفحص الست:')}</b>
+        <div style="display:flex; flex-direction:column; gap:7px;">
+          <div style="background:rgba(15,23,42,0.65); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:9px 12px;">
+            <div style="display:flex; align-items:center; gap:8px; margin-bottom:2px;">
+              <span style="font-size:16px;">📦</span>
+              <b style="font-size:14.5px; color:#ffffff;">${tr('Tool Containment in Docker:', 'تشغيل الأدوات داخل بيئة الحاويات:')}</b>
             </div>
-            <p class="c-card-p" style="font-size:14px; line-height:1.5; margin:0; color:#f1f5f9;">
-              ${tr('All 6 security tools (Subfinder, Naabu, httpx, Kiterunner, Nuclei, Wapiti) execute inside independent containerized sandboxes.',
-                   'تشغيل جميع أدوات الفحص الست داخل حاويات Docker معزولة ومستقلة تماماً لمنع أي تداخل بين الأدوات والخادم.')}
+            <p class="c-card-p" style="font-size:13.5px; line-height:1.5; margin:0; color:#f1f5f9;">
+              ${tr('The design runs the 6 security tools inside Docker containers with dropped privileges, non-root users, and isolated runtime environments.',
+                   'يعتمد التصميم على تشغيل أدوات الفحص الست داخل حاويات Docker بصلاحيات مقلصة ومستخدم غير جذري وبيئات تشغيل معزولة للحد من التداخل.')}
             </p>
           </div>
 
-          <div style="background:rgba(15,23,42,0.65); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:10px 14px;">
-            <div style="display:flex; align-items:center; gap:8px; margin-bottom:3px;">
-              <span style="font-size:17px;">🧱</span>
-              <b style="font-size:15.5px; color:#ffffff;">${tr('Host OS Shield & Non-Root Execution:', 'حماية نظام التشغيل والتشغيل غير الجذري:')}</b>
+          <div style="background:rgba(15,23,42,0.65); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:9px 12px;">
+            <div style="display:flex; align-items:center; gap:8px; margin-bottom:2px;">
+              <span style="font-size:16px;">🧱</span>
+              <b style="font-size:14.5px; color:#ffffff;">${tr('Host Protection & Privilege Reduction:', 'حماية الخادم وتقليص الصلاحيات:')}</b>
             </div>
-            <p class="c-card-p" style="font-size:14px; line-height:1.5; margin:0; color:#f1f5f9;">
-              ${tr('Unprivileged non-root execution prevents command injection, scanner vulnerabilities, or malicious targets from escaping to the host.',
-                   'تشغيل بصلاحيات غير جذرية يمنع استغلال أوامر النظام أو ثغرات الأدوات أو الردود الخبيثة من النفاذ للسيرفر المضيف.')}
+            <p class="c-card-p" style="font-size:13.5px; line-height:1.5; margin:0; color:#f1f5f9;">
+              ${tr('Non-root execution helps reduce the blast radius if a tool or parser is compromised, though strict input validation remains essential to prevent command injection.',
+                   'يساعد التشغيل دون صلاحيات جذرية في تقليص أثر استغلال الأدوات أو مخرجات الفحص، مع بقاء التحقق الصارم من المدخلات ضرورياً لمنع حقن الأوامر.')}
             </p>
           </div>
 
-          <div style="background:rgba(15,23,42,0.65); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:10px 14px;">
-            <div style="display:flex; align-items:center; gap:8px; margin-bottom:3px;">
-              <span style="font-size:17px;">⚙️</span>
-              <b style="font-size:15.5px; color:#ffffff;">${tr('Strict Resource Quotas (Anti-DoS):', 'تقييد الموارد وحصص المعالجة (Anti-DoS):')}</b>
+          <div style="background:rgba(15,23,42,0.65); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:9px 12px;">
+            <div style="display:flex; align-items:center; gap:8px; margin-bottom:2px;">
+              <span style="font-size:16px;">⚙️</span>
+              <b style="font-size:14.5px; color:#ffffff;">${tr('Resource Limits & Execution Controls:', 'حدود الموارد وضوابط التنفيذ:')}</b>
             </div>
-            <p class="c-card-p" style="font-size:14px; line-height:1.5; margin:0; color:#f1f5f9;">
-              ${tr('Hard CPU and memory limits per container prevent aggressive scanning workloads from exhausting host server infrastructure.',
-                   'تحديد سقوف صارمة للذاكرة والمعالج لكل حاوية لمنع استنزاف موارد الخادم وحماية المنصة من هجمات حجب الخدمة.')}
+            <p class="c-card-p" style="font-size:13.5px; line-height:1.5; margin:0; color:#f1f5f9;">
+              ${tr('Per-container memory and CPU limits help reduce the risk of host resource exhaustion, alongside execution timeouts and scan cancellation.',
+                   'تُحدَّد حدود الذاكرة وحصص المعالج لكل حاوية لتقليل مخاطر استنزاف موارد الخادم، إلى جانب المهل الزمنية وإمكانية إلغاء الفحص.')}
+              <span style="font-size:11px; color:var(--text-dim); display:block; margin-top:3px;">(Docker Documentation)</span>
             </p>
           </div>
         </div>
       `, 'c-card c-blue')}
     </div>
 
-    <div class="stat-box" style="margin-top:2px; padding:10px 18px; border-color:var(--teal); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px;">
-      <div style="display:flex; align-items:center; gap:12px; flex:1; min-width:300px;">
-        <span style="font-size:26px;">🛡️</span>
-        <div class="stat-txt" style="font-size:14.5px; line-height:1.5; color:#f8fafc;">
-          <b style="font-size:15px; color:#ffffff;">${tr('Multi-Layered Defense-in-Depth Model:', 'نموذج الدفاع في العمق المتكامل:')}</b>
-          ${tr('Synergy between AES-256-GCM data at rest encryption and runtime Docker sandboxing guarantees both data confidentiality and host platform resilience.',
-               'التكامل بين تشفير البيانات المخزنة بـ AES-256-GCM والعزل الصارم بحاويات Docker يحقق حماية مزدوجة للبيانات ولبيئة التشغيل معاً.')}
+    <div class="stat-box" style="margin-top:2px; padding:8px 16px; border-color:var(--teal); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px;">
+      <div style="display:flex; align-items:center; gap:10px; flex:1; min-width:300px;">
+        <span style="font-size:22px;">ℹ️</span>
+        <div class="stat-txt" style="font-size:13.5px; line-height:1.45; color:#f8fafc;">
+          <b style="color:var(--teal);">${tr('Trust & Privacy Boundary:', 'حدود الثقة والخصوصية:')}</b>
+          ${tr('Platform admin access is restricted at the application level; this design does not provide a zero-knowledge guarantee against an operator with unrestricted host or infrastructure access.',
+               'تقتصر قيود وصول مدير المنصة على مستوى التطبيق؛ ولا يوفر هذا التصميم ضمانة المعرفة الصفرية (Zero-Knowledge) في مواجهة مشغل يمتلك وصولاً كاملاً إلى الخادم المضيف أو البنية التحتية.')}
         </div>
       </div>
-      <div style="display:flex; gap:8px; flex-shrink:0;">
-        <span class="status-badge badge-done" style="font-size:13px; padding:4px 12px;">🔐 ${tr('Confidentiality: AES-256-GCM', 'السرية: AES-256-GCM')}</span>
-        <span class="status-badge badge-done" style="font-size:13px; padding:4px 12px;">🐳 ${tr('Containment: Docker Sandbox', 'العزل: حاويات Docker')}</span>
+      <div style="display:flex; gap:6px; flex-shrink:0;">
+        <span class="status-badge badge-done" style="font-size:12px; padding:3px 10px;">🔐 ${tr('Data at Rest', 'بيانات التخزين')}</span>
+        <span class="status-badge badge-done" style="font-size:12px; padding:3px 10px;">🐳 ${tr('Container Sandbox', 'عزل الحاويات')}</span>
       </div>
     </div>
   </div>`
 );
 
-// 16. Testing Progress & Verification (الشريحة 16: خطة الاختبارات وسيناريوهاتها)
+// 16. Threat Model & Architectural Controls (الشريحة 16: نموذج التهديدات وحدود الثقة)
 addSlide(
-  ['Slide 16: Testing Verification', 'الشريحة 16: خطة وتقدم الاختبارات'],
+  ['Slide 16: Threat Model', 'الشريحة 16: نموذج التهديدات'],
+  ['YemScan Platform Threat Model & Design Controls', 'نموذج التهديدات لمنصة YemScan: حدود الثقة والضوابط المعمارية'],
+  ['Threat Model', 'نموذج التهديدات'], 'tag-sec',
+  ['Preliminary threat model and architectural design controls; effectiveness remains subject to empirical verification during testing.',
+   'نموذج تهديدات أولي وضوابط معمارية مصممة للحد من المخاطر؛ وتخضع فاعليتها للتحقق التجريبي أثناء مرحلة الاختبار.'],
+  () => {
+    const threats = [
+      [
+        'User Data & Findings', 'بيانات المستخدمين ونتائج الفحص',
+        'Cross-user unauthorized access (IDOR / BOLA) via API.', 'وصول مستخدم غير مصرح به لبيانات أو نتائج فحص مستخدم آخر عبر واجهة API.',
+        'Authentication, RBAC, and per-operation resource ownership validation in Application Layer.', 'مصادقة مركزية، تحكم بالوصول مبني على الأدوار (RBAC)، وتحقق صارم من ملكية المورد لكل طلب في طبقة التطبيق.'
+      ],
+      [
+        'Stored Data & Files', 'المخرجات المخزنة وقاعدة البيانات',
+        'Exposure or tampering at rest if storage media is compromised.', 'تسريب البيانات الحساسة أو التلاعب بها أثناء التخزين عند الوصول غير المصرح لوسائط التخزين.',
+        'Data encryption using AES-256-GCM, 128-bit authentication tag verification, dedicated DEK per scan, and KEK managed separately from DB.', 'تشفير البيانات باستخدام AES-256-GCM، التحقق من وسم المصادقة 128 بت، مفتاح DEK مستقل لكل فحص، وحفظ KEK في مستودع أسرار منفصل عن قاعدة البيانات.'
+      ],
+      [
+        'Worker & Host Execution', 'مشغل المهام وبيئة الخادم المضيف',
+        'Malicious target payloads, out-of-scope scanning, or tool exploit attempting host escape.', 'استغلال مخرجات الهدف لاختراق أداة الفحص، الفحص خارج النطاق المصرح، أو محاولة كسر الحاوية.',
+        'Strict target/scope validation, executing commands without shell (exec array), non-root container user, and dropped capabilities.', 'تحقق صارم من النطاق والمدخلات، تشغيل الأوامر كقائمة معاملات دون غلاف أوامر، حاويات بمستخدم غير جذري وصلاحيات مقلصة.'
+      ],
+      [
+        'Platform Resources', 'موارد المنصة والحوسبة',
+        'Resource exhaustion from concurrent or hanging scans (internal DoS).', 'استنزاف المعالج والذاكرة بفحوصات متزامنة مكثفة أو أدوات فحص عالقة (حجب خدمة داخلي).',
+        'Container CPU/memory quotas, concurrency limits, per-tool execution timeouts, and cancellation hooks.', 'حصص صارمة للمعالج والذاكرة للحاويات، قيود على عدد الفحوصات المتزامنة، مهلات زمنية لكل أداة، وإمكانية إلغاء الفحص.'
+      ],
+      [
+        'AI Data & Reporting', 'بيانات الذكاء الاصطناعي والتقارير',
+        'Secret leakage in prompt payloads, or untrusted output manipulation.', 'تسريب أسرار أو بيانات حساسة في طلبات الاستدعاء، أو تأثير بيانات غير موثوقة على ردود الذكاء.',
+        'Data minimization, automated secret redaction before transit, HTTPS transport, validate response schema; treat scan content as untrusted data, separate from instructions, and validate conclusions and references before accepting report content.', 'تقليل البيانات، تنقيح الأسرار والمفاتيح قبل الإرسال، نقل مشفر عبر HTTPS، التحقق من هيكل ردود الذكاء؛ ومعاملة محتوى الفحص كبيانات غير موثوقة منفصلة عن التعليمات، والتحقق من الاستنتاجات والمراجع قبل قبول محتوى التقرير.'
+      ]
+    ];
+
+    return `<div style="display:flex; flex-direction:column; gap:9px; width:100%;">
+      <div style="background:rgba(20,184,166,0.08); border:1px solid rgba(20,184,166,0.3); border-radius:8px; padding:6px 14px; font-size:13px; color:#f1f5f9; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px;">
+        <div style="display:flex; align-items:center; gap:8px;">
+          <span style="color:var(--teal); font-size:16px;">🛡️</span>
+          <span><b>${tr('Trust Boundaries:', 'حدود الثقة المعمارية:')}</b> <code>Browser ↔ FastAPI Backend</code> | <code>App ↔ Worker</code> | <code>App ↔ Storage & Keys</code> | <code>Platform ↔ External AI</code></span>
+        </div>
+        <span class="status-badge badge-sec" style="font-size:11.5px; padding:2px 8px;">${tr('Design Controls', 'ضوابط التصميم')}</span>
+      </div>
+
+      <div style="overflow-x:auto;">
+        <table class="comp-table" style="font-size:13px;">
+          <thead>
+            <tr>
+              <th style="width:24%;">${tr('Asset & Surface', 'الأصل ونطاق التهديد')}</th>
+              <th style="width:36%;">${tr('Identified Threat', 'التهديد المحتمل')}</th>
+              <th style="width:40%;">${tr('Architectural Control', 'الضابط المعماري المصمم')}</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${threats.map(t => `
+              <tr>
+                <td style="font-weight:700; color:#e2e8f0; padding:6px 10px;">${tr(t[0], t[1])}</td>
+                <td style="color:#cbd5e1; padding:6px 10px;">${tr(t[2], t[3])}</td>
+                <td style="color:var(--teal); padding:6px 10px; font-size:12.5px; line-height:1.45;">${tr(t[4], t[5])}</td>
+              </tr>
+            `).join('')}
+          </tbody>
+        </table>
+      </div>
+
+      <div style="background:rgba(15,23,42,0.7); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:6px 14px; font-size:12.5px; color:var(--amber); display:flex; align-items:center; gap:8px;">
+        <span style="font-size:15px;">⚠️</span>
+        <span><b>${tr('AI Privacy Boundary Note:', 'تنبيه خصوصية خدمة الذكاء الاصطناعي:')}</b> ${tr('The external AI model processes data submitted in prompt payloads; HTTPS protects transit only. Data minimization and secret redaction prior to transit are critical pre-flight controls.',
+          'تعالج خدمة الذكاء الاصطناعي الخارجية البيانات المرفوعة في طلب الاستدعاء؛ ويقتصر تشفير HTTPS على حماية النقل فقط. لذا يعد تقليل البيانات وتنقيح الأسرار قبل الإرسال ضابطاً حاسماً لحماية الخصوصية.')} <span style="font-size:11px; color:var(--amber); opacity:0.8;">(OWASP LLM Top 10)</span></span>
+      </div>
+    </div>`;
+  }
+);
+
+// 17. Testing Progress & Verification (الشريحة 17: خطة الاختبارات وسيناريوهاتها)
+addSlide(
+  ['Slide 17: Testing Verification', 'الشريحة 17: خطة وتقدم الاختبارات'],
   ['Testing Verification: Controlled Test Scenarios', 'خطة وتقدم الاختبارات: سيناريوهات التحقق المخبري'],
   ['Testing Plan', 'خطة الاختبارات'], 'tag-sec',
   ['Focusing on selected test cases with expected vs actual behavior, without unlinked success numbers.',
-   'التركيز على سيناريوهات اختبار محددة تقارن النتيجة المتوقعة بالنتيجة الفعلية، دون أرقام نجاح غير مقاسة.']
-  , () => {
+   'التركيز على سيناريوهات اختبار محددة تقارن النتيجة المتوقعة بالنتيجة الفعلية، دون أرقام نجاح غير مقاسة.'],
+  () => {
     const tests = [
-      ['API Authentication & Ownership', 'المصادقة وفحص الملكية', 'Cross-tenant scan retrieval returns HTTP 403 Forbidden.', 'Verified in clean PostgreSQL environment', 'badge-done'],
-      ['Worker Sandbox Isolation', 'عزل الحاويات في Docker', 'Worker processes terminate cleanly within assigned CPU/memory bounds.', 'Verified in local environment', 'badge-done'],
-      ['Data Normalization & Dedup', 'توحيد المخرجات وإلغاء التكرار', 'Mock scanner outputs parse into single consolidated finding with provenance.', 'Sample parser tests passed', 'badge-done'],
-      ['Cryptographic Tag Verification', 'التحقق من وسوم التشفير', 'Tampered ciphertext or invalid nonce is rejected before decryption.', 'Verified via Python cryptography tests', 'badge-done'],
-      ['AI Prompt Sanitization', 'تنقية مدخلات الذكاء', 'Data submitted over HTTPS omits raw secrets and unneeded tokens.', 'In Progress (Sprints 6–7)', 'badge-wip']
+      ['API Authentication & Ownership', 'المصادقة وفحص الملكية',
+       'Cross-tenant scan retrieval returns HTTP 403 Forbidden.',
+       'محاولة استرجاع فحوصات مستخدم آخر تُرجع خطأ 403 Forbidden.',
+       'Verified in clean PostgreSQL environment', 'تم التحقق في بيئة PostgreSQL نظيفة', 'badge-done'],
+      ['Worker Sandbox Isolation', 'عزل الحاويات في Docker',
+       'Worker processes terminate cleanly within assigned CPU/memory bounds.',
+       'عمليات الفحص تنتهي بانتظام ضمن حدود المعالج والذاكرة المخصصة.',
+       'Verified in local environment', 'تم التحقق في البيئة المحلية', 'badge-done'],
+      ['Data Normalization & Dedup', 'توحيد المخرجات وإلغاء التكرار',
+       'Mock scanner outputs parse into single consolidated finding with provenance.',
+       'تحويل مخرجات الفحص التجريبية إلى نتيجة موحدة مع حفظ أدلة الإثبات.',
+       'Sample parser tests passed', 'اجتازت اختبارات عينة المحللات', 'badge-done'],
+      ['Cryptographic Tag Verification', 'التحقق من وسم المصادقة',
+       'Tampered ciphertext or invalid nonce is rejected upon verification failure without use.',
+       'رفض النص المشفر المتلاعب به أو الـ Nonce غير الصالح عند فشل التحقق دون استخدامه.',
+       'Verified via Python cryptography tests', 'تم التحقق عبر اختبارات مكتبة التشفير', 'badge-done'],
+      ['Data Minimization & Secret Redaction', 'تقليل البيانات وتنقيح الأسرار',
+       'Data submitted over HTTPS omits raw secrets, credentials, and unneeded tokens.',
+       'البيانات المرسلة عبر HTTPS تستبعد المفاتيح السرية وبيانات الاعتماد والرموز غير الضرورية.',
+       'In Progress (Sprints 6–7)', 'قيد التنفيذ (السبرنتات 6–7)', 'badge-wip']
     ];
     return `<div class="c-col">
       <table class="comp-table">
         <thead>
           <tr>
-            <th>${tr('Test Scenario', 'سيناريو الاختبار')}</th>
-            <th>${tr('Expected Behavior / Criterion', 'السلوك المتوقع ومعيار النجاح')}</th>
-            <th class="center">${tr('Verification Outcome', 'النتيجة')}</th>
+            <th style="width:28%;">${tr('Test Scenario', 'سيناريو الاختبار')}</th>
+            <th style="width:44%;">${tr('Expected Behavior / Criterion', 'السلوك المتوقع ومعيار النجاح')}</th>
+            <th class="center" style="width:28%;">${tr('Verification Outcome', 'النتيجة')}</th>
           </tr>
         </thead>
         <tbody>
           ${tests.map(t => `
             <tr>
               <td><b>${tr(t[0], t[1])}</b></td>
-              <td>${t[2]}</td>
-              <td class="center"><span class="status-badge ${t[4]}">${t[3]}</span></td>
+              <td>${tr(t[2], t[3])}</td>
+              <td class="center"><span class="status-badge ${t[6]}">${tr(t[4], t[5])}</span></td>
             </tr>`).join('')}
         </tbody>
       </table>
@@ -1030,13 +1148,13 @@ addSlide(
   }
 );
 
-// 17. Preliminary Results & Technical Validation (الشريحة 17)
+// 18. Preliminary Results & Technical Validation (الشريحة 18)
 addSlide(
-  ['Slide 17: Preliminary Results', 'الشريحة 17: النتائج الأولية والتقييم'],
+  ['Slide 18: Preliminary Results', 'الشريحة 18: النتائج الأولية والتقييم'],
   ['Preliminary Results & Technical Validation', 'النتائج الأولية والتقييم الفني لمنصة YemScan'],
   ['Technical Validation', 'النتائج الأولية'], 'tag-sec',
-  ['Initial laboratory runs confirm automated handover feasibility, schema normalization, and deterministic grounding.',
-   'تؤكد التجارب الأولية جدوى التسليم الآلي بين الأدوات، توحيد البيانات، والربط بالمعايير القياسية.'],
+  ['Initial laboratory runs confirm automated handover feasibility, schema normalization, and pre-AI reference grounding.',
+   'تؤكد التجارب الأولية جدوى التسليم الآلي بين الأدوات، توحيد البيانات، والربط بالمعايير القياسية قبل استدعاء الذكاء.'],
   () => `<div class="c-grid-3">
     ${A(0, `<div class="c-card-ic">🔄</div>
       <h3 class="c-card-h">${tr('Automated Handover Feasibility', 'جدوى التسليم الآلي بين الأدوات')}</h3>
@@ -1049,15 +1167,15 @@ addSlide(
         'أثبتت الاختبارات الأولية للمحللات إمكانية دمج النتائج المتداخلة في جداول علائقية موحدة مع الحفاظ على أدلة الإثبات.')}</p>`, 'c-card c-blue')}
 
     ${A(2, `<div class="c-card-ic" style="color:var(--violet);">🏷️</div>
-      <h3 class="c-card-h" style="color:var(--violet);">${tr('Deterministic Reference Grounding', 'المصداقية عبر المرجعية المعتمدة')}</h3>
-      <p class="c-card-p">${tr('Explicit association with CVE and CWE catalogs before AI analysis provides factual technical grounding, avoiding AI score hallucination risks.',
-        'الربط الصريح والمسبق بالمعايير الدولية المعتمدة يثبت المرجعية التقنية ويمنع مخاطر هلوسة الذكاء في درجات الخطورة.')}</p>`, 'c-card c-violet')}
+      <h3 class="c-card-h" style="color:var(--violet);">${tr('Pre-AI Reference Grounding', 'ربط المراجع القياسية قبل استدعاء الذكاء')}</h3>
+      <p class="c-card-p">${tr('Rule-based pre-association with CVE identifiers and CWE classifications reduces reliance on the AI model for identifiers and severity scores; AI responses are validated against defined schemas to limit dependence on the model for conclusions.',
+        'الربط المسبق بالقواعد مع معرّفات CVE وتصنيفات CWE يقلل الاعتماد على الذكاء في استنتاج المعرّفات ودرجات الخطورة؛ ويتم التحقق من ردود الذكاء وفق قوالب مهيكلة للحد من الاعتماد على النموذج في الاستنتاج.')}</p>`, 'c-card c-violet')}
   </div>`
 );
 
-// 18. Technical Challenges & Mitigation (الشريحة 18)
+// 19. Technical Challenges & Mitigation (الشريحة 19)
 addSlide(
-  ['Slide 18: Challenges & Risks', 'الشريحة 18: التحديات والمخاطر التقنية'],
+  ['Slide 19: Challenges & Risks', 'الشريحة 19: التحديات والمخاطر التقنية'],
   ['Technical Challenges Encountered & Mitigation Strategies', 'التحديات والمخاطر التقنية التي واجهت الفريق وكيف تمت معالجتها'],
   ['Risk Management', 'إدارة المخاطر'], 'tag-prop',
   ['Separating potential risks from actual encountered problems, presenting root causes and verified mitigations.',
@@ -1066,34 +1184,46 @@ addSlide(
     const risks = [
       ['Inconsistent Tool Output Schemas', 'اختلاف تنسيق مخرجات الأدوات',
        'CLI scanners produce divergent JSON, plain text, and XML.',
-       'Built custom normalization adapter modules with provenance retention.', 'Resolved', 'badge-done'],
-      ['Long-Running Scan Execution', 'عمليات الفحص الطويلة',
-       'Port and vulnerability scanning may block web server threads.',
-       'Decoupled execution via asynchronous FastAPI workers with status tracking.', 'Resolved', 'badge-done'],
-      ['AI Hallucination & Token Costs', 'مخاطر هلوسة الذكاء وتكلفة الـ API',
-       'Large raw logs exceed context windows and risk inaccurate CVSS scoring.',
-       'Minimized submitted payload; strictly restricted AI to remediation explanation.', 'Resolved', 'badge-done'],
-      ['Cryptographic Key Management', 'تعقيدات إدارة وتشفير المفاتيح',
-       'High latency if encrypting every individual field separately.',
-       'Adopted envelope encryption (per-scan DEK) with memory caching during active jobs.', 'In Progress', 'badge-wip']
+       'أدوات الفحص تنتج مخرجات متباينة بصيغ JSON ونصوص عادية وXML.',
+       'Built custom normalization adapter modules with provenance retention.',
+       'تطوير وحدات مهايئة (Adapters) لتوحيد الصيغ مع الحفاظ على مصادر الإثبات.',
+       'Resolved', 'تم الحل', 'badge-done'],
+      ['Long-Running Scan Execution', 'عمليات الفحص طويلة الأمد',
+       'Port and vulnerability scanning may block HTTP request threads if executed synchronously.',
+       'فحص المنافذ والثغرات قد يعطل خيوط معالجة طلبات HTTP إذا نُفذ تزامناً داخل واجهة API.',
+       'Decoupled execution via an independent background worker with status tracking and cancellation hooks.',
+       'فصل التنفيذ عبر مشغل مهام خلفي مستقل عن خادم FastAPI، مع تتبع الحالة وإمكانية إلغاء الفحص.',
+       'Resolved', 'تم الحل', 'badge-done'],
+      ['AI Token Costs & Grounding', 'تكلفة الـ API وتثبيت مخرجات الذكاء',
+       'Submitting large raw logs risks exceeding context windows and unreliable severity rankings.',
+       'إرسال سجلات خام ضخمة يستهلك الرموز ويزيد احتمالية تقديم درجات خطورة غير دقيقة.',
+       'Minimized submitted payload and restricted AI to remediation explanation based on pre-enriched findings.',
+       'تقليل البيانات المرسلة وحصر دور الذكاء في تفسير المعالجة استناداً إلى نتائج تم إثراؤها مسبقاً.',
+       'Resolved', 'تم الحل', 'badge-done'],
+      ['Cryptographic Key Management Complexity', 'تعقيدات إدارة وتطبيق التشفير',
+       'Encrypting each record with an external key service creates network overhead and key exposure risks.',
+       'تشفير كل سجل باستدعاء خارجي للمفتاح يضيف عبئاً شبكياً ومخاطر كشف للمفاتيح.',
+       'Adopted envelope encryption (per-scan DEK protected by KEK) with temporary plaintext key caching in memory during active jobs.',
+       'اعتماد تشفير المغلف (مفتاح DEK مستقل لكل فحص محمي بـ KEK) مع إبقاء المفتاح مؤقتاً في الذاكرة أثناء تنفيذ المهمة فقط.',
+       'In Progress', 'قيد التنفيذ', 'badge-wip']
     ];
     return `<div class="c-col">
       <table class="comp-table">
         <thead>
           <tr>
-            <th>${tr('Challenge Encountered', 'التحدي التقني الفعلي')}</th>
-            <th>${tr('Root Cause', 'السبب')}</th>
-            <th>${tr('Action Taken / Mitigation', 'الإجراء المتخذ والمعالجة')}</th>
-            <th class="center">${tr('Status', 'الحالة')}</th>
+            <th style="width:24%;">${tr('Challenge Encountered', 'التحدي التقني الفعلي')}</th>
+            <th style="width:34%;">${tr('Root Cause', 'السبب الجذري')}</th>
+            <th style="width:30%;">${tr('Action Taken / Mitigation', 'الإجراء المتخذ والمعالجة')}</th>
+            <th class="center" style="width:12%;">${tr('Status', 'الحالة')}</th>
           </tr>
         </thead>
         <tbody>
           ${risks.map(r => `
             <tr>
               <td><b>${tr(r[0], r[1])}</b></td>
-              <td>${r[2]}</td>
-              <td>${r[3]}</td>
-              <td class="center"><span class="status-badge ${r[5]}">${r[4]}</span></td>
+              <td>${tr(r[2], r[3])}</td>
+              <td>${tr(r[4], r[5])}</td>
+              <td class="center"><span class="status-badge ${r[8]}">${tr(r[6], r[7])}</span></td>
             </tr>`).join('')}
         </tbody>
       </table>
@@ -1101,25 +1231,35 @@ addSlide(
   }
 );
 
-// 19. Updated Schedule / Gantt Chart (الشريحة 19: تصحيح التواريخ إلى أكتوبر 2026)
+// 20. Updated Schedule / Gantt Chart (الشريحة 20)
 addSlide(
-  ['Slide 19: Updated Schedule', 'الشريحة 19: الجدول الزمني المحدث'],
+  ['Slide 20: Updated Schedule', 'الشريحة 20: الجدول الزمني المحدث'],
   ['Updated Project Schedule & Milestone Roadmap', 'الجدول الزمني المحدث وخريطة المعالم الرئيسية (Milestones)'],
   ['Project Roadmap', 'الجدول الزمني'], 'tag-sec',
   ['Realistic timeline anchored to current review date (October 2026) through final graduation in mid-2027.',
    'جدول زمني واقعي يبدأ من تاريخ المناقشة الحالية (أكتوبر 2026) وحتى التخرج النهائي في منتصف 2027.'],
   () => {
     const milestones = [
-      ['Phase 1: Foundation & Discovery (Sprints 1–3)', 'المرحلة 1: التأسيس والاستكشاف', 'Oct 2026', 'Current Milestone (Midterm Defense)', 'badge-done',
-       'FastAPI backend, PostgreSQL migrations, worker jobs, AES-256-GCM encryption, Subfinder/Naabu/httpx.'],
-      ['Phase 2: API & Vulnerability Scanners (Sprints 4–5)', 'المرحلة 2: فحص الـ APIs والثغرات', 'Nov – Dec 2026', 'Planned', 'badge-plan',
-       'Kiterunner API routing and Nuclei YAML & Wapiti dynamic scanning container integration.'],
-      ['Phase 3: Reference Enrichment & AI (Sprints 6–7)', 'المرحلة 3: الإثراء المرجعي والذكاء', 'Jan – Feb 2027', 'Planned', 'badge-plan',
-       'Deterministic CVE/CWE/CVSS mapping catalogs and Gemini 3.8 Flash remediation prompt pipeline.'],
-      ['Phase 4: Reports & Frontend Interface (Sprints 8–9)', 'المرحلة 4: التقارير ولوحة التحكم', 'Mar – Apr 2027', 'Planned', 'badge-plan',
-       'Encrypted PDF dual-tier report engine and React/TypeScript interactive dashboard.'],
-      ['Phase 5: Laboratory Benchmarking & Defense (Sprint 10)', 'المرحلة 5: التقييم المخبري والمناقشة', 'May – Jun 2027', 'Planned', 'badge-plan',
-       'Controlled lab testing against benchmark targets, thesis completion, and final graduation defense.']
+      ['Phase 1: Foundation & Discovery (Sprints 1–3)', 'المرحلة 1: التأسيس والاستكشاف (السبرنتات 1–3)', 'Oct 2026',
+       'Current Milestone (Midterm Defense)', 'المعلم الحالي (المناقشة النصفية)', 'badge-done',
+       'FastAPI backend, PostgreSQL migrations, worker jobs, AES-256-GCM encryption, Subfinder/Naabu/httpx.',
+       'خلفية FastAPI، ترحيلات PostgreSQL، مهام المشغل، تشفير AES-256-GCM، ودمج Subfinder وNaabu وhttpx.'],
+      ['Phase 2: API & Vulnerability Scanners (Sprints 4–5)', 'المرحلة 2: فحص الـ APIs والثغرات (السبرنتات 4–5)', 'Nov – Dec 2026',
+       'Planned', 'مخطط', 'badge-plan',
+       'Kiterunner for API route discovery; Nuclei YAML templates and Wapiti dynamic web probing in Docker containers.',
+       'أداة Kiterunner لاكتشاف مسارات واجهات API؛ وقوالب Nuclei وفحص Wapiti الديناميكي داخل حاويات Docker.'],
+      ['Phase 3: Reference Enrichment & AI (Sprints 6–7)', 'المرحلة 3: الإثراء المرجعي والذكاء (السبرنتات 6–7)', 'Jan – Feb 2027',
+       'Planned', 'مخطط', 'badge-plan',
+       'Associating findings with CVE identifiers, CWE classifications, and OWASP Top 10 categories, utilizing available CVSS severity scores; Gemini 3.8 Flash remediation prompt pipeline.',
+       'ربط النتائج بمعرّفات CVE وتصنيفات CWE وفئات OWASP Top 10 والاستفادة من درجات CVSS المتاحة؛ ومسار استدعاء Gemini 3.8 Flash لتفسير المعالجة.'],
+      ['Phase 4: Reports & Frontend Interface (Sprints 8–9)', 'المرحلة 4: التقارير ولوحة التحكم (السبرنتات 8–9)', 'Mar – Apr 2027',
+       'Planned', 'مخطط', 'badge-plan',
+       'Encrypted PDF dual-tier report engine and React/TypeScript interactive dashboard.',
+       'محرك توليد التقارير المزدوجة المشفرة ولوحة التحكم التفاعلية بتقنيتي React وTypeScript.'],
+      ['Phase 5: Laboratory Benchmarking & Defense (Sprint 10)', 'المرحلة 5: التقييم المخبري والمناقشة (السبرنت 10)', 'May – Jun 2027',
+       'Planned', 'مخطط', 'badge-plan',
+       'Controlled lab testing against benchmark targets, thesis completion, and final graduation defense.',
+       'اختبارات مخبرية منضبطة على أهداف معيارية، استكمال كتابة الأطروحة، ومناقشة التخرج النهائية.']
     ];
     return `<div class="c-col" style="gap:9px;">
       ${milestones.map((m, idx) => A(idx, `
@@ -1128,16 +1268,16 @@ addSlide(
             <span style="font-family:var(--font-mono); font-size:13px; color:var(--blue); font-weight:700;">${m[2]}</span>
             <b style="font-size:15.5px; color:#ffffff;">${tr(m[0], m[1])}</b>
           </div>
-          <span class="status-badge ${m[4]}">${m[3]}</span>
+          <span class="status-badge ${m[5]}">${tr(m[3], m[4])}</span>
         </div>
-        <p class="c-card-p" style="font-size:13.5px; line-height:1.5; margin:0;">${m[5]}</p>`, 'c-card')).join('')}
+        <p class="c-card-p" style="font-size:13.5px; line-height:1.5; margin:0;">${tr(m[6], m[7])}</p>`, 'c-card')).join('')}
     </div>`;
   }
 );
 
-// 20. Conclusion / Q&A (الشريحة 20)
+// 21. Conclusion / Q&A (الشريحة 21)
 addSlide(
-  ['Slide 20: Conclusion', 'الشريحة 20: الخاتمة والخطوات التالية'],
+  ['Slide 21: Conclusion', 'الشريحة 21: الخاتمة والخطوات التالية'],
   ['Conclusion, Project Status & Examination Q&A', 'الخاتمة: خلاصة التقدم والجاهزية لمشروع (2) وأسئلة اللجنة'],
   ['Conclusion & Q&A', 'الخاتمة والمناقشة'], 'tag-sec',
   ['Midterm defense proves sound methodology, clear engineering progress, and a solid roadmap for completion.',
@@ -1147,17 +1287,17 @@ addSlide(
       YemScan
     </div>
     <div style="font-size:16px; color:#e2e8f0; max-width:920px; line-height:1.55;">
-      ${tr('Midterm Evaluation Summary: The team has established a rigorous academic and theoretical foundation, designed the 5-layer modular architecture, built the containerized worker and encrypted storage baseline (Sprints 1–3), and formulated a clear roadmap for completion in Graduation Project (2).',
-           'خلاصة التقييم النصفي: نجح الفريق في إرساء الأساس النظري والأكاديمي الرصين، وتصميم معمارية النظام ذات الـ 5 طبقات، وبناء بيئة تشغيل العمال المستقلين والتخزين المشفر (السبرنتات 1-3)، وصياغة خطة عمل واضحة لاستكمال المشروع في الفصل القادم.')}
+      ${tr('Midterm Evaluation Summary: The team has established a rigorous academic and theoretical foundation, designed the modular layered architecture integrating an external AI service, built the containerized worker and encrypted storage baseline (Sprints 1–3), and formulated a clear roadmap for completion in Graduation Project (2).',
+           'خلاصة التقييم النصفي: نجح الفريق في إرساء الأساس النظري والأكاديمي الرصين، وتصميم معمارية النظام المعيارية ذات الطبقات المتكاملة مع خدمة ذكاء اصطناعي خارجية، وبناء بيئة تشغيل العمال المستقلين والتخزين المشفر (السبرنتات 1-3)، وصياغة خطة عمل واضحة لاستكمال المشروع في الفصل القادم.')}
     </div>
 
     <div class="c-grid-3" style="max-width:1100px; text-align:start;">
       ${A(0, `<h4 class="c-card-h" style="color:var(--teal); font-size:16px;">1. ${tr('Methodological Rigor', 'انضباط المنهجية')}</h4>
         <p class="c-card-p" style="font-size:13.5px; line-height:1.5;">${tr('Agile development with measurable engineering increments, verifiable technical criteria, and traceable progress.', 'تطبيق عملي لمنهجية Agile عبر زيادات برمجية هندسية قابلة للقياس ومعايير قبول فنية محددة.')}</p>`, 'c-card')}
       ${A(1, `<h4 class="c-card-h" style="color:var(--blue); font-size:16px;">2. ${tr('Architectural Feasibility', 'جدوى المعمارية')}</h4>
-        <p class="c-card-p" style="font-size:13.5px; line-height:1.5;">${tr('Modular 5-layer design with Docker worker isolation and deterministic security reference grounding.', 'معمارية معيارية من 5 طبقات مع عزل بيئات التشغيل وتثبيت المرجعية القياسية.')}</p>`, 'c-card c-blue')}
+        <p class="c-card-p" style="font-size:13.5px; line-height:1.5;">${tr('Modular layered design with Docker worker isolation, rule-based security reference grounding, and external AI service integration.', 'معمارية معيارية بطبقات مع عزل بيئات التشغيل بحاويات Docker، ربط المراجع القياسية وفق معايير مطابقة محددة، والتكامل مع خدمة ذكاء اصطناعي خارجية.')}</p>`, 'c-card c-blue')}
       ${A(2, `<h4 class="c-card-h" style="color:var(--violet); font-size:16px;">3. ${tr('Security & Data Protection', 'الأمان وحماية البيانات')}</h4>
-        <p class="c-card-p" style="font-size:13.5px; line-height:1.5;">${tr('AES-256-GCM envelope encryption protecting stored findings and reports at rest.', 'تشفير المغلف AES-256-GCM لحماية نتائج وتقارير الفحص أثناء التخزين (Data at Rest).')}</p>`, 'c-card c-violet')}
+        <p class="c-card-p" style="font-size:13.5px; line-height:1.5;">${tr('Data encryption using AES-256-GCM, with envelope encryption for key protection, securing stored findings and reports at rest.', 'تشفير البيانات باستخدام AES-256-GCM، وحماية مفاتيحها باستخدام تشفير المغلف، لحماية نتائج وتقارير الفحص أثناء التخزين (Data at Rest).')}</p>`, 'c-card c-violet')}
     </div>
 
     <div class="stat-box" style="margin-top:2px; border-color:var(--teal); padding:10px 24px;">
@@ -1236,7 +1376,7 @@ function renderAllSlides(){
        <div class="help-item"><kbd>Home</kbd> <span>الشريحة الأولى</span></div>
        <div class="help-item"><kbd>End</kbd> <span>الشريحة الأخيرة</span></div>
        <div class="help-item"><kbd>F</kbd> <span>ملء الشاشة</span></div>
-       <div class="help-item"><kbd>O</kbd> <span>فهرس الشرائح (20 شريحة)</span></div>
+       <div class="help-item"><kbd>O</kbd> <span>فهرس الشرائح (21 شريحة)</span></div>
        <div class="help-item"><kbd>L</kbd> <span>تبديل اللغة (EN / AR)</span></div>
        <div class="help-item"><kbd>M</kbd> <span>تقليل الحركة</span></div>
        <div class="help-item"><kbd>Esc</kbd> <span>إغلاق النوافذ</span></div>
@@ -1246,7 +1386,7 @@ function renderAllSlides(){
        <div class="help-item"><kbd>Home</kbd> <span>First Slide</span></div>
        <div class="help-item"><kbd>End</kbd> <span>Last Slide</span></div>
        <div class="help-item"><kbd>F</kbd> <span>Toggle Fullscreen</span></div>
-       <div class="help-item"><kbd>O</kbd> <span>Toggle Overview (20 Slides)</span></div>
+       <div class="help-item"><kbd>O</kbd> <span>Toggle Overview (21 Slides)</span></div>
        <div class="help-item"><kbd>L</kbd> <span>Switch Language</span></div>
        <div class="help-item"><kbd>M</kbd> <span>Reduce Motion</span></div>
        <div class="help-item"><kbd>Esc</kbd> <span>Close Modals</span></div>
@@ -1313,10 +1453,10 @@ const simDefs = {
        '[المرحلة 2] فحص الثغرات: تسليم نقاط النهاية المحققة لـ Nuclei لفحص القوالب وWapiti للفحص الديناميكي لتطبيقات الويب.'],
       ['[STEP 3] Output Processing: Raw scanner outputs ingested; normalization adapter unifies heterogeneous schemas into deduplicated PostgreSQL records.',
        '[المرحلة 3] معالجة المخرجات: استيعاب النتائج الخام وتوحيد التنسيقات وإلغاء التكرار في جداول علائقية بقاعدة البيانات مع إثبات المصدر.'],
-      ['[STEP 4] Deterministic Enrichment: Associating normalized findings with authoritative CVE, CWE, CVSS, and OWASP Top 10 security references.',
-       '[المرحلة 4] الإثراء المرجعي الصريح: ربط الثغرات الموحدة بمراجع ومصنفات الأمان القياسية المعتمدة CVE وCWE وCVSS وOWASP Top 10.'],
-      ['[STEP 5] AI-Assisted Interpretation: Context-grounded finding sent over HTTPS to Gemini 3.8 Flash for root cause remediation guidance.',
-       '[المرحلة 5] التحليل الذكي: إرسال السياق المصرح به عبر HTTPS لنموذج Gemini لتوليد إرشادات المعالجة الدقيقة دون مخاطر هلوسة.'],
+      ['[STEP 4] Reference Enrichment: Associating normalized findings with authoritative CVE, CWE, CVSS, and OWASP Top 10 security references.',
+       '[المرحلة 4] الإثراء المرجعي الصريح: ربط النتائج الموحدة بالقواعد بمراجع الأمان القياسية المعتمدة CVE وCWE وCVSS وOWASP Top 10.'],
+      ['[STEP 5] AI-Assisted Interpretation: Context-grounded finding sent over HTTPS to Gemini 3.8 Flash for root cause remediation guidance with schema validation.',
+       '[المرحلة 5] التحليل الذكي: إرسال السياق المصرح به عبر HTTPS لنموذج Gemini لتوليد إرشادات المعالجة الدقيقة والتحقق من الاستجابة.'],
       ['[STEP 6] Dual-Tier Reporting: Generating Executive and Technical Reports; all report artifacts encrypted at rest with AES-256-GCM.',
        '[المرحلة 6] إصدار التقارير المزدوجة: إنشاء التقرير التنفيذي والتقرير الفني مع حماية الملفات المخزنة بتشفير AES-256-GCM.']
     ],
