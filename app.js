@@ -310,7 +310,7 @@ addSlide(
       ['1. Active Exploitation', '1. الاستغلال الفعلي للثغرات أو اختراق الخوادم'],
       ['2. Internal Network Scanning', '2. فحص الشبكات الداخلية أو الأجهزة الطرفية'],
       ['3. Vulnerability Ticketing', '3. إدارة دورة حياة التذاكر وتتبع الإغلاق'],
-      ['4. WAF / DDoS / CAPTCHA Bypass', '4. تجاوز جدران WAF أو حماية DDoS أو CAPTCHA'],
+      ['4. DDoS  Protection Bypass:', '4. تجاوز حماية هجمات حجب الخدمة (DDoS):'],
       ['5. Social Engineering & Brute-Force', '5. الهندسة الاجتماعية أو تخمين كلمات المرور'],
       ['6. Cryptographic Boundaries', '6. حدود الخصوصية (ليس Zero-Knowledge ضد مالك الخادم)']
     ];
