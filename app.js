@@ -47,74 +47,69 @@ addSlide(
   ['Team & Supervision', 'الفريق والإشراف'], 'tag-sec',
   ['YemScan: Graduation Project (1) at UST, Faculty of Computing & IT, Department of Computer Science.',
    'مشروع YemScan: مقرر مشروع التخرج (1) بكلية الحاسبات وتكنولوجيا المعلومات - قسم علوم الحاسوب.'],
-  () => `<div class="c-grid-2" style="align-items:stretch;">
+  () => `<div style="display:flex; flex-direction:column; align-items:center; justify-content:center; width:100%; height:100%; text-align:center;">
     ${A(0, `
-      <div class="uni-badge" style="margin-bottom:12px; align-self:stretch;">
-        <div class="uni-emblem">🇾🇪 🎓</div>
-        <div class="uni-info">
-          <div class="uni-name">${tr('University of Science and Technology (UST)', 'جامعة العلوم والتكنولوجيا')}</div>
-          <div class="uni-dept">${tr('Faculty of Computing & IT · Computer Science Dept · Cybersecurity & Networking', 'كلية الحاسبات وتكنولوجيا المعلومات · قسم علوم الحاسوب · الأمن السيبراني والشبكات')}</div>
-        </div>
+      <div style="display:inline-flex; align-items:center; gap:8px; padding:4px 16px; border-radius:100px; background:rgba(45,212,191,0.12); border:1px solid rgba(45,212,191,0.3); font-size:12px; font-weight:700; color:var(--teal); text-transform:uppercase; letter-spacing:1px; margin-bottom:8px;">
+        <span style="width:7px; height:7px; border-radius:50%; background:var(--teal); box-shadow:0 0 8px var(--teal);"></span>
+        ${tr('Graduation Project (1) Defense · Chapters 1, 2 & 3', 'مناقشة مشروع التخرج (1) · الفصول 1، 2 و 3')}
       </div>
-
-      <div style="display:flex; align-items:center; gap:14px; margin-bottom:8px;">
-        <div class="radar-visual" style="width:72px; height:72px; flex:none;">
-          <div class="radar-ring r1" style="width:72px; height:72px;"></div>
-          <div class="radar-ring r2" style="width:48px; height:48px;"></div>
-          <div class="radar-sweep" style="width:72px; height:72px;"></div>
-          <div class="radar-core" style="font-size:18px;">🛡️</div>
-        </div>
-        <div>
-          <h1 style="font-size:40px; font-weight:900; line-height:1; color:var(--teal); letter-spacing:1px; margin:0;">YemScan</h1>
-          <h3 style="font-size:15.5px; font-weight:700; color:#e2e8f0; margin-top:4px;">${tr('Yemeni Web Attack and Vulnerability Scanner', 'الماسح اليمني لفحص ثغرات وهجمات الويب')}</h3>
-        </div>
-      </div>
-
-      <p class="c-card-p" style="font-size:14px; line-height:1.6; margin-bottom:12px;">
-        ${tr('An integrated external black-box reconnaissance and security scanning platform combining multi-tool orchestration, security-reference enrichment, data encryption using AES-256-GCM with envelope encryption for key protection, and Gemini AI-assisted remediation analysis.',
-             'منصة متكاملة ومؤتمتة لاستطلاع وفحص أمن تطبيقات الويب (Black-Box)، تجمع بين تنسيق الأدوات المتعددة، الإثراء المرجعي للثغرات، تشفير البيانات باستخدام AES-256-GCM وحماية مفاتيحها باستخدام تشفير المغلف، والتحليل المدعوم بذكاء Gemini.')}
+      <p style="font-size:14.5px; color:#cbd5e1; font-weight:600; margin:0 0 6px 0;">
+        ${tr('University of Science and Technology · Faculty of Computing & IT · Department of Computer Science · Cybersecurity & Networking',
+             'جامعة العلوم والتكنولوجيا · كلية الحاسبات وتكنولوجيا المعلومات · قسم علوم الحاسوب · الأمن السيبراني والشبكات')}
+      </p>
+      <h1 style="font-size:clamp(30px, 3.6vw, 42px); font-weight:900; line-height:1.15; color:#ffffff; margin:0 0 4px 0; background:linear-gradient(135deg, #ffffff 20%, var(--teal) 75%, var(--blue) 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">
+        YemScan: ${tr('Yemeni Web Attack and Vulnerability Scanner', 'الماسح اليمني لفحص ثغرات وهجمات الويب')}
+      </h1>
+      <p style="font-size:15px; color:#94a3b8; max-width:940px; line-height:1.6; margin:0 auto 12px auto;">
+        ${tr('A proposed platform for authorized external black-box reconnaissance and security scanning, combining multi-tool coordination, security-reference enrichment, data protection design, and AI-assisted remediation analysis.',
+             'منصة مقترحة لاستطلاع وفحص أمن تطبيقات الويب (Black-Box) ضمن نطاق مصرح به، تجمع بين تنسيق الأدوات المتعددة، الإثراء المرجعي للثغرات، تصميم حماية البيانات، والتحليل المساعد بالذكاء الاصطناعي.')}
       </p>
 
-      <div class="pipeline-badge" style="margin-bottom:10px;">
-        <span class="pb-tag">${tr('Pipeline', 'المسار')}</span>
-        <div class="pb-steps">
-          <span><b>01</b> Discover</span><i>→</i>
-          <span><b>02</b> Scan</span><i>→</i>
-          <span><b>03</b> Process</span><i>→</i>
-          <span><b>04</b> Enrich</span><i>→</i>
-          <span><b>05</b> Analyze</span><i>→</i>
-          <span><b>06</b> Report</span>
+      <div class="team-title-grid" style="margin:0 auto 12px auto; max-width:980px;">
+        <div class="team-title-card">
+          <div class="team-title-av">01</div>
+          <div class="team-title-info">
+            <div class="team-title-name">${tr('Mohammed Saleh Hatem', 'محمد صالح حاتم')}</div>
+            <div class="team-title-id">ID: 202310400368</div>
+          </div>
+        </div>
+        <div class="team-title-card">
+          <div class="team-title-av">02</div>
+          <div class="team-title-info">
+            <div class="team-title-name">${tr('Nassar Ahmed Al-Fattahi', 'نصار أحمد الفتاحي')}</div>
+            <div class="team-title-id">ID: 202310400349</div>
+          </div>
+        </div>
+        <div class="team-title-card">
+          <div class="team-title-av">03</div>
+          <div class="team-title-info">
+            <div class="team-title-name">${tr('Mohammed Abdulwahid Alrubaidi', 'محمد عبد الواحد الربيدي')}</div>
+            <div class="team-title-id">ID: 202310100273</div>
+          </div>
+        </div>
+        <div class="team-title-card">
+          <div class="team-title-av">04</div>
+          <div class="team-title-info">
+            <div class="team-title-name">${tr('Younes Mohammed Alsarory', 'يونس محمد السروري')}</div>
+            <div class="team-title-id">ID: 202310102399</div>
+          </div>
+        </div>
+        <div class="team-title-card" style="grid-column: span 2;">
+          <div class="team-title-av">05</div>
+          <div class="team-title-info">
+            <div class="team-title-name">${tr('Abdulmajid Abulkarim Anqa', 'عبد المجيد عبد الكريم عنقة')}</div>
+            <div class="team-title-id">ID: 202310102081</div>
+          </div>
         </div>
       </div>
 
-      <div style="font-size:13.5px; color:var(--text-muted); display:flex; justify-content:space-between; border-top:1px solid rgba(255,255,255,0.08); padding-top:8px;">
-        <div><b>${tr('Supervisor:', 'المشرف:')}</b> <span style="color:var(--violet); font-weight:800;">Dr. Aisha Al-Hadm</span></div>
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; background:rgba(15,23,42,0.7); border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:8px 20px; font-size:13.5px; width:100%; max-width:980px; margin:0 auto;">
+        <div><b>${tr('Supervisor:', 'المشرف:')}</b> <span style="color:var(--teal); font-weight:800;">${tr('Dr. Aisha Al-Hadm', 'د. عائشة الهضم')}</span></div>
+        <div><b>${tr('Major:', 'التخصص:')}</b> <span style="color:#ffffff; font-weight:700;">${tr('Cybersecurity & Networking', 'الأمن السيبراني والشبكات')}</span></div>
+        <div><b>${tr('Methodology:', 'المنهجية:')}</b> <span style="color:var(--blue); font-weight:700;">${tr('Iterative Agile Lifecycle', 'دورة Agile التكرارية')}</span></div>
         <div><b>${tr('Academic Year:', 'العام الجامعي:')}</b> <span style="color:#ffffff; font-weight:700;">2026 - 2027</span></div>
       </div>
-    `, 'c-card')}
-
-    ${A(1, `
-      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
-        <div style="display:flex; align-items:center; gap:8px;">
-          <span style="font-size:20px;">👥</span>
-          <h3 class="c-card-h" style="color:var(--blue); font-size:18px; margin:0;">${tr('Research & Engineering Team', 'فريق البحث والتطوير')}</h3>
-        </div>
-        <span class="status-badge badge-sec" style="font-size:11.5px;">Cybersecurity & Networking</span>
-      </div>
-
-      <div class="c-col" style="gap:7px;">
-        <div class="member"><span class="m-icon">👤</span><span class="m-name">Mohammed Saleh Hatem</span><span class="m-id">202310400368</span></div>
-        <div class="member"><span class="m-icon">👤</span><span class="m-name">Nassar Ahmed Al-Fattahi</span><span class="m-id">202310400349</span></div>
-        <div class="member"><span class="m-icon">👤</span><span class="m-name">Mohammed Abdulwahid Alrubaidi</span><span class="m-id">202310100273</span></div>
-        <div class="member"><span class="m-icon">👤</span><span class="m-name">Younes Mohammed Alsarory</span><span class="m-id">202310102399</span></div>
-        <div class="member"><span class="m-icon">👤</span><span class="m-name">Abdulmajid Abulkarim Anqa</span><span class="m-id">202310102081</span></div>
-      </div>
-
-      <div class="disclaimer-mini" style="margin-top:10px;">
-        ⚠️ ${tr('Midterm Defense Presentation (Project 1) · All security workflows are simulated demonstrations · No active external scanning executed',
-                 'عرض مناقشة مشروع تخرج (1) · جميع عمليات الفحص محاكاة تعليمية وتوضيحية للمسار المقترح · لا يتم استهداف أي أهداف حقيقية')}
-      </div>
-    `, 'c-card c-blue')}
+    `)}
   </div>`
 );
 
@@ -125,28 +120,70 @@ addSlide(
   ['Background', 'الخلفية'], 'tag-sec',
   ['Accelerated digital migration creates dynamic subdomains, APIs, and services prone to external threats.',
    'التوسع الرقمي المتسارع يفرز أصولاً رقمية ونطاقات وواجهات API معرضة للهجمات الخارجية.'],
-  () => `<div class="c-grid-3">
-    ${A(0, `<span class="c-card-ic">🌐</span>
-      <h3 class="c-card-h">${tr('Dynamic Attack Surface', 'توسع سطح الهجوم الخارجي')}</h3>
-      <p class="c-card-p">${tr('Organizations rely heavily on externally exposed subdomains, web services, and APIs to deliver public services, creating an evolving external perimeter that requires ongoing inventorying.',
-        'تعتمد المؤسسات والشركات على نطاقات فرعية وخدمات ويب وواجهات API مكشوفة خارجياً، مما يشكل سطح هجوم ديناميكياً يتطلب حصراً ومتابعة مستمرة.')}</p>`, 'c-card')}
+  () => `<div class="split-ill-grid">
+    <!-- Left Column: 3 Operational Cards & Stats Row -->
+    <div style="display:flex; flex-direction:column; gap:10px; justify-content:space-between;">
+      ${A(0, `
+        <div class="card" style="padding:12px 16px;">
+          <h3 style="font-size:17.5px; font-weight:800; color:var(--teal); margin:0 0 4px 0;">${tr('Dynamic Attack Surface Expansion', 'توسع سطح الهجوم الخارجي')}</h3>
+          <p style="font-size:14.5px; line-height:1.55; color:#cbd5e1; margin:0;">${tr('Organizations rely heavily on externally exposed subdomains, web services, and APIs to deliver public services, creating an evolving external perimeter that requires ongoing inventorying.',
+            'تعتمد المؤسسات والشركات على نطاقات فرعية وخدمات ويب وواجهات API مكشوفة خارجياً، مما يشكل سطح هجوم ديناميكياً يتطلب حصراً ومتابعة مستمرة.')}</p>
+        </div>
+      `)}
 
-    ${A(1, `<span class="c-card-ic">🎯</span>
-      <h3 class="c-card-h">${tr('External Black-Box Testing', 'منهج الفحص الصندوق الأسود')}</h3>
-      <p class="c-card-p">${tr('External security scanning examines accessible interfaces without source code access, mimicking true adversary perspectives to identify exposed assets and security misconfigurations.',
-        'فحص المنظومة من الخارج بنهج الصندوق الأسود ودون الحاجة للكود المصدري يحاكي زاوية المهاجم الفعلي لاكتشاف الأصول المكشوفة واكتشاف أخطاء الإعدادات الأمنية.')}</p>`, 'c-card c-blue')}
+      ${A(1, `
+        <div class="card" style="padding:12px 16px; border-color:rgba(56,189,248,0.25);">
+          <h3 style="font-size:17.5px; font-weight:800; color:var(--blue); margin:0 0 4px 0;">${tr('External Black-Box Testing Methodology', 'منهج الفحص الصندوق الأسود')}</h3>
+          <p style="font-size:14.5px; line-height:1.55; color:#cbd5e1; margin:0;">${tr('External security scanning examines accessible interfaces without source code access, mimicking true adversary perspectives to identify exposed assets and security misconfigurations.',
+            'فحص المنظومة من الخارج بنهج الصندوق الأسود ودون الحاجة للكود المصدري يحاكي زاوية المهاجم الفعلي لاكتشاف الأصول المكشوفة واكتشاف أخطاء الإعدادات الأمنية.')}</p>
+        </div>
+      `)}
 
-    ${A(2, `<span class="c-card-ic">📊</span>
-      <h3 class="c-card-h">${tr('Verizon DBIR 2025 Reality', 'واقع تقرير الاختراقات DBIR 2025')}</h3>
-      <p class="c-card-p">${tr('Vulnerability exploitation accounted for 20% of analyzed initial breach access vectors (+34% increase relative to prior report).',
-        'شكل استغلال الثغرات مدخل الوصول الأولي في 20% من حوادث الاختراق المحللة، بزيادة بلغت 34% مقارنة بالتقرير السابق.')}</p>
-      <div class="stat-box">
-        <div class="stat-num">20%</div>
-        <div class="stat-txt"><b>${tr('Initial Access Vector', 'مدخل الاختراق الأولي')}</b><br>${tr('+34% Year-over-Year', '+34% زيادة سنوية')}</div>
+      ${A(2, `
+        <div class="card" style="padding:12px 16px; border-color:rgba(167,139,250,0.25);">
+          <h3 style="font-size:17.5px; font-weight:800; color:var(--violet); margin:0 0 4px 0;">${tr('Verizon DBIR 2025 Reality', 'واقع تقرير الاختراقات DBIR 2025')}</h3>
+          <p style="font-size:14.5px; line-height:1.55; color:#cbd5e1; margin:0;">${tr('Vulnerability exploitation accounted for 20% of analyzed initial breach access vectors (+34% increase relative to prior report).',
+            'شكل استغلال الثغرات مدخل الوصول الأولي في 20% من حوادث الاختراق المحللة، بزيادة بلغت 34% مقارنة بالتقرير السابق.')}</p>
+        </div>
+      `)}
+
+      ${A(3, `
+        <div class="srow">
+          <div class="sb">
+            <div class="snum">20%</div>
+            <div class="slbl">${tr('Initial Breach Vector', 'مدخل الاختراق')}</div>
+          </div>
+          <div class="sb">
+            <div class="snum">+34%</div>
+            <div class="slbl">${tr('YoY Exploitation', 'زيادة سنوية')}</div>
+          </div>
+          <div class="sb">
+            <div class="snum">Zero-Code</div>
+            <div class="slbl">${tr('Black-Box Testing', 'فحص الصندوق الأسود')}</div>
+          </div>
+        </div>
+      `)}
+    </div>
+
+    <!-- Right Column: Illustrated Attack Surface Card -->
+    ${A(4, `
+      <div class="ill-card">
+        <div class="ill-frame" onclick="openImgModal('images/soc_command_center.jpg', '${tr('External Attack Surface & Exposed Web Services Telemetry', 'سطح الهجوم الخارجي ورصد الخدمات والواجهات المكشوفة')}')">
+          <img src="images/soc_command_center.jpg" alt="Attack Surface & Security Telemetry" class="ill-img" loading="lazy">
+          <div class="ill-zoom-hint">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            <span>ZOOM</span>
+          </div>
+        </div>
+        <div class="ill-caption">
+          <div class="ill-title">
+            <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:var(--teal);"></span>
+            ${tr('External Attack Surface & Threat Monitoring', 'رصد سطح الهجوم والتهديدات الخارجية')}
+          </div>
+          <div class="ill-sub">CHAPTER 1 §1.1</div>
+        </div>
       </div>
-      <div style="font-size:11.5px; color:var(--text-dim); margin-top:6px;">
-        * ${tr('Source: Verizon DBIR 2025 (concerns analyzed breach sample rather than all web attacks).', 'المصدر: تقرير DBIR 2025 (يخص عينة الاختراقات المحللة في التقرير ولا يعمم على كافة الهجمات).')}
-      </div>`, 'c-card c-violet')}
+    `)}
   </div>`
 );
 
@@ -157,46 +194,77 @@ addSlide(
   ['Problem Statement', 'صياغة المشكلة'], 'tag-prop',
   ['Addresses tool fragmentation, heterogeneous outputs, and limited analytical context for remediation.',
    'معالجة تشتت أدوات الفحص، تباين المخرجات، ومحدودية السياق التحليلي لإرشاد المعالجة.'],
-  () => `<div style="display:flex; flex-direction:column; gap:12px; width:100%;">
-    ${A(0, `
-      <div style="background:rgba(20,184,166,0.08); border:1px solid rgba(20,184,166,0.3); border-radius:12px; padding:12px 18px; font-size:15px; line-height:1.55; color:#f1f5f9; display:flex; align-items:center; gap:12px;">
-        <span style="font-size:20px; flex-shrink:0;">💡</span>
-        <span>${tr('“YemScan addresses the fragmented coordination of multiple security tools, heterogeneous scanning outputs, and the effort required to interpret findings and prepare actionable reports.”',
-                  '“تعالج منصة YemScan تشتت التنسيق بين أدوات الأمان المتعددة، وتباين مخرجات الفحص، والجهد المطلوب لتفسير النتائج وإعداد تقارير قابلة للتنفيذ.”')}</span>
-      </div>
-    `)}
-
-    <div class="c-grid-3">
-      ${A(1, `
-        <span class="c-card-ic">⚙️</span>
-        <h3 class="c-card-h" style="font-size:18px;">${tr('1. Fragmented Tool Coordination', '1. تشتت تنسيق الأدوات')}</h3>
-        <p class="c-card-p" style="font-size:14.5px; line-height:1.55;">${tr('“Operating several discovery and security scanning tools separately requires manual coordination and repeated transfer of outputs between tools.”',
-          '“تشغيل عدة أدوات للاستكشاف والفحص الأمني بشكل منفصل يتطلب تنسيقاً يدوياً ونقلاً متكرراً للمخرجات بين الأدوات.”')}</p>
-        <div class="stat-box" style="border-color:rgba(245,158,11,0.25); background:rgba(245,158,11,0.06); padding:8px 12px; margin-top:12px;">
-          <span style="font-size:13px; color:var(--amber);"><b>${tr('Challenge:', 'التحدي:')}</b> ${tr('Manual data piping & operational fragmentation.', 'تشتت مسارات العمل واستهلاك الجهد اليدوي.')}</span>
+  () => `<div class="split-ill-grid">
+    <!-- Left Column: 3 Problem Cards & Anchor Quote -->
+    <div style="display:flex; flex-direction:column; gap:10px; justify-content:space-between;">
+      ${A(0, `
+        <div style="border-inline-start:4px solid var(--teal); background:rgba(45,212,191,0.06); padding:8px 16px; border-radius:8px;">
+          <p style="font-size:15px; font-weight:600; line-height:1.55; color:#f1f5f9; margin:0;">
+            ${tr('“YemScan addresses the fragmented coordination of multiple security tools, heterogeneous scanning outputs, and the effort required to interpret findings and prepare actionable reports.”',
+                 '«تعالج منصة YemScan تشتت التنسيق بين أدوات الأمان المتعددة، وتباين مخرجات الفحص، والجهد المطلوب لتفسير النتائج وإعداد تقارير قابلة للتنفيذ».')}
+          </p>
         </div>
-      `, 'c-card')}
+      `)}
+
+      ${A(1, `
+        <div class="card" style="padding:11px 14px; border-color:rgba(251,191,36,0.3);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:3px;">
+            <h3 style="font-size:17px; font-weight:800; color:var(--amber); margin:0;">${tr('1. Fragmented Tool Coordination', '1. تشتت تنسيق الأدوات')}</h3>
+            <span style="font-size:12px; font-weight:700; color:var(--amber); font-family:var(--font-mono);">01 / TOOL SILOS</span>
+          </div>
+          <p style="font-size:14px; line-height:1.5; color:#cbd5e1; margin:0;">
+            ${tr('Operating several discovery and security scanning tools separately requires manual coordination and repeated transfer of outputs between tools.',
+                 'تشغيل عدة أدوات للاستكشاف والفحص الأمني بشكل منفصل يتطلب تنسيقاً يدوياً ونقلاً متكرراً للمخرجات بين الأدوات.')}
+          </p>
+        </div>
+      `)}
 
       ${A(2, `
-        <span class="c-card-ic">📑</span>
-        <h3 class="c-card-h" style="font-size:18px;">${tr('2. Heterogeneous Scanning Outputs', '2. تباين مخرجات الفحص')}</h3>
-        <p class="c-card-p" style="font-size:14.5px; line-height:1.55;">${tr('“Different tools produce outputs with different formats, structures, and levels of detail, which complicates their collection and comparison.”',
-          '“تنتج الأدوات المختلفة مخرجات بصيغ وهياكل ومستويات تفصيل متباينة، مما يعقّد تجميعها والمقارنة بينها.”')}</p>
-        <div class="stat-box" style="border-color:rgba(56,189,248,0.25); background:rgba(56,189,248,0.06); padding:8px 12px; margin-top:12px;">
-          <span style="font-size:13px; color:var(--blue);"><b>${tr('Challenge:', 'التحدي:')}</b> ${tr('Inconsistent schemas & consolidation obstacles.', 'صعوبة دمج النتائج ومقارنتها دون توحيد.')}</span>
+        <div class="card" style="padding:11px 14px; border-color:rgba(56,189,248,0.3);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:3px;">
+            <h3 style="font-size:17px; font-weight:800; color:var(--blue); margin:0;">${tr('2. Heterogeneous Scanning Outputs', '2. تباين مخرجات الفحص')}</h3>
+            <span style="font-size:12px; font-weight:700; color:var(--blue); font-family:var(--font-mono);">02 / SCHEMA DISPARITY</span>
+          </div>
+          <p style="font-size:14px; line-height:1.5; color:#cbd5e1; margin:0;">
+            ${tr('Different tools produce outputs with different formats, structures, and levels of detail, which complicates their collection and comparison.',
+                 'تنتج الأدوات المختلفة مخرجات بصيغ وهياكل ومستويات تفصيل متباينة، مما يعقّد تجميعها والمقارنة بينها دون توحيد.')}
+          </p>
         </div>
-      `, 'c-card c-blue')}
+      `)}
 
       ${A(3, `
-        <span class="c-card-ic">⚠️</span>
-        <h3 class="c-card-h" style="font-size:18px;">${tr('3. Limited Analytical Context', '3. محدودية السياق التحليلي')}</h3>
-        <p class="c-card-p" style="font-size:14.5px; line-height:1.55;">${tr('“Raw technical outputs may be difficult to interpret and may not provide sufficient context for prioritizing remediation activities.”',
-          '“قد يصعب تفسير المخرجات التقنية الخام، وقد لا توفر سياقاً كافياً لتحديد أولويات المعالجة والإصلاح.”')}</p>
-        <div class="stat-box" style="border-color:rgba(244,63,94,0.25); background:rgba(244,63,94,0.06); padding:8px 12px; margin-top:12px;">
-          <span style="font-size:13px; color:var(--red);"><b>${tr('Challenge:', 'التحدي:')}</b> ${tr('Lack of actionable remediation prioritization.', 'صعوبة ترتيب أولويات المعالجة واتخاذ القرارات.')}</span>
+        <div class="card" style="padding:11px 14px; border-color:rgba(251,113,133,0.3);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:3px;">
+            <h3 style="font-size:17px; font-weight:800; color:var(--red); margin:0;">${tr('3. Limited Analytical Context', '3. محدودية السياق التحليلي')}</h3>
+            <span style="font-size:12px; font-weight:700; color:var(--red); font-family:var(--font-mono);">03 / CONTEXT VOID</span>
+          </div>
+          <p style="font-size:14px; line-height:1.5; color:#cbd5e1; margin:0;">
+            ${tr('Raw technical outputs may be difficult to interpret and may not provide sufficient context for prioritizing remediation activities.',
+                 'قد يصعب تفسير المخرجات التقنية الخام، وقد لا توفر سياقاً كافياً لتحديد أولويات المعالجة والإصلاح الفعلي.')}
+          </p>
         </div>
-      `, 'c-card c-red')}
+      `)}
     </div>
+
+    <!-- Right Column: Illustrated Tool Chaos Card -->
+    ${A(4, `
+      <div class="ill-card">
+        <div class="ill-frame" onclick="openImgModal('images/alert_fatigue_chaos.jpg', '${tr('Fragmented Security Tools & Heterogeneous Output Crisis', 'تشتت أدوات الأمان وأزمة تباين المخرجات الفنية')}')">
+          <img src="images/alert_fatigue_chaos.jpg" alt="Tool Fragmentation & Heterogeneous Outputs" class="ill-img" loading="lazy">
+          <div class="ill-zoom-hint">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            <span>ZOOM</span>
+          </div>
+        </div>
+        <div class="ill-caption">
+          <div class="ill-title">
+            <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:var(--red);"></span>
+            ${tr('Tool Coordination & Output Disparity', 'تشتت الأدوات وتباين المخرجات')}
+          </div>
+          <div class="ill-sub">CHAPTER 1 §1.2</div>
+        </div>
+      </div>
+    `)}
   </div>`
 );
 
@@ -207,50 +275,67 @@ addSlide(
   ['Significance', 'الأهمية والدافع'], 'tag-sec',
   ['Unified and structured approach to assessing externally exposed web assets and services.',
    'نهج موحد ومهيكل لتقييم أصول وخدمات الويب المكشوفة خارجياً ضمن نطاق مصرح به.'],
-  () => `<div style="display:flex; flex-direction:column; gap:12px; width:100%;">
+  () => `<div style="display:flex; flex-direction:column; gap:12px; width:100%; height:100%; justify-content:space-between;">
     ${A(0, `
-      <div style="background:rgba(56,189,248,0.08); border:1px solid rgba(56,189,248,0.3); border-radius:12px; padding:12px 18px; font-size:15px; line-height:1.55; color:#f1f5f9; display:flex; align-items:center; gap:12px;">
-        <span style="font-size:20px; flex-shrink:0;">🎯</span>
-        <span>${tr('“YemScan is significant because it provides a unified and structured approach to assessing externally exposed web assets and services within a defined and authorized scope.”',
-                  '“تكمن أهمية YemScan في توفير نهج موحد ومهيكل لتقييم أصول وخدمات الويب المكشوفة خارجياً ضمن نطاق محدد ومصرح به.”')}</span>
+      <div class="hl">
+        <p style="font-size:16px; font-weight:700; text-align:center;">
+          ${tr('“YemScan is significant because it provides a unified and structured approach to assessing externally exposed web assets and services within a defined and authorized scope.”',
+               '«تكمن أهمية YemScan في توفير نهج موحد ومهيكل لتقييم أصول وخدمات الويب المكشوفة خارجياً ضمن نطاق محدد ومصرح به».')}
+        </p>
       </div>
     `)}
 
-    <div class="c-grid-4">
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:14px; width:100%;">
       ${A(1, `
-        <span class="c-card-ic">🛡️</span>
-        <h3 class="c-card-h" style="font-size:17px;">${tr('1. Security Significance', '1. الأهمية الأمنية')}</h3>
-        <p class="c-card-p" style="font-size:14px; line-height:1.5;">${tr('“Improves visibility of externally exposed assets, services, ports, subdomains, and relevant API paths.”',
-          '“تحسين الرؤية الشاملة للأصول والخدمات والمنافذ والنطاقات الفرعية ومسارات واجهات البرمجة (APIs) المكشوفة خارجياً.”')}</p>
-      `, 'c-card')}
+        <div class="card" style="padding:14px 18px; border-color:rgba(45,212,191,0.35);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+            <h3 style="font-size:18.5px; font-weight:800; color:var(--teal); margin:0;">${tr('1. Security Significance', '1. الأهمية الأمنية')}</h3>
+            <span style="font-size:11px; font-weight:800; padding:2px 8px; border-radius:4px; background:rgba(45,212,191,0.15); color:var(--teal); font-family:var(--font-mono);">VISIBILITY</span>
+          </div>
+          <p style="font-size:14.5px; line-height:1.55; color:#cbd5e1; margin:0;">${tr('“Improves visibility of externally exposed assets, services, ports, subdomains, and relevant API paths.”',
+            '«تحسين الرؤية الشاملة للأصول والخدمات والمنافذ والنطاقات الفرعية ومسارات واجهات البرمجة (APIs) المكشوفة خارجياً».')}</p>
+        </div>
+      `)}
 
       ${A(2, `
-        <span class="c-card-ic">⚙️</span>
-        <h3 class="c-card-h" style="font-size:17px;">${tr('2. Technical Significance', '2. الأهمية التقنية')}</h3>
-        <p class="c-card-p" style="font-size:14px; line-height:1.5;">${tr('“Integrates multiple open-source tools within an organized external black-box scanning workflow.”',
-          '“دمج وتنسيق أدوات مفتوحة المصدر متعددة ضمن سير عمل منظم لفحص الصندوق الأسود الخارجي.”')}</p>
-      `, 'c-card c-blue')}
+        <div class="card" style="padding:14px 18px; border-color:rgba(56,189,248,0.35);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+            <h3 style="font-size:18.5px; font-weight:800; color:var(--blue); margin:0;">${tr('2. Technical Significance', '2. الأهمية التقنية')}</h3>
+            <span style="font-size:11px; font-weight:800; padding:2px 8px; border-radius:4px; background:rgba(56,189,248,0.15); color:var(--blue); font-family:var(--font-mono);">PIPELINE</span>
+          </div>
+          <p style="font-size:14.5px; line-height:1.55; color:#cbd5e1; margin:0;">${tr('“Integrates multiple open-source tools within an organized external black-box scanning workflow.”',
+            '«دمج وتنسيق أدوات مفتوحة المصدر متعددة ضمن سير عمل منظم لفحص الصندوق الأسود الخارجي».')}</p>
+        </div>
+      `)}
 
       ${A(3, `
-        <span class="c-card-ic">🔬</span>
-        <h3 class="c-card-h" style="font-size:17px;">${tr('3. Research Significance', '3. الأهمية البحثية')}</h3>
-        <p class="c-card-p" style="font-size:14px; line-height:1.5;">${tr('“Supports the processing, enrichment, interpretation, and prioritization of security findings using structured data and AI-assisted analysis.”',
-          '“دعم معالجة وإثراء وتفسير وتحديد أولويات النتائج الأمنية باستخدام البيانات المهيكلة والتحليل المعزز بالذكاء الاصطناعي.”')}</p>
-      `, 'c-card c-violet')}
+        <div class="card" style="padding:14px 18px; border-color:rgba(167,139,250,0.35);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+            <h3 style="font-size:18.5px; font-weight:800; color:var(--violet); margin:0;">${tr('3. Research Significance', '3. الأهمية البحثية')}</h3>
+            <span style="font-size:11px; font-weight:800; padding:2px 8px; border-radius:4px; background:rgba(167,139,250,0.15); color:var(--violet); font-family:var(--font-mono);">ENRICHMENT</span>
+          </div>
+          <p style="font-size:14.5px; line-height:1.55; color:#cbd5e1; margin:0;">${tr('“Supports the processing, enrichment, interpretation, and prioritization of security findings using structured data and AI-assisted analysis.”',
+            '«دعم معالجة وإثراء وتفسير وتحديد أولويات النتائج الأمنية باستخدام البيانات المهيكلة والتحليل المعزز بالذكاء الاصطناعي».')}</p>
+        </div>
+      `)}
 
       ${A(4, `
-        <span class="c-card-ic">📋</span>
-        <h3 class="c-card-h" style="font-size:17px;">${tr('4. Practical Significance', '4. الأهمية التطبيقية')}</h3>
-        <p class="c-card-p" style="font-size:14px; line-height:1.5;">${tr('“Helps reduce the effort required to operate separate tools and supports the preparation of Executive and Technical Reports.”',
-          '“المساعدة في تقليص الجهد المبذول لتشغيل الأدوات المنفصلة ودعم إعداد التقارير التنفيذية والفنية.”')}</p>
-      `, 'c-card c-amber')}
+        <div class="card" style="padding:14px 18px; border-color:rgba(251,191,36,0.35);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+            <h3 style="font-size:18.5px; font-weight:800; color:var(--amber); margin:0;">${tr('4. Practical Significance', '4. الأهمية التطبيقية')}</h3>
+            <span style="font-size:11px; font-weight:800; padding:2px 8px; border-radius:4px; background:rgba(251,191,36,0.15); color:var(--amber); font-family:var(--font-mono);">REPORTING</span>
+          </div>
+          <p style="font-size:14.5px; line-height:1.55; color:#cbd5e1; margin:0;">${tr('“Helps reduce the effort required to operate separate tools and supports the preparation of Executive and Technical Reports.”',
+            '«المساعدة في تقليص الجهد المبذول لتشغيل الأدوات المنفصلة ودعم إعداد التقارير التنفيذية والفنية».')}</p>
+        </div>
+      `)}
     </div>
 
     ${A(5, `
-      <div style="background:rgba(15,23,42,0.7); border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:8px 16px; font-size:13.5px; color:#cbd5e1; display:flex; align-items:center; gap:10px;">
-        <span style="font-size:16px; color:var(--teal);">🔒</span>
-        <span><b>${tr('Proposed Protection Control:', 'ضوابط الحماية المقترحة:')}</b> ${tr('AES-256-GCM authenticated encryption is designed to protect sensitive scanning data and reports at rest (decrypted only during authorized access).',
-          'تم تصميم النظام لحماية بيانات الفحص والتقارير الحساسة أثناء التخزين (Data at Rest) باستخدام التشفير الموثق AES-256-GCM (ويتم فك التشفير فقط أثناء الوصول المصرح به).')}</span>
+      <div style="background:rgba(15,23,42,0.85); border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:10px 18px; font-size:14px; color:#cbd5e1; display:flex; justify-content:space-between; align-items:center;">
+        <div><b>${tr('Proposed Protection Control:', 'ضوابط الحماية المقترحة:')}</b> ${tr('AES-256-GCM authenticated encryption is designed to protect sensitive scanning data and reports at rest (decrypted only during authorized access).',
+          'تم تصميم النظام لحماية بيانات الفحص والتقارير الحساسة أثناء التخزين (Data at Rest) باستخدام التشفير الموثق AES-256-GCM (ويتم فك التشفير فقط أثناء الوصول المصرح به).')}</div>
+        <span style="font-size:11.5px; color:var(--teal); font-family:var(--font-mono); font-weight:700;">NIST SP 800-38D</span>
       </div>
     `)}
   </div>`
@@ -263,80 +348,187 @@ addSlide(
   ['Objectives', 'الأهداف'], 'tag-prop',
   ['One primary goal supported by six measurable operational objectives; reference associations depend on available evidence.',
    'هدف رئيسي واحد مدعوم بستة أهداف تشغيلية محددة؛ ربط المراجع القياسية مشروط بوجود أدلة ومراجع مناسبة.'],
-  () => `<div class="c-grid-2">
-    ${A(0, `<h3 class="c-card-h" style="color:var(--teal); font-size:20px;">🎯 ${tr('Primary Project Objective', 'الهدف العام للمشروع')}</h3>
-      <p class="c-card-p" style="font-size:15px; line-height:1.65; margin-bottom:12px;">${tr('To design and build the YemScan platform for discovering and inventorying externally exposed digital assets and services, conducting black-box security scans, and processing, enriching, and analyzing results in a structured manner to support remediation recommendations and dual-tier reports.',
-        'تطوير منصة YemScan لاكتشاف وحصر الأصول والخدمات الرقمية المكشوفة خارجياً، وإجراء الفحوصات الأمنية بنهج الصندوق الأسود، ومعالجة وإثراء وتحليل النتائج بأسلوب مهيكل لدعم تقديم التوصيات وإنتاج التقارير التنفيذية والفنية.')}</p>
-      <div class="stat-box">
-        <span style="font-size:24px;">🔐</span>
-         <div class="stat-txt"><b>${tr('Security by Design:', 'الأمان كمعيار تصميمي:')}</b> ${tr('Data encryption using AES-256-GCM, with envelope encryption for key protection, for stored telemetry and reports at rest.', 'تشفير البيانات باستخدام AES-256-GCM، وحماية مفاتيحها باستخدام تشفير المغلف، لحماية السجلات والتقارير أثناء التخزين (Data at Rest).')}</div>
-      </div>`, 'c-card')}
-
-    ${A(1, `<h3 class="c-card-h" style="color:var(--blue); font-size:20px;">📋 ${tr('Specific Operational Objectives', 'الأهداف التشغيلية التفصيلية')}</h3>
-      <ul class="c-card-list" style="font-size:14px; line-height:1.65;">
-        <li><b>1. ${tr('Asset & Service Discovery:', 'اكتشاف الأصول والخدمات:')}</b> ${tr('Discover and inventory external assets, ports, and services.', 'حصر النطاقات والمنافذ والخدمات وواجهات API.')}</li>
-        <li><b>2. ${tr('Black-Box Scanning Execution:', 'تنفيذ الفحص الخارجي:')}</b> ${tr('Coordinate sequential and independent black-box scans.', 'تنسيق الفحص بنمطي التشغيل المتسلسل والمستقل.')}</li>
-        <li><b>3. ${tr('Normalization & Reference Enrichment:', 'التوحيد والإثراء المرجعي:')}</b> ${tr('Normalize findings and associate supported security references (CVE, CWE, CVSS, OWASP) using defined matching criteria.', 'توحيد المخرجات وربط المراجع القياسية (CVE/CWE/CVSS/OWASP) وفق معايير مطابقة محددة عند توفرها.')}</li>
-        <li><b>4. ${tr('AI Remediation Guidance:', 'التحليل الذكي والإرشاد:')}</b> ${tr('Use AI to explain findings and suggest remediation priorities.', 'توظيف الذكاء لتفسير النتائج واقتراح أولويات المعالجة.')}</li>
-        <li><b>5. ${tr('Centralized Dashboard & Access Control:', 'لوحة التحكم والوصول الآمن:')}</b> ${tr('Provide a centralized web dashboard for managing scans and viewing findings and reports, with role-based access control and protected storage.', 'توفير لوحة تحكم ويب مركزية لإدارة الفحوصات واستعراض النتائج والتقارير، مع التحكم في الوصول المبني على الأدوار والتخزين المحمي.')}</li>
-        <li><b>6. ${tr('Dual-Tier Report Generation:', 'توليد التقارير:')}</b> ${tr('Generate encrypted executive and technical reports.', 'إنتاج تقارير تنفيذية وفنية مشفرة ومؤتمتة.')}</li>
-      </ul>`, 'c-card c-blue')}
-  </div>`
-);
-
-// 6. Project Scope & Delimitations (الشريحة 6)
-addSlide(
-  ['Slide 06: Scope & Delimitations', 'الشريحة 6: النطاق والمحددات'],
-  ['Project Scope and Delimitations', 'نطاق المشروع ومحدداته'],
-  ['Scope Boundaries', 'حدود النطاق'], 'tag-sec',
-  ['Authorized external black-box scanning only; clear technical and operational boundaries defined.',
-   'الفحص الخارجي المصرح به بنهج الصندوق الأسود فقط؛ مع تحديد حدود تقنية وتشغيلية صارمة.'],
-  () => `<div style="display:flex; flex-direction:column; gap:10px; width:100%;">
+  () => `<div style="display:flex; flex-direction:column; gap:12px; width:100%; height:100%; justify-content:space-between;">
     ${A(0, `
-      <div style="background:rgba(20,184,166,0.08); border:1px solid rgba(20,184,166,0.3); border-radius:10px; padding:9px 16px; font-size:14.5px; line-height:1.5; color:#f1f5f9; display:flex; align-items:center; gap:10px;">
-        <span style="font-size:18px; color:var(--teal); flex-shrink:0;">🎯</span>
-        <span>${tr('“YemScan focuses on authorized external black-box scanning of web assets and services.”',
-                  '“يركز مشروع YemScan على الفحص الخارجي بنهج الصندوق الأسود والمصرح به لأصول وخدمات الويب.”')}</span>
+      <div class="hl">
+        <p style="font-size:15.5px; line-height:1.6; margin:0;">
+          <strong>${tr('Primary Project Objective:', 'الهدف العام للمشروع:')}</strong>
+          ${tr(' To design and build the YemScan platform for discovering and inventorying externally exposed digital assets and services, conducting black-box security scans, and processing, enriching, and analyzing results in a structured manner to support remediation recommendations and dual-tier reports.',
+               ' تطوير منصة YemScan لاكتشاف وحصر الأصول والخدمات الرقمية المكشوفة خارجياً، وإجراء الفحوصات الأمنية بنهج الصندوق الأسود، ومعالجة وإثراء وتحليل النتائج بأسلوب مهيكل لدعم تقديم التوصيات وإنتاج التقارير التنفيذية والفنية.')}
+        </p>
       </div>
     `)}
 
-    <div class="c-grid-2">
+    <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:12px; width:100%;">
       ${A(1, `
-        <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
-          <span style="color:var(--teal); font-size:18px; font-weight:900;">✔</span>
-          <h3 class="c-card-h" style="color:var(--teal); font-size:17.5px; margin:0;">${tr('In Scope (Covered in YemScan)', 'داخل نطاق العمل (In-Scope)')}</h3>
+        <div class="card" style="padding:12px 14px; border-color:rgba(45,212,191,0.25);">
+          <div style="font-size:12px; font-weight:800; color:var(--teal); font-family:var(--font-mono); margin-bottom:4px;">OBJ 01</div>
+          <h4 style="font-size:15px; font-weight:800; color:#fff; margin:0 0 4px 0;">${tr('1. Asset & Service Discovery', '1. اكتشاف الأصول والخدمات')}</h4>
+          <p style="font-size:13px; line-height:1.5; color:#cbd5e1; margin:0;">${tr('Discover and inventory external assets, ports, and services via Subfinder, Naabu, httpx, and Kiterunner.', 'حصر النطاقات والمنافذ والخدمات وواجهات API.')}</p>
         </div>
-        <ul class="c-card-list" style="font-size:13.5px; line-height:1.55; margin-top:4px;">
-          <li><b>${tr('External Web Assets:', 'أصول الويب المصرح بها:')}</b> ${tr('Subdomains, accessible IPs, open ports, live HTTP/HTTPS services, and relevant API paths within authorized scope.', 'النطاقات الفرعية، عناوين IP، المنافذ المفتوحة، خدمات الويب، ومسارات API المصرح بها.')}</li>
-          <li><b>${tr('Supported Tools (6 Only):', 'الأدوات الست المعتمدة فقط:')}</b> <code>Subfinder</code>, <code>Naabu</code>, <code>httpx</code>, <code>Kiterunner</code>, <code>Nuclei</code>, <code>Wapiti</code>.</li>
-          <li><b>${tr('Scanning Approach:', 'نهج الفحص الخارجي:')}</b> ${tr('External black-box scanning without requiring source code or internal network access.', 'فحص الصندوق الأسود الخارجي دون الحاجة لكود مصدري أو وصول داخلي.')}</li>
-          <li><b>${tr('Execution Modes:', 'أنماط التشغيل:')}</b> ${tr('Sequential scanning with automated data handover between stages, and independent scanning for individual tools.', 'فحص متسلسل بتمرير آلي للمخرجات أو فحص مستقل لكل أداة منفردة.')}</li>
-          <li><b>${tr('Main Outputs:', 'المخرجات الأساسية:')}</b> ${tr('Structured Executive and Technical Reports.', 'تقارير تنفيذية وفنية (Executive & Technical Reports) مهيكلة.')}</li>
-          <li><b>${tr('Processing & Analysis:', 'المعالجة والتحليل:')}</b> ${tr('Rule-based processing (deduplication, normalization, references) based on defined matching criteria, followed by AI-assisted analysis.', 'معالجة قائمة على القواعد (توحيد وإلغاء تكرار وربط مراجع) وفق معايير مطابقة محددة، متبوعة بتحليل معزز بالذكاء.')}</li>
-          <li><b>${tr('Proposed Protection Controls:', 'ضوابط الحماية المصممة:')}</b> ${tr('Scope validation, RBAC, Docker isolation, HTTPS, password hashing, and AES-256-GCM data at rest.', 'التحقق من النطاق، RBAC، عزل Docker، تأمين HTTPS، وتشفير AES-256-GCM للبيانات المخزنة.')}</li>
-        </ul>
-      `, 'c-card')}
+      `)}
 
       ${A(2, `
-        <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
-          <span style="color:var(--red); font-size:18px; font-weight:900;">✖</span>
-          <h3 class="c-card-h" style="color:var(--red); font-size:17.5px; margin:0;">${tr('Out of Scope (Delimitations)', 'خارج نطاق العمل والمحددات')}</h3>
+        <div class="card" style="padding:12px 14px; border-color:rgba(56,189,248,0.25);">
+          <div style="font-size:12px; font-weight:800; color:var(--blue); font-family:var(--font-mono); margin-bottom:4px;">OBJ 02</div>
+          <h4 style="font-size:15px; font-weight:800; color:#fff; margin:0 0 4px 0;">${tr('2. Black-Box Scanning Execution', '2. تنفيذ الفحص الخارجي')}</h4>
+          <p style="font-size:13px; line-height:1.5; color:#cbd5e1; margin:0;">${tr('Coordinate sequential and independent black-box scans using Nuclei and Wapiti.', 'تنسيق الفحص بنمطي التشغيل المتسلسل والمستقل.')}</p>
         </div>
-        <ul class="c-card-list" style="font-size:13.5px; line-height:1.55; margin-top:4px;">
-          <li><b>${tr('Internal Network Scanning:', 'الشبكات والأنظمة الداخلية:')}</b> ${tr('Does not scan internal LAN/VLANs, local endpoints, or internal host configurations.', 'استبعاد فحص الشبكات الداخلية، الأجهزة المحلية، وإعدادات الأنظمة.')}</li>
-          <li><b>${tr('Source Code Analysis:', 'الفحص المصدري:')}</b> ${tr('Excludes static code analysis (SAST) and white-box/gray-box testing.', 'استبعاد الفحص المصدري (White-Box / SAST) كلياً.')}</li>
-          <li><b>${tr('Active Exploitation:', 'الاستغلال الهجومي الفعلي:')}</b> ${tr('No penetration, database dumping, destructive payloads, or Denial of Service (DoS/DDoS).', 'لا استغلال هجومي، لا سحب قواعد بيانات، ولا هجمات حجب خدمة.')}</li>
-          <li><b>${tr('Social Engineering & Brute-Force:', 'الهندسة الاجتماعية والتخمين:')}</b> ${tr('Excludes phishing, social engineering, credential stuffing, and password cracking.', 'استبعاد هجمات التصيد وتخمين كلمات المرور كلياً.')}</li>
-          <li><b>${tr('Protection Bypass Mechanisms:', 'تجاوز أنظمة الحماية:')}</b> ${tr('Does not attempt evasion of WAF, CAPTCHA, or anti-DDoS shields.', 'لا يسعى لتجاوز جدران الحماية WAF أو أنظمة الكابتشا أو مضادات DDoS.')}</li>
-          <li><b>${tr('Targets Outside Scope:', 'الأهداف غير المصرح بها:')}</b> ${tr('Scanning targets outside the defined and authorized scope is strictly excluded.', 'حظر تام لفحص أي هدف خارج النطاق المصرح به قانونياً وتقنياً.')}</li>
-          <li><b>${tr('Remediation & Ticketing:', 'إدارة التذاكر والإصلاح:')}</b> ${tr('Excludes vulnerability lifecycle tracking, patch management, and developer ticketing.', 'لا يشمل تتبع دورة معالجة الثغرات أو إدارة التذاكر للمطورين.')}</li>
-          <li><b>${tr('Other Scanners:', 'أدوات الفحص الأخرى:')}</b> ${tr('No scanner tools supported beyond the six explicitly listed.', 'لا يدعم أدوات فحص أخرى غير الأدوات الست المحددة.')}</li>
-        </ul>
-        <div style="font-size:12.5px; color:var(--amber); margin-top:6px; border-top:1px dashed rgba(245,158,11,0.25); padding-top:5px;">
-          ⚠️ ${tr('Delimitation Note: Any tools not explicitly listed above are outside the current project scope.', 'ملاحظة محددات: أي أدوات لم تُذكر صراحة أعلاه تقع خارج نطاق المشروع الحالي.')}
+      `)}
+
+      ${A(3, `
+        <div class="card" style="padding:12px 14px; border-color:rgba(167,139,250,0.25);">
+          <div style="font-size:12px; font-weight:800; color:var(--violet); font-family:var(--font-mono); margin-bottom:4px;">OBJ 03</div>
+          <h4 style="font-size:15px; font-weight:800; color:#fff; margin:0 0 4px 0;">${tr('3. Normalization & Enrichment', '3. التوحيد والإثراء المرجعي')}</h4>
+          <p style="font-size:13px; line-height:1.5; color:#cbd5e1; margin:0;">${tr('Normalize findings and associate supported security references (CVE, CWE, CVSS, OWASP) using defined matching criteria.', 'توحيد المخرجات وربط المراجع القياسية وفق معايير مطابقة محددة.')}</p>
         </div>
-      `, 'c-card c-red')}
+      `)}
+
+      ${A(4, `
+        <div class="card" style="padding:12px 14px; border-color:rgba(251,191,36,0.25);">
+          <div style="font-size:12px; font-weight:800; color:var(--amber); font-family:var(--font-mono); margin-bottom:4px;">OBJ 04</div>
+          <h4 style="font-size:15px; font-weight:800; color:#fff; margin:0 0 4px 0;">${tr('4. AI Remediation Guidance', '4. التحليل الذكي والإرشاد')}</h4>
+          <p style="font-size:13px; line-height:1.5; color:#cbd5e1; margin:0;">${tr('Use AI to explain findings in plain language and suggest remediation priorities.', 'توظيف الذكاء لتفسير النتائج واقتراح أولويات المعالجة.')}</p>
+        </div>
+      `)}
+
+      ${A(5, `
+        <div class="card" style="padding:12px 14px; border-color:rgba(52,211,153,0.25);">
+          <div style="font-size:12px; font-weight:800; color:var(--green); font-family:var(--font-mono); margin-bottom:4px;">OBJ 05</div>
+          <h4 style="font-size:15px; font-weight:800; color:#fff; margin:0 0 4px 0;">${tr('5. Centralized Dashboard & RBAC', '5. لوحة التحكم والوصول الآمن')}</h4>
+          <p style="font-size:13px; line-height:1.5; color:#cbd5e1; margin:0;">${tr('Provide a centralized web dashboard with role-based access control and protected storage.', 'توفير لوحة تحكم ويب مركزية مع التحكم في الوصول المبني على الأدوار والتخزين المحمي.')}</p>
+        </div>
+      `)}
+
+      ${A(6, `
+        <div class="card" style="padding:12px 14px; border-color:rgba(251,113,133,0.25);">
+          <div style="font-size:12px; font-weight:800; color:var(--red); font-family:var(--font-mono); margin-bottom:4px;">OBJ 06</div>
+          <h4 style="font-size:15px; font-weight:800; color:#fff; margin:0 0 4px 0;">${tr('6. Dual-Tier Report Generation', '6. توليد التقارير المزدوجة')}</h4>
+          <p style="font-size:13px; line-height:1.5; color:#cbd5e1; margin:0;">${tr('Generate encrypted executive and technical reports with actionable advice.', 'إنتاج تقارير تنفيذية وفنية مشفرة ومؤتمتة.')}</p>
+        </div>
+      `)}
     </div>
+
+    ${A(7, `
+      <div style="background:rgba(15,23,42,0.85); border:1px solid rgba(45,212,191,0.25); border-radius:10px; padding:8px 18px; font-size:13.5px; color:#cbd5e1; display:flex; justify-content:space-between; align-items:center;">
+        <div><b>${tr('Security by Design Control:', 'معيار الأمان التصميمي:')}</b> ${tr('AES-256-GCM data encryption with envelope key protection for telemetry and reports at rest.', 'تشفير البيانات باستخدام AES-256-GCM وحماية المفاتيح بتشفير المغلف (DEK/KEK) للسجلات والتقارير المخزنة.')}</div>
+        <span style="font-size:11.5px; color:var(--teal); font-family:var(--font-mono); font-weight:700;">NIST SP 800-38D</span>
+      </div>
+    `)}
+  </div>`
+);
+
+// 6. Project Scope & Boundaries (الشريحة 6: نطاق المشروع وحدوده)
+addSlide(
+  ['Slide 06: Scope & Boundaries', 'الشريحة 6: نطاق المشروع وحدوده'],
+  ['Project Scope and Boundaries', 'نطاق المشروع وحدوده'],
+  ['Scope Boundaries', 'حدود النطاق'], 'tag-sec',
+  ['Authorized external black-box scanning within a defined perimeter; out-of-scope activities are strictly excluded.',
+   'فحص خارجي مصرح به بنهج الصندوق الأسود ضمن نطاق محدد؛ مع استبعاد كامل للأنشطة الخارجة عن النطاق.'],
+  () => `<div style="display:flex; flex-direction:column; gap:12px; width:100%; height:100%; justify-content:space-between;">
+    ${A(0, `
+      <div class="hl">
+        <p style="font-size:16px; font-weight:700; text-align:center; line-height:1.6;">
+          ${tr('“The project focuses on discovering and assessing internet-exposed web assets and services using a black-box approach within a defined, authorized scope.”',
+               '«يركز المشروع على اكتشاف أصول وخدمات الويب المكشوفة للإنترنت وفحصها أمنيًا بنهج الصندوق الأسود، ضمن نطاق محدد ومصرح به».')}
+        </p>
+      </div>
+    `)}
+
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:36px; width:100%; align-items:stretch;">
+      ${A(1, `
+        <div style="display:flex; flex-direction:column; justify-content:space-between; height:100%; border-inline-end: 1.5px solid rgba(255,255,255,0.12); padding-inline-end: 28px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; padding-bottom:6px; border-bottom:1.5px solid rgba(45,212,191,0.35);">
+            <h3 style="color:var(--teal); font-size:21px; font-weight:800; margin:0;">
+              ${tr('In-Scope (Included)', 'داخل النطاق (مشمول)')}
+            </h3>
+            <span class="status-badge" style="background:rgba(45,212,191,0.15); color:var(--teal); border:1px solid rgba(45,212,191,0.4); font-size:12.5px; padding:3px 10px; font-family:var(--font-mono);">
+              INCLUDED
+            </span>
+          </div>
+
+          <div style="display:flex; flex-direction:column; gap:12px;">
+            <div style="border-bottom:1px dashed rgba(255,255,255,0.08); padding-bottom:10px; display:flex; gap:12px; align-items:flex-start;">
+              <span style="color:var(--teal); font-weight:800; font-size:15px; font-family:var(--font-mono); background:rgba(45,212,191,0.1); padding:2px 8px; border-radius:4px; flex-shrink:0;">01</span>
+              <div style="font-size:16px; font-weight:600; line-height:1.55; color:#f1f5f9;">
+                ${tr('Discovery of external web assets, services, and API endpoints.', 'اكتشاف أصول الويب والخدمات ومسارات API الخارجية.')}
+              </div>
+            </div>
+
+            <div style="border-bottom:1px dashed rgba(255,255,255,0.08); padding-bottom:10px; display:flex; gap:12px; align-items:flex-start;">
+              <span style="color:var(--teal); font-weight:800; font-size:15px; font-family:var(--font-mono); background:rgba(45,212,191,0.1); padding:2px 8px; border-radius:4px; flex-shrink:0;">02</span>
+              <div style="font-size:16px; font-weight:600; line-height:1.55; color:#f1f5f9;">
+                ${tr('Security scanning using approved tools.', 'فحص أمني باستخدام الأدوات المعتمدة.')}
+              </div>
+            </div>
+
+            <div style="border-bottom:1px dashed rgba(255,255,255,0.08); padding-bottom:10px; display:flex; gap:12px; align-items:flex-start;">
+              <span style="color:var(--teal); font-weight:800; font-size:15px; font-family:var(--font-mono); background:rgba(45,212,191,0.1); padding:2px 8px; border-radius:4px; flex-shrink:0;">03</span>
+              <div style="font-size:16px; font-weight:600; line-height:1.55; color:#f1f5f9;">
+                ${tr('Sequential or independent scan execution.', 'تشغيل متسلسل أو مستقل.')}
+              </div>
+            </div>
+
+            <div style="display:flex; gap:12px; align-items:flex-start;">
+              <span style="color:var(--teal); font-weight:800; font-size:15px; font-family:var(--font-mono); background:rgba(45,212,191,0.1); padding:2px 8px; border-radius:4px; flex-shrink:0;">04</span>
+              <div style="font-size:16px; font-weight:600; line-height:1.55; color:#f1f5f9;">
+                ${tr('Findings organization, enrichment, analysis, and reporting.', 'تنظيم النتائج وإثراؤها وتحليلها وإعداد التقارير.')}
+              </div>
+            </div>
+          </div>
+        </div>
+      `)}
+
+      ${A(2, `
+        <div style="display:flex; flex-direction:column; justify-content:space-between; height:100%; padding-inline-start: 4px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; padding-bottom:6px; border-bottom:1.5px solid rgba(244,63,94,0.35);">
+            <h3 style="color:var(--red); font-size:21px; font-weight:800; margin:0;">
+              ${tr('Out-of-Scope (Excluded)', 'خارج النطاق (مستبعد)')}
+            </h3>
+            <span class="status-badge" style="background:rgba(244,63,94,0.15); color:var(--red); border:1px solid rgba(244,63,94,0.4); font-size:12.5px; padding:3px 10px; font-family:var(--font-mono);">
+              EXCLUDED
+            </span>
+          </div>
+
+          <div style="display:flex; flex-direction:column; gap:12px;">
+            <div style="border-bottom:1px dashed rgba(255,255,255,0.08); padding-bottom:10px; display:flex; gap:12px; align-items:flex-start;">
+              <span style="color:var(--red); font-weight:800; font-size:15px; font-family:var(--font-mono); background:rgba(244,63,94,0.1); padding:2px 8px; border-radius:4px; flex-shrink:0;">01</span>
+              <div style="font-size:16px; font-weight:600; line-height:1.55; color:#cbd5e1;">
+                ${tr('Internal network scanning and source code analysis.', 'فحص الشبكات الداخلية وتحليل الشيفرة المصدرية.')}
+              </div>
+            </div>
+
+            <div style="border-bottom:1px dashed rgba(255,255,255,0.08); padding-bottom:10px; display:flex; gap:12px; align-items:flex-start;">
+              <span style="color:var(--red); font-weight:800; font-size:15px; font-family:var(--font-mono); background:rgba(244,63,94,0.1); padding:2px 8px; border-radius:4px; flex-shrink:0;">02</span>
+              <div style="font-size:16px; font-weight:600; line-height:1.55; color:#cbd5e1;">
+                ${tr('Active exploitation, social engineering, password guessing, and DoS attacks.', 'الاستغلال الفعلي والهندسة الاجتماعية وتخمين كلمات المرور وهجمات حجب الخدمة.')}
+              </div>
+            </div>
+
+            <div style="border-bottom:1px dashed rgba(255,255,255,0.08); padding-bottom:10px; display:flex; gap:12px; align-items:flex-start;">
+              <span style="color:var(--red); font-weight:800; font-size:15px; font-family:var(--font-mono); background:rgba(244,63,94,0.1); padding:2px 8px; border-radius:4px; flex-shrink:0;">03</span>
+              <div style="font-size:16px; font-weight:600; line-height:1.55; color:#cbd5e1;">
+                ${tr('Bypassing WAF, CAPTCHA, or DDoS protection.', 'تجاوز WAF أو CAPTCHA أو حماية DDoS.')}
+              </div>
+            </div>
+
+            <div style="display:flex; gap:12px; align-items:flex-start;">
+              <span style="color:var(--red); font-weight:800; font-size:15px; font-family:var(--font-mono); background:rgba(244,63,94,0.1); padding:2px 8px; border-radius:4px; flex-shrink:0;">04</span>
+              <div style="font-size:16px; font-weight:600; line-height:1.55; color:#cbd5e1;">
+                ${tr('Vulnerability remediation lifecycle and ticketing management.', 'إدارة دورة معالجة الثغرات والتذاكر.')}
+              </div>
+            </div>
+          </div>
+        </div>
+      `)}
+    </div>
+
+    ${A(3, `
+      <div style="background:rgba(15,23,42,0.8); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:8px 18px; font-size:14px; color:#cbd5e1; display:flex; justify-content:space-between; align-items:center;">
+        <div><b>${tr('Documentation Baseline:', 'المرجع التوثيقي:')}</b> ${tr('Chapter 1 §1.5 defines strict black-box boundaries; internal pentesting and active exploitation are strictly excluded.', 'يحدد الفصل الأول (القسم 1.5) حدود الفحص الخارجي الصارم بنهج الصندوق الأسود، مع استبعاد تام لأي فحص داخلي أو استغلال فعلي.')}</div>
+        <span style="font-size:11.5px; color:var(--teal); font-family:var(--font-mono); font-weight:700;">CHAPTER 1 §1.5</span>
+      </div>
+    `)}
   </div>`
 );
 
@@ -345,74 +537,73 @@ addSlide(
   ['Slide 07: Related Systems & Tools', 'الشريحة 7: الأنظمة والأدوات ذات الصلة'],
   ['Related Systems and Tools', 'الأنظمة والأدوات ذات الصلة'],
   ['Related Systems & Tools', 'الأنظمة والأدوات ذات الصلة'], 'tag-sec',
-  ['Table 2.2: Criterion-based comparison of reviewed systems with the proposed YemScan platform.',
-   'جدول 2.2: مقارنة معيارية بين الأنظمة والأدوات المراجعة ومنصة YemScan المقترحة.'],
+  ['Criterion-based comparison of reviewed systems with the proposed YemScan platform (Table 2.2 summary).',
+   'مقارنة معيارية موجزة بين الأنظمة المراجعة ومنصة YemScan المقترحة (ملخص جدول 2.2).'],
   () => {
     const headers = [
-      tr('Comparison Criterion', 'معيار المقارنة'),
-      'Nuclei (ProjectDiscovery)',
-      'Wapiti (Wapiti-Scanner)',
-      'reNgine (Ojha, n.d)',
-      'FortiScan (Al-Sharaf et al., 2024)',
-      tr('YemScan (Proposed)', 'YemScan (مقترح)')
+      tr('Comparison criterion \\ Tool or System', 'معيار المقارنة \\ الأداة أو النظام'),
+      'Nuclei',
+      'Wapiti',
+      'reNgine',
+      'FortiScan',
+      'YemScan'
     ];
 
     const rows = [
       [
-        tr('Centralized web dashboard for managing scans', 'لوحة تحكم ويب مركزية لإدارة الفحوصات'),
-        '❌', '❌', '✅', '✅', '✅', false
+        tr('Integrated subdomain and open-port discovery', 'اكتشاف مدمج للنطاقات الفرعية والمنافذ المفتوحة'),
+        '❌', '❌', '✅', '❌', '✅'
       ],
       [
-        tr('Integrated subdomain and open-port discovery', 'استكشاف مدمج للنطاقات الفرعية والمنافذ المفتوحة'),
-        '❌', '❌', '✅', '❌', '✅', false
+        tr('Coordination of multiple discovery and scanning tools', 'تنسيق مسار متعدد الأدوات للاستكشاف والفحص'),
+        '❌', '❌', '✅', '❌', '✅'
       ],
       [
-        tr('Coordination of multiple discovery and scanning tools', 'تنسيق أدوات استكشاف وفحص أمني متعددة'),
-        '❌', '❌', '✅', '❌', '✅', false
+        tr('AI-assisted interpretation of security findings', 'تفسير نتائج الفحص بمساعدة الذكاء الاصطناعي'),
+        '❌', '❌', '✅', '✅', '✅'
       ],
       [
-        tr('AI-assisted interpretation of security findings', 'تفسير النتائج الأمنية بمساعدة الذكاء الاصطناعي'),
-        '❌', '❌', '✅', '✅', '✅', false
-      ],
-      [
-        tr('Generation of scan outputs or reports', 'توليد مخرجات الفحص أو التقارير'),
-        '✅', '✅', '✅', '✅', '✅', false
-      ],
-      [
-        tr('Explicit security-reference enrichment of consolidated findings before AI analysis', 'إثراء صريح للنتائج الموحدة بالمراجع القياسية قبل تحليل الذكاء'),
-        '❌', '❌', '❌', '❌', '✅', true
+        tr('Explicit security-reference enrichment of consolidated findings before AI analysis', 'إثراء مرجعي قياسي صريح للنتائج الموحدة قبل التحليل بالذكاء الاصطناعي'),
+        '❌', '❌', '❌', '❌', '✅'
       ]
     ];
 
-    return `<div style="display:flex; flex-direction:column; gap:9px; width:100%;">
-      <div style="font-size:14.5px; font-weight:700; color:var(--teal); margin-bottom:-2px;">
-        ${tr('Table 2.2: Comparison of Related Systems and Tools with the Proposed YemScan Platform', 'جدول 2.2: مقارنة الأنظمة والأدوات ذات الصلة مع منصة YemScan المقترحة')}
+    return `<div style="display:flex; flex-direction:column; gap:10px; width:100%;">
+      <div style="display:flex; justify-content:space-between; align-items:center;">
+        <div style="font-size:16.5px; font-weight:700; color:var(--teal);">
+          ${tr('Criterion-Based Comparison with Reviewed Systems and Tools', 'مقارنة معيارية مع الأنظمة والأدوات المراجعة')}
+        </div>
+        <button class="pill-btn" onclick="openTable22Modal()" style="font-size:13.5px; padding:5px 14px; cursor:pointer;">
+          ${tr('View Full Table 2.2', 'عرض جدول 2.2 الكامل')}
+        </button>
       </div>
 
       ${A(0, `
         <div style="overflow-x:auto;">
-          <table class="comp-table" style="font-size:13.5px;">
+          <table class="comp-table" style="font-size:15px; width:100%;">
             <thead>
               <tr>
-                <th style="width:40%;">${headers[0]}</th>
-                <th class="center" style="width:11%;">${headers[1]}</th>
-                <th class="center" style="width:11%;">${headers[2]}</th>
-                <th class="center" style="width:11%;">${headers[3]}</th>
-                <th class="center" style="width:11%;">${headers[4]}</th>
-                <th class="center" style="width:16%; color:var(--teal); background:rgba(45,212,191,0.18); border-left:1px solid rgba(45,212,191,0.3); border-right:1px solid rgba(45,212,191,0.3);">${headers[5]}</th>
+                <th style="width:38%; padding:10px 14px;">${headers[0]}</th>
+                <th class="center" style="width:12%; padding:10px 8px;">${headers[1]}</th>
+                <th class="center" style="width:12%; padding:10px 8px;">${headers[2]}</th>
+                <th class="center" style="width:12%; padding:10px 8px;">${headers[3]}</th>
+                <th class="center" style="width:12%; padding:10px 8px;">${headers[4]}</th>
+                <th class="center" style="width:14%; padding:10px 8px; color:var(--teal); background:rgba(45,212,191,0.18); border-left:1px solid rgba(45,212,191,0.3); border-right:1px solid rgba(45,212,191,0.3);">${headers[5]}</th>
               </tr>
             </thead>
             <tbody>
-              ${rows.map(r => `
-                <tr class="${r[6] ? 'highlight' : ''}" style="${r[6] ? 'background:rgba(45,212,191,0.12);' : ''}">
-                  <td style="font-weight:${r[6] ? '800' : '600'}; color:${r[6] ? 'var(--teal)' : '#e2e8f0'}; padding:6px 10px;">
-                    ${r[6] ? '⭐ ' : ''}${r[0]}
+              ${rows.map((r, idx) => `
+                <tr style="${idx === 3 ? 'background:rgba(45,212,191,0.08);' : ''}">
+                  <td style="font-weight:${idx === 3 ? '800' : '600'}; color:${idx === 3 ? 'var(--teal)' : '#e2e8f0'}; padding:10px 14px;">
+                    ${r[0]}
                   </td>
-                  <td class="center" style="font-size:14px; padding:6px 4px;">${r[1]}</td>
-                  <td class="center" style="font-size:14px; padding:6px 4px;">${r[2]}</td>
-                  <td class="center" style="font-size:14px; padding:6px 4px;">${r[3]}</td>
-                  <td class="center" style="font-size:14px; padding:6px 4px;">${r[4]}</td>
-                  <td class="center" style="font-size:15px; font-weight:800; background:rgba(45,212,191,0.06); border-left:1px solid rgba(45,212,191,0.2); border-right:1px solid rgba(45,212,191,0.2); color:var(--teal); padding:6px 4px;">${r[5]}</td>
+                  <td class="center" style="font-size:18px; padding:9px 6px;">${r[1]}</td>
+                  <td class="center" style="font-size:18px; padding:9px 6px;">${r[2]}</td>
+                  <td class="center" style="font-size:18px; padding:9px 6px;">${r[3]}</td>
+                  <td class="center" style="font-size:18px; padding:9px 6px;">${r[4]}</td>
+                  <td class="center" style="font-size:18px; font-weight:800; background:rgba(45,212,191,0.06); border-left:1px solid rgba(45,212,191,0.2); border-right:1px solid rgba(45,212,191,0.2); padding:9px 6px;">
+                    ${r[5]}
+                  </td>
                 </tr>
               `).join('')}
             </tbody>
@@ -421,20 +612,15 @@ addSlide(
       `)}
 
       ${A(1, `
-        <div style="display:flex; flex-direction:column; gap:5px; background:rgba(15,23,42,0.7); border:1px solid rgba(255,255,255,0.08); border-radius:10px; padding:8px 14px; font-size:13px; line-height:1.5; color:var(--text-muted);">
-          <div>
-            <b>${tr('Note:', 'ملاحظة:')}</b>
-            ${tr(' (✅) indicates the criterion is documented for a reviewed system or proposed for YemScan; (❌) indicates the complete criterion as defined is not documented in the reviewed source (does not mean the system lacks every related capability). Nuclei and Wapiti are compared as standalone open-source scanners.',
-                 ' تشير (✅) إلى أن المعيار موثق في النظام المراجع أو مقترح لمنصة YemScan؛ بينما تشير (❌) إلى أن المعيار بصيغته المحددة غير موثق في المصدر المراجع (ولا يعني بالضرورة انعدام كافة القدرات ذات الصلة). قورن Nuclei وWapiti كأداتي فحص مستقلتين مفتوحتي المصدر.')}
+        <div style="display:flex; flex-direction:column; gap:6px; background:rgba(15,23,42,0.7); border:1px solid rgba(255,255,255,0.08); border-radius:10px; padding:10px 16px; font-size:14px; line-height:1.55; color:var(--text-muted);">
+          <div style="color:#cbd5e1;">
+            <b style="color:var(--teal);">${tr('Symbol Note:', 'ملاحظة الرموز:')}</b>
+            ${tr('✅ Feature supported or documented in reviewed source; ❌ Feature not supported or not documented in reviewed source.',
+                 '✅ الميزة مدعومة أو موثقة في المصدر المراجع؛ ❌ الميزة غير مدعومة أو غير موثقة في المصدر المراجع.')}
           </div>
-          <div style="color:#cbd5e1; border-top:1px dashed rgba(255,255,255,0.08); padding-top:4px;">
-            <b style="color:var(--teal);">${tr('Key Takeaway:', 'الاستنتاج الرئيسي:')}</b>
-            ${tr('reNgine already supports several shared capabilities (discovery, tool integration, LLMs, reporting). The principal distinction represented in this table is YemScan\'s proposed stage for enriching consolidated findings with relevant security references (CVE, CWE, CVSS, OWASP) before AI-assisted interpretation (subject to verification during testing).',
-                 'يدعم reNgine قدرات مشتركة عدة (الاستكشاف، دمج الأدوات، ميزات الذكاء، التقارير). ويتمثل التميز التصميمي لـ YemScan في مرحلة إثراء النتائج الموحدة بالمراجع القياسية المعتمدة (CVE/CWE/CVSS/OWASP) قبل التحليل بالذكاء الاصطناعي (يخضع للتحقق أثناء الاختبار).')}
-          </div>
-          <div style="font-size:11.5px; color:var(--text-dim); border-top:1px dashed rgba(255,255,255,0.08); padding-top:4px; margin-top:2px;">
-            ${tr('FortiScan: unpublished bachelor\'s graduation project, UST (Al-Sharaf et al., 2024).',
-                 'FortiScan: مشروع تخرج بكالوريوس غير منشور، جامعة العلوم والتكنولوجيا (Al-Sharaf et al., 2024).')}
+          <div style="font-size:12.5px; color:var(--text-dim); border-top:1px dashed rgba(255,255,255,0.08); padding-top:5px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px;">
+            <span>${tr('Note: Lack of documentation in the reviewed source does not imply absence of capability.', 'تنبيه: عدم التوثيق في المصدر المراجع لا يعني بالضرورة غياب القدرة.')}</span>
+            <span>${tr('FortiScan: unpublished bachelor\'s graduation project, UST (Al-Sharaf et al., 2024).', 'FortiScan: مشروع تخرج بكالوريوس غير منشور، جامعة العلوم والتكنولوجيا (Al-Sharaf et al., 2024).')}</span>
           </div>
         </div>
       `)}
@@ -449,70 +635,77 @@ addSlide(
   ['Research Gap', 'الفجوة التقنية'], 'tag-prop',
   ['Addressing tool integration variance, output fragmentation, and lack of pre-AI reference enrichment.',
    'معالجة تباين نطاق الأدوات، تشتت المخرجات، وغياب مرحلة الإثراء المرجعي الصريح قبل الذكاء.'],
-  () => `<div style="display:flex; flex-direction:column; gap:10px; width:100%;">
-    ${A(0, `
-      <div style="background:rgba(20,184,166,0.08); border:1px solid rgba(20,184,166,0.3); border-radius:10px; padding:8px 16px; font-size:14.5px; line-height:1.5; color:#f1f5f9; display:flex; align-items:center; gap:10px;">
-        <span style="font-size:18px; color:var(--teal); flex-shrink:0;">🎯</span>
-        <span>${tr('“Existing solutions differ in functional scope and integration level. Operating multiple tools separately increases scanning complexity, causing fragmented outputs and difficult unified analysis.”',
-                  '“تتباين الحلول الحالية في نطاقها الوظيفي ومستوى التكامل؛ حيث يزيد تشغيل الأدوات بشكل منفصل من تعقيد العمليات وتشتت المخرجات وصعوبة تنظيمها وتحليلها بشكل موحد.”')}</span>
+  () => `<div class="split-ill-grid">
+    <!-- Left Column: Top Quote Banner + 3 Pillars & Verification Note -->
+    <div style="display:flex; flex-direction:column; gap:10px; justify-content:space-between;">
+      ${A(0, `
+        <div style="border-inline-start:4px solid var(--teal); background:rgba(45,212,191,0.06); padding:8px 16px; border-radius:8px;">
+          <p style="font-size:14px; font-weight:600; line-height:1.55; color:#f1f5f9; margin:0;">
+            ${tr('“Existing solutions differ in functional scope and integration level. Operating multiple tools separately increases scanning complexity, causing fragmented outputs and difficult unified analysis.”',
+                 '“تتباين الحلول الحالية في نطاقها الوظيفي ومستوى التكامل؛ حيث يزيد تشغيل الأدوات بشكل منفصل من تعقيد العمليات وتشتت المخرجات وصعوبة تنظيمها وتحليلها بشكل موحد.”')}
+          </p>
+        </div>
+      `)}
+
+      <div style="display:flex; flex-direction:column; gap:8px;">
+        ${A(1, `
+          <div class="card" style="padding:10px 14px; border-color:rgba(45,212,191,0.3);">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:2px;">
+              <h4 style="font-size:15.5px; font-weight:800; color:var(--teal); margin:0;">${tr('1. Unified Workflow & Dual Modes', '1. سير عمل موحد ونمطان للفحص')}</h4>
+              <span style="font-size:11px; font-weight:700; color:var(--teal); font-family:var(--font-mono);">PIPELINE DUALITY</span>
+            </div>
+            <p style="font-size:13.5px; line-height:1.5; color:#cbd5e1; margin:0;">${tr('Integrates external discovery with multiple scanners, supporting both Sequential and Independent modes in a unified black-box workflow.',
+              'دمج استكشاف الأصول مع أدوات فحص الثغرات المتعددة، مع دعم الفحص المتسلسل والفحص المستقل ضمن سير عمل خارجي موحد.')}</p>
+          </div>
+        `)}
+
+        ${A(2, `
+          <div class="card" style="padding:10px 14px; border-color:rgba(56,189,248,0.3);">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:2px;">
+              <h4 style="font-size:15.5px; font-weight:800; color:var(--blue); margin:0;">${tr('2. Consolidation & Provenance', '2. توحيد المخرجات وإثبات المصدر')}</h4>
+              <span style="font-size:11px; font-weight:700; color:var(--blue); font-family:var(--font-mono);">AUDIT TRAIL</span>
+            </div>
+            <p style="font-size:13.5px; line-height:1.5; color:#cbd5e1; margin:0;">${tr('Preserves raw tool outputs separately while consolidating heterogeneous findings into structured records with full audit traceability.',
+              'الاحتفاظ بالمخرجات الخام بشكل منفصل مع توحيد وإلغاء تكرار النتائج المتباينة ضمن سجلات مهيكلة تحتفظ بروابط التدقيق للأدلة ومصادر الفحص الأصلية.')}</p>
+          </div>
+        `)}
+
+        ${A(3, `
+          <div class="card" style="padding:10px 14px; border-color:rgba(167,139,250,0.3);">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:2px;">
+              <h4 style="font-size:15.5px; font-weight:800; color:var(--violet); margin:0;">${tr('3. Pre-AI Reference Enrichment', '3. إثراء المراجع القياسية قبل الذكاء')}</h4>
+              <span style="font-size:11px; font-weight:700; color:var(--violet); font-family:var(--font-mono);">GROUNDING</span>
+            </div>
+            <p style="font-size:13.5px; line-height:1.5; color:#cbd5e1; margin:0;">${tr('Associates consolidated findings with relevant CVE, CWE, CVSS, and OWASP categories prior to AI interpretation using defined matching criteria.',
+              'ربط النتائج الموحدة بمعرّفات CVE وتصنيفات CWE ودرجات CVSS وفئات OWASP Top 10 عند توفر تطابق ملائم وفق معايير مطابقة محددة، وذلك قبل تقديمها للذكاء الاصطناعي.')}</p>
+          </div>
+        `)}
       </div>
-    `)}
-
-    <div class="c-grid-2">
-      ${A(1, `
-        <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;">
-          <span style="font-size:18px; color:var(--teal);">🔄</span>
-          <h3 class="c-card-h" style="font-size:17px; margin:0;">${tr('1. Unified Workflow & Dual Modes', '1. سير عمل موحد ونمطان للفحص')}</h3>
-        </div>
-        <p class="c-card-p" style="font-size:13.5px; line-height:1.55; margin-bottom:6px;">${tr('Integrates external asset & service discovery with multiple vulnerability scanners, supporting both Sequential Scanning (automated stage handover) and Independent Scanning in a unified external black-box workflow.',
-          'دمج استكشاف الأصول والخدمات الرقمية مع أدوات فحص الثغرات المتعددة، مع دعم الفحص المتسلسل (تسليم آلي للمخرجات) والفحص المستقل ضمن سير عمل خارجي موحد بنهج الصندوق الأسود.')}</p>
-        <div style="font-size:12px; color:var(--teal); background:rgba(45,212,191,0.08); padding:3px 8px; border-radius:6px; display:inline-block;">
-          <b>${tr('Pillars:', 'الركائز:')}</b> ${tr('Discovery + Scanning integration · Sequential & Independent modes', 'دمج الاستكشاف والفحص · نمطا الفحص المتسلسل والمستقل')}
-        </div>
-      `, 'c-card')}
-
-      ${A(2, `
-        <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;">
-          <span style="font-size:18px; color:var(--blue);">📑</span>
-          <h3 class="c-card-h" style="font-size:17px; margin:0;">${tr('2. Consolidation & Provenance', '2. توحيد المخرجات وإثبات المصدر')}</h3>
-        </div>
-        <p class="c-card-p" style="font-size:13.5px; line-height:1.55; margin-bottom:6px;">${tr('Preserves raw tool outputs separately while normalizing and consolidating heterogeneous findings into structured records with full audit traceability back to source evidence.',
-          'الاحتفاظ بالمخرجات الخام بشكل منفصل مع توحيد وإلغاء تكرار النتائج المتباينة ضمن سجلات مهيكلة تحتفظ بروابط التدقيق للأدلة ومصادر الفحص الأصلية.')}</p>
-        <div style="font-size:12px; color:var(--blue); background:rgba(56,189,248,0.08); padding:3px 8px; border-radius:6px; display:inline-block;">
-          <b>${tr('Pillars:', 'الركائز:')}</b> ${tr('Heterogeneous normalization · Raw output preservation & auditability', 'معالجة تباين الصيغ · حفظ المخرجات الخام وقابلية التدقيق')}
-        </div>
-      `, 'c-card c-blue')}
-
-      ${A(3, `
-        <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;">
-          <span style="font-size:18px; color:var(--violet);">🏷️</span>
-          <h3 class="c-card-h" style="font-size:17px; margin:0;">${tr('3. Pre-AI Reference Enrichment', '3. إثراء المراجع القياسية قبل الذكاء')}</h3>
-        </div>
-        <p class="c-card-p" style="font-size:13.5px; line-height:1.55; margin-bottom:6px;">${tr('When an appropriate match is available, associates consolidated findings with relevant CVE identifiers, CWE classifications, CVSS scores, and OWASP Top 10 categories prior to AI interpretation using defined matching criteria.',
-          'ربط النتائج الموحدة بمعرّفات CVE وتصنيفات CWE ودرجات CVSS وفئات OWASP Top 10 عند توفر تطابق ملائم وفق معايير مطابقة محددة، وذلك قبل تقديمها للذكاء الاصطناعي.')}</p>
-        <div style="font-size:12px; color:var(--violet); background:rgba(167,139,250,0.08); padding:3px 8px; border-radius:6px; display:inline-block;">
-          <b>${tr('Pillars:', 'الركائز:')}</b> ${tr('Rule-based CVE/CWE/CVSS/OWASP association · Explicit pre-AI grounding', 'ربط المراجع القياسية بالقواعد · تثبيت المرجعية قبل الذكاء')}
-        </div>
-      `, 'c-card c-violet')}
 
       ${A(4, `
-        <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;">
-          <span style="font-size:18px; color:var(--amber);">🧠</span>
-          <h3 class="c-card-h" style="font-size:17px; margin:0;">${tr('4. AI Guidance & Dual Reports', '4. التفسير بالذكاء والتقارير التنفيذية/الفنية')}</h3>
+        <div style="background:rgba(15,23,42,0.85); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:6px 14px; font-size:13px; color:#cbd5e1;">
+          <b>${tr('Verification Note:', 'ملاحظة التحقق:')}</b> ${tr('These functions represent design-specific solutions to the identified gap, verified during prototype testing.', 'تمثل هذه الوظائف حلاً تصميمياً للفجوة المحددة؛ وتخضع للتحقق والتقييم أثناء مرحلة التنفيذ والاختبار.')}
         </div>
-        <p class="c-card-p" style="font-size:13.5px; line-height:1.55; margin-bottom:6px;">${tr('Employs AI strictly as a supporting explanatory layer to interpret findings, assist remediation prioritization, and generate structured Executive and Technical Reports.',
-          'توظيف الذكاء الاصطناعي كطبقة مساعدة فقط لتفسير النتائج واقتراح أولويات المعالجة ودعم إعداد التقارير التنفيذية والفنية المهيكلة (المحمية أثناء التخزين).')}</p>
-        <div style="font-size:12px; color:var(--amber); background:rgba(245,158,11,0.08); padding:3px 8px; border-radius:6px; display:inline-block;">
-          <b>${tr('Pillars:', 'الركائز:')}</b> ${tr('AI-assisted remediation context · Executive & Technical Reports', 'إرشاد وتفسير مدعوم بالذكاء · تقارير تنفيذية وفنية')}
-        </div>
-      `, 'c-card c-amber')}
+      `)}
     </div>
 
+    <!-- Right Column: Illustrated Research Gap Card -->
     ${A(5, `
-      <div style="background:rgba(15,23,42,0.7); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:6px 14px; font-size:13px; color:#cbd5e1; display:flex; align-items:center; gap:8px;">
-        <span style="font-size:14px; color:var(--teal);">🔬</span>
-        <span><b>${tr('Academic Verification Note:', 'ملاحظة التحقق الأكاديمي:')}</b> ${tr('These proposed functions represent a design-specific solution to the identified gap; their implementation and effectiveness will be verified during testing.',
-          'تمثل هذه الوظائف حلاً تصميمياً للفجوة المحددة؛ وستخضع جميع هذه الميزات المقترحة للتحقق والتقييم التجريبي أثناء مرحلة التنفيذ والاختبار.')}</span>
+      <div class="ill-card">
+        <div class="ill-frame" onclick="openImgModal('images/prior_work_benchmark.jpg', '${tr('Comparative Gap Analysis: Tool Coordination & Pre-AI Reference Grounding', 'تحليل الفجوة المقارنة: تنسيق الأدوات والإثراء المرجعي الصريح قبل الذكاء')}')">
+          <img src="images/prior_work_benchmark.jpg" alt="Comparative Literature Benchmark" class="ill-img" loading="lazy">
+          <div class="ill-zoom-hint">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            <span>BENCHMARK ZOOM</span>
+          </div>
+        </div>
+        <div class="ill-caption">
+          <div class="ill-title">
+            <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:var(--violet);"></span>
+            ${tr('Comparative Gap in Prior Tools', 'الفجوة المقارنة في الأدوات السابقة')}
+          </div>
+          <div class="ill-sub">CHAPTER 2 §2.3</div>
+        </div>
       </div>
     `)}
   </div>`
@@ -530,7 +723,7 @@ addSlide(
       <div class="diag-card" onclick="openImgModal('./assets/workflow-diagram.png', 'Figure 3.3: YemScan | Proposed Scanning and Analysis Workflow')" title="${tr('Click to view full-screen diagram', 'انقر لتكبير المخطط بحجم الشاشة')}">
         <div class="diag-card-head">
           <span class="diag-badge">Figure 3.3</span>
-          <span class="diag-hint">🔍 ${tr('Click to Enlarge', 'انقر للتكبير')}</span>
+          <span class="diag-hint">${tr('Click to Enlarge', 'انقر للتكبير')}</span>
         </div>
         <div class="diag-img-box">
           <img src="./assets/workflow-diagram.png" alt="Figure 3.3: Proposed Scanning & Analysis Workflow" class="diag-img">
@@ -543,8 +736,7 @@ addSlide(
 
     ${A(1, `
       <div style="display:flex; flex-direction:column; gap:8px; height:100%; justify-content:space-between;">
-        <div style="background:rgba(20,184,166,0.08); border:1px solid rgba(20,184,166,0.3); border-radius:10px; padding:7px 14px; font-size:13.5px; color:#f1f5f9; display:flex; align-items:center; gap:8px;">
-          <span style="color:var(--teal); font-size:16px;">🔄</span>
+        <div style="background:rgba(20,184,166,0.08); border:1px solid rgba(20,184,166,0.3); border-radius:10px; padding:7px 14px; font-size:13.5px; color:#f1f5f9; display:flex; align-items:center;">
           <span><b>${tr('Workflow Stages (Chapter 3):', 'مراحل سير العمل (الفصل الثالث):')}</b> ${tr('From authorized target input and scope validation to report generation, encrypted storage, and authorized delivery via HTTPS.', 'من إدخال الهدف والتحقق من النطاق إلى إنشاء التقارير وحفظها مشفرة وإتاحتها للمستخدم المصرح له عبر HTTPS.')}</span>
         </div>
 
@@ -595,245 +787,317 @@ addSlide(
   ['Slide 10: System Architecture', 'الشريحة 10: معمارية النظام وتدفق البيانات'],
   ['System Architecture and Protected Data Flow (Figure 3.1)', 'معمارية النظام وتدفق البيانات المحمية (مخطط 3.1)'],
   ['Architecture Flow', 'معمارية النظام'], 'tag-prop',
-  ['Figure 3.1: Modular architecture integrating with an external AI service: decoupling presentation, backend orchestration, isolated execution, protected data management, and external AI analysis.',
-   'مخطط 3.1: معمارية معيارية تتكامل مع خدمة ذكاء اصطناعي خارجية: تفصل العرض، التطبيق، محرك الفحص المعزول، إدارة البيانات المحمية، والتحليل الخارجي بالذكاء.'],
-  () => `<div style="display:grid; grid-template-columns: 460px 1fr; gap:16px; width:100%; align-items:stretch;">
+  ['', ''],
+  () => `<div style="display:grid; grid-template-columns: 480px 1fr; gap:16px; width:100%; height:100%; align-items:center;">
     ${A(0, `
       <div class="diag-card" onclick="openImgModal('./assets/architecture-diagram.png', 'Figure 3.1: YemScan System Architecture and Protected Data Flow')" title="${tr('Click to view full-screen diagram', 'انقر لتكبير المخطط بحجم الشاشة')}">
         <div class="diag-card-head">
           <span class="diag-badge">Figure 3.1</span>
-          <span class="diag-hint">🔍 ${tr('Click to Enlarge', 'انقر للتكبير')}</span>
+          <span class="diag-hint">${tr('Click to Enlarge', 'انقر للتكبير')}</span>
         </div>
         <div class="diag-img-box">
           <img src="./assets/architecture-diagram.png" alt="Figure 3.1: YemScan System Architecture" class="diag-img">
         </div>
-        <div style="font-size:12px; color:#475569; text-align:center; margin-top:4px; font-weight:700;">
+        <div style="font-size:13px; color:#475569; text-align:center; margin-top:5px; font-weight:700;">
           ${tr('Figure 3.1: System Architecture & Protected Data Flow', 'مخطط 3.1: معمارية النظام وتدفق البيانات المحمية')}
         </div>
       </div>
     `)}
 
     ${A(1, `
-      <div style="display:flex; flex-direction:column; gap:7px; height:100%; justify-content:space-between;">
-        <div class="arch-layer" style="padding:7px 12px; margin:0;">
-          <div class="arch-layer-info" style="width:170px;">
+      <div style="display:flex; flex-direction:column; gap:10px; height:100%; justify-content:center;">
+        <div class="arch-layer" style="padding:10px 16px; margin:0;">
+          <div class="arch-layer-info" style="width:190px;">
             <span class="arch-layer-num">Layer 1</span>
-            <div class="arch-layer-name" style="font-size:14px;">${tr('Presentation Layer', 'طبقة العرض والواجهة')}</div>
-            <div class="arch-layer-tech">React & TypeScript <span class="badge-plan" style="font-size:11px; padding:2px 6px;">${tr('Planned', 'مخطط')}</span></div>
+            <div class="arch-layer-name" style="font-size:16px;">${tr('Presentation Layer', 'طبقة العرض والواجهة')}</div>
+            <div class="arch-layer-tech">React & TypeScript <span class="badge-plan" style="font-size:12px; padding:2px 8px;">${tr('Planned', 'مخطط')}</span></div>
           </div>
           <div class="arch-boxes">
-            <div class="arch-pill" style="font-size:13px; padding:5px 11px;">
+            <div class="arch-pill" style="font-size:15px; padding:7px 14px;">
               ${tr('Targets, scan selection, live dashboard, authorized report viewing via HTTPS.', 'إدخال الأهداف، اختيار نمط الفحص، لوحة المتابعة، وعرض التقارير عبر HTTPS.')}
             </div>
           </div>
         </div>
 
-        <div class="arch-layer" style="padding:7px 12px; margin:0;">
-          <div class="arch-layer-info" style="width:170px;">
+        <div class="arch-layer" style="padding:10px 16px; margin:0;">
+          <div class="arch-layer-info" style="width:190px;">
             <span class="arch-layer-num">Layer 2</span>
-            <div class="arch-layer-name" style="font-size:14px;">${tr('Application Layer', 'طبقة التطبيق والتنسيق')}</div>
+            <div class="arch-layer-name" style="font-size:16px;">${tr('Application Layer', 'طبقة التطبيق والتنسيق')}</div>
             <div class="arch-layer-tech">FastAPI Backend</div>
           </div>
           <div class="arch-boxes">
-            <div class="arch-pill blue" style="font-size:13px; padding:5px 11px;">
+            <div class="arch-pill blue" style="font-size:15px; padding:7px 14px;">
               ${tr('Authentication, RBAC, ownership checks, scan orchestration, coordinating external AI calls, validating responses, compiling reports.', 'المصادقة، إدارة الأدوار (RBAC)، فحص الملكية، تنسيق الفحص، تنسيق استدعاءات الذكاء الخارجية والتحقق من الردود وتجميع التقارير.')}
             </div>
           </div>
         </div>
 
-        <div class="arch-layer" style="padding:7px 12px; margin:0;">
-          <div class="arch-layer-info" style="width:170px;">
+        <div class="arch-layer" style="padding:10px 16px; margin:0;">
+          <div class="arch-layer-info" style="width:190px;">
             <span class="arch-layer-num">Layer 3</span>
-            <div class="arch-layer-name" style="font-size:14px;">${tr('Security Execution Engine', 'محرك الفحص والتنفيذ')}</div>
+            <div class="arch-layer-name" style="font-size:16px;">${tr('Security Execution Engine', 'محرك الفحص والتنفيذ')}</div>
             <div class="arch-layer-tech">Docker Isolation</div>
           </div>
           <div class="arch-boxes">
-            <div class="arch-pill violet" style="font-size:13px; padding:5px 11px;">
+            <div class="arch-pill violet" style="font-size:15px; padding:7px 14px;">
               ${tr('Subfinder, Naabu, httpx, Kiterunner, Nuclei, Wapiti (Sequential & Independent execution).', 'تشغيل معزول للأدوات الست: Subfinder وNaabu وhttpx وKiterunner وNuclei وWapiti.')}
             </div>
           </div>
         </div>
 
-        <div class="arch-layer" style="padding:7px 12px; margin:0;">
-          <div class="arch-layer-info" style="width:170px;">
+        <div class="arch-layer" style="padding:10px 16px; margin:0;">
+          <div class="arch-layer-info" style="width:190px;">
             <span class="arch-layer-num">Layer 4</span>
-            <div class="arch-layer-name" style="font-size:14px;">${tr('Data Management Layer', 'طبقة إدارة البيانات')}</div>
+            <div class="arch-layer-name" style="font-size:16px;">${tr('Data Management Layer', 'طبقة إدارة البيانات')}</div>
             <div class="arch-layer-tech">PostgreSQL & File System</div>
           </div>
           <div class="arch-boxes">
-            <div class="arch-pill amber" style="font-size:13px; padding:5px 11px;">
+            <div class="arch-pill amber" style="font-size:15px; padding:7px 14px;">
               ${tr('Parsing, normalization, deduplication, reference enrichment. Encrypts analyses, reports, and raw data prior to storage via AES-256-GCM.', 'توحيد الصيغ، إلغاء التكرار، إثراء المراجع، وتشفير التحليلات والتقارير والبيانات الخام قبل التخزين بـ AES-256-GCM.')}
             </div>
           </div>
         </div>
 
-        <div class="arch-layer" style="padding:7px 12px; margin:0;">
-          <div class="arch-layer-info" style="width:170px;">
-            <span class="arch-layer-num" style="background:rgba(168,85,247,0.25); color:#d8b4fe; font-size:11px; padding:2px 7px;">${tr('External Service', 'خدمة خارجية')}</span>
-            <div class="arch-layer-name" style="font-size:14px;">${tr('External AI Service', 'خدمة الذكاء الاصطناعي الخارجية')}</div>
-            <div class="arch-layer-tech">Gemini 3.8 Flash <span class="badge-plan" style="font-size:11px; padding:2px 6px;">${tr('Planned', 'مخطط')}</span></div>
+        <div class="arch-layer" style="padding:10px 16px; margin:0;">
+          <div class="arch-layer-info" style="width:190px;">
+            <span class="arch-layer-num" style="background:rgba(168,85,247,0.25); color:#d8b4fe; font-size:12px; padding:2px 8px;">${tr('External Service', 'خدمة خارجية')}</span>
+            <div class="arch-layer-name" style="font-size:16px;">${tr('External AI Service', 'خدمة الذكاء الاصطناعي الخارجية')}</div>
+            <div class="arch-layer-tech">Gemini 3.8 Flash <span class="badge-plan" style="font-size:12px; padding:2px 8px;">${tr('Planned', 'مخطط')}</span></div>
           </div>
           <div class="arch-boxes">
-            <div class="arch-pill" style="font-size:13px; padding:5px 11px;">
+            <div class="arch-pill" style="font-size:15px; padding:7px 14px;">
               ${tr('Authorized minimized findings via HTTPS; plain-language remediation; Executive & Technical Reports.', 'إرسال بيانات مقتضبة ومصرح بها؛ تفسير المعالجة؛ وتوليد التقارير التنفيذية والفنية.')}
             </div>
           </div>
-        </div>
-
-        <div style="background:rgba(15,23,42,0.75); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:6px 12px; font-size:13px; color:#cbd5e1; display:flex; align-items:center; gap:8px;">
-          <span style="color:var(--teal); font-size:14px;">🔒</span>
-          <span><b>${tr('Cross-Cutting Security Controls:', 'ضوابط الأمان العابرة للطبقات:')}</b> ${tr('Envelope encryption · Controlled key access · Temporary plaintext in memory · No plaintext keys stored in the application database or logs, with KEK managed in a protected secret store separate from the database · Platform admin restricted at application level.', 'تشفير المغلف · وصول محكوم للمفاتيح · معالجة مؤقتة في الذاكرة · عدم حفظ المفاتيح بصيغتها الصريحة في قاعدة بيانات التطبيق أو سجلاته، مع إدارة KEK في مخزن أسرار محمي منفصل عن قاعدة البيانات · قيود مدير المنصة على مستوى التطبيق.')}</span>
         </div>
       </div>
     `)}
   </div>`
 );
 
-// 11. Development Methodology: Agile & Sprints (الشريحة 11)
+// 11. Development Methodology (الشريحة 11)
 addSlide(
   ['Slide 11: Development Methodology', 'الشريحة 11: منهجية التطوير الهندسية'],
-  ['Iterative & Incremental Engineering Methodology (Agile)', 'منهجية التطوير: الهندسة التكرارية والتزايدية (منهجية Agile)'],
+  ['Iterative & Incremental Development (Agile Principles)', 'التطوير التكراري والتزايدي وفق مبادئ Agile'],
   ['Methodology', 'منهجية Agile'], 'tag-prop',
-  ['Decomposing requirements into tasks, executing iterative sprints, and validating against defined technical acceptance criteria.',
-   'تفكيك المتطلبات إلى مهام، وتنفيذ سبرنتات تكرارية، والتحقق وفق معايير قبول تقنية محددة.'],
-  () => `<div style="display:flex; flex-direction:column; gap:12px; width:100%;">
-    <div class="c-grid-2">
+  ['Iterative and incremental progression: requirements decomposition, engineering tasks, and planned technical acceptance criteria.',
+   'تطوير تكراري وتزايدي: تفكيك المتطلبات إلى مهام هندسية، والتحقق وفق معايير قبول تقنية مخططة.'],
+  () => `<div style="display:flex; flex-direction:column; gap:12px; width:100%; height:100%; justify-content:space-between;">
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:36px; width:100%; align-items:stretch;">
       ${A(0, `
-        <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
-          <span style="font-size:20px; color:var(--teal);">🔄</span>
-          <h3 class="c-card-h" style="color:var(--teal); font-size:18px; margin:0;">${tr('Iterative Engineering Lifecycle', 'مبادئ دورة التطوير التكرارية والتزايدية')}</h3>
+        <div style="display:flex; flex-direction:column; justify-content:space-between; height:100%; border-inline-end: 1.5px solid rgba(255,255,255,0.12); padding-inline-end: 28px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; padding-bottom:6px; border-bottom:1.5px solid rgba(45,212,191,0.35);">
+            <h3 style="color:var(--teal); font-size:19.5px; font-weight:800; margin:0;">
+              ${tr('1. What Methodology is Used?', '1. ما المنهجية المستخدمة في تطوير المشروع؟')}
+            </h3>
+            <span class="status-badge" style="background:rgba(45,212,191,0.15); color:var(--teal); border:1px solid rgba(45,212,191,0.4); font-size:12px; padding:2px 8px; font-family:var(--font-mono);">
+              AGILE LIFECYCLE
+            </span>
+          </div>
+
+          <div style="background:rgba(45,212,191,0.06); border:1px solid rgba(45,212,191,0.2); border-radius:8px; padding:8px 12px; margin-bottom:10px;">
+            <div style="font-size:14.5px; font-weight:700; color:var(--teal); margin-bottom:2px;">
+              ${tr('Iterative & Incremental Agile Development:', 'التطوير التكراري والتزايدي وفق مبادئ Agile:')}
+            </div>
+            <p style="font-size:13.5px; line-height:1.5; color:#cbd5e1; margin:0;">
+              ${tr('Progressive development cycles decomposing engineering requirements into discrete tasks and integration modules.',
+                   'تطوير منصة YemScan عبر دورات تكرارية تزايدية تفكك المتطلبات إلى مهام برمجية ومحولات تكامل مستقلة.')}
+            </p>
+          </div>
+
+          <div style="display:flex; flex-direction:column; gap:8px;">
+            <div style="background:rgba(15,23,42,0.6); padding:8px 12px; border-radius:8px; border-left:3px solid var(--teal);">
+              <b style="font-size:14.5px; color:#fff;">1. ${tr('Requirements & Task Breakdown:', 'ترتيب المتطلبات وتفكيك المهام:')}</b>
+              <div style="font-size:13.5px; color:#cbd5e1; margin-top:2px; line-height:1.45;">${tr('Decomposing functional requirements into discrete technical engineering tasks.', 'تحليل المتطلبات الوظيفية إلى مهام برمجية وهندسية محددة.')}</div>
+            </div>
+            <div style="background:rgba(15,23,42,0.6); padding:8px 12px; border-radius:8px; border-left:3px solid var(--blue);">
+              <b style="font-size:14.5px; color:#fff;">2. ${tr('Design & Incremental Development:', 'التصميم والتطوير التزايدي:')}</b>
+              <div style="font-size:13.5px; color:#cbd5e1; margin-top:2px; line-height:1.45;">${tr('Developing tool integration adapters and pipeline logic incrementally.', 'تطوير وحدات تكامل الأدوات ومسار الفحص تدريجياً.')}</div>
+            </div>
+            <div style="background:rgba(15,23,42,0.6); padding:8px 12px; border-radius:8px; border-left:3px solid var(--amber);">
+              <b style="font-size:14.5px; color:#fff;">3. ${tr('Testing & Integration:', 'الاختبار والتكامل:')}</b>
+              <div style="font-size:13.5px; color:#cbd5e1; margin-top:2px; line-height:1.45;">${tr('Verifying data handover between tools and container sandbox boundaries.', 'اختبار تسليم البيانات بين الأدوات وضوابط بيئة التنفيذ.')}</div>
+            </div>
+            <div style="background:rgba(15,23,42,0.6); padding:8px 12px; border-radius:8px; border-left:3px solid var(--violet);">
+              <b style="font-size:14.5px; color:#fff;">4. ${tr('Review & Refinement:', 'المراجعة والتحسين:')}</b>
+              <div style="font-size:13.5px; color:#cbd5e1; margin-top:2px; line-height:1.45;">${tr('Reviewing test findings and refining implementation for subsequent stages.', 'تقييم نتائج الاختبارات ومراجعة الإشراف لإعادة ضبط العمل.')}</div>
+            </div>
+          </div>
         </div>
-        <ul class="c-card-list" style="font-size:13.5px; line-height:1.6; margin-top:4px;">
-          <li><b>${tr('Requirements Breakdown & Prioritization:', 'تفكيك المتطلبات وترتيب الأولويات:')}</b> ${tr('Decomposing functional and security specifications into structured engineering tasks and prioritizing the product backlog.', 'تفكيك المواصفات الوظيفية والأمنية إلى مهام هندسية محددة وترتيب أولويات قائمة متطلبات المنتج.')}</li>
-          <li><b>${tr('Sprint Goal & 2-Week Cadences:', 'أهداف السبرنت والدورات المنتظمة (أسبوعان):')}</b> ${tr('Structuring development into phased 2-week iterations with clear technical goals and bounded scope.', 'تنظيم العمل في دورات زمنية مدتها أسبوعان ذات هدف تقني محدد ونطاق تسليم منضبط.')}</li>
-          <li><b>${tr('Incremental Engineering & Review:', 'التطوير التزايدي والمراجعة المستمرة:')}</b> ${tr('Delivering testable components incrementally, verified through testing and supervisor review to adapt subsequent sprints.', 'تسليم زيادات برمجية قابلة للاختبار مع التحقق المستمر ومراجعة الإشراف لإعادة ضبط أولويات السبرنتات اللاحقة.')}</li>
-        </ul>
-        <div style="font-size:12.5px; color:var(--text-dim); margin-top:10px; border-top:1px dashed rgba(255,255,255,0.08); padding-top:6px;">
-          📌 ${tr('Schedule Alignment: 10 planned sprints × 2 weeks = 20 work weeks across Projects (1) and (2) (submitted for supervisor review).', 'التوافق الزمني: 10 سبرنتات مخططة × أسبوعين = 20 أسبوع عمل موزعة على مشروعي (1) و (2) (خاضعة لمراجعة الإشراف).')}
-        </div>
-      `, 'c-card')}
+      `)}
 
       ${A(1, `
-        <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
-          <span style="font-size:20px; color:var(--blue);">📋</span>
-          <h3 class="c-card-h" style="color:var(--blue); font-size:18px; margin:0;">${tr('Work Packages & Acceptance Framework', 'هيكلة حزم العمل وإطار القبول والتحقق')}</h3>
-        </div>
-        <div style="margin-bottom:8px;">
-          <div style="font-size:12.5px; font-weight:700; color:var(--teal); text-transform:uppercase; margin-bottom:4px;">
-            ${tr('Product Backlog Work Packages (7 Clusters):', 'حزم عمل قائمة متطلبات المنتج (7 حزم رئيسية):')}
+        <div style="display:flex; flex-direction:column; justify-content:space-between; height:100%; padding-inline-start: 4px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; padding-bottom:6px; border-bottom:1.5px solid rgba(56,189,248,0.35);">
+            <h3 style="color:var(--blue); font-size:19.5px; font-weight:800; margin:0;">
+              ${tr('2. Why Was It Chosen for YemScan?', '2. لماذا تم اختيار هذه المنهجية؟')}
+            </h3>
+            <span class="status-badge" style="background:rgba(56,189,248,0.15); color:var(--blue); border:1px solid rgba(56,189,248,0.4); font-size:12px; padding:2px 8px; font-family:var(--font-mono);">
+              RATIONALE
+            </span>
           </div>
-          <div style="font-size:12.5px; line-height:1.5; color:#cbd5e1; background:rgba(15,23,42,0.6); padding:6px 10px; border-radius:6px;">
-            ${tr(
-              '1. Core RBAC & Tenant Isolation · 2. Asynchronous Workers · 3. Reconnaissance Tools · 4. Vulnerability Scanners · 5. Schema Normalization & References · 6. AI Explanatory Pipeline · 7. Encrypted Reports',
-              '1. الحسابات والصلاحيات وعزل بيانات المستخدمين · 2. المهام الخلفية والعامل المستقل · 3. اكتشاف الأصول والخدمات · 4. فحص الثغرات · 5. توحيد النتائج والإثراء المرجعي · 6. التحليل المساعد بالذكاء الاصطناعي · 7. التقارير المشفرة'
-            )}
+
+          <div style="display:flex; flex-direction:column; gap:8px;">
+            <div style="border-bottom:1px dashed rgba(255,255,255,0.08); padding-bottom:8px;">
+              <b style="font-size:14.5px; color:#ffffff; display:block; margin-bottom:3px;">
+                ${tr('Tool Diversity & Phased Integration:', 'تعدد الأدوات وتكاملها التدريجي:')}
+              </b>
+              <p style="font-size:13.5px; line-height:1.5; margin:0; color:#cbd5e1;">
+                ${tr('Integrating 6 diverse tools requires phased unit testing for each tool adapter before orchestrating the full pipeline.',
+                     'دمج 6 أدوات فحص متباينة يتطلب بناء واختبار تكامل كل أداة تدريجياً والتأكد من سلامة مخرجاتها قبل ربطها بالمسار المتسلسل.')}
+              </p>
+            </div>
+
+            <div style="border-bottom:1px dashed rgba(255,255,255,0.08); padding-bottom:8px;">
+              <b style="font-size:14.5px; color:#ffffff; display:block; margin-bottom:3px;">
+                ${tr('Adapting to Empirical Test Results:', 'الاستجابة لنتائج الاختبارات التجريبية:')}
+              </b>
+              <p style="font-size:13.5px; line-height:1.5; margin:0; color:#cbd5e1;">
+                ${tr('Refining parsers and output normalizers iteratively based on live tool testing rather than static upfront assumptions.',
+                     'مراجعة وتعديل معالجات البيانات ومحللات المخرجات بناءً على ما تظهره الاختبارات التجريبية الفعلية.')}
+              </p>
+            </div>
+
+            <div>
+              <b style="font-size:14.5px; color:#ffffff; display:block; margin-bottom:3px;">
+                ${tr('Partial Failure Risk Mitigation:', 'تقليل المخاطر ومعالجة الفشل الجزئي:')}
+              </b>
+              <p style="font-size:13.5px; line-height:1.5; margin:0; color:#cbd5e1;">
+                ${tr('Isolating potential faults per tool without breaking the whole workflow, ensuring preserved progress at each step.',
+                     'إتاحة عزل المشكلات البرمجية لكل أداة دون تعطيل النظام ككل، وضمان استمرار حفظ مخرجات المراحل السابقة.')}
+              </p>
+            </div>
+          </div>
+
+          <div style="background:rgba(15,23,42,0.7); border:1px solid rgba(251,191,36,0.3); border-radius:8px; padding:9px 12px; margin-top:8px;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:3px;">
+              <span style="font-size:12.5px; font-weight:800; color:var(--amber); font-family:var(--font-mono); text-transform:uppercase;">
+                ${tr('Planned Acceptance Criterion Example', 'مثال معيار قبول تقني مخطط')}
+              </span>
+              <span class="status-badge badge-plan" style="font-size:11px; padding:2px 7px;">${tr('Planned (No Pass Mark)', 'مخطط (غير مختوم باجتياز)')}</span>
+            </div>
+            <div style="font-size:14px; color:#f1f5f9; line-height:1.5;">
+              ${tr('“Completed stage results remain accessible and preserved if a subsequent tool fails.”',
+                   '«تبقى نتائج المراحل المكتملة متاحة ومحفوظة عند فشل أداة لاحقة».')}
+            </div>
           </div>
         </div>
-        <div>
-          <div style="font-size:12.5px; font-weight:700; color:var(--green); text-transform:uppercase; margin-bottom:4px;">
-            ${tr('Examples of Task-Specific Technical Acceptance Criteria:', '«أمثلة لمعايير القبول التقنية بحسب المهمة»:')}
-          </div>
-          <ul class="c-card-list" style="font-size:13px; line-height:1.55; margin-top:2px;">
-            <li><b>${tr('Task Criteria:', 'معايير المهام:')}</b> ${tr('Specific functional criteria defined for individual tasks (examples below).', 'شروط تحقق وظيفية محددة لكل مهمة برمجية (أمثلة مختارة).')}</li>
-            <li>✔ <b>${tr('Container Isolation Example:', 'مثال عزل الحاويات:')}</b> ${tr('Container isolation & execution stability verified.', 'عزل بيئة التنفيذ بحاويات Docker والتحقق من الاستقرار.')}</li>
-            <li>✔ ${tr('Encryption Example: AES-256-GCM encryption with 128-bit authentication tag validated at rest.', 'مثال التشفير: التحقق من تشفير AES-256-GCM ووسم المصادقة 128 بت أثناء التخزين.')}</li>
-            <li>✔ ${tr('Normalization Example: Schema normalization & audit provenance preserved without data loss.', 'مثال التوحيد: اكتمال توحيد الصيغ وحفظ روابط التدقيق للأدلة دون فقدان.')}</li>
-          </ul>
-        </div>
-      `, 'c-card c-blue')}
+      `)}
     </div>
 
-    <div style="background:rgba(15,23,42,0.7); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:6px 14px; font-size:13px; color:#cbd5e1; display:flex; align-items:center; gap:8px;">
-      <span style="font-size:14px; color:var(--teal);">💡</span>
-      <span><b>${tr('Methodological Focus:', 'التركيز المنهجي:')}</b> ${tr('Decomposing requirements into tasks, executing iterative sprints, and validating against defined technical acceptance criteria.',
-        'تفكيك المتطلبات إلى مهام، وتنفيذ سبرنتات تكرارية، والتحقق وفق معايير قبول تقنية محددة.')}</span>
-    </div>
+    ${A(2, `
+      <div style="background:rgba(15,23,42,0.8); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:8px 18px; font-size:14px; color:#cbd5e1; display:flex; justify-content:space-between; align-items:center;">
+        <div><b>${tr('Academic Documentation Note (Chapter 1 §1.6):', 'الملاحظة التوثيقية (الفصل الأول §1.6):')}</b> ${tr('The team operates on direct engineering requirements and tasks aligned with Agile principles, without formal User Stories.',
+          'يعتمد الفريق على تفكيك المتطلبات والمهام الهندسية المباشرة وفق مبادئ Agile، دون صياغة قصص مستخدمين (User Stories).')}</div>
+        <span style="font-size:11.5px; color:var(--teal); font-family:var(--font-mono); font-weight:700;">CHAPTER 1 §1.6</span>
+      </div>
+    `)}
   </div>`
 );
 
-// 12. First Three Sprints in Draft (الشريحة 12)
+// 12. Initial Engine Implementation Progress (الشريحة 12: التنفيذ الأولي لمحرك الفحص)
 addSlide(
-  ['Slide 12: Sprint Progress', 'الشريحة 12: التقدم حسب السبرنتات'],
-  ['Sprint Progress: Baseline Sprints 1–3', 'التقدم حسب السبرنتات: إنجاز السبرنتات 1 إلى 3'],
-  ['Draft Baseline', 'حالة السبرنتات'], 'tag-sec',
-  ['Draft status: Sprints 1–3 are provisionally marked complete for presentation planning. Acceptance evidence is pending.',
-   'حالة تحريرية مؤقتة: السبرنتات 1-3 مكتملة مبدئياً لأغراض إعداد العرض، وقبول التنفيذ قيد التحقق بالأدلة.'],
+  ['Slide 12: Engine Progress', 'الشريحة 12: تقدم محرك الفحص'],
+  ['Initial Engine Implementation Progress', 'التنفيذ الأولي لمحرك الفحص'],
+  ['Engine Progress', 'تقدم التنفيذ'], 'tag-wip',
+  ['Initial implementation of the scan orchestration engine, with verification of tool integrations and result normalization currently ongoing.',
+   'تنفيذ أولي لمحرك تنسيق الفحص، مع استمرار التحقق من تكامل الأدوات وتوحيد النتائج.'],
   () => {
-    const sprints = [
-      ['Sprint 1: Backend Foundation & Access Control', 'السبرنت 1: تأسيس الخدمات الخلفية والحسابات والصلاحيات', 'Provisionally Complete', 'badge-draft',
-       'FastAPI setup, PostgreSQL migrations, account registration, password hashing, session expiry, role and ownership checks, and owner-linked draft scan records (no real scanning in this sprint).',
-       'تهيئة بيئة FastAPI وترحيلات PostgreSQL، التسجيل والدخول، تجزئة كلمات المرور، انتهاء الجلسات، فحص الملكية، وسجلات تجريبية للمالك دون فحص فعلي.'],
-      ['Sprint 2: Background Jobs & Encrypted Storage', 'السبرنت 2: العامل الخلفي والتشفير والتخزين', 'Provisionally Complete', 'badge-draft',
-       'Independent worker execution with task status, cancellation, and recovery handling. Per-scan DEKs, key wrapping, and authenticated file/field encryption with mock tool validation.',
-       'تنفيذ العامل الخلفي المستقل، تتبع الحالة والإلغاء والتعافي. تشفير المغلف بمفاتيح DEK لكل فحص، وتشفير موثق للملفات وقاعدة البيانات مع أداة تجريبية (Mock).'],
-      ['Sprint 3: Asset and Service Discovery', 'السبرنت 3: اكتشاف الأصول والخدمات', 'Provisionally Complete', 'badge-draft',
-       'Integrate Subfinder, Naabu, and httpx through a consistent tool interface. Normalize discovered domains, ports, and web services with provenance; enforce authorized scope. (Kiterunner, Nuclei, Wapiti not in this sprint).',
-       'دمج Subfinder وNaabu وhttpx عبر واجهة موحدة للأدوات. توحيد النطاقات والمنافذ والخدمات مع إثبات المصدر وفرض النطاق المصرح به. (لم تشمل Kiterunner أو Nuclei أو Wapiti).']
+    const items = [
+      ['1. API Services & Scan Management', '1. خدمات API وتنظيم الفحوص', 'In Codebase · Scope WIP', 'موجود كودياً · النطاق قيد الاستكمال', 'badge-done',
+       'FastAPI endpoints for target submission, scan job creation, and status inspection; authorization and scope controls are ongoing.',
+       'واجهات FastAPI لاستقبال الهدف وإنشاء مهام الفحص ومتابعة حالتها؛ وضوابط الصلاحيات وفحص النطاق قيد الاستكمال.'],
+      ['2. Sequential Coordinator & Tool Integrations', '2. منسق التنفيذ المتسلسل وتكاملات الأدوات', 'Partial · In Progress', 'جزئي · قيد الاستكمال', 'badge-wip',
+       'Sequential coordination pipeline passing targets between discovery tools (Subfinder, Naabu, httpx); verifying CLI executions and completing Kiterunner.',
+       'مسار تنسيق متسلسل لتمرير الأهداف بين أدوات الاستكشاف (Subfinder وNaabu وhttpx)؛ مع التحقق من استدعاء الأدوات واستكمال Kiterunner.'],
+      ['3. Output Collection, Retrieval & Initial Parsing', '3. جمع المخرجات واسترجاعها ومعالجتها الأولية', 'Initial · Needs Fixes', 'أولي · يحتاج تصحيحاً', 'badge-draft',
+       'Raw output persistence and initial parsers implemented; addressing deduplication, merge consistency, and partial failure handling.',
+       'حفظ المخرجات الخام ومحللات أولية في الكود؛ مع معالجة ملاحظات إلغاء التكرار والدمج وحالات الفشل الجزئي.']
     ];
-    return `<div class="c-col" style="gap:10px;">
-      ${sprints.map((s, idx) => A(idx, `
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
-          <b style="font-size:16px; color:var(--teal);">${tr(s[0], s[1])}</b>
-          <span class="status-badge ${s[3]}">${tr(s[2], s[2] === 'Provisionally Complete' ? 'مكتمل مبدئيًا' : s[2])}</span>
+    return `<div class="c-col" style="gap:12px;">
+      <div style="display:flex; justify-content:space-between; align-items:center; background:rgba(20,184,166,0.08); border:1px solid rgba(20,184,166,0.25); border-radius:8px; padding:8px 16px; font-size:15px; color:#f1f5f9;">
+        <span><b>${tr('Status Assessment:', 'توصيف الحالة البرمجية:')}</b> ${tr('Initial implementation with verification of tool integrations and result validity ongoing.', 'تنفيذ أولي، مع استكمال التحقق من تكامل الأدوات وصحة النتائج.')}</span>
+        <span class="status-badge badge-wip" style="font-size:13px; padding:3px 10px;">${tr('In Progress', 'قيد الاستكمال')}</span>
+      </div>
+
+      ${items.map((s, idx) => A(idx, `
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:5px;">
+          <b style="font-size:18px; color:var(--teal);">${tr(s[0], s[1])}</b>
+          <span class="status-badge ${s[4]}" style="font-size:13px; padding:3px 10px;">${tr(s[2], s[3])}</span>
         </div>
-        <p class="c-card-p" style="font-size:13.5px; line-height:1.55;">${tr(s[4], s[5])}</p>`, 'c-card')).join('')}
-      <div style="font-size:12.5px; color:var(--amber); text-align:center; margin-top:2px;">
-        ⚠️ ${tr('Draft status for presentation preparation; operational acceptance evidence is pending and will be attached.',
-                 'حالة مسودة تحريرية مؤقتة لأغراض إعداد العرض؛ أدلة القبول التشغيلي قيد المراجعة وسترفق لاحقاً.')}
+        <p class="c-card-p" style="font-size:15.5px; line-height:1.6; margin:0;">${tr(s[5], s[6])}</p>`, 'c-card')).join('')}
+
+      <div style="background:rgba(15,23,42,0.7); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:8px 16px; font-size:14px; color:var(--amber); text-align:center;">
+        <b>${tr('Status Notice:', 'إشعار الحالة:')}</b> ${tr('Initial implementation progress; operational sprint artifacts and acceptance evidence will be attached following verification.',
+                 'تقدم أولي في التنفيذ قيد التحقق؛ وستُرفق وثائق وأدلة السبرنتات التشغيلية المفصلة لاحقاً بعد التحقق منها.')}
       </div>
     </div>`;
   }
 );
 
-// 13. Requirements Engineering Progress (الشريحة 13)
+// 13. Functional & Non-Functional Requirements Status (الشريحة 13)
 addSlide(
-  ['Slide 13: Requirements Status', 'الشريحة 13: المتطلبات وحالتها'],
-  ['Requirements & Verification Status', 'المتطلبات وحالة التحقق وأدلة القبول'],
-  ['Requirements Engineering', 'المتطلبات'], 'tag-prop',
-  ['Separating requirement definition from implementation verification; ownership checks added to RBAC; post-Sprint 3 features remain planned.',
-   'فصل اعتماد المتطلب عن اختباره؛ إضافة فحص الملكية لـ RBAC؛ والميزات بعد السبرنت 3 تظل ضمن المخطط.'],
+  ['Slide 13: Requirements Status', 'الشريحة 13: حالة المتطلبات'],
+  ['Functional & Non-Functional Requirements Status', 'حالة تنفيذ المتطلبات الوظيفية وغير الوظيفية'],
+  ['Requirements Status', 'حالة المتطلبات'], 'tag-prop',
+  ['Status of functional and non-functional requirements: separating codebase presence from empirical verification, with post-discovery features planned.',
+   'حالة المتطلبات الوظيفية وغير الوظيفية: تمييز الموجود كودياً عما تم التحقق منه، وبقاء الميزات اللاحقة ضمن المخطط.'],
   () => {
     const reqs = [
-      ['Access & Permissions', 'الوصول والصلاحيات',
-       'Registration, authentication, sessions, role-based access, and owner-scoped retrieval.',
-       'التسجيل والمصادقة، الجلسات، إدارة الصلاحيات (RBAC)، والتحقق من ملكية المورد.',
-       'Implemented (Sprint 1) · Acceptance Pending', 'مُنفذ (السبرنت 1) · قيد قبول الأدلة', 'badge-draft'],
-      ['Job Execution Lifecycle', 'إدارة دورة تنفيذ المهام',
-       'Sequential and independent modes, stage tracking, cancellation, and recovery handling.',
-       'نمطا الفحص المتسلسل والمستقل، تتبع المراحل، إلغاء الفحص، ومعالجة التعافي.',
-       'Implemented (Sprint 2) · Acceptance Pending', 'مُنفذ (السبرنت 2) · قيد قبول الأدلة', 'badge-draft'],
-      ['Asset & Service Discovery', 'اكتشاف الأصول والخدمات',
-       'Subdomain, port, and live service enumeration with strict scope enforcement.',
-       'استكشاف النطاقات الفرعية والمنافذ والخدمات الحية وفرض حدود النطاق.',
-       'Implemented (Sprint 3) · Acceptance Pending', 'مُنفذ (السبرنت 3) · قيد قبول الأدلة', 'badge-draft'],
-      ['Sensitive Data Protection', 'حماية وتشفير البيانات',
-       'Data encryption using AES-256-GCM, with envelope encryption for key protection, and authorized decryption.',
-       'تشفير البيانات باستخدام AES-256-GCM، وحماية مفاتيحها باستخدام تشفير المغلف، وفك التشفير المصرح به فقط.',
-       'Implemented (Sprint 2) · Acceptance Pending', 'مُنفذ (السبرنت 2) · قيد قبول الأدلة', 'badge-draft'],
-      ['API Discovery & Vulnerability Scanners', 'اكتشاف مسارات API وفحص الثغرات',
-       'Kiterunner for API route discovery; Nuclei YAML templates and Wapiti dynamic audits for vulnerability scanning.',
-       'أداة Kiterunner لاكتشاف مسارات واجهات API؛ وقوالب Nuclei وفحص Wapiti الديناميكي لاكتشاف الثغرات.',
-       'Planned (Sprints 4–5)', 'مخطط (السبرنتات 4–5)', 'badge-plan'],
-      ['Reference Enrichment & AI Analysis', 'الإثراء المرجعي والتحليل بالذكاء',
-       'Associating findings with CVE identifiers, CWE classifications, and OWASP Top 10 categories, utilizing available CVSS severity scores when supporting evidence exists; Gemini 3.8 Flash remediation explanation.',
-       'ربط النتائج بمعرّفات CVE وتصنيفات CWE وفئات OWASP Top 10، والاستفادة من درجات CVSS المتاحة عند توفر أدلة مناسبة؛ وتفسير المعالجة بـ Gemini 3.8 Flash.',
-       'Planned (Sprints 6–7)', 'مخطط (السبرنتات 6–7)', 'badge-plan']
+      ['Target Input & Output Retrieval', 'إدخال الهدف واسترجاع المخرجات',
+       'Receiving target, initiating scans, and inspecting tool outputs (Functional §3.3.1).',
+       'استقبال الهدف وبدء الفحص واسترجاع مخرجاته (وظيفي §3.3.1).',
+       'In Progress · Initial API', 'قيد الاستكمال · واجهات أولية', 'badge-wip',
+       'Initial endpoints exist; scope validation & ownership controls in progress.',
+       'واجهات أولية موجودة؛ ضوابط النطاق والملكية غير مكتملة.'],
+      ['Scan Orchestration & Tools', 'تنسيق الفحص وتكامل الأدوات',
+       'Coordinating discovery workflow and external security tools execution (Functional §3.3.1).',
+       'تنسيق مسار الفحص وتكامل الأدوات الأمنية المعتمدة (وظيفي §3.3.1).',
+       'Partial · Tools in Progress', 'تنفيذ جزئي · قيد الاستكمال', 'badge-wip',
+       'Sequential pipeline in progress; completing Kiterunner and native CLI tool runs.',
+       'تنفيذ جزئي؛ استكمال Kiterunner والتحقق من الأدوات الأصلية.'],
+      ['Collection & Normalization', 'جمع النتائج وتوحيدها',
+       'Parsing raw CLI outputs into normalized schema and persistence (Functional §3.3.1).',
+       'جمع النتائج وتوحيد مخرجات الأدوات وتخزينها (وظيفي §3.3.1).',
+       'Initial · Fixes Needed', 'أولي يحتاج تصحيحاً', 'badge-draft',
+       'Initial parsers in code; deduplication fixes needed; DB storage planned.',
+       'تنفيذ أولي يحتاج تصحيحاً؛ والحفظ المشفر وPostgreSQL لم ينفذا.'],
+      ['Modular Architecture', 'التنظيم المعياري للكود',
+       'Decoupling API, engine, parsers, and adapter layers (Non-Functional §3.3.2).',
+       'فصل طبقات الواجهات البرمجية والمحرك والمحللات معيارياً (غير وظيفي §3.3.2).',
+       'In Codebase', 'موجود كودياً', 'badge-done',
+       'Codebase follows modular packages; empirical extensibility audit pending.',
+       'تقسيم برمجي موجود؛ قابلية الصيانة والامتداد لم تُقيّم تجريبياً.'],
+      ['Reliability & Error Handling', 'الاعتمادية ومعالجة الأخطاء',
+       'Graceful failure handling, timeouts, and cancellation hooks (Non-Functional §3.3.2).',
+       'معالجة الفشل الجزئي والمهل الزمنية وإلغاء الفحص (غير وظيفي §3.3.2).',
+       'In Progress · Fixes Needed', 'قيد الاستكمال · يلزم تصحيح', 'badge-wip',
+       'Partial error traps exist; failure recovery and cancellation require refinement.',
+       'معالجة جزئية؛ يلزم تصحيح حالات الفشل والإلغاء.'],
+      ['Security, RBAC & Encryption', 'الحسابات والصلاحيات والتشفير',
+       'Authentication, RBAC, ownership checks, AES-256-GCM encryption (Non-Functional §3.3.2).',
+       'المصادقة والصلاحيات وفحص الملكية وتشفير AES-256-GCM (أمني §3.3.2).',
+       'Planned Design', 'تصميم مقترح', 'badge-plan',
+       'Architectural design documented; backend implementation not yet started.',
+       'تصميم مقترح موثق؛ لم يبدأ التنفيذ البرمجي بعد.']
     ];
     return `<div class="c-col">
-      <table class="comp-table">
+      <table class="comp-table" style="font-size:14.5px;">
         <thead>
           <tr>
-            <th style="width:28%;">${tr('Requirement Category', 'فئة المتطلب')}</th>
-            <th style="width:48%;">${tr('Specification Description', 'الوصف الوظيفي')}</th>
-            <th class="center" style="width:24%;">${tr('Verification Status', 'حالة التحقق')}</th>
+            <th style="width:25%; padding:9px 12px;">${tr('Requirement Category', 'فئة المتطلب')}</th>
+            <th style="width:38%; padding:9px 12px;">${tr('Specification Description', 'الوصف الوظيفي')}</th>
+            <th class="center" style="width:17%; padding:9px 8px;">${tr('Status', 'الحالة')}</th>
+            <th style="width:20%; padding:9px 12px;">${tr('Codebase Evidence / Note', 'الدليل والقيد')}</th>
           </tr>
         </thead>
         <tbody>
           ${reqs.map(r => `
             <tr>
-              <td><b>${tr(r[0], r[1])}</b></td>
-              <td>${tr(r[2], r[3])}</td>
-              <td class="center"><span class="status-badge ${r[6]}">${tr(r[4], r[5])}</span></td>
+              <td style="padding:8px 12px;"><b style="font-size:15px; color:#ffffff;">${tr(r[0], r[1])}</b></td>
+              <td style="padding:8px 12px; font-size:14px; line-height:1.5;">${tr(r[2], r[3])}</td>
+              <td class="center" style="padding:8px 6px;"><span class="status-badge ${r[6]}" style="font-size:12.5px; padding:3px 8px;">${tr(r[4], r[5])}</span></td>
+              <td style="font-size:13.5px; color:#cbd5e1; padding:8px 12px; line-height:1.45;">${tr(r[7], r[8])}</td>
             </tr>`).join('')}
         </tbody>
       </table>
@@ -844,50 +1108,63 @@ addSlide(
 // 14. Database Architecture & Relational Design (الشريحة 14: مخطط قاعدة البيانات والعلاقات ERD)
 addSlide(
   ['Slide 14: Database Design', 'الشريحة 14: تصميم قاعدة البيانات والعلاقات'],
-  ['Database Design & Relationships (Figure 3.2 ERD)', 'تصميم قاعدة البيانات ومخطط الكيانات والعلاقات (مخطط 3.2 ERD)'],
-  ['Database ERD', 'مخطط العلاقات'], 'tag-prop',
-  ['PostgreSQL relational schema: scans link to users; findings link via assets; reports link via AI analyses; finding_sources & finding_references resolve M:N.',
-   'مخطط علائقي: الفحص يتبع المستخدم؛ نتائج الفحص ترتبط عبر الأصول؛ والتقارير ترتبط عبر التحليل الذكي؛ وجداول الربط تعالج علاقات متعدد إلى متعدد.'],
-  () => `<div style="display:grid; grid-template-columns: 480px 1fr; gap:16px; width:100%; align-items:stretch;">
+  ['Database Design & Relational Schema (Figure 3.2 ERD)', 'تصميم قاعدة البيانات ومخطط الكيانات والعلاقات (مخطط 3.2 ERD)'],
+  ['Database Design', 'تصميم قاعدة البيانات'], 'tag-prop',
+  ['Proposed PostgreSQL relational design: users link to scans; findings link via assets; reports link via AI analyses; M:N tables resolve provenance.',
+   'تصميم علائقي مقترح لقاعدة البيانات: الفحوص تتبع المستخدمين؛ النتائج تتبع الأصول؛ التقارير تتبع التحليلات؛ وجداول الربط توثق المصادر والمراجع.'],
+  () => `<div style="display:grid; grid-template-columns: 420px 1fr; gap:16px; width:100%; align-items:stretch;">
     ${A(0, `
-      <div class="diag-card" onclick="openImgModal('./assets/erd-diagram.png', 'Figure 3.2: YemScan Entity Relationship Diagram (ERD)')" title="${tr('Click to view full-screen diagram', 'انقر لتكبير المخطط بحجم الشاشة')}">
+      <div class="diag-card" onclick="openImgModal('./assets/erd-diagram.png', 'Figure 3.2: YemScan Entity Relationship Diagram (ERD) — 12 Entities / مخطط الكيانات والعلاقات (12 كيانًا)')" title="${tr('Click to view full-screen diagram', 'انقر لتكبير المخطط بحجم الشاشة')}">
         <div class="diag-card-head">
-          <span class="diag-badge">Figure 3.2</span>
-          <span class="diag-hint">🔍 ${tr('Click to Enlarge', 'انقر للتكبير')}</span>
+          <span class="diag-badge">Figure 3.2 ERD</span>
+          <span class="diag-hint">${tr('Click to Enlarge', 'انقر للتكبير')}</span>
         </div>
         <div class="diag-img-box">
           <img src="./assets/erd-diagram.png" alt="Figure 3.2: Database ERD Schema" class="diag-img">
         </div>
-        <div style="font-size:12px; color:#475569; text-align:center; margin-top:4px; font-weight:700;">
-          ${tr('Figure 3.2: Relational Schema & Protected Attributes', 'مخطط 3.2: المخطط العلائقي والحقول المشفرة')}
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-top:6px;">
+          <span style="font-size:13.5px; color:#475569; font-weight:700;">
+            ${tr('12 Normalized Relational Entities', '12 كياناً علائقياً موحداً')}
+          </span>
+          <button type="button" class="action-btn" style="padding:3px 10px; font-size:12.5px; background:rgba(45,212,191,0.12); border:1px solid var(--teal); color:var(--teal); border-radius:5px; cursor:pointer;" onclick="event.stopPropagation(); openImgModal('./assets/erd-diagram.png', 'Figure 3.2: YemScan Entity Relationship Diagram (ERD) — 12 Entities / مخطط الكيانات والعلاقات (12 كيانًا)')">
+            ${tr('View Full ERD — 12 Entities', 'عرض ERD الكامل — 12 كيانًا')}
+          </button>
         </div>
       </div>
     `)}
 
     ${A(1, `
-      <div style="display:flex; flex-direction:column; gap:8px; justify-content:space-between; height:100%;">
+      <div style="display:flex; flex-direction:column; gap:9px; justify-content:space-between; height:100%;">
+        <!-- Relational Perspective Card -->
+        <div class="c-card" style="padding:11px 16px; background:rgba(15,23,42,0.85); border-color:rgba(56,189,248,0.3);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+            <b style="color:var(--blue); font-size:16px;">${tr('Core Relational Perspective (Cardinalities):', 'المنظور العلائقي الأساسي (الكاردينالية):')}</b>
+            <span class="status-badge badge-plan" style="font-size:12px; padding:3px 8px;">${tr('Proposed Design — Implementation Not Started', 'تصميم مقترح — لم يبدأ التنفيذ')}</span>
+          </div>
+          <div style="font-family:var(--font-mono); font-size:14px; line-height:1.7; color:#e2e8f0; direction:ltr; text-align:start; background:rgba(0,0,0,0.3); padding:8px 12px; border-radius:6px; border:1px solid rgba(255,255,255,0.06);">
+            <div>users (1) ─────── (0..*) scan_jobs</div>
+            <div style="margin-top:3px;">scan_jobs (1) ─── (0..*) assets (1) ─── (0..*) findings</div>
+            <div style="margin-top:3px;">scan_jobs (1) ─── (0..*) ai_analyses (1) ── (0..*) reports</div>
+          </div>
+        </div>
+
+        <!-- 3 Concise Statements -->
         <div class="c-card" style="padding:10px 14px;">
-          <h4 class="c-card-h" style="color:var(--teal); font-size:16.5px; margin-bottom:4px;">1. ${tr('Normalized 12-Table Structure', 'الهيكل العلائقي الموحد (12 جدولاً)')}</h4>
-          <p class="c-card-p" style="font-size:14px; line-height:1.5; margin:0; color:#f1f5f9;">${tr('Comprehensive schema spanning users, scan jobs, encryption keys, scan stages, raw outputs, assets, scan findings, finding sources, finding references, external references, AI analyses, and reports.',
-            'مخطط علائقي متكامل يشمل: المستخدمين، مهام الفحص، مفاتيح التشفير، المراحل، المخرجات الخام، الأصول، نتائج الفحص، مصادر النتائج، ربط المراجع، المراجع القياسية، تحليلات الذكاء، والتقارير.')}</p>
+          <h4 class="c-card-h" style="color:var(--teal); font-size:16.5px; margin-bottom:4px;">1. ${tr('Traceability & Evidence Provenance', 'تتبع مصادر نتائج الفحص ومراجعها')}</h4>
+          <p class="c-card-p" style="font-size:14.5px; line-height:1.55; margin:0; color:#f1f5f9;">${tr('Many-to-many linking tables (finding_sources & finding_references) map each scan finding to raw tool outputs and authoritative standard references (CVE/CWE).',
+            'جداول ربط متعدد-إلى-متعدد (finding_sources وfinding_references) لربط نتائج الفحص بمصادر الأدلة الخام والمراجع القياسية (CVE/CWE).')}</p>
         </div>
 
         <div class="c-card c-blue" style="padding:10px 14px;">
-          <h4 class="c-card-h" style="color:var(--blue); font-size:16.5px; margin-bottom:4px;">2. ${tr('Application-Level Encryption of Sensitive Fields', 'تشفير الحقول الحساسة ومفتاح DEK المحمي')}</h4>
-          <p class="c-card-p" style="font-size:14px; line-height:1.5; margin:0; color:#f1f5f9;">${tr('Sensitive fields (target_enc, title_enc, description_enc) are encrypted at the application level using AES-256-GCM prior to storage. Meanwhile, wrapped_dek stores the data encryption key protected by KEK wrapping, without requiring an additional layer of field encryption.',
-            'تُشفّر الحقول الحساسة (target_enc وtitle_enc وdescription_enc) على مستوى التطبيق باستخدام خوارزمية AES-256-GCM قبل التخزين. أما wrapped_dek فهو مفتاح تشفير البيانات نفسه محفوظًا بعد لفه وحمايته باستخدام KEK، ولا يحتاج إلى طبقة تشفير حقول إضافية.')}</p>
+          <h4 class="c-card-h" style="color:var(--blue); font-size:16.5px; margin-bottom:4px;">2. ${tr('Application-Level Sensitive Field Encryption', 'تشفير الحقول الحساسة قبل الحفظ')}</h4>
+          <p class="c-card-p" style="font-size:14.5px; line-height:1.55; margin:0; color:#f1f5f9;">${tr('Retrievable sensitive fields (target_enc, title_enc, description_enc) are encrypted with AES-256-GCM at application level prior to database persistence.',
+            'تُشفّر الحقول الحساسة القابلة للاسترجاع (الهدف، عنوان ووصف نتيجة الفحص) باستخدام AES-256-GCM على مستوى التطبيق قبل الحفظ في قاعدة البيانات.')}</p>
         </div>
 
         <div class="c-card c-amber" style="padding:10px 14px;">
-          <h4 class="c-card-h" style="color:var(--amber); font-size:16.5px; margin-bottom:4px;">3. ${tr('Many-to-Many Audit & Evidence Traceability', 'تتبع نتائج الفحص والأدلة عبر جداول الربط')}</h4>
-          <p class="c-card-p" style="font-size:14px; line-height:1.5; margin:0; color:#f1f5f9;">${tr('finding_sources links scan findings to raw output proofs; finding_references maps each finding to authoritative CVE/CWE codes with complete provenance.',
-            'جدول finding_sources يربط نتائج الفحص بالأدلة الخام؛ وجدول finding_references يربط كل نتيجة بالمعايير القياسية مع حفظ مصدر الإثبات.')}</p>
-        </div>
-
-        <div class="c-card c-violet" style="padding:10px 14px;">
-          <h4 class="c-card-h" style="color:var(--violet); font-size:16.5px; margin-bottom:4px;">4. ${tr('Hierarchical Asset Modeling & Acyclic Checks', 'نمذجة الأصول والتحقق البرمجي من البنية الشجرية')}</h4>
-          <p class="c-card-p" style="font-size:14px; line-height:1.5; margin:0; color:#f1f5f9;">${tr('Recursive parent_asset_id hierarchy models domains, subdomains, open ports, and web endpoints; application validation enforces an acyclic tree structure in strict scope.',
-            'علاقة شجرية ذاتية عبر parent_asset_id لنمذجة النطاقات والمنافذ ونقاط النهاية؛ ويتولى التطبيق التحقق البرمجي لضمان خلو الشجرة من الحلقات (Acyclic Tree).')}</p>
+          <h4 class="c-card-h" style="color:var(--amber); font-size:16.5px; margin-bottom:4px;">3. ${tr('Per-Scan DEK Wrapped by KEK', 'DEK مستقل لكل فحص، محفوظ ملفوفاً')}</h4>
+          <p class="c-card-p" style="font-size:14.5px; line-height:1.55; margin:0; color:#f1f5f9;">${tr('A dedicated per-scan Data Encryption Key (DEK) encrypts job data, stored wrapped (wrapped_dek) by a KEK managed in a separate protected secret store.',
+            'يُستخدم DEK مستقل لكل فحص لتشفير بياناته، ويُحفظ في قاعدة البيانات ملفوفاً (wrapped_dek) بواسطة KEK يُدار في مخزن أسرار محمي منفصل.')}</p>
         </div>
       </div>
     `)}
@@ -896,126 +1173,117 @@ addSlide(
 
 // 15. Data Protection & Execution Security: Cryptography & Docker Isolation (الشريحة 15)
 addSlide(
-  ['Slide 15: Security & Isolation', 'الشريحة 15: حماية البيانات وضبط بيئة التنفيذ'],
-  ['Data Protection & Execution Controls: Cryptography & Docker Sandboxing', 'حماية البيانات وضوابط التنفيذ: التشفير وعزل بيئة الفحص بحاويات Docker'],
-  ['Security & Docker', 'الأمان والتشفير'], 'tag-sec',
-  ['Layered controls: AES-256-GCM encryption with 128-bit authentication tags, protected key wrapping, and containerized sandboxing.',
-   'ضوابط متعددة الطبقات: تشفير AES-256-GCM مع وسوم مصادقة 128 بت، حماية مفاتيح التشفير، وعزل بيئة الفحص بالحاويات.'],
-  () => `<div class="c-col" style="gap:11px;">
-    <div class="c-grid-2" style="gap:16px; align-items:stretch;">
+  ['Slide 15: Security & Isolation Design', 'الشريحة 15: تصميم حماية البيانات والتنفيذ'],
+  ['Data Protection & Execution Environment Design', 'تصميم حماية البيانات وبيئة التنفيذ'],
+  ['Security & Isolation Design', 'حماية البيانات والتنفيذ'], 'tag-sec',
+  ['Design controls for data protection at rest and containerized execution; cryptographic storage is planned, and runtime controls are being completed.',
+   'ضوابط التصميم لحماية البيانات أثناء التخزين وضبط بيئة التنفيذ بالحاويات؛ التشفير مخطط وضوابط التشغيل قيد الاستكمال.'],
+  () => `<div style="display:flex; flex-direction:column; gap:12px; width:100%; height:100%; justify-content:space-between;">
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:36px; width:100%; align-items:stretch;">
       ${A(0, `
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; padding-bottom:6px; border-bottom:1px solid rgba(45,212,191,0.25);">
-          <div style="display:flex; align-items:center; gap:8px;">
-            <span style="font-size:22px; color:var(--teal);">🔐</span>
-            <h3 class="c-card-h" style="color:var(--teal); font-size:18px; margin:0;">
-              ${tr('Data Protection & Cryptography', 'تشفير البيانات والتحقق من سلامتها')}
+        <div style="display:flex; flex-direction:column; justify-content:space-between; height:100%; border-inline-end: 1.5px solid rgba(255,255,255,0.12); padding-inline-end: 28px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; padding-bottom:6px; border-bottom:1.5px solid rgba(45,212,191,0.35);">
+            <h3 style="color:var(--teal); font-size:20.5px; font-weight:800; margin:0;">
+              ${tr('Storage Protection (Design)', 'حماية التخزين (تصميم مقترح)')}
             </h3>
-          </div>
-          <span class="status-badge badge-done" style="font-size:12px; padding:2px 8px;">
-            ${tr('AES-256-GCM', 'AES-256-GCM')}
-          </span>
-        </div>
-
-        <div style="display:flex; flex-direction:column; gap:7px;">
-          <div style="background:rgba(15,23,42,0.65); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:9px 12px;">
-            <div style="display:flex; align-items:center; gap:8px; margin-bottom:2px;">
-              <span style="font-size:16px;">🛡️</span>
-              <b style="font-size:14.5px; color:#ffffff;">${tr('Encryption & Tag Verification:', 'التشفير والتحقق من السلامة:')}</b>
-            </div>
-            <p class="c-card-p" style="font-size:13.5px; line-height:1.5; margin:0; color:#f1f5f9;">
-              ${tr('Raw outputs, reports, and retrievable sensitive fields are encrypted using AES-256-GCM. The 128-bit authentication tag is verified before accepting or using decrypted data, with nonces never reused with the same encryption key; data is rejected upon verification failure without being accepted or used.',
-                   'تُشفّر المخرجات الخام والتقارير والحقول الحساسة القابلة للاسترجاع باستخدام AES-256-GCM. يُتحقق من وسم المصادقة بطول 128 بت قبل قبول البيانات المفكوكة أو استخدامها، مع عدم تكرار Nonce مع مفتاح التشفير نفسه، ورفض البيانات عند فشل التحقق وعدم قبولها أو استخدامها.')}
-              <span style="font-size:11px; color:var(--text-dim); display:block; margin-top:3px;">(NIST SP 800-38D)</span>
-            </p>
+            <span class="status-badge badge-plan" style="font-size:12.5px; padding:3px 10px;">
+              ${tr('Planned Design', 'تصميم مقترح')}
+            </span>
           </div>
 
-          <div style="background:rgba(15,23,42,0.65); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:9px 12px;">
-            <div style="display:flex; align-items:center; gap:8px; margin-bottom:2px;">
-              <span style="font-size:16px;">🗝️</span>
-              <b style="font-size:14.5px; color:#ffffff;">${tr('Key Management (DEK / KEK):', 'إدارة المفاتيح وتشفير المغلف:')}</b>
+          <div style="display:flex; flex-direction:column; gap:11px;">
+            <div style="border-bottom:1px dashed rgba(255,255,255,0.08); padding-bottom:9px;">
+              <b style="font-size:16px; color:#ffffff; display:block; margin-bottom:4px;">
+                ${tr('AES-256-GCM & Tag Verification:', 'تشفير البيانات والتحقق من سلامتها:')}
+              </b>
+              <p style="font-size:15px; line-height:1.6; margin:0; color:#cbd5e1;">
+                ${tr('Raw outputs, reports, and sensitive retrievable fields are encrypted using AES-256-GCM. The 128-bit authentication tag is verified before accepting or using decrypted data, with nonces never reused with the same encryption key; data is rejected upon verification failure.',
+                     'تُشفّر المخرجات الخام والتقارير والحقول الحساسة القابلة للاسترجاع باستخدام AES-256-GCM. يُتحقق من وسم المصادقة بطول 128 بت قبل قبول البيانات المفكوكة أو استخدامها، مع عدم تكرار Nonce مع مفتاح التشفير نفسه، ورفض البيانات عند فشل التحقق.')}
+                <span style="font-size:12px; color:var(--text-dim); display:inline-block; margin-inline-start:4px;">(NIST SP 800-38D)</span>
+              </p>
             </div>
-            <p class="c-card-p" style="font-size:13.5px; line-height:1.5; margin:0; color:#f1f5f9;">
-              ${tr('A dedicated DEK encrypts each scan\'s data and is stored in the database wrapped by a KEK. The KEK is managed in a protected secret store separate from the database, with restricted access and no plaintext copies in the application database or logs.',
-                   'يُستخدم DEK مستقل لكل فحص لتشفير بياناته، ويُحفظ في قاعدة البيانات بعد حمايته باستخدام KEK. يُدار KEK في مخزن أسرار محمي منفصل عن قاعدة البيانات، مع تقييد الوصول إليه وعدم نسخه بصيغة صريحة إلى قاعدة بيانات التطبيق أو سجلاته.')}
-            </p>
-          </div>
 
-          <div style="background:rgba(15,23,42,0.65); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:9px 12px;">
-            <div style="display:flex; align-items:center; gap:8px; margin-bottom:2px;">
-              <span style="font-size:16px;">📁</span>
-              <b style="font-size:14.5px; color:#ffffff;">${tr('Protected Data Scope:', 'نطاق البيانات المحمية بالتشفير:')}</b>
+            <div style="border-bottom:1px dashed rgba(255,255,255,0.08); padding-bottom:9px;">
+              <b style="font-size:16px; color:#ffffff; display:block; margin-bottom:4px;">
+                ${tr('Key Management (Wrapped DEK / KEK):', 'إدارة المفاتيح وتشفير المغلف:')}
+              </b>
+              <p style="font-size:15px; line-height:1.6; margin:0; color:#cbd5e1;">
+                ${tr('A dedicated DEK encrypts each scan\'s data and is stored in the database wrapped by a KEK. The KEK is managed in a protected secret store separate from the database, with restricted access and no plaintext copies in application database or logs.',
+                     'يُستخدم DEK مستقل لكل فحص لتشفير بياناته، ويُحفظ في قاعدة البيانات بعد حمايته باستخدام KEK. يُدار KEK في مخزن أسرار محمي منفصل عن قاعدة البيانات، مع تقييد الوصول إليه وعدم نسخه بصيغة صريحة إلى قاعدة بيانات التطبيق أو سجلاته.')}
+              </p>
             </div>
-            <p class="c-card-p" style="font-size:13.5px; line-height:1.5; margin:0; color:#f1f5f9;">
-              ${tr('Retained raw tool outputs, generated technical and executive report files, and sensitive database columns (target_enc, title_enc, description_enc).',
-                   'المخرجات الخام المخزنة في نظام الملفات، ملفات التقارير الفنية والتنفيذية الناتجة، والأعمدة الحساسة في قاعدة البيانات (الهدف، عنوان ووصف نتيجة الفحص).')}
-            </p>
+
+            <div>
+              <b style="font-size:16px; color:#ffffff; display:block; margin-bottom:4px;">
+                ${tr('Protected Data Scope:', 'نطاق البيانات المحمية:')}
+              </b>
+              <p style="font-size:15px; line-height:1.6; margin:0; color:#cbd5e1;">
+                ${tr('Retained raw tool outputs, generated technical and executive report files, and sensitive database columns (target_enc, title_enc, description_enc).',
+                     'المخرجات الخام المخزنة في نظام الملفات، ملفات التقارير الفنية والتنفيذية الناتجة، والأعمدة الحساسة في قاعدة البيانات (الهدف، عنوان ووصف نتيجة الفحص).')}
+              </p>
+            </div>
           </div>
         </div>
-      `, 'c-card')}
+      `)}
 
       ${A(1, `
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; padding-bottom:6px; border-bottom:1px solid rgba(56,189,248,0.25);">
-          <div style="display:flex; align-items:center; gap:8px;">
-            <span style="font-size:22px; color:var(--blue);">🐳</span>
-            <h3 class="c-card-h" style="color:var(--blue); font-size:18px; margin:0;">
-              ${tr('Execution Isolation & Container Controls', 'عزل بيئة التنفيذ وضوابط الحاويات')}
+        <div style="display:flex; flex-direction:column; justify-content:space-between; height:100%; padding-inline-start: 4px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; padding-bottom:6px; border-bottom:1.5px solid rgba(56,189,248,0.35);">
+            <h3 style="color:var(--blue); font-size:20.5px; font-weight:800; margin:0;">
+              ${tr('Execution Protection (Design)', 'حماية التنفيذ (ضوابط تشغيل الأدوات)')}
             </h3>
-          </div>
-          <span class="status-badge badge-done" style="font-size:12px; padding:2px 8px;">
-            ${tr('Docker Sandboxing', 'عزل Docker')}
-          </span>
-        </div>
-
-        <div style="display:flex; flex-direction:column; gap:7px;">
-          <div style="background:rgba(15,23,42,0.65); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:9px 12px;">
-            <div style="display:flex; align-items:center; gap:8px; margin-bottom:2px;">
-              <span style="font-size:16px;">📦</span>
-              <b style="font-size:14.5px; color:#ffffff;">${tr('Tool Containment in Docker:', 'تشغيل الأدوات داخل بيئة الحاويات:')}</b>
-            </div>
-            <p class="c-card-p" style="font-size:13.5px; line-height:1.5; margin:0; color:#f1f5f9;">
-              ${tr('The design runs the 6 security tools inside Docker containers with dropped privileges, non-root users, and isolated runtime environments.',
-                   'يعتمد التصميم على تشغيل أدوات الفحص الست داخل حاويات Docker بصلاحيات مقلصة ومستخدم غير جذري وبيئات تشغيل معزولة للحد من التداخل.')}
-            </p>
+            <span class="status-badge badge-wip" style="font-size:12.5px; padding:3px 10px;">
+              ${tr('Controls in Progress', 'ضوابط قيد الاستكمال')}
+            </span>
           </div>
 
-          <div style="background:rgba(15,23,42,0.65); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:9px 12px;">
-            <div style="display:flex; align-items:center; gap:8px; margin-bottom:2px;">
-              <span style="font-size:16px;">🧱</span>
-              <b style="font-size:14.5px; color:#ffffff;">${tr('Host Protection & Privilege Reduction:', 'حماية الخادم وتقليص الصلاحيات:')}</b>
+          <div style="display:flex; flex-direction:column; gap:11px;">
+            <div style="border-bottom:1px dashed rgba(255,255,255,0.08); padding-bottom:9px;">
+              <b style="font-size:16px; color:#ffffff; display:block; margin-bottom:4px;">
+                ${tr('Tool Containment in Docker:', 'تشغيل الأدوات داخل بيئة الحاويات:')}
+              </b>
+              <p style="font-size:15px; line-height:1.6; margin:0; color:#cbd5e1;">
+                ${tr('The design runs security tools inside Docker containers with dropped privileges, non-root users, and isolated runtime environments to limit lateral impact.',
+                     'يعتمد التصميم على تشغيل أدوات الفحص الست داخل حاويات Docker بصلاحيات مقلصة ومستخدم غير جذري وبيئات تشغيل معزولة للحد من التداخل.')}
+              </p>
             </div>
-            <p class="c-card-p" style="font-size:13.5px; line-height:1.5; margin:0; color:#f1f5f9;">
-              ${tr('Non-root execution helps reduce the blast radius if a tool or parser is compromised, though strict input validation remains essential to prevent command injection.',
-                   'يساعد التشغيل دون صلاحيات جذرية في تقليص أثر استغلال الأدوات أو مخرجات الفحص، مع بقاء التحقق الصارم من المدخلات ضرورياً لمنع حقن الأوامر.')}
-            </p>
-          </div>
 
-          <div style="background:rgba(15,23,42,0.65); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:9px 12px;">
-            <div style="display:flex; align-items:center; gap:8px; margin-bottom:2px;">
-              <span style="font-size:16px;">⚙️</span>
-              <b style="font-size:14.5px; color:#ffffff;">${tr('Resource Limits & Execution Controls:', 'حدود الموارد وضوابط التنفيذ:')}</b>
+            <div style="border-bottom:1px dashed rgba(255,255,255,0.08); padding-bottom:9px;">
+              <b style="font-size:16px; color:#ffffff; display:block; margin-bottom:4px;">
+                ${tr('Host Attack Surface & Execution Safety:', 'تقليص أثر الاستغلال وتشغيل الأوامر:')}
+              </b>
+              <p style="font-size:15px; line-height:1.6; margin:0; color:#cbd5e1;">
+                ${tr('Non-root execution helps reduce the blast radius if a tool or parser is compromised; commands are executed as argument arrays without shell invocation, with strict input validation.',
+                     'يساعد التشغيل دون صلاحيات جذرية في تقليص أثر استغلال الأدوات؛ مع استدعاء الأوامر كقائمة معاملات دون غلاف أوامر (No Shell) والتحقق الصارم لمنع حقن الأوامر.')}
+              </p>
             </div>
-            <p class="c-card-p" style="font-size:13.5px; line-height:1.5; margin:0; color:#f1f5f9;">
-              ${tr('Per-container memory and CPU limits help reduce the risk of host resource exhaustion, alongside execution timeouts and scan cancellation.',
-                   'تُحدَّد حدود الذاكرة وحصص المعالج لكل حاوية لتقليل مخاطر استنزاف موارد الخادم، إلى جانب المهل الزمنية وإمكانية إلغاء الفحص.')}
-              <span style="font-size:11px; color:var(--text-dim); display:block; margin-top:3px;">(Docker Documentation)</span>
-            </p>
+
+            <div>
+              <b style="font-size:16px; color:#ffffff; display:block; margin-bottom:4px;">
+                ${tr('Resource Limits & Execution Controls:', 'حدود الموارد وضوابط التنفيذ:')}
+              </b>
+              <p style="font-size:15px; line-height:1.6; margin:0; color:#cbd5e1;">
+                ${tr('Per-container memory and CPU limits help reduce the risk of host resource exhaustion, alongside execution timeouts and scan cancellation.',
+                     'تُحدَّد حدود الذاكرة وحصص المعالج لكل حاوية لتقليل مخاطر استنزاف موارد الخادم، إلى جانب المهل الزمنية وإمكانية إلغاء الفحص.')}
+                <span style="font-size:12px; color:var(--text-dim); display:inline-block; margin-inline-start:4px;">(Docker Documentation)</span>
+              </p>
+            </div>
           </div>
         </div>
-      `, 'c-card c-blue')}
+      `)}
     </div>
 
-    <div class="stat-box" style="margin-top:2px; padding:8px 16px; border-color:var(--teal); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px;">
+    <div class="stat-box" style="margin-top:4px; padding:10px 20px; border-color:var(--teal); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px;">
       <div style="display:flex; align-items:center; gap:10px; flex:1; min-width:300px;">
-        <span style="font-size:22px;">ℹ️</span>
-        <div class="stat-txt" style="font-size:13.5px; line-height:1.45; color:#f8fafc;">
+        <div class="stat-txt" style="font-size:14.5px; line-height:1.55; color:#f8fafc;">
           <b style="color:var(--teal);">${tr('Trust & Privacy Boundary:', 'حدود الثقة والخصوصية:')}</b>
-          ${tr('Platform admin access is restricted at the application level; this design does not provide a zero-knowledge guarantee against an operator with unrestricted host or infrastructure access.',
-               'تقتصر قيود وصول مدير المنصة على مستوى التطبيق؛ ولا يوفر هذا التصميم ضمانة المعرفة الصفرية (Zero-Knowledge) في مواجهة مشغل يمتلك وصولاً كاملاً إلى الخادم المضيف أو البنية التحتية.')}
+          ${tr('Platform admin access is restricted at the application level; this design does not provide a zero-knowledge guarantee against an operator with unrestricted host access. Cryptographic persistence remains planned.',
+               'تقتصر قيود وصول مدير المنصة على مستوى التطبيق؛ ولا يوفر هذا التصميم ضمانة المعرفة الصفرية (Zero-Knowledge) في مواجهة مشغل يمتلك وصولاً كاملاً إلى الخادم المضيف. وتشفير التخزين يظل تصميماً مخططاً.')}
         </div>
       </div>
       <div style="display:flex; gap:6px; flex-shrink:0;">
-        <span class="status-badge badge-done" style="font-size:12px; padding:3px 10px;">🔐 ${tr('Data at Rest', 'بيانات التخزين')}</span>
-        <span class="status-badge badge-done" style="font-size:12px; padding:3px 10px;">🐳 ${tr('Container Sandbox', 'عزل الحاويات')}</span>
+        <span class="status-badge badge-plan" style="font-size:12.5px; padding:3px 10px;">${tr('Storage: Planned', 'التخزين: مخطط')}</span>
+        <span class="status-badge badge-wip" style="font-size:12.5px; padding:3px 10px;">${tr('Execution: In Progress', 'التنفيذ: قيد الاستكمال')}</span>
       </div>
     </div>
   </div>`
@@ -1024,206 +1292,197 @@ addSlide(
 // 16. Threat Model & Architectural Controls (الشريحة 16: نموذج التهديدات وحدود الثقة)
 addSlide(
   ['Slide 16: Threat Model', 'الشريحة 16: نموذج التهديدات'],
-  ['YemScan Platform Threat Model & Design Controls', 'نموذج التهديدات لمنصة YemScan: حدود الثقة والضوابط المعمارية'],
+  ['Core Threats & Architectural Design Controls', 'التهديدات الأساسية وضوابط التصميم المعماري'],
   ['Threat Model', 'نموذج التهديدات'], 'tag-sec',
-  ['Preliminary threat model and architectural design controls; effectiveness remains subject to empirical verification during testing.',
-   'نموذج تهديدات أولي وضوابط معمارية مصممة للحد من المخاطر؛ وتخضع فاعليتها للتحقق التجريبي أثناء مرحلة الاختبار.'],
+  ['Core threats and architectural design controls; effectiveness remains subject to empirical verification during testing.',
+   'التهديدات الأساسية والضوابط المعمارية المصممة للحد من المخاطر؛ وتخضع فاعليتها للتحقق التجريبي أثناء مرحلة الاختبار.'],
   () => {
     const threats = [
       [
-        'User Data & Findings', 'بيانات المستخدمين ونتائج الفحص',
-        'Cross-user unauthorized access (IDOR / BOLA) via API.', 'وصول مستخدم غير مصرح به لبيانات أو نتائج فحص مستخدم آخر عبر واجهة API.',
-        'Authentication, RBAC, and per-operation resource ownership validation in Application Layer.', 'مصادقة مركزية، تحكم بالوصول مبني على الأدوار (RBAC)، وتحقق صارم من ملكية المورد لكل طلب في طبقة التطبيق.'
+        'Cross-User Access (API)', 'الوصول لبيانات مستخدم آخر',
+        'Unauthorized retrieval of another user\'s scans or findings (IDOR / BOLA).', 'استرجاع غير مصرح لفحوصات أو نتائج مستخدم آخر عبر API (IDOR / BOLA).',
+        'Authentication, RBAC, and per-operation resource ownership checks in application layer.', 'المصادقة المركزية، إدارة الصلاحيات (RBAC)، وفحص ملكية المورد لكل طلب في طبقة التطبيق.'
       ],
       [
-        'Stored Data & Files', 'المخرجات المخزنة وقاعدة البيانات',
-        'Exposure or tampering at rest if storage media is compromised.', 'تسريب البيانات الحساسة أو التلاعب بها أثناء التخزين عند الوصول غير المصرح لوسائط التخزين.',
-        'Data encryption using AES-256-GCM, 128-bit authentication tag verification, dedicated DEK per scan, and KEK managed separately from DB.', 'تشفير البيانات باستخدام AES-256-GCM، التحقق من وسم المصادقة 128 بت، مفتاح DEK مستقل لكل فحص، وحفظ KEK في مستودع أسرار منفصل عن قاعدة البيانات.'
+        'Storage Exposure or Tampering', 'تسريب التخزين أو العبث به',
+        'Exposure or tampering with stored findings and reports at rest if storage media is compromised.', 'تسريب البيانات الحساسة أو التلاعب بها أثناء التخزين عند الوصول غير المصرح لوسائط التخزين.',
+        'Data encryption using AES-256-GCM, 128-bit tag verification, per-scan DEK, and KEK in separate secret store.', 'تشفير البيانات باستخدام AES-256-GCM، التحقق من وسم المصادقة 128 بت، مفتاح DEK مستقل، وحفظ KEK في مخزن أسرار منفصل.'
       ],
       [
-        'Worker & Host Execution', 'مشغل المهام وبيئة الخادم المضيف',
-        'Malicious target payloads, out-of-scope scanning, or tool exploit attempting host escape.', 'استغلال مخرجات الهدف لاختراق أداة الفحص، الفحص خارج النطاق المصرح، أو محاولة كسر الحاوية.',
-        'Strict target/scope validation, executing commands without shell (exec array), non-root container user, and dropped capabilities.', 'تحقق صارم من النطاق والمدخلات، تشغيل الأوامر كقائمة معاملات دون غلاف أوامر، حاويات بمستخدم غير جذري وصلاحيات مقلصة.'
+        'Unsafe Execution & Out-of-Scope', 'التنفيذ غير الآمن أو الخروج عن النطاق',
+        'Malicious target payloads, out-of-scope scanning, or tool exploit attempting container breakout.', 'مدخلات خبيثة من الهدف، فحص خارج النطاق المصرح، أو محاولة كسر الحاوية عبر استغلال أداة.',
+        'Strict target/scope validation, argument array execution (no shell), non-root container, and dropped capabilities.', 'تحقق صارم من النطاق والمدخلات، تشغيل دون shell (قائمة معاملات)، ومستخدم غير جذري وصلاحيات مقلصة.'
       ],
       [
-        'Platform Resources', 'موارد المنصة والحوسبة',
-        'Resource exhaustion from concurrent or hanging scans (internal DoS).', 'استنزاف المعالج والذاكرة بفحوصات متزامنة مكثفة أو أدوات فحص عالقة (حجب خدمة داخلي).',
-        'Container CPU/memory quotas, concurrency limits, per-tool execution timeouts, and cancellation hooks.', 'حصص صارمة للمعالج والذاكرة للحاويات، قيود على عدد الفحوصات المتزامنة، مهلات زمنية لكل أداة، وإمكانية إلغاء الفحص.'
+        'Resource Exhaustion (Internal DoS)', 'استنزاف موارد الخادم (حجب خدمة داخلي)',
+        'Host CPU/memory exhaustion from heavy concurrent scans or hanging scanner processes.', 'استنزاف المعالج والذاكرة بفحوصات متزامنة مكثفة أو أدوات فحص عالقة في النظام.',
+        'Per-container CPU/memory quotas, concurrency limits, execution timeouts, and cancellation hooks.', 'حصص معالج وذاكرة لكل حاوية، حدود التزامن، مهل زمنية لكل أداة، وإمكانية إلغاء الفحص.'
       ],
       [
-        'AI Data & Reporting', 'بيانات الذكاء الاصطناعي والتقارير',
-        'Secret leakage in prompt payloads, or untrusted output manipulation.', 'تسريب أسرار أو بيانات حساسة في طلبات الاستدعاء، أو تأثير بيانات غير موثوقة على ردود الذكاء.',
-        'Data minimization, automated secret redaction before transit, HTTPS transport, validate response schema; treat scan content as untrusted data, separate from instructions, and validate conclusions and references before accepting report content.', 'تقليل البيانات، تنقيح الأسرار والمفاتيح قبل الإرسال، نقل مشفر عبر HTTPS، التحقق من هيكل ردود الذكاء؛ ومعاملة محتوى الفحص كبيانات غير موثوقة منفصلة عن التعليمات، والتحقق من الاستنتاجات والمراجع قبل قبول محتوى التقرير.'
+        'AI Data Leakage & Output Tampering', 'تسريب بيانات AI أو تضليل التحليل',
+        'Secret leakage in prompt payloads, or untrusted findings manipulating AI report output.', 'تسريب أسرار في طلبات الاستدعاء، أو تأثير بيانات غير موثوقة على استنتاجات الذكاء.',
+        'Data minimization, secret redaction before transit, prompt-data separation, and validating structure, conclusions, and references.', 'تقليل البيانات وتنقيح الأسرار، فصل البيانات عن التعليمات، والتحقق من البنية والاستنتاجات والمراجع القياسية.'
       ]
     ];
 
-    return `<div style="display:flex; flex-direction:column; gap:9px; width:100%;">
-      <div style="background:rgba(20,184,166,0.08); border:1px solid rgba(20,184,166,0.3); border-radius:8px; padding:6px 14px; font-size:13px; color:#f1f5f9; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px;">
+    return `<div style="display:flex; flex-direction:column; gap:10px; width:100%;">
+      <div style="background:rgba(20,184,166,0.08); border:1px solid rgba(20,184,166,0.3); border-radius:8px; padding:8px 16px; font-size:14.5px; color:#f1f5f9; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px;">
         <div style="display:flex; align-items:center; gap:8px;">
-          <span style="color:var(--teal); font-size:16px;">🛡️</span>
-          <span><b>${tr('Trust Boundaries:', 'حدود الثقة المعمارية:')}</b> <code>Browser ↔ FastAPI Backend</code> | <code>App ↔ Worker</code> | <code>App ↔ Storage & Keys</code> | <code>Platform ↔ External AI</code></span>
+          <span><b>${tr('Design Controls Focus:', 'تركيز ضوابط التصميم:')}</b> ${tr('Architectural design controls; effectiveness is validated during implementation and testing.', 'ضوابط تصميمية؛ يجري التحقق من فاعليتها أثناء التنفيذ والاختبار.')}</span>
         </div>
-        <span class="status-badge badge-sec" style="font-size:11.5px; padding:2px 8px;">${tr('Design Controls', 'ضوابط التصميم')}</span>
+        <span class="status-badge badge-sec" style="font-size:12.5px; padding:3px 9px;">${tr('Design Controls', 'ضوابط التصميم')}</span>
       </div>
 
       <div style="overflow-x:auto;">
-        <table class="comp-table" style="font-size:13px;">
+        <table class="comp-table" style="font-size:14.5px;">
           <thead>
             <tr>
-              <th style="width:24%;">${tr('Asset & Surface', 'الأصل ونطاق التهديد')}</th>
-              <th style="width:36%;">${tr('Identified Threat', 'التهديد المحتمل')}</th>
-              <th style="width:40%;">${tr('Architectural Control', 'الضابط المعماري المصمم')}</th>
+              <th style="width:48%; padding:9px 12px;">${tr('Threat Surface & Potential Scenario', 'الأصل وسيناريو التهديد المحتمل')}</th>
+              <th style="width:52%; padding:9px 12px;">${tr('Architectural Design Control', 'الضابط المعماري المصمم')}</th>
             </tr>
           </thead>
           <tbody>
             ${threats.map(t => `
               <tr>
-                <td style="font-weight:700; color:#e2e8f0; padding:6px 10px;">${tr(t[0], t[1])}</td>
-                <td style="color:#cbd5e1; padding:6px 10px;">${tr(t[2], t[3])}</td>
-                <td style="color:var(--teal); padding:6px 10px; font-size:12.5px; line-height:1.45;">${tr(t[4], t[5])}</td>
+                <td style="padding:8px 12px;">
+                  <b style="color:#ffffff; font-size:15px; display:block; margin-bottom:3px;">${tr(t[0], t[1])}</b>
+                  <span style="color:#cbd5e1; font-size:13.5px; line-height:1.5;">${tr(t[2], t[3])}</span>
+                </td>
+                <td style="color:var(--teal); padding:8px 12px; font-size:14px; line-height:1.5;">${tr(t[4], t[5])}</td>
               </tr>
             `).join('')}
           </tbody>
         </table>
       </div>
 
-      <div style="background:rgba(15,23,42,0.7); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:6px 14px; font-size:12.5px; color:var(--amber); display:flex; align-items:center; gap:8px;">
-        <span style="font-size:15px;">⚠️</span>
-        <span><b>${tr('AI Privacy Boundary Note:', 'تنبيه خصوصية خدمة الذكاء الاصطناعي:')}</b> ${tr('The external AI model processes data submitted in prompt payloads; HTTPS protects transit only. Data minimization and secret redaction prior to transit are critical pre-flight controls.',
-          'تعالج خدمة الذكاء الاصطناعي الخارجية البيانات المرفوعة في طلب الاستدعاء؛ ويقتصر تشفير HTTPS على حماية النقل فقط. لذا يعد تقليل البيانات وتنقيح الأسرار قبل الإرسال ضابطاً حاسماً لحماية الخصوصية.')} <span style="font-size:11px; color:var(--amber); opacity:0.8;">(OWASP LLM Top 10)</span></span>
+      <div style="background:rgba(15,23,42,0.7); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:8px 16px; font-size:14px; color:var(--amber); display:flex; align-items:center;">
+        <span><b>${tr('AI Transit & Processing Boundary:', 'تنبيه خصوصية خدمة الذكاء الاصطناعي:')}</b> ${tr('HTTPS protects transit; the external AI service processes data submitted in prompt payloads. Pre-transit minimization and secret redaction are essential controls.',
+          'HTTPS يحمي النقل؛ وخدمة AI تعالج البيانات المرسلة في طلب الاستدعاء. لذا يعد تقليل البيانات وتنقيح الأسرار قبل الإرسال ضابطاً أساسياً.')} <span style="font-size:12px; color:var(--amber); opacity:0.85;">(OWASP LLM Top 10)</span></span>
       </div>
     </div>`;
   }
 );
 
-// 17. Testing Progress & Verification (الشريحة 17: خطة الاختبارات وسيناريوهاتها)
+// 17. Engine Testing Scenarios & Verification (الشريحة 17: سيناريوهات اختبار المحرك وحالة التحقق)
 addSlide(
-  ['Slide 17: Testing Verification', 'الشريحة 17: خطة وتقدم الاختبارات'],
-  ['Testing Verification: Controlled Test Scenarios', 'خطة وتقدم الاختبارات: سيناريوهات التحقق المخبري'],
-  ['Testing Plan', 'خطة الاختبارات'], 'tag-sec',
-  ['Focusing on selected test cases with expected vs actual behavior, without unlinked success numbers.',
-   'التركيز على سيناريوهات اختبار محددة تقارن النتيجة المتوقعة بالنتيجة الفعلية، دون أرقام نجاح غير مقاسة.'],
+  ['Slide 17: Testing Scenarios', 'الشريحة 17: سيناريوهات الاختبار وحالة التحقق'],
+  ['Engine Testing Scenarios & Verification Status', 'سيناريوهات اختبار المحرك وحالة التحقق المخبري'],
+  ['Engine Testing', 'اختبارات المحرك'], 'tag-sec',
+  ['Controlled engine test scenarios: distinguishing planned cases from local prototype tests, with operational verification ongoing.',
+   'سيناريوهات اختبار المحرك المنضبطة: تمييز الحالات المخططة عما تم في النموذج الأولي محلياً، مع استمرار التحقق التشغيلي.'],
   () => {
     const tests = [
-      ['API Authentication & Ownership', 'المصادقة وفحص الملكية',
-       'Cross-tenant scan retrieval returns HTTP 403 Forbidden.',
-       'محاولة استرجاع فحوصات مستخدم آخر تُرجع خطأ 403 Forbidden.',
-       'Verified in clean PostgreSQL environment', 'تم التحقق في بيئة PostgreSQL نظيفة', 'badge-done'],
-      ['Worker Sandbox Isolation', 'عزل الحاويات في Docker',
-       'Worker processes terminate cleanly within assigned CPU/memory bounds.',
-       'عمليات الفحص تنتهي بانتظام ضمن حدود المعالج والذاكرة المخصصة.',
-       'Verified in local environment', 'تم التحقق في البيئة المحلية', 'badge-done'],
-      ['Data Normalization & Dedup', 'توحيد المخرجات وإلغاء التكرار',
-       'Mock scanner outputs parse into single consolidated finding with provenance.',
-       'تحويل مخرجات الفحص التجريبية إلى نتيجة موحدة مع حفظ أدلة الإثبات.',
-       'Sample parser tests passed', 'اجتازت اختبارات عينة المحللات', 'badge-done'],
-      ['Cryptographic Tag Verification', 'التحقق من وسم المصادقة',
-       'Tampered ciphertext or invalid nonce is rejected upon verification failure without use.',
-       'رفض النص المشفر المتلاعب به أو الـ Nonce غير الصالح عند فشل التحقق دون استخدامه.',
-       'Verified via Python cryptography tests', 'تم التحقق عبر اختبارات مكتبة التشفير', 'badge-done'],
-      ['Data Minimization & Secret Redaction', 'تقليل البيانات وتنقيح الأسرار',
-       'Data submitted over HTTPS omits raw secrets, credentials, and unneeded tokens.',
-       'البيانات المرسلة عبر HTTPS تستبعد المفاتيح السرية وبيانات الاعتماد والرموز غير الضرورية.',
-       'In Progress (Sprints 6–7)', 'قيد التنفيذ (السبرنتات 6–7)', 'badge-wip']
+      ['Input Handover Between Tools', 'تسليم المدخلات بين الأدوات',
+       'Passing discovered subdomains and open ports to subsequent tools without data loss.',
+       'تمرير النطاقات الفرعية والمنافذ المكتشفة إلى الأدوات التالية في المسار دون فقد للبيانات.',
+       'Executed with Issues · Local Prototype', 'أُجري محلياً مع وجود مشكلات مسارات', 'badge-draft'],
+      ['Output Normalization & Data Retention', 'توحيد المخرجات وعدم فقد البيانات',
+       'Parsing raw CLI tool outputs into unified findings schema without dropping proof artifacts.',
+       'تحويل مخرجات الأدوات إلى بنية موحدة دون فقدان أدلة الإثبات ومصادر الاستخراج.',
+       'Executed with Issues · Fixes Needed', 'أُجري مع وجود مشكلة · يلزم تصحيح الدمج', 'badge-draft'],
+      ['Partial Tool Failure Handling', 'معالجة الفشل الجزئي للأداة',
+       'Failure of a single tool allows completed stages to remain accessible without total pipeline crash.',
+       'فشل أداة معينة يتيح بقاء نتائج المراحل المكتملة متاحة دون توقف المسار كاملاً.',
+       'Executed with Issues · Traps Ongoing', 'أُجري مع وجود مشكلة · استكمال المعالجة', 'badge-wip'],
+      ['Scan Cancellation & Timeout Hooks', 'إلغاء الفحص والمهل الزمنية',
+       'User cancellation halts active scanner processes promptly and records state cleanly.',
+       'إلغاء الفحص من المستخدم يوقف عمليات الأدوات النشطة بانتظام ويسجل الحالة بدقة.',
+       'Planned · Integration in Progress', 'مخطط · قيد التكامل البرمجي', 'badge-plan']
     ];
-    return `<div class="c-col">
-      <table class="comp-table">
+    return `<div class="c-col" style="gap:10px;">
+      <table class="comp-table" style="font-size:14.5px;">
         <thead>
           <tr>
-            <th style="width:28%;">${tr('Test Scenario', 'سيناريو الاختبار')}</th>
-            <th style="width:44%;">${tr('Expected Behavior / Criterion', 'السلوك المتوقع ومعيار النجاح')}</th>
-            <th class="center" style="width:28%;">${tr('Verification Outcome', 'النتيجة')}</th>
+            <th style="width:28%; padding:9px 12px;">${tr('Test Scenario', 'سيناريو الاختبار')}</th>
+            <th style="width:44%; padding:9px 12px;">${tr('Expected Behavior / Success Criterion', 'السلوك المتوقع ومعيار النجاح')}</th>
+            <th class="center" style="width:28%; padding:9px 8px;">${tr('Verification Outcome', 'النتيجة وحالة التحقق')}</th>
           </tr>
         </thead>
         <tbody>
           ${tests.map(t => `
             <tr>
-              <td><b>${tr(t[0], t[1])}</b></td>
-              <td>${tr(t[2], t[3])}</td>
-              <td class="center"><span class="status-badge ${t[6]}">${tr(t[4], t[5])}</span></td>
+              <td style="padding:8px 12px;"><b style="font-size:15px; color:#ffffff;">${tr(t[0], t[1])}</b></td>
+              <td style="padding:8px 12px; font-size:14px; line-height:1.5;">${tr(t[2], t[3])}</td>
+              <td class="center" style="padding:8px 6px;"><span class="status-badge ${t[6]}" style="font-size:12.5px; padding:3px 8px;">${tr(t[4], t[5])}</span></td>
             </tr>`).join('')}
         </tbody>
       </table>
+
+      <div style="background:rgba(15,23,42,0.7); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:8px 16px; font-size:14px; color:#cbd5e1; display:flex; align-items:center; gap:8px;">
+        <span><b>${tr('Testing Scope Note:', 'ملاحظة نطاق الاختبارات:')}</b> ${tr('Testing reflects local engine script validation with sample data, not full black-box external scans. Code review notes identify specific areas for deduplication and error-handling remediation.',
+          'تعكس الاختبارات تحققاً محلياً لنصوص المحرك باستخدام بيانات تجريبية، وليست فحوصات خارجية كاملة. وملاحظات المراجعة الكودية تحدد مواضع التصحيح للدمج ومعالجة الأخطاء.')}</span>
+      </div>
     </div>`;
   }
 );
 
 // 18. Preliminary Results & Technical Validation (الشريحة 18)
 addSlide(
-  ['Slide 18: Preliminary Results', 'الشريحة 18: النتائج الأولية والتقييم'],
-  ['Preliminary Results & Technical Validation', 'النتائج الأولية والتقييم الفني لمنصة YemScan'],
-  ['Technical Validation', 'النتائج الأولية'], 'tag-sec',
-  ['Initial laboratory runs confirm automated handover feasibility, schema normalization, and pre-AI reference grounding.',
-   'تؤكد التجارب الأولية جدوى التسليم الآلي بين الأدوات، توحيد البيانات، والربط بالمعايير القياسية قبل استدعاء الذكاء.'],
+  ['Slide 18: Prototype Outputs', 'الشريحة 18: مخرجات النموذج الأولي والتحقق الفني'],
+  ['Prototype Outputs & Technical Verification', 'مخرجات النموذج الأولي والتحقق الفني'],
+  ['Technical Verification', 'التحقق الفني'], 'tag-sec',
+  ['Observations from local prototype execution: validating sequential pipeline feasibility while identifying parser and state management refinements.',
+   'ملاحظات تشغيل النموذج الأولي محلياً: تأكيد جدوى التسلسل البرمجي مع تحديد متطلبات تحسين المحللات وإدارة الحالة.'],
   () => `<div class="c-grid-3">
-    ${A(0, `<div class="c-card-ic">🔄</div>
-      <h3 class="c-card-h">${tr('Automated Handover Feasibility', 'جدوى التسليم الآلي بين الأدوات')}</h3>
-      <p class="c-card-p">${tr('Prototyping confirms that sequential data passing between discovery tools (Subfinder → Naabu → httpx) operates reliably without manual piping.',
-        'أكدت التجارب الأولية أن تمرير البيانات المتسلسل بين أدوات الاستكشاف يعمل بسلاسة دون الحاجة لنقل يدوي للمخرجات.')}</p>`, 'c-card')}
+    ${A(0, `<h3 class="c-card-h" style="font-size:20px; color:var(--teal);">${tr('Automated Pipeline Handover', 'جدوى التسليم الآلي بين الأدوات')}</h3>
+      <p class="c-card-p" style="font-size:15.5px; line-height:1.6;">${tr('Local prototype execution confirms the feasibility of passing discovery targets (Subfinder → Naabu → httpx) programmatically without manual operator intervention.',
+        'أكدت تجارب النموذج الأولي محلياً جدوى تمرير أهداف الاستكشاف برمجياً (Subfinder ثم Naabu ثم httpx) بسلاسة دون تدخل يدوي من المشغل.')}</p>`, 'c-card')}
 
-    ${A(1, `<div class="c-card-ic" style="color:var(--blue);">📊</div>
-      <h3 class="c-card-h" style="color:var(--blue);">${tr('Data Normalization & Hygiene', 'توحيد البيانات وإلغاء التكرار')}</h3>
-      <p class="c-card-p">${tr('Sample parser runs verify that overlapping simulated findings are successfully consolidated into structured relational tables with provenance preserved.',
-        'أثبتت الاختبارات الأولية للمحللات إمكانية دمج النتائج المتداخلة في جداول علائقية موحدة مع الحفاظ على أدلة الإثبات.')}</p>`, 'c-card c-blue')}
+    ${A(1, `<h3 class="c-card-h" style="font-size:20px; color:var(--blue);">${tr('Normalization & Parsing Challenges', 'مخرجات التوحيد والتحديات الحالية')}</h3>
+      <p class="c-card-p" style="font-size:15.5px; line-height:1.6;">${tr('Prototype parsers successfully extract assets and findings from tool outputs, while highlighting the need for refined deduplication and merge consistency algorithms.',
+        'نجحت المحللات التجريبية في استخراج الأصول والنتائج، مع إظهار الحاجة لمعالجة أخطاء الدمج وإلغاء التكرار بين مخرجات الأدوات المتعددة.')}</p>`, 'c-card c-blue')}
 
-    ${A(2, `<div class="c-card-ic" style="color:var(--violet);">🏷️</div>
-      <h3 class="c-card-h" style="color:var(--violet);">${tr('AI Response Validation & Reference Grounding', 'التحقق من ردود الذكاء وربط المراجع القياسية')}</h3>
-      <p class="c-card-p">${tr('The model response is checked for structural validity, and its conclusions and referenced identifiers are reviewed against scan evidence and available security references before report content is accepted.',
-        'يُتحقق من بنية استجابة النموذج، وتُراجع استنتاجاته ومعرّفاته المرجعية مقابل نتائج الفحص والمراجع المتاحة قبل اعتماد محتوى التقرير.')}</p>`, 'c-card c-violet')}
+    ${A(2, `<h3 class="c-card-h" style="font-size:20px; color:var(--violet);">${tr('AI Response Validation Design', 'تصميم التحقق من مخرجات الذكاء')}</h3>
+      <p class="c-card-p" style="font-size:15.5px; line-height:1.6;">${tr('The proposed design enforces structural response validation and requires verifying conclusions and security references (CVE/CWE) against scan evidence prior to report inclusion.',
+        'يعتمد التصميم المقترح التحقق البنيوي من مخرجات النموذج، واشتراط مطابقة الاستنتاجات والمراجع القياسية (CVE/CWE) مع أدلة الفحص قبل إدراجها في التقرير.')}</p>`, 'c-card c-violet')}
   </div>`
 );
 
 // 19. Technical Challenges & Mitigation (الشريحة 19)
 addSlide(
-  ['Slide 19: Challenges & Risks', 'الشريحة 19: التحديات والمخاطر التقنية'],
-  ['Technical Challenges Encountered & Mitigation Strategies', 'التحديات والمخاطر التقنية التي واجهت الفريق وكيف تمت معالجتها'],
-  ['Risk Management', 'إدارة المخاطر'], 'tag-prop',
-  ['Separating potential risks from actual encountered problems, presenting root causes and verified mitigations.',
-   'فصل المخاطر المتوقعة عن المشاكل الفعلية، وتوضيح الأسباب الجذرية وإجراءات المعالجة المتخذة.'],
+  ['Slide 19: Challenges & Mitigations', 'الشريحة 19: التحديات والمعالجات'],
+  ['Encountered Challenges & Mitigation Status', 'التحديات والمعالجات وحالتها في الكود البرمجي'],
+  ['Risk & Issue Management', 'إدارة المشكلات'], 'tag-prop',
+  ['Concrete technical challenges encountered during engine development, root causes, and current mitigation status in codebase.',
+   'تحديات تقنية فعلية واجهت تطوير المحرك، أسبابها الجذرية، وحالة المعالجة البرمجية في الكود.'],
   () => {
     const risks = [
-      ['Inconsistent Tool Output Schemas', 'اختلاف تنسيق مخرجات الأدوات',
-       'CLI scanners produce divergent JSON, plain text, and XML.',
-       'أدوات الفحص تنتج مخرجات متباينة بصيغ JSON ونصوص عادية وXML.',
-       'Built custom normalization adapter modules with provenance retention.',
-       'تطوير وحدات مهايئة (Adapters) لتوحيد الصيغ مع الحفاظ على مصادر الإثبات.',
-       'Resolved', 'تم الحل', 'badge-done'],
-      ['Long-Running Scan Execution', 'عمليات الفحص طويلة الأمد',
-       'Port and vulnerability scanning may block HTTP request threads if executed synchronously.',
-       'فحص المنافذ والثغرات قد يعطل خيوط معالجة طلبات HTTP إذا نُفذ تزامناً داخل واجهة API.',
-       'Decoupled execution via an independent background worker with status tracking and cancellation hooks.',
-       'فصل التنفيذ عبر مشغل مهام خلفي مستقل عن خادم FastAPI، مع تتبع الحالة وإمكانية إلغاء الفحص.',
-       'Resolved', 'تم الحل', 'badge-done'],
-      ['AI Token Costs & Grounding', 'تكلفة الـ API وتثبيت مخرجات الذكاء',
-       'Submitting large raw logs risks exceeding context windows and unreliable severity rankings.',
-       'إرسال سجلات خام ضخمة يستهلك الرموز ويزيد احتمالية تقديم درجات خطورة غير دقيقة.',
-       'Minimized submitted payload and restricted AI to remediation explanation based on pre-enriched findings.',
-       'تقليل البيانات المرسلة وحصر دور الذكاء في تفسير المعالجة استناداً إلى نتائج تم إثراؤها مسبقاً.',
-       'Resolved', 'تم الحل', 'badge-done'],
-      ['Cryptographic Key Management Complexity', 'تعقيدات إدارة وتطبيق التشفير',
-       'Encrypting each record with an external key service creates network overhead and key exposure risks.',
-       'تشفير كل سجل باستدعاء خارجي للمفتاح يضيف عبئاً شبكياً ومخاطر كشف للمفاتيح.',
-       'Adopted envelope encryption (per-scan DEK protected by KEK) with temporary plaintext key caching in memory during active jobs.',
-       'اعتماد تشفير المغلف (مفتاح DEK مستقل لكل فحص محمي بـ KEK) مع إبقاء المفتاح مؤقتاً في الذاكرة أثناء تنفيذ المهمة فقط.',
-       'In Progress', 'قيد التنفيذ', 'badge-wip']
+      ['Divergent Scanner Output Schemas', 'اختلاف تنسيق مخرجات الأدوات',
+       'CLI tools output varying formats (raw JSON, JSONL, plain text).',
+       'أدوات الفحص تنتج مخرجات متباينة بصيغ JSON ونصوص عادية وسجلات أسطر.',
+       'Custom parsing adapter functions with source provenance tracking.',
+       'تطوير دوال مهايئة (Adapters) لمعالجة التنسيقات وتتبع مصدر كل نتيجة.',
+       'Partial · Refinement Needed', 'جزئي · يحتاج تحسيناً', 'badge-wip'],
+      ['Cross-Platform Execution Paths', 'مسارات التنفيذ عبر المنصات',
+       'Differences in binary paths, environment vars, and Docker socket between Windows host and Linux containers.',
+       'تباين مسارات الأدوات ومتغيرات البيئة ومقبس Docker بين خادم التطوير وبيئة الحاويات.',
+       'Path normalization helpers and environment-aware execution wrappers in engine config.',
+       'دوال مساعدة لتوحيد المسارات ومغلفات تنفيذ تراعي بيئة التشغيل في إعدادات المحرك.',
+       'In Codebase · Testing Ongoing', 'موجود كودياً · قيد الاختبار', 'badge-wip'],
+      ['Long-Running Scan Execution', 'إدارة المهام طويلة الأمد',
+       'Synchronous tool runs block HTTP threads; standalone Celery/Redis worker not yet configured.',
+       'التشغيل المتزامن يعطل خيوط HTTP؛ ومشغل المهام المستقل (Celery/Redis) لم يُهيأ بعد.',
+       'FastAPI BackgroundTasks used as an in-process workaround; standalone queue planned for production.',
+       'استخدام FastAPI BackgroundTasks كمعالجة داخلية مؤقتة؛ والمشغل المستقل مخطط للإنتاج.',
+       'In-Process Workaround · Worker Planned', 'معالجة داخلية مؤقتة · المشغل مخطط', 'badge-draft']
     ];
     return `<div class="c-col">
-      <table class="comp-table">
+      <table class="comp-table" style="font-size:14.5px;">
         <thead>
           <tr>
-            <th style="width:24%;">${tr('Challenge Encountered', 'التحدي التقني الفعلي')}</th>
-            <th style="width:34%;">${tr('Root Cause', 'السبب الجذري')}</th>
-            <th style="width:30%;">${tr('Action Taken / Mitigation', 'الإجراء المتخذ والمعالجة')}</th>
-            <th class="center" style="width:12%;">${tr('Status', 'الحالة')}</th>
+            <th style="width:24%; padding:9px 12px;">${tr('Challenge Encountered', 'التحدي التقني الفعلي')}</th>
+            <th style="width:30%; padding:9px 12px;">${tr('Root Cause', 'السبب الجذري')}</th>
+            <th style="width:30%; padding:9px 12px;">${tr('Codebase Action / Mitigation', 'الإجراء والمعالجة البرمجية')}</th>
+            <th class="center" style="width:16%; padding:9px 8px;">${tr('Status', 'الحالة')}</th>
           </tr>
         </thead>
         <tbody>
           ${risks.map(r => `
             <tr>
-              <td><b>${tr(r[0], r[1])}</b></td>
-              <td>${tr(r[2], r[3])}</td>
-              <td>${tr(r[4], r[5])}</td>
-              <td class="center"><span class="status-badge ${r[8]}">${tr(r[6], r[7])}</span></td>
+              <td style="padding:8px 12px;"><b style="font-size:15px; color:#ffffff;">${tr(r[0], r[1])}</b></td>
+              <td style="padding:8px 12px; font-size:14px; line-height:1.5;">${tr(r[2], r[3])}</td>
+              <td style="padding:8px 12px; font-size:14px; line-height:1.5;">${tr(r[4], r[5])}</td>
+              <td class="center" style="padding:8px 6px;"><span class="status-badge ${r[8]}" style="font-size:12.5px; padding:3px 8px;">${tr(r[6], r[7])}</span></td>
             </tr>`).join('')}
         </tbody>
       </table>
@@ -1231,78 +1490,75 @@ addSlide(
   }
 );
 
-// 20. Updated Schedule / Gantt Chart (الشريحة 20)
+// 20. Remaining Work & Completion Roadmap (الشريحة 20: الأعمال المتبقية وخطة الاستكمال)
 addSlide(
-  ['Slide 20: Updated Schedule', 'الشريحة 20: الجدول الزمني المحدث'],
-  ['Updated Project Schedule & Milestone Roadmap', 'الجدول الزمني المحدث وخريطة المعالم الرئيسية (Milestones)'],
-  ['Project Roadmap', 'الجدول الزمني'], 'tag-sec',
-  ['Realistic timeline anchored to current review date (October 2026) through final graduation in mid-2027.',
-   'جدول زمني واقعي يبدأ من تاريخ المناقشة الحالية (أكتوبر 2026) وحتى التخرج النهائي في منتصف 2027.'],
+  ['Slide 20: Completion Roadmap', 'الشريحة 20: الأعمال المتبقية وخطة الاستكمال'],
+  ['Remaining Work & Completion Roadmap', 'الأعمال المتبقية وخطة الاستكمال لمشروع التخرج (2)'],
+  ['Project Roadmap', 'خطة الاستكمال'], 'tag-sec',
+  ['Remaining engineering packages for Graduation Project (2), structured into 4 work clusters pending academic supervisor timeline approval.',
+   'حزم العمل الهندسية المتبقية لمشروع التخرج (2)، مقسمة إلى 4 مجموعات عمل بانتظار اعتماد الجدول الزمني من المشرف الأكاديمي.'],
   () => {
-    const milestones = [
-      ['Phase 1: Foundation & Discovery (Sprints 1–3)', 'المرحلة 1: التأسيس والاستكشاف (السبرنتات 1–3)', 'Oct 2026',
-       'Current Milestone (Midterm Defense)', 'المعلم الحالي (المناقشة النصفية)', 'badge-done',
-       'FastAPI backend, PostgreSQL migrations, worker jobs, AES-256-GCM encryption, Subfinder/Naabu/httpx.',
-       'خلفية FastAPI، ترحيلات PostgreSQL، مهام المشغل، تشفير AES-256-GCM، ودمج Subfinder وNaabu وhttpx.'],
-      ['Phase 2: API & Vulnerability Scanners (Sprints 4–5)', 'المرحلة 2: فحص الـ APIs والثغرات (السبرنتات 4–5)', 'Nov – Dec 2026',
-       'Planned', 'مخطط', 'badge-plan',
-       'Kiterunner for API route discovery; Nuclei YAML templates and Wapiti dynamic web probing in Docker containers.',
-       'أداة Kiterunner لاكتشاف مسارات واجهات API؛ وقوالب Nuclei وفحص Wapiti الديناميكي داخل حاويات Docker.'],
-      ['Phase 3: Reference Enrichment & AI (Sprints 6–7)', 'المرحلة 3: الإثراء المرجعي والذكاء (السبرنتات 6–7)', 'Jan – Feb 2027',
-       'Planned', 'مخطط', 'badge-plan',
-       'Associating findings with CVE identifiers, CWE classifications, and OWASP Top 10 categories, utilizing available CVSS severity scores; Gemini 3.8 Flash remediation prompt pipeline.',
-       'ربط النتائج بمعرّفات CVE وتصنيفات CWE وفئات OWASP Top 10 والاستفادة من درجات CVSS المتاحة؛ ومسار استدعاء Gemini 3.8 Flash لتفسير المعالجة.'],
-      ['Phase 4: Reports & Frontend Interface (Sprints 8–9)', 'المرحلة 4: التقارير ولوحة التحكم (السبرنتات 8–9)', 'Mar – Apr 2027',
-       'Planned', 'مخطط', 'badge-plan',
-       'Encrypted PDF dual-tier report engine and React/TypeScript interactive dashboard.',
-       'محرك توليد التقارير المزدوجة المشفرة ولوحة التحكم التفاعلية بتقنيتي React وTypeScript.'],
-      ['Phase 5: Laboratory Benchmarking & Defense (Sprint 10)', 'المرحلة 5: التقييم المخبري والمناقشة (السبرنت 10)', 'May – Jun 2027',
-       'Planned', 'مخطط', 'badge-plan',
-       'Controlled lab testing against benchmark targets, thesis completion, and final graduation defense.',
-       'اختبارات مخبرية منضبطة على أهداف معيارية، استكمال كتابة الأطروحة، ومناقشة التخرج النهائية.']
+    const clusters = [
+      ['Cluster 1: Engine Remediation & Tool Integration', 'المجموعة 1: تصحيح المحرك واستكمال تكامل الأدوات',
+       'Priority 1', 'أولوية 1', 'badge-wip',
+       'Fix normalization deduplication and merge issues; complete Kiterunner integration; verify native tool executions in isolated container environment.',
+       'تصحيح أخطاء إلغاء التكرار والدمج في المحللات؛ استكمال تكامل Kiterunner؛ والتحقق من تشغيل الأدوات الأصلية داخل بيئة الحاويات المعزولة.'],
+      ['Cluster 2: Core Services, Database & Security Controls', 'المجموعة 2: الخدمات الأساسية وقاعدة البيانات وضوابط الحماية',
+       'Priority 2', 'أولوية 2', 'badge-plan',
+       'Implement PostgreSQL database schema; build authentication, RBAC, and ownership checks; implement AES-256-GCM data encryption and KEK secret store separation.',
+       'تنفيذ مخطط قاعدة بيانات PostgreSQL؛ بناء منظومة المصادقة والصلاحيات وفحص الملكية؛ وتطبيق تشفير AES-256-GCM وإدارة KEK في مخزن أسرار منفصل.'],
+      ['Cluster 3: Reference Enrichment, AI Analysis & Dual Reports', 'المجموعة 3: الإثراء المرجعي وتحليل الذكاء والتقارير المزدوجة',
+       'Priority 3', 'أولوية 3', 'badge-plan',
+       'Automate CVE/CWE and OWASP reference enrichment; integrate Gemini 3.8 Flash remediation pipeline with prompt minimization; build executive and technical report generators.',
+       'أتمتة الإثراء المرجعي بمعايير CVE/CWE وOWASP؛ دمج مسار استدعاء Gemini 3.8 Flash لتفسير المعالجة مع تقليل البيانات؛ وتطوير مولد التقارير المزدوجة.'],
+      ['Cluster 4: Frontend Dashboard, Benchmarking & Documentation', 'المجموعة 4: الواجهة التفاعلية والتقييم المخبري والتوثيق',
+       'Priority 4', 'أولوية 4', 'badge-plan',
+       'Develop interactive web dashboard; conduct laboratory evaluation against benchmark targets; complete graduation thesis and project defense preparation.',
+       'تطوير لوحة التحكم التفاعلية؛ إجراء التقييم المخبري المنضبط على أهداف معيارية؛ واستكمال وثيقة الأطروحة والاستعداد للمناقشة النهائية.']
     ];
-    return `<div class="c-col" style="gap:9px;">
-      ${milestones.map((m, idx) => A(idx, `
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:3px;">
-          <div style="display:flex; align-items:center; gap:10px;">
-            <span style="font-family:var(--font-mono); font-size:13px; color:var(--blue); font-weight:700;">${m[2]}</span>
-            <b style="font-size:15.5px; color:#ffffff;">${tr(m[0], m[1])}</b>
-          </div>
-          <span class="status-badge ${m[5]}">${tr(m[3], m[4])}</span>
+    return `<div class="c-col" style="gap:10px;">
+      ${clusters.map((c, idx) => A(idx, `
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
+          <b style="font-size:17px; color:#ffffff;">${tr(c[0], c[1])}</b>
+          <span class="status-badge ${c[4]}" style="font-size:12.5px; padding:3px 8px;">${tr(c[2], c[3])}</span>
         </div>
-        <p class="c-card-p" style="font-size:13.5px; line-height:1.5; margin:0;">${tr(m[6], m[7])}</p>`, 'c-card')).join('')}
+        <p class="c-card-p" style="font-size:15px; line-height:1.55; margin:0;">${tr(c[5], c[6])}</p>`, 'c-card')).join('')}
+
+      <div style="background:rgba(15,23,42,0.7); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:8px 16px; font-size:14px; color:var(--amber); text-align:center;">
+        <b>${tr('Timeline Approval Note:', 'تنبيه اعتماد الجدول:')}</b> ${tr('Work clusters define technical scope for Project (2). Calendar dates and duration allocations are subject to academic supervisor approval.',
+                 'مجموعات العمل تمثل النطاق الفني المتبقي لمشروع (2)؛ والجدول الزمني المحدث وتوزيع الفترات معلقان بانتظار اعتماد المشرف الأكاديمي.')}
+      </div>
     </div>`;
   }
 );
 
 // 21. Conclusion / Q&A (الشريحة 21)
 addSlide(
-  ['Slide 21: Conclusion', 'الشريحة 21: الخاتمة والخطوات التالية'],
-  ['Conclusion, Project Status & Examination Q&A', 'الخاتمة: خلاصة التقدم والجاهزية لمشروع (2) وأسئلة اللجنة'],
-  ['Conclusion & Q&A', 'الخاتمة والمناقشة'], 'tag-sec',
-  ['Midterm defense proves sound methodology, clear engineering progress, and a solid roadmap for completion.',
-   'يؤكد العرض النصفي سلامة المنهجية، وضوح الإنجاز الهندسي، وجاهزية خطة استكمال المشروع في الفصل القادم.'],
-  () => `<div class="c-col" style="align-items:center; gap:16px; text-align:center;">
+  ['Slide 21: Conclusion & Readiness', 'الشريحة 21: الخاتمة والجاهزية لمشروع (2)'],
+  ['Conclusion & Graduation Project (2) Readiness', 'الخاتمة: خلاصة التقدم والجاهزية لمشروع التخرج (2)'],
+  ['Conclusion & Readiness', 'الخاتمة والجاهزية'], 'tag-sec',
+  ['Midterm defense summary: solid theoretical foundation and architectural design, initial engine progress, and a structured roadmap for completion in Project (2).',
+   'خلاصة المناقشة النصفية: أساس نظري وتصميم معماري رصين، تقدم أولي في محرك الفحص، وخطة واضحة للاستكمال في مشروع التخرج (2).'],
+  () => `<div class="c-col" style="align-items:center; gap:14px; text-align:center;">
     <div style="font-size:52px; font-weight:900; letter-spacing:2px; line-height:1; background:linear-gradient(120deg, #ffffff, #2dd4bf, #38bdf8); -webkit-background-clip:text; background-clip:text; color:transparent;">
       YemScan
     </div>
-    <div style="font-size:16px; color:#e2e8f0; max-width:920px; line-height:1.55;">
-      ${tr('Midterm Evaluation Summary: The team has established a rigorous academic and theoretical foundation, designed the modular layered architecture integrating an external AI service, built the containerized worker and encrypted storage baseline (Sprints 1–3), and formulated a clear roadmap for completion in Graduation Project (2).',
-           'خلاصة التقييم النصفي: نجح الفريق في إرساء الأساس النظري والأكاديمي الرصين، وتصميم معمارية النظام المعيارية ذات الطبقات المتكاملة مع خدمة ذكاء اصطناعي خارجية، وبناء بيئة تشغيل العمال المستقلين والتخزين المشفر (السبرنتات 1-3)، وصياغة خطة عمل واضحة لاستكمال المشروع في الفصل القادم.')}
+    <div style="font-size:16.5px; color:#e2e8f0; max-width:960px; line-height:1.6;">
+      ${tr('Midterm Evaluation Summary: The team has established a rigorous academic and theoretical foundation, designed the modular architecture integrating with an external AI service, achieved initial implementation progress on the scanning engine, and defined a clear technical roadmap for completion in Graduation Project (2).',
+           'خلاصة التقييم النصفي: نجح الفريق في إرساء الأساس النظري والأكاديمي الرصين، وتصميم المعمارية المعيارية المتكاملة مع خدمة الذكاء الاصطناعي الخارجية، وتحقيق تقدم أولي في برمجة محرك الفحص، مع تحديد خارطة طريق فنية واضحة للاستكمال في مشروع التخرج (2).')}
     </div>
 
-    <div class="c-grid-3" style="max-width:1100px; text-align:start;">
-      ${A(0, `<h4 class="c-card-h" style="color:var(--teal); font-size:16px;">1. ${tr('Methodological Rigor', 'انضباط المنهجية')}</h4>
-        <p class="c-card-p" style="font-size:13.5px; line-height:1.5;">${tr('Agile development with measurable engineering increments, verifiable technical criteria, and traceable progress.', 'تطبيق عملي لمنهجية Agile عبر زيادات برمجية هندسية قابلة للقياس ومعايير قبول فنية محددة.')}</p>`, 'c-card')}
-      ${A(1, `<h4 class="c-card-h" style="color:var(--blue); font-size:16px;">2. ${tr('Architectural Feasibility', 'جدوى المعمارية')}</h4>
-        <p class="c-card-p" style="font-size:13.5px; line-height:1.5;">${tr('Modular layered design with Docker worker isolation, rule-based security reference grounding, and external AI service integration.', 'معمارية معيارية بطبقات مع عزل بيئات التشغيل بحاويات Docker، ربط المراجع القياسية وفق معايير مطابقة محددة، والتكامل مع خدمة ذكاء اصطناعي خارجية.')}</p>`, 'c-card c-blue')}
-      ${A(2, `<h4 class="c-card-h" style="color:var(--violet); font-size:16px;">3. ${tr('Security & Data Protection', 'الأمان وحماية البيانات')}</h4>
-        <p class="c-card-p" style="font-size:13.5px; line-height:1.5;">${tr('Data encryption using AES-256-GCM, with envelope encryption for key protection, securing stored findings and reports at rest.', 'تشفير البيانات باستخدام AES-256-GCM، وحماية مفاتيحها باستخدام تشفير المغلف، لحماية نتائج وتقارير الفحص أثناء التخزين (Data at Rest).')}</p>`, 'c-card c-violet')}
+    <div class="c-grid-3" style="max-width:1120px; text-align:start;">
+      ${A(0, `<h4 class="c-card-h" style="color:var(--teal); font-size:17.5px;">1. ${tr('Academic & Design Progress', 'التقدم الأكاديمي والتصميمي')}</h4>
+        <p class="c-card-p" style="font-size:14.5px; line-height:1.55;">${tr('Comprehensive literature review, problem formulation, and modular architectural design with defined trust boundaries and cryptographic specifications.', 'دراسة مرجعية شاملة، صياغة دقيقة للمشكلة، وتصميم معماري معياري بحدود ثقة واضحة ومواصفات تشفير محددة.')}</p>`, 'c-card')}
+      ${A(1, `<h4 class="c-card-h" style="color:var(--blue); font-size:17.5px;">2. ${tr('Initial Engine Implementation', 'التنفيذ الأولي لمحرك الفحص')}</h4>
+        <p class="c-card-p" style="font-size:14.5px; line-height:1.55;">${tr('Initial codebase integrating discovery tools, sequential execution logic, and raw output parsing; undergoing refinement and empirical verification.', 'كود برمجي أولي يدمج أدوات الاستكشاف ومنطق التنفيذ المتسلسل ومحللات المخرجات؛ ويخضع حالياً للتحسين والتحقق المخبري.')}</p>`, 'c-card c-blue')}
+      ${A(2, `<h4 class="c-card-h" style="color:var(--violet); font-size:17.5px;">3. ${tr('Next Steps & Completion', 'الخطوات التالية والاستكمال')}</h4>
+        <p class="c-card-p" style="font-size:14.5px; line-height:1.55;">${tr('Structured 4-cluster roadmap covering engine fixes, core authentication/storage, reference enrichment with AI, and lab evaluation for final defense.', 'خطة عمل محددة في 4 مجموعات تشمل تصحيح المحرك، بناء الحسابات والتخزين، الإثراء بالذكاء، والتقييم المخبري للمناقشة النهائية.')}</p>`, 'c-card c-violet')}
     </div>
 
-    <div class="stat-box" style="margin-top:2px; border-color:var(--teal); padding:10px 24px;">
-      <span style="font-size:24px;">🎓</span>
-      <div class="stat-txt" style="font-size:15.5px;">
+    <div class="stat-box" style="margin-top:2px; border-color:var(--teal); padding:12px 28px;">
+      <div class="stat-txt" style="font-size:17px; line-height:1.5;">
         <b>${tr('Thank you! We welcome all questions and constructive feedback from the examination committee.', 'شكراً لحسن استماعكم! نرحب بكافة أسئلة وملاحظات لجنة المناقشة والتقييم الكريمة.')}</b>
       </div>
     </div>
@@ -1354,10 +1610,11 @@ function renderAllSlides(){
         ${s.renderFn()}
       </div>
 
+      ${(s.note && s.note[0] && s.note[0].trim()) ? `
       <footer class="s-summary">
-        <span class="sum-ic">💡</span>
+        ${idx === 0 ? '<span class="sum-ic">💡</span>' : ''}
         <div><b>${tr('Key Insight:', 'الخلاصة الجوهرية:')}</b> ${tr(s.note[0], s.note[1])}</div>
-      </footer>
+      </footer>` : ''}
     </section>
   `).join('');
 
@@ -1439,12 +1696,12 @@ const simDefs = {
       '[محاكاة متسلسلة] جاهز. انقر على "محاكاة تنفيذ سير العمل" لمشاهدة التسليم الآلي عبر جميع مراحل الفحص.'
     ],
     steps: [
-      ['01', '🔭', 'Discovery', 'الاستكشاف', 'Subfinder · Naabu · httpx · Kiterunner'],
-      ['02', '📡', 'Scanning', 'فحص الثغرات', 'Nuclei & Wapiti'],
-      ['03', '⚙️', 'Processing', 'المعالجة', 'Normalization & Dedup'],
-      ['04', '🏷️', 'Enrichment', 'الإثراء المرجعي', 'CVE · CWE · CVSS Catalogs'],
-      ['05', '🧠', 'AI Analysis', 'التحليل الذكي', 'Gemini Remediation Prompt'],
-      ['06', '📑', 'Reporting', 'التقارير', 'Executive & Technical PDF (AES-256-GCM)']
+      ['01', '', 'Discovery', 'الاستكشاف', 'Subfinder · Naabu · httpx · Kiterunner'],
+      ['02', '', 'Scanning', 'فحص الثغرات', 'Nuclei & Wapiti'],
+      ['03', '', 'Processing', 'المعالجة', 'Normalization & Dedup'],
+      ['04', '', 'Enrichment', 'الإثراء المرجعي', 'CVE · CWE · CVSS Catalogs'],
+      ['05', '', 'AI Analysis', 'التحليل الذكي', 'Gemini Remediation Prompt'],
+      ['06', '', 'Reporting', 'التقارير', 'Executive & Technical PDF (AES-256-GCM)']
     ],
     logs: [
       ['[STEP 1] Asset Discovery: Subfinder gathers passive subdomains; Naabu sweeps open ports; httpx verifies live web servers; Kiterunner maps API endpoints.',
@@ -1472,10 +1729,10 @@ const simDefs = {
       '[محاكاة مستقلة] جاهز. انقر على "محاكاة تنفيذ سير العمل" لمشاهدة التنفيذ المباشر للأداة داخل الحاوية متجاوزاً الاستكشاف.'
     ],
     steps: [
-      ['01', '🎯', 'Target Scope', 'تحديد الهدف', 'Designated URL / Host / API'],
-      ['02', '🐳', 'Docker Worker', 'عزل الحاوية', 'Isolated Scanner Sandbox'],
-      ['03', '⚙️', 'Processing', 'المعالجة', 'Normalization & PostgreSQL'],
-      ['04', '📑', 'Targeted Report', 'التقرير المستقل', 'Technical Report (AES-256-GCM)']
+      ['01', '', 'Target Scope', 'تحديد الهدف', 'Designated URL / Host / API'],
+      ['02', '', 'Docker Worker', 'عزل الحاوية', 'Isolated Scanner Sandbox'],
+      ['03', '', 'Processing', 'المعالجة', 'Normalization & PostgreSQL'],
+      ['04', '', 'Targeted Report', 'التقرير المستقل', 'Technical Report (AES-256-GCM)']
     ],
     logs: [
       ['[STEP 1] Direct Target Selection: Operator specifies an isolated target (e.g. specific API or domain) and chooses a standalone scanner.',
@@ -1501,7 +1758,7 @@ function renderSimPipeNodes(){
   pipe.innerHTML = def.steps.map((s, idx) => (idx ? '<div class="pipe-conn">➜</div>' : '') +
     `<div class="pipe-node" data-sim-idx="${idx}">
       <div class="pn-step">STEP ${s[0]}</div>
-      <span class="pn-ic">${s[1]}</span>
+      ${s[1] ? `<span class="pn-ic">${s[1]}</span>` : ''}
       <div class="pn-title">${tr(s[2], s[3])}</div>
       <div class="pn-sub">${s[4]}</div>
     </div>`).join('');
@@ -1641,6 +1898,113 @@ window.closeImgModal = () => {
   if(m) m.classList.remove('open');
 };
 
+// Full Table 2.2 Comparison Modal Function
+window.openTable22Modal = () => {
+  let m = $('table22Modal');
+  if(!m){
+    m = document.createElement('div');
+    m.id = 'table22Modal';
+    m.className = 'img-modal';
+    m.onclick = window.closeTable22Modal;
+    m.setAttribute('role', 'dialog');
+    m.setAttribute('aria-modal', 'true');
+    m.setAttribute('aria-label', 'Table 2.2 Modal');
+    document.body.appendChild(m);
+  }
+  
+  const isAr = (L === 'ar');
+  const headers = [
+    isAr ? 'معيار المقارنة \\ الأداة أو النظام' : 'Comparison criterion \\ Tool or System',
+    'Nuclei', 'Wapiti', 'reNgine', 'FortiScan', 'YemScan'
+  ];
+  const rows = [
+    [
+      isAr ? 'لوحة تحكم ويب مركزية لإدارة الفحوصات' : 'Centralized web dashboard for managing scans',
+      '❌', '❌', '✅', '✅', '✅'
+    ],
+    [
+      isAr ? 'استكشاف النطاقات الفرعية والمنافذ المفتوحة بصورة مدمجة' : 'Integrated subdomain and open-port discovery',
+      '❌', '❌', '✅', '❌', '✅'
+    ],
+    [
+      isAr ? 'تنسيق وتشغيل أدوات استكشاف وفحص متعددة' : 'Coordination of multiple discovery and scanning tools',
+      '❌', '❌', '✅', '❌', '✅'
+    ],
+    [
+      isAr ? 'تفسير نتائج الفحص بمساعدة الذكاء الاصطناعي' : 'AI-assisted interpretation of security findings',
+      '❌', '❌', '✅', '✅', '✅'
+    ],
+    [
+      isAr ? 'توليد مخرجات أو تقارير الفحص' : 'Generation of scan outputs or reports',
+      '✅', '✅', '✅', '✅', '✅'
+    ],
+    [
+      isAr ? 'الإثراء المرجعي الأمني الصريح للنتائج الموحدة قبل تحليل الذكاء الاصطناعي' : 'Explicit security-reference enrichment of consolidated findings before AI analysis',
+      '❌', '❌', '❌', '❌', '✅'
+    ]
+  ];
+
+  m.innerHTML = `
+    <div class="img-modal-content" onclick="event.stopPropagation()" style="max-width:1120px; max-height:88vh; overflow-y:auto; padding:22px 26px; background:#0f172a; color:#f8fafc; border:1px solid rgba(45,212,191,0.3); border-radius:14px; direction:${isAr ? 'rtl' : 'ltr'}; text-align:start;">
+      <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:12px; margin-bottom:14px;">
+        <div>
+          <span style="font-family:var(--font-mono); font-size:13px; color:var(--teal); font-weight:700;">${isAr ? 'الفصل الثاني: دراسة مرجعية ومقارنة تفصيلية' : 'Chapter 2: Literature Review & Detailed Comparison'}</span>
+          <h3 style="font-size:20px; color:#ffffff; margin:3px 0 0 0;">${isAr ? 'جدول 2.2 الكامل: مقارنة معيارية شاملة بين الأنظمة والأدوات المراجعة' : 'Table 2.2: Full Comparison Matrix of Reviewed Systems and Tools'}</h3>
+        </div>
+        <button class="img-modal-close" onclick="closeTable22Modal()" title="${isAr ? 'إغلاق (Esc)' : 'Close (Esc)'}" style="position:static; font-size:18px;">✕</button>
+      </div>
+
+      <div style="overflow-x:auto;">
+        <table class="comp-table" style="font-size:15px; width:100%;">
+          <thead>
+            <tr>
+              <th style="width:40%; padding:11px 14px;">${headers[0]}</th>
+              <th class="center" style="width:11%; padding:11px 8px;">${headers[1]}</th>
+              <th class="center" style="width:11%; padding:11px 8px;">${headers[2]}</th>
+              <th class="center" style="width:12%; padding:11px 8px;">${headers[3]}</th>
+              <th class="center" style="width:12%; padding:11px 8px;">${headers[4]}</th>
+              <th class="center" style="width:14%; padding:11px 8px; color:var(--teal); background:rgba(45,212,191,0.18); border-left:1px solid rgba(45,212,191,0.3); border-right:1px solid rgba(45,212,191,0.3);">${headers[5]}</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${rows.map((r, idx) => `
+              <tr style="${idx === 5 ? 'background:rgba(45,212,191,0.08);' : ''}">
+                <td style="font-weight:${idx === 5 ? '800' : '600'}; color:${idx === 5 ? 'var(--teal)' : '#e2e8f0'}; padding:10px 14px;">
+                  ${r[0]}
+                </td>
+                <td class="center" style="font-size:18px; padding:9px 6px;">${r[1]}</td>
+                <td class="center" style="font-size:18px; padding:9px 6px;">${r[2]}</td>
+                <td class="center" style="font-size:18px; padding:9px 6px;">${r[3]}</td>
+                <td class="center" style="font-size:18px; padding:9px 6px;">${r[4]}</td>
+                <td class="center" style="font-size:18px; font-weight:800; background:rgba(45,212,191,0.06); border-left:1px solid rgba(45,212,191,0.2); border-right:1px solid rgba(45,212,191,0.2); padding:9px 6px;">
+                  ${r[5]}
+                </td>
+              </tr>
+            `).join('')}
+          </tbody>
+        </table>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:6px; background:rgba(15,23,42,0.85); border:1px solid rgba(255,255,255,0.08); border-radius:10px; padding:12px 16px; font-size:13.5px; line-height:1.6; color:#cbd5e1; margin-top:14px;">
+        <div>
+          <b style="color:var(--teal);">${isAr ? 'ملاحظة الرموز:' : 'Symbol Note:'}</b>
+          ${isAr ? '✅ الميزة مدعومة أو موثقة في المصدر المراجع؛ ❌ الميزة غير مدعومة أو غير موثقة في المصدر المراجع.' : '✅ Feature supported or documented in reviewed source; ❌ Feature not supported or not documented in reviewed source.'}
+        </div>
+        <div style="font-size:12.5px; color:#94a3b8; border-top:1px dashed rgba(255,255,255,0.08); padding-top:6px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px;">
+          <span>${isAr ? 'مرجع التوثيق: جدول 2.2 من وثيقة الفصل الثاني.' : 'Citation: Table 2.2 from Chapter 2 documentation.'}</span>
+          <span>${isAr ? 'FortiScan: مشروع تخرج بكالوريوس غير منشور، جامعة العلوم والتكنولوجيا (الشرف وآخرون، 2024).' : 'FortiScan: unpublished bachelor\'s graduation project, UST (Al-Sharaf et al., 2024).'}</span>
+        </div>
+      </div>
+    </div>
+  `;
+  m.classList.add('open');
+};
+
+window.closeTable22Modal = () => {
+  const m = $('table22Modal');
+  if(m) m.classList.remove('open');
+};
+
 // Stage click navigation (Right half = Next, Left half = Prev, flipped in RTL)
 $('stage').addEventListener('click', e => {
   if(e.target.closest('button, input, .sim-console, .ov-card, .help-inner, table, .diag-card, .img-modal')) return;
@@ -1660,6 +2024,7 @@ window.addEventListener('keydown', e => {
     $('overview').classList.add('hidden');
     $('helpModal').classList.add('hidden');
     window.closeImgModal();
+    window.closeTable22Modal();
     return;
   }
   if(k === 'ArrowRight' || k === 'PageDown' || k === ' '){
