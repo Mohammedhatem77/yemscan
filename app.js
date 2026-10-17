@@ -20,7 +20,7 @@ const I18N = {
     ar: 'جامعة العلوم والتكنولوجيا · الأمن السيبراني والشبكات · مناقشة نصفية 2026-2027'
   },
   overview: { en: 'Overview', ar: 'الفهرس' },
-  overviewTitle: { en: 'Slide Overview & Navigation (19 Slides)', ar: 'فهرس شرائح العرض والتنقل السريع (19 شريحة)' },
+  overviewTitle: { en: 'Slide Overview & Navigation (20 Slides)', ar: 'فهرس شرائح العرض والتنقل السريع (20 شريحة)' },
   overviewSub: { en: 'Presentation organized according to UST Guidelines', ar: 'تنظيم العرض وفق محاور دليل الجامعة' },
   close: { en: 'Close', ar: 'إغلاق' },
   prev: { en: 'Prev', ar: 'السابق' },
@@ -31,7 +31,7 @@ const I18N = {
 };
 
 /* ============================================================
-   19 SLIDES — CLEAN, CONCISE & COMPLIANT WITH UST GUIDELINES
+   20 SLIDES — CLEAN, CONCISE & COMPLIANT WITH UST GUIDELINES
 ============================================================ */
 const S = [];
 const addSlide = (kicker, title, tagText, tagClass, renderFn) => {
@@ -178,60 +178,62 @@ addSlide(
   ['Slide 03: Problem Statement', 'الشريحة 3: مشكلة البحث وأهميته'],
   ['Problem Statement & Project Significance', 'صياغة المشكلة وأهمية المشروع'],
   ['Problem & Value', 'المشكلة والأهمية'], 'tag-prop',
-  () => `<div class="split-ill-grid">
-    <div style="display:flex; flex-direction:column; gap:12px; justify-content:space-between;">
-      ${A(0, `
-        <div class="c-card c-amber" style="padding:13px 16px;">
-          <h3 style="font-size:17.5px; font-weight:800; color:var(--amber); margin:0 0 4px 0;">${tr('1. Fragmented Tool Execution', '1. تشتت تشغيل الأدوات')}</h3>
-          <p style="font-size:14.5px; line-height:1.5; color:#cbd5e1; margin:0;">
-            ${tr('Operating discovery and scanning tools separately requires manual effort to transfer inputs and manage tasks.',
-                 'تشغيل أدوات الاستكشاف والفحص بشكل منفصل يتطلب جهداً يدوياً لنقل المدخلات وإدارة المهام.')}
-          </p>
-        </div>
-      `)}
+  () => `<div style="display:flex; flex-direction:column; gap:4px; width:100%; height:100%; justify-content:space-between;">
+    ${A(0, `
+      <div class="hl" style="padding:11px 18px;">
+        <p style="font-size:15.5px; font-weight:700; line-height:1.55; margin:0; color:#f8fafc;">
+          ${tr('The problem centers on fragmented coordination among multiple security tools, heterogeneous scan outputs, and the effort required to interpret findings and prepare actionable reports.',
+               'تتمحور المشكلة في تشتت التنسيق بين أدوات الأمان المتعددة، وتباين مخرجات الفحص، والجهد المطلوب لتفسير النتائج وإعداد تقارير قابلة للتنفيذ.')}
+        </p>
+      </div>
+    `)}
 
-      ${A(1, `
-        <div class="c-card c-blue" style="padding:13px 16px;">
-          <h3 style="font-size:17.5px; font-weight:800; color:var(--blue); margin:0 0 4px 0;">${tr('2. Heterogeneous Scanner Outputs', '2. تباين صيغ وهياكل المخرجات')}</h3>
-          <p style="font-size:14.5px; line-height:1.5; color:#cbd5e1; margin:0;">
-            ${tr('Different tools produce varied formats and detail levels, complicating deduplication and comparison.',
-                 'تنتج الأدوات مخرجات بصيغ وتفاصيل مختلفة، مما يصعّب إزالة التكرار والمقارنة الموحدة.')}
-          </p>
-        </div>
-      `)}
+    <div class="split-ill-grid" style="flex:1; min-height:0;">
+      <div style="display:flex; flex-direction:column; gap:14px; justify-content:flex-start;">
+        ${A(1, `
+          <div class="c-card c-amber" style="padding:15px 18px;">
+            <h3 style="font-size:17.5px; font-weight:800; color:var(--amber); margin:0 0 5px 0;">${tr('1. Fragmented Tool Execution', '1. تشتت تشغيل الأدوات')}</h3>
+            <p style="font-size:14.5px; line-height:1.55; color:#cbd5e1; margin:0;">
+              ${tr('Operating discovery and scanning tools separately requires manual effort to transfer inputs and manage tasks.',
+                   'تشغيل أدوات الاستكشاف والفحص بشكل منفصل يتطلب جهداً يدوياً لنقل المدخلات وإدارة المهام.')}
+            </p>
+          </div>
+        `)}
 
-      ${A(2, `
-        <div class="c-card c-red" style="padding:13px 16px;">
-          <h3 style="font-size:17.5px; font-weight:800; color:var(--red); margin:0 0 4px 0;">${tr('3. Difficulty Interpreting Raw Findings', '3. صعوبة تفسير النتائج الخام')}</h3>
-          <p style="font-size:14.5px; line-height:1.5; color:#cbd5e1; margin:0;">
-            ${tr('Raw outputs lack unified security reference mapping (CVE/CWE/OWASP/CVSS) and clear remediation priorities.',
-                 'تفتقر المخرجات الخام للربط المرجعي الموحد (CVE/CWE/OWASP/CVSS) وتوضيح أولويات المعالجة.')}
-          </p>
-        </div>
-      `)}
+        ${A(2, `
+          <div class="c-card c-blue" style="padding:15px 18px;">
+            <h3 style="font-size:17.5px; font-weight:800; color:var(--blue); margin:0 0 5px 0;">${tr('2. Heterogeneous Scanner Outputs', '2. تباين صيغ وهياكل المخرجات')}</h3>
+            <p style="font-size:14.5px; line-height:1.55; color:#cbd5e1; margin:0;">
+              ${tr('Different tools produce varied formats and detail levels, complicating deduplication and comparison.',
+                   'تنتج الأدوات مخرجات بصيغ وتفاصيل مختلفة، مما يصعّب إزالة التكرار والمقارنة الموحدة.')}
+            </p>
+          </div>
+        `)}
 
-      ${A(3, `
-        <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:8px;">
-          <div class="sb" style="padding:8px;"><div style="font-size:13px; font-weight:800; color:var(--teal);">${tr('Security', 'أمنية')}</div><div style="font-size:11.5px; color:#cbd5e1;">${tr('Surface Visibility', 'وضوح الأصول')}</div></div>
-          <div class="sb" style="padding:8px;"><div style="font-size:13px; font-weight:800; color:var(--blue);">${tr('Technical', 'تقنية')}</div><div style="font-size:11.5px; color:#cbd5e1;">${tr('Unified & Encrypted', 'أتمتة وتشفير')}</div></div>
-          <div class="sb" style="padding:8px;"><div style="font-size:13px; font-weight:800; color:var(--violet);">${tr('Research', 'بحثية')}</div><div style="font-size:11.5px; color:#cbd5e1;">${tr('Applied Model', 'نموذج تطبيقي')}</div></div>
-          <div class="sb" style="padding:8px;"><div style="font-size:13px; font-weight:800; color:var(--amber);">${tr('Practical', 'عملية')}</div><div style="font-size:11.5px; color:#cbd5e1;">${tr('Dual Reports', 'تقارير مزدوجة')}</div></div>
+        ${A(3, `
+          <div class="c-card c-red" style="padding:15px 18px;">
+            <h3 style="font-size:17.5px; font-weight:800; color:var(--red); margin:0 0 5px 0;">${tr('3. Difficulty Interpreting Raw Findings', '3. صعوبة تفسير النتائج الخام')}</h3>
+            <p style="font-size:14.5px; line-height:1.55; color:#cbd5e1; margin:0;">
+              ${tr('Raw outputs lack unified security reference mapping (CVE/CWE/OWASP/CVSS) and clear remediation priorities.',
+                   'تفتقر المخرجات الخام للربط المرجعي الموحد (CVE/CWE/OWASP/CVSS) وتوضيح أولويات المعالجة.')}
+            </p>
+          </div>
+        `)}
+      </div>
+
+      ${A(4, `
+        <div class="ill-card">
+          <div class="ill-frame" onclick="openImgModal('images/alert_fatigue_chaos.jpg', '${tr('Fragmented Security Tools & Heterogeneous Outputs', 'تشتت أدوات الفحص وتباين المخرجات')}')">
+            <img src="images/alert_fatigue_chaos.jpg" alt="Tool Fragmentation" class="ill-img" loading="lazy">
+            <div class="ill-zoom-hint"><span>ZOOM</span></div>
+          </div>
+          <div class="ill-caption">
+            <div class="ill-title">${tr('Fragmented Tools & Outputs', 'تشتت الأدوات وتباين المخرجات')}</div>
+            <div class="ill-sub">${tr('PROBLEM STATEMENT', 'مشكلة البحث')}</div>
+          </div>
         </div>
       `)}
     </div>
-
-    ${A(4, `
-      <div class="ill-card">
-        <div class="ill-frame" onclick="openImgModal('images/alert_fatigue_chaos.jpg', '${tr('Fragmented Security Tools & Heterogeneous Outputs', 'تشتت أدوات الفحص وتباين المخرجات')}')">
-          <img src="images/alert_fatigue_chaos.jpg" alt="Tool Fragmentation" class="ill-img" loading="lazy">
-          <div class="ill-zoom-hint"><span>ZOOM</span></div>
-        </div>
-        <div class="ill-caption">
-          <div class="ill-title">${tr('Problem & 4 Significance Pillars', 'المشكلة وأبعاد الأهمية الأربعة')}</div>
-          <div class="ill-sub">${tr('PROBLEM & SIGNIFICANCE', 'المشكلة والأهمية')}</div>
-        </div>
-      </div>
-    `)}
   </div>`
 );
 
@@ -251,7 +253,7 @@ addSlide(
       ['3. Processing & Enrichment', '3. معالجة البيانات وإثراؤها مرجعياً',
        'Normalize, deduplicate, and link findings to CVE, CWE, OWASP Top 10, and CVSS.',
        'توحيد النتائج وإزالة التكرار وربطها بـ CVE وCWE وOWASP وCVSS.', 'var(--violet)'],
-      ['4. AI-Assisted Analysis', '4. التحليل والتوصيات بالذكاء الاصطناعي',
+      ['4. AI-Assisted Analysis', '4. .4 التحليل والتوصيات باستخدام  مساعد بالذكاء الاصطناعي',
        'Summarize enriched findings and propose remediation without guessing references.',
        'تلخيص النتائج واقتراح أولويات المعالجة دون اعتماده مصدراً للتصنيفات.', 'var(--amber)'],
       ['5. Dashboard & Data Protection', '5. لوحة التحكم وحماية البيانات',
@@ -307,12 +309,10 @@ addSlide(
     ];
 
     const outScope = [
-      ['1. Active Exploitation', '1. الاستغلال الفعلي للثغرات أو اختراق الخوادم'],
-      ['2. Internal Network Scanning', '2. فحص الشبكات الداخلية أو الأجهزة الطرفية'],
-      ['3. Vulnerability Ticketing', '3. إدارة دورة حياة التذاكر وتتبع الإغلاق'],
-      ['4. DDoS  Protection Bypass:', '4. تجاوز حماية هجمات حجب الخدمة (DDoS):'],
-      ['5. Social Engineering & Brute-Force', '5. الهندسة الاجتماعية أو تخمين كلمات المرور'],
-      ['6. Cryptographic Boundaries', '6. حدود الخصوصية (ليس Zero-Knowledge ضد مالك الخادم)']
+      ['1. Internal Network Scanning', '1. فحص الشبكات الداخلية أو الأجهزة الطرفية'],
+      ['2. Vulnerability Ticketing', '2. إدارة مهام إصلاح الثغرات ومتابعتها'],
+      ['3. It does not detect social engineering attacks or Brute-Force', '3. لا يكتشف الهجمات الخاصة بالهندسة الاجتماعية أو تخمين كلمات المرور'],
+    
     ];
 
     return `<div style="display:grid; grid-template-columns: 1.25fr 1fr; gap:18px; width:100%; height:100%; align-items:stretch;">
@@ -360,9 +360,9 @@ addSlide(
 
 // 6. Related Systems, Comparison & Technical Gap (Merged Slide 6 & 7)
 addSlide(
-  ['Slide 06: Related Systems & Gap', 'الشريحة 6: مقارنة الأنظمة والفجوة التقنية'],
-  ['Comparison of Related Systems & Technical Gap', 'مقارنة الأنظمة ذات الصلة والفجوة التقنية'],
-  ['Related Work & Gap', 'المقارنة والفجوة'], 'tag-sec',
+  ['Slide 06: Literature Review', 'الشريحة 6: مراجعة الأدبيات'],
+  ['Literature Review (Related Systems and Tools)', 'مراجعة الأدبيات (الأنظمة والأدوات ذات الصلة)'],
+  ['Literature Review', 'مراجعة الأدبيات'], 'tag-sec',
   () => {
     const rows = [
       [tr('Centralized web dashboard for managing scans', 'لوحة تحكم ويب مركزية لإدارة الفحوصات'), '❌', '❌', '✅', '✅', '✅'],
@@ -370,7 +370,7 @@ addSlide(
       [tr('Coordination of multiple discovery and scanning tools', 'تنسيق وتشغيل أدوات استكشاف وفحص متعددة'), '❌', '❌', '✅', '❌', '✅'],
       [tr('AI-assisted interpretation of security findings', 'تفسير نتائج الفحص بمساعدة الذكاء الاصطناعي'), '❌', '❌', '✅', '✅', '✅'],
       [tr('Generation of scan outputs or reports', 'توليد مخرجات أو تقارير الفحص'), '✅', '✅', '✅', '✅', '✅'],
-      [tr('Explicit security-reference enrichment of consolidated findings before AI analysis', 'إثراء مرجعي أمني صريح للنتائج الموحدة قبل تحليل الذكاء الاصطناعي'), '❌', '❌', '❌', '❌', '✅']
+      [tr('Security-Reference Enrichment of Findings Before AI Analysis', 'إثراء النتائج بالمراجع الأمنية قبل تحليل الذكاء الاصطناعي'), '❌', '❌', '❌', '❌', '✅']
     ];
 
     return `<div style="display:flex; flex-direction:column; gap:10px; width:100%; height:100%; justify-content:space-between;">
@@ -387,9 +387,9 @@ addSlide(
             </tr>
           </thead>
           <tbody>
-            ${rows.map((r, idx) => `
-              <tr style="${idx === 5 ? 'background:rgba(45,212,191,0.08);' : ''}">
-                <td style="font-weight:${idx === 5 ? '800' : '600'}; color:${idx === 5 ? 'var(--teal)' : '#e2e8f0'}; padding:7px 14px;">${r[0]}</td>
+            ${rows.map((r) => `
+              <tr>
+                <td style="font-weight:600; color:#e2e8f0; padding:7px 14px;">${r[0]}</td>
                 <td class="center" style="font-size:16px; padding:7px;">${r[1]}</td>
                 <td class="center" style="font-size:16px; padding:7px;">${r[2]}</td>
                 <td class="center" style="font-size:16px; padding:7px;">${r[3]}</td>
@@ -428,9 +428,60 @@ addSlide(
   }
 );
 
-// 7. Proposed Solution & Workflow
+// 7. System Use Case Diagram (UML 2.5)
 addSlide(
-  ['Slide 07: Proposed Workflow', 'الشريحة 7: الحل المقترح وسير العمل'],
+  ['Slide 07: System Use Case', 'الشريحة 7: مخطط حالات الاستخدام'],
+  ['System Use Case Diagram', 'مخطط حالات الاستخدام للنظام (Use Case Diagram)'],
+  ['Functional Requirements', 'المتطلبات الوظيفية'], 'tag-prop',
+  () => `<div style="display:grid; grid-template-columns: 480px 1fr; gap:18px; width:100%; height:100%; align-items:stretch;">
+    ${A(0, `
+      <div class="diag-card" onclick="openImgModal('./assets/usecase-diagram.png', 'YemScan Platform — System Use Case Diagram')">
+        <div class="diag-card-head">
+          <span class="diag-badge">YEMSCAN PLATFORM · USE CASE</span>
+          <span class="diag-hint">${tr('Click to Enlarge', 'انقر للتكبير')}</span>
+        </div>
+        <div class="diag-img-box">
+          <img src="./assets/usecase-diagram.png" alt="YemScan Use Case Diagram" class="diag-img">
+        </div>
+        <div style="font-size:12.5px; color:#475569; text-align:center; margin-top:4px; font-weight:700;">
+          ${tr('4 Actors (User, System Administrator, Docker Tools, Gemini API) & 18 Use Cases', '4 فاعلين (المستخدم، مدير النظام، أدوات Docker، و Gemini API) و 18 حالة استخدام')}
+        </div>
+      </div>
+    `)}
+
+    ${A(1, `
+      <div style="display:flex; flex-direction:column; gap:10px; justify-content:space-between; height:100%;">
+        <div class="c-card c-red" style="padding:11px 16px;">
+          <h4 style="font-size:15.5px; color:var(--red); margin:0 0 3px 0;">1. ${tr('User Management & Role-Based Access Control (RBAC)', 'إدارة الحسابات والتحكم بالوصول المبني على الأدوار (RBAC)')}</h4>
+          <p style="font-size:13.6px; color:#cbd5e1; margin:0; line-height:1.5;">${tr('Supports User and System Administrator roles. The Administrator manages user accounts and platform settings with no application-level access to users’ scan data, encryption keys, or decryption operations.',
+            'يدعم النظام دورَي المستخدم ومدير النظام؛ حيث يدير المدير الحسابات وإعدادات المنصة دون أي وصول على مستوى التطبيق لبيانات فحص المستخدمين أو مفاتيح التشفير أو عمليات فك التشفير.')}</p>
+        </div>
+
+        <div class="c-card c-blue" style="padding:11px 16px;">
+          <h4 style="font-size:15.5px; color:var(--blue); margin:0 0 3px 0;">2. ${tr('Target Validation & Scanning Modes (Sequential vs. Independent)', 'التحقق من الهدف ونمطا الفحص (المتسلسل والمستقل)')}</h4>
+          <p style="font-size:13.6px; color:#cbd5e1; margin:0; line-height:1.5;">${tr('User enters a target (Domain / URL) and initiates Start Scan, which includes Validate Target and Scope. Run Sequential Scan and Run Independent Scan specialize Start Scan, with Independent Scan including Select Scanning Tools.',
+            'يدخل المستخدم الهدف (نطاق أو رابط) ويبدأ الفحص (Start Scan) الذي يتضمن التحقق من الهدف والنطاق، ويتفرع بعلاقة تعميم إلى الفحص المتسلسل والفحص المستقل (الذي يتضمن اختيار أدوات الفحص).')}</p>
+        </div>
+
+        <div class="c-card c-amber" style="padding:11px 16px;">
+          <h4 style="font-size:15.5px; color:var(--amber); margin:0 0 3px 0;">3. ${tr('Isolated Tool Execution, AI Analysis & Report Generation', 'تنفيذ الأدوات المعزول، التحليل الذكي، وتوليد التقارير')}</h4>
+          <p style="font-size:13.6px; color:#cbd5e1; margin:0; line-height:1.5;">${tr('Start Scan includes Execute Scanning Tools via isolated Docker containers, which sequentially includes Generate AI Analysis (via Gemini API) and Generate Executive and Technical Reports.',
+            'يتضمن بدء الفحص تنفيذ أدوات الفحص داخل حاويات Docker المعزولة، والتي تتضمن بدورها توليد التحليل بالذكاء الاصطناعي عبر Gemini API ثم توليد التقريرين التنفيذي والفني.')}</p>
+        </div>
+
+        <div class="c-card c-violet" style="padding:11px 16px;">
+          <h4 style="font-size:15.5px; color:var(--violet); margin:0 0 3px 0;">4. ${tr('Dashboard Monitoring & Ownership Verification («include»)', 'متابعة حالة الفحص والتحقق الإجباري من الملكية («include»)')}</h4>
+          <p style="font-size:13.6px; color:#cbd5e1; margin:0; line-height:1.5;">${tr('Users monitor scan status and view discovered assets, findings and security references (CVE/CWE/OWASP/CVSS), AI recommendations, and reports—each mandatorily including Verify Ownership.',
+            'يتابع المستخدم حالة الفحص ويعرض الأصول المكتشفة، النتائج والمراجع الأمنية، تحليل وتوصيات الذكاء الاصطناعي، وتحميل التقارير بعد التحقق الإجباري من الملكية (Verify Ownership).')}</p>
+        </div>
+      </div>
+    `)}
+  </div>`
+);
+
+// 8. Proposed Solution & Workflow
+addSlide(
+  ['Slide 08: Proposed Workflow', 'الشريحة 8: الحل المقترح وسير العمل'],
   ['Proposed Scanning & Analysis Workflow', 'طريقة العمل المقترحة ومسار الفحص والتحليل'],
   ['Workflow', 'سير العمل'], 'tag-demo',
   () => `<div style="display:grid; grid-template-columns: 380px 1fr; gap:18px; width:100%; align-items:stretch;">
@@ -479,10 +530,10 @@ addSlide(
   </div>`
 );
 
-// 8. System Architecture
+// 9. System Architecture
 addSlide(
-  ['Slide 08: System Architecture', 'الشريحة 8: معمارية النظام'],
-  ['Five-Layer System Architecture', 'المعمارية الخماسية الطبقات للنظام'],
+  ['Slide 09: System Architecture', 'الشريحة 9: معمارية النظام'],
+  ['System Architecture', 'معماريةالنظام'],
   ['Architecture', 'المعمارية'], 'tag-prop',
   () => `<div style="display:grid; grid-template-columns: 460px 1fr; gap:18px; width:100%; height:100%; align-items:center;">
     ${A(0, `
@@ -551,9 +602,9 @@ addSlide(
   </div>`
 );
 
-// 9. Development Methodology
+// 10. Development Methodology
 addSlide(
-  ['Slide 09: Development Methodology', 'الشريحة 9: منهجية التطوير'],
+  ['Slide 10: Development Methodology', 'الشريحة 10: منهجية التطوير'],
   ['Development Methodology', 'منهجية التطوير'],
   ['Agile Methodology', 'منهجية Agile'], 'tag-prop',
   () => `<div style="display:flex; flex-direction:column; gap:12px; width:100%; height:100%; justify-content:space-between;">
@@ -633,9 +684,9 @@ addSlide(
   </div>`
 );
 
-// 10. Agile Sprints & Working Increment Progress
+// 11. Agile Sprints & Working Increment Progress
 addSlide(
-  ['Slide 10: Sprint Progress', 'الشريحة 10: تقدم السبرنتات'],
+  ['Slide 11: Sprint Progress', 'الشريحة 11: تقدم السبرنتات'],
   ['Agile Sprint Progress & Product Backlog', 'حالة السبرنتات الحالية وسجل المنتج المتبقي'],
   ['Sprint Status', 'حالة السبرنتات'], 'tag-wip',
   () => `<div style="display:flex; flex-direction:column; gap:14px; width:100%; height:100%; justify-content:space-between;">
@@ -701,9 +752,9 @@ addSlide(
   </div>`
 );
 
-// 11. System Requirements Analysis
+// 12. System Requirements Analysis
 addSlide(
-  ['Slide 11: Analysis Progress', 'الشريحة 11: تقدم التحليل'],
+  ['Slide 12: Analysis Progress', 'الشريحة 12: تقدم التحليل'],
   ['System Requirements Analysis', 'تحليل متطلبات النظام'],
   ['Requirements', 'تحليل المتطلبات'], 'tag-prop',
   () => {
@@ -756,9 +807,9 @@ addSlide(
   }
 );
 
-// 12. Database Design & ERD
+// 13. Database Design & ERD
 addSlide(
-  ['Slide 12: Database Design', 'الشريحة 12: تصميم قاعدة البيانات'],
+  ['Slide 13: Database Design', 'الشريحة 13: تصميم قاعدة البيانات'],
   ['Database Design & ERD', 'تصميم قاعدة البيانات ومخطط العلاقات ERD'],
   ['Database ERD', 'قاعدة البيانات'], 'tag-prop',
   () => `<div style="display:grid; grid-template-columns: 430px 1fr; gap:18px; width:100%; align-items:stretch;">
@@ -808,9 +859,9 @@ addSlide(
   </div>`
 );
 
-// 13. Data Protection & Execution Isolation Design
+// 14. Data Protection & Execution Isolation Design
 addSlide(
-  ['Slide 13: Security & Isolation', 'الشريحة 13: حماية البيانات وعزل التنفيذ'],
+  ['Slide 14: Security & Isolation', 'الشريحة 14: حماية البيانات وعزل التنفيذ'],
   ['Data Protection & Execution Isolation Design', 'تصميم حماية البيانات وعزل بيئة التنفيذ'],
   ['Security Design', 'تصميم الأمان'], 'tag-sec',
   () => `<div class="c-grid-2" style="height:100%; align-items:stretch;">
@@ -848,9 +899,9 @@ addSlide(
   </div>`
 );
 
-// 14. Threat Model & Security Controls
+// 15. Threat Model & Security Controls
 addSlide(
-  ['Slide 14: Threat Model', 'الشريحة 14: نموذج التهديدات والضوابط'],
+  ['Slide 15: Threat Model', 'الشريحة 15: نموذج التهديدات والضوابط'],
   ['Cybersecurity Threat Model & Design Controls', 'نموذج التهديدات الأمنية والضوابط المعمارية المقابلة'],
   ['Threat Model', 'نموذج التهديدات'], 'tag-sec',
   () => {
@@ -890,9 +941,9 @@ addSlide(
   }
 );
 
-// 15. Working Prototype & Sprint 1 Operational Evidence
+// 16. Working Prototype & Sprint 1 Operational Evidence
 addSlide(
-  ['Slide 15: Working Prototype', 'الشريحة 15: النموذج الأولي وأدلة التشغيل'],
+  ['Slide 16: Working Prototype', 'الشريحة 16: النموذج الأولي وأدلة التشغيل'],
   ['Working Prototype & Operational Evidence', 'النموذج الأولي العامل وأدلة التشغيل الفعلية'],
   ['Prototype Evidence', 'أدلة النموذج العامل'], 'tag-demo',
   () => {
@@ -946,9 +997,9 @@ addSlide(
   }
 );
 
-// 16. Testing Plan & Preliminary Evaluation
+// 17. Testing Plan & Preliminary Evaluation
 addSlide(
-  ['Slide 16: Testing & Evaluation', 'الشريحة 16: خطة الاختبار والتقييم الأولي'],
+  ['Slide 17: Testing & Evaluation', 'الشريحة 17: خطة الاختبار والتقييم الأولي'],
   ['Testing Plan & Preliminary Evaluation Cases', 'خطة الاختبار وحالات التحقق الأولية'],
   ['Testing Progress', 'الاختبار والتقييم'], 'tag-sec',
   () => {
@@ -994,9 +1045,9 @@ addSlide(
   }
 );
 
-// 17. Challenges, Risks & Actions Taken
+// 18. Challenges, Risks & Actions Taken
 addSlide(
-  ['Slide 17: Challenges & Risks', 'الشريحة 17: التحديات والمخاطر'],
+  ['Slide 18: Challenges & Risks', 'الشريحة 18: التحديات والمخاطر'],
   ['Encountered Challenges, Causes & Actions Taken', 'التحديات التقنية التي ظهرت وكيف تمت معالجتها'],
   ['Challenges & Risks', 'التحديات والمخاطر'], 'tag-prop',
   () => {
@@ -1071,9 +1122,9 @@ addSlide(
   }
 );
 
-// 18. Remaining Work & Adaptive Product Backlog Roadmap
+// 19. Remaining Work & Adaptive Product Backlog Roadmap
 addSlide(
-  ['Slide 18: Remaining Work & Backlog', 'الشريحة 18: الأعمال المتبقية وسجل المنتج'],
+  ['Slide 19: Remaining Work & Backlog', 'الشريحة 19: الأعمال المتبقية وسجل المنتج'],
   ['Remaining Work & Product Backlog Roadmap', 'الأعمال المتبقية وخارطة سجل المنتج'],
   ['Backlog Roadmap', 'خارطة الاستكمال'], 'tag-sec',
   () => {
@@ -1125,9 +1176,9 @@ addSlide(
   }
 );
 
-// 19. Conclusion / Thank You (Simple & Clean)
+// 20. Conclusion / Thank You (Simple & Clean)
 addSlide(
-  ['Slide 19: Thank You', 'الشريحة 19: الخاتمة'],
+  ['Slide 20: Thank You', 'الشريحة 20: الخاتمة'],
   ['Thank You & Questions', 'شكراً لكم — نرحب بأسئلتكم'],
   ['Q & A', 'الأسئلة والمناقشة'], 'tag-sec',
   () => `<div style="display:flex; flex-direction:column; align-items:center; justify-content:center; width:100%; height:100%; text-align:center; gap:20px;">
@@ -1203,7 +1254,7 @@ function renderAllSlides(){
        <div class="help-item"><kbd>Home</kbd> <span>الشريحة الأولى</span></div>
        <div class="help-item"><kbd>End</kbd> <span>الشريحة الأخيرة</span></div>
        <div class="help-item"><kbd>F</kbd> <span>ملء الشاشة</span></div>
-       <div class="help-item"><kbd>O</kbd> <span>فهرس الشرائح (19 شريحة)</span></div>
+       <div class="help-item"><kbd>O</kbd> <span>فهرس الشرائح (20 شريحة)</span></div>
        <div class="help-item"><kbd>L</kbd> <span>تبديل اللغة (EN / AR)</span></div>
        <div class="help-item"><kbd>M</kbd> <span>تقليل الحركة</span></div>
        <div class="help-item"><kbd>Esc</kbd> <span>إغلاق النوافذ</span></div>
@@ -1213,7 +1264,7 @@ function renderAllSlides(){
        <div class="help-item"><kbd>Home</kbd> <span>First Slide</span></div>
        <div class="help-item"><kbd>End</kbd> <span>Last Slide</span></div>
        <div class="help-item"><kbd>F</kbd> <span>Toggle Fullscreen</span></div>
-       <div class="help-item"><kbd>O</kbd> <span>Toggle Overview (19 Slides)</span></div>
+       <div class="help-item"><kbd>O</kbd> <span>Toggle Overview (20 Slides)</span></div>
        <div class="help-item"><kbd>L</kbd> <span>Switch Language</span></div>
        <div class="help-item"><kbd>M</kbd> <span>Reduce Motion</span></div>
        <div class="help-item"><kbd>Esc</kbd> <span>Close Modals</span></div>

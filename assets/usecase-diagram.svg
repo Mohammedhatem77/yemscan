@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1360 1150" width="100%" height="100%" style="background:#ffffff; font-family: Arial, Helvetica, sans-serif;">
+  <defs>
+    <!-- Open arrow for «include» (draw.io endArrow=open;endFill=0) -->
+    <marker id="open-arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M 1 1 L 10 6 L 1 11" fill="none" stroke="#000000" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <!-- Hollow triangle for Generalization (draw.io endArrow=block;endFill=0;endSize=12) -->
+    <marker id="hollow-triangle" viewBox="0 0 16 16" refX="14" refY="8" markerWidth="12" markerHeight="12" orient="auto-start-reverse">
+      <path d="M 1 2 L 14 8 L 1 14 Z" fill="#ffffff" stroke="#000000" stroke-width="1.4" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <!-- White Canvas Background -->
+  <rect x="0" y="0" width="1360" height="1150" fill="#ffffff"/>
+
+  <!-- System Boundary: YemScan Platform (x=200, y=20, w=980, h=1110) -->
+  <rect x="200" y="20" width="980" height="1110" fill="none" stroke="#000000" stroke-width="2"/>
+  <text x="690" y="44" text-anchor="middle" font-size="16" font-weight="bold" fill="#000000">YemScan Platform</text>
+
+  <!-- Note (next to Admin): x=8, y=215, w=168, h=82 -->
+  <g>
+    <path d="M 8 215 L 162 215 L 176 229 L 176 297 L 8 297 Z" fill="#fff2cc" stroke="#d6b656" stroke-width="1.3"/>
+    <path d="M 162 215 L 162 229 L 176 229" fill="none" stroke="#d6b656" stroke-width="1.3"/>
+    <text x="92" y="239" text-anchor="middle" font-size="11" fill="#000000">
+      <tspan x="92" dy="0">No application-level access to</tspan>
+      <tspan x="92" dy="14">users&apos; scan data, encryption</tspan>
+      <tspan x="92" dy="14">keys, or decryption</tspan>
+      <tspan x="92" dy="14">operations.</tspan>
+    </text>
+  </g>
+
+  <!-- ASSOCIATIONS AND RELATIONSHIPS -->
+
+  <!-- Admin associations -->
+  <line x1="120" y1="102" x2="250" y2="90" stroke="#000000" stroke-width="1.2"/>
+  <line x1="120" y1="112" x2="250" y2="180" stroke="#000000" stroke-width="1.2"/>
+  <line x1="120" y1="122" x2="252" y2="285" stroke="#000000" stroke-width="1.2"/>
+  <line x1="120" y1="132" x2="252" y2="365" stroke="#000000" stroke-width="1.2"/>
+  <line x1="95" y1="215" x2="95" y2="185" stroke="#000000" stroke-width="1.2" stroke-dasharray="5,5"/>
+
+  <!-- User associations (100% straight lines, zero overlap with any ellipse) -->
+  <!-- e9: aUser -> uc2 (Login) -->
+  <line x1="120" y1="825" x2="252" y2="296" stroke="#000000" stroke-width="1.2"/>
+  <!-- e10: aUser -> uc3 (Logout) -->
+  <line x1="120" y1="831" x2="252" y2="376" stroke="#000000" stroke-width="1.2"/>
+  <!-- e1: aUser -> uc1 (Register Account) -->
+  <line x1="120" y1="837" x2="252" y2="494" stroke="#000000" stroke-width="1.2"/>
+  <!-- e2: aUser -> uc4 (Enter Scan Target) -->
+  <line x1="120" y1="843" x2="251" y2="582" stroke="#000000" stroke-width="1.2"/>
+  <!-- e3: aUser -> uc6 (Start Scan) -->
+  <line x1="120" y1="849" x2="251" y2="682" stroke="#000000" stroke-width="1.2"/>
+  <!-- e4: aUser -> uc11 (Monitor Scan Status) -->
+  <line x1="120" y1="855" x2="250" y2="762" stroke="#000000" stroke-width="1.2"/>
+  <!-- e5: aUser -> uc12 (View Discovered Assets) -->
+  <line x1="120" y1="861" x2="250" y2="832" stroke="#000000" stroke-width="1.2"/>
+  <!-- e6: aUser -> uc13 (View Findings and Security References) -->
+  <line x1="120" y1="867" x2="500" y2="890" stroke="#000000" stroke-width="1.2"/>
+  <!-- e7: aUser -> uc14 (View AI Analysis and Recommendations) -->
+  <line x1="120" y1="873" x2="500" y2="975" stroke="#000000" stroke-width="1.2"/>
+  <!-- e8: aUser -> uc15 (View / Download Reports) -->
+  <line x1="120" y1="879" x2="500" y2="1060" stroke="#000000" stroke-width="1.2"/>
+
+  <!-- Secondary actor associations -->
+  <line x1="1150" y1="600" x2="1250" y2="600" stroke="#000000" stroke-width="1.2"/>
+  <line x1="1150" y1="800" x2="1250" y2="800" stroke="#000000" stroke-width="1.2"/>
+
+  <!-- Generalization relationships (solid line + hollow triangle) -->
+  <line x1="500" y1="660" x2="421" y2="675" stroke="#000000" stroke-width="1.3" marker-end="url(#hollow-triangle)"/>
+  <line x1="504" y1="740" x2="412" y2="695" stroke="#000000" stroke-width="1.3" marker-end="url(#hollow-triangle)"/>
+
+  <!-- Include relationships (dashed line + open arrow + «include» label) -->
+  <!-- i1: uc6 (Start Scan) to uc5 (Validate Target and Scope) -->
+  <line x1="382" y1="654" x2="535" y2="564" stroke="#000000" stroke-width="1.2" stroke-dasharray="5,5" marker-end="url(#open-arrow)"/>
+  <rect x="444" y="586" width="54" height="14" fill="#ffffff"/>
+  <text x="471" y="597" text-anchor="middle" font-size="11" fill="#000000">«include»</text>
+
+  <!-- i2: uc6 (Start Scan) to uc10 (Execute Scanning Tools) -->
+  <polyline points="402,661 460,612 900,612 970,605" fill="none" stroke="#000000" stroke-width="1.2" stroke-dasharray="5,5" marker-end="url(#open-arrow)"/>
+  <rect x="700" y="604" width="54" height="14" fill="#ffffff"/>
+  <text x="727" y="615" text-anchor="middle" font-size="11" fill="#000000">«include»</text>
+
+  <!-- i3: uc8 (Run Independent Scan) to uc9 (Select Scanning Tools) -->
+  <line x1="670" y1="750" x2="740" y2="750" stroke="#000000" stroke-width="1.2" stroke-dasharray="5,5" marker-end="url(#open-arrow)"/>
+  <rect x="678" y="742" width="54" height="14" fill="#ffffff"/>
+  <text x="705" y="753" text-anchor="middle" font-size="11" fill="#000000">«include»</text>
+
+  <!-- i4: uc12 (View Discovered Assets) to uc16 (Verify Ownership) -->
+  <polyline points="420,830 825,830 825,940" fill="none" stroke="#000000" stroke-width="1.2" stroke-dasharray="5,5" marker-end="url(#open-arrow)"/>
+  <rect x="648" y="822" width="54" height="14" fill="#ffffff"/>
+  <text x="675" y="833" text-anchor="middle" font-size="11" fill="#000000">«include»</text>
+
+  <!-- i5: uc13 (View Findings and Security References) to uc16 (Verify Ownership) -->
+  <line x1="658" y1="904" x2="756" y2="952" stroke="#000000" stroke-width="1.2" stroke-dasharray="5,5" marker-end="url(#open-arrow)"/>
+  <rect x="678" y="920" width="54" height="14" fill="#ffffff"/>
+  <text x="705" y="931" text-anchor="middle" font-size="11" fill="#000000">«include»</text>
+
+  <!-- i6: uc14 (View AI Analysis and Recommendations) to uc16 (Verify Ownership) -->
+  <line x1="670" y1="973" x2="740" y2="971" stroke="#000000" stroke-width="1.2" stroke-dasharray="5,5" marker-end="url(#open-arrow)"/>
+  <rect x="678" y="965" width="54" height="14" fill="#ffffff"/>
+  <text x="705" y="976" text-anchor="middle" font-size="11" fill="#000000">«include»</text>
+
+  <!-- i7: uc15 (View / Download Reports) to uc16 (Verify Ownership) -->
+  <line x1="656" y1="1045" x2="756" y2="988" stroke="#000000" stroke-width="1.2" stroke-dasharray="5,5" marker-end="url(#open-arrow)"/>
+  <rect x="678" y="1010" width="54" height="14" fill="#ffffff"/>
+  <text x="705" y="1021" text-anchor="middle" font-size="11" fill="#000000">«include»</text>
+
+  <!-- i8: uc10 (Execute Scanning Tools) to uc17 (Generate AI Analysis) -->
+  <line x1="1060" y1="630" x2="1060" y2="770" stroke="#000000" stroke-width="1.2" stroke-dasharray="5,5" marker-end="url(#open-arrow)"/>
+  <rect x="1033" y="692" width="54" height="14" fill="#ffffff"/>
+  <text x="1060" y="703" text-anchor="middle" font-size="11" fill="#000000">«include»</text>
+
+  <!-- i9: uc17 (Generate AI Analysis) to uc18 (Generate Executive and Technical Reports) -->
+  <line x1="1060" y1="830" x2="1060" y2="950" stroke="#000000" stroke-width="1.2" stroke-dasharray="5,5" marker-end="url(#open-arrow)"/>
+  <rect x="1033" y="882" width="54" height="14" fill="#ffffff"/>
+  <text x="1060" y="893" text-anchor="middle" font-size="11" fill="#000000">«include»</text>
+
+  <!-- USE CASE ELLIPSES -->
+
+  <!-- Admin use cases (top): #f8cecc / #b85450 -->
+  <ellipse cx="335" cy="90" rx="85" ry="30" fill="#f8cecc" stroke="#b85450" stroke-width="1.5"/>
+  <text x="335" y="94" text-anchor="middle" font-size="12" fill="#000000">Manage User Accounts</text>
+
+  <ellipse cx="335" cy="180" rx="85" ry="30" fill="#f8cecc" stroke="#b85450" stroke-width="1.5"/>
+  <text x="335" y="184" text-anchor="middle" font-size="12" fill="#000000">Manage Platform Settings</text>
+
+  <!-- Shared use cases (middle): #d5e8d4 / #82b366 -->
+  <ellipse cx="335" cy="290" rx="85" ry="30" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+  <text x="335" y="294" text-anchor="middle" font-size="12" fill="#000000">Login</text>
+
+  <ellipse cx="335" cy="370" rx="85" ry="30" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+  <text x="335" y="374" text-anchor="middle" font-size="12" fill="#000000">Logout</text>
+
+  <!-- User use cases Column A: #dae8fc / #6c8ebf -->
+  <ellipse cx="335" cy="490" rx="85" ry="30" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+  <text x="335" y="494" text-anchor="middle" font-size="12" fill="#000000">Register Account</text>
+
+  <ellipse cx="335" cy="580" rx="85" ry="30" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+  <text x="335" y="576" text-anchor="middle" font-size="12" fill="#000000">
+    <tspan x="335" dy="0">Enter Scan Target (Domain /</tspan>
+    <tspan x="335" dy="15">URL)</tspan>
+  </text>
+
+  <ellipse cx="335" cy="680" rx="85" ry="30" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+  <text x="335" y="684" text-anchor="middle" font-size="12" font-weight="bold" fill="#000000">Start Scan</text>
+
+  <ellipse cx="335" cy="760" rx="85" ry="28" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+  <text x="335" y="764" text-anchor="middle" font-size="12" fill="#000000">Monitor Scan Status</text>
+
+  <ellipse cx="335" cy="830" rx="85" ry="28" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+  <text x="335" y="834" text-anchor="middle" font-size="12" fill="#000000">View Discovered Assets</text>
+
+  <!-- User use cases Column B: #dae8fc / #6c8ebf -->
+  <ellipse cx="585" cy="540" rx="85" ry="30" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+  <text x="585" y="544" text-anchor="middle" font-size="12" fill="#000000">Validate Target and Scope</text>
+
+  <ellipse cx="585" cy="660" rx="85" ry="30" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+  <text x="585" y="664" text-anchor="middle" font-size="12" fill="#000000">Run Sequential Scan</text>
+
+  <ellipse cx="585" cy="750" rx="85" ry="30" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+  <text x="585" y="754" text-anchor="middle" font-size="12" fill="#000000">Run Independent Scan</text>
+
+  <ellipse cx="585" cy="890" rx="85" ry="30" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+  <text x="585" y="886" text-anchor="middle" font-size="12" fill="#000000">
+    <tspan x="585" dy="0">View Findings and Security</tspan>
+    <tspan x="585" dy="15">References</tspan>
+  </text>
+
+  <ellipse cx="585" cy="975" rx="85" ry="30" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+  <text x="585" y="971" text-anchor="middle" font-size="12" fill="#000000">
+    <tspan x="585" dy="0">View AI Analysis and</tspan>
+    <tspan x="585" dy="15">Recommendations</tspan>
+  </text>
+
+  <ellipse cx="585" cy="1060" rx="85" ry="30" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+  <text x="585" y="1064" text-anchor="middle" font-size="12" fill="#000000">View / Download Reports</text>
+
+  <!-- Column C -->
+  <ellipse cx="825" cy="750" rx="85" ry="30" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+  <text x="825" y="754" text-anchor="middle" font-size="12" fill="#000000">Select Scanning Tools</text>
+
+  <ellipse cx="825" cy="970" rx="85" ry="30" fill="#e1d5e7" stroke="#9673a6" stroke-width="1.5"/>
+  <text x="825" y="974" text-anchor="middle" font-size="12" fill="#000000">Verify Ownership</text>
+
+  <!-- Column D (system-triggered): #fff2cc / #d6b656 -->
+  <ellipse cx="1060" cy="600" rx="90" ry="30" fill="#fff2cc" stroke="#d6b656" stroke-width="1.5"/>
+  <text x="1060" y="604" text-anchor="middle" font-size="12" fill="#000000">Execute Scanning Tools</text>
+
+  <ellipse cx="1060" cy="800" rx="90" ry="30" fill="#fff2cc" stroke="#d6b656" stroke-width="1.5"/>
+  <text x="1060" y="804" text-anchor="middle" font-size="12" fill="#000000">Generate AI Analysis</text>
+
+  <ellipse cx="1060" cy="985" rx="90" ry="35" fill="#fff2cc" stroke="#d6b656" stroke-width="1.5"/>
+  <text x="1060" y="981" text-anchor="middle" font-size="12" fill="#000000">
+    <tspan x="1060" dy="0">Generate Executive and</tspan>
+    <tspan x="1060" dy="15">Technical Reports</tspan>
+  </text>
+
+  <!-- ACTORS (UML Stick Figures) -->
+
+  <!-- aAdmin: System Administrator -->
+  <g stroke="#000000" stroke-width="1.6" fill="#ffffff">
+    <circle cx="100" cy="82" r="10"/>
+    <line x1="100" y1="92" x2="100" y2="124"/>
+    <line x1="80" y1="104" x2="120" y2="104"/>
+    <line x1="100" y1="124" x2="82" y2="150"/>
+    <line x1="100" y1="124" x2="118" y2="150"/>
+  </g>
+  <text x="100" y="166" text-anchor="middle" font-size="13" font-weight="bold" fill="#000000">
+    <tspan x="100" dy="0">System</tspan>
+    <tspan x="100" dy="15">Administrator</tspan>
+  </text>
+
+  <!-- aUser: User -->
+  <g stroke="#000000" stroke-width="1.6" fill="#ffffff">
+    <circle cx="100" cy="832" r="10"/>
+    <line x1="100" y1="842" x2="100" y2="874"/>
+    <line x1="80" y1="854" x2="120" y2="854"/>
+    <line x1="100" y1="874" x2="82" y2="900"/>
+    <line x1="100" y1="874" x2="118" y2="900"/>
+  </g>
+  <text x="100" y="918" text-anchor="middle" font-size="13" font-weight="bold" fill="#000000">User</text>
+
+  <!-- aTools: «system» Scanning Tools (Docker) -->
+  <g stroke="#000000" stroke-width="1.6" fill="#ffffff">
+    <circle cx="1270" cy="572" r="10"/>
+    <line x1="1270" y1="582" x2="1270" y2="614"/>
+    <line x1="1250" y1="594" x2="1290" y2="594"/>
+    <line x1="1270" y1="614" x2="1252" y2="640"/>
+    <line x1="1270" y1="614" x2="1288" y2="640"/>
+  </g>
+  <text x="1270" y="656" text-anchor="middle" font-size="12" fill="#000000">
+    <tspan x="1270" dy="0">«system»</tspan>
+    <tspan x="1270" dy="14">Scanning Tools</tspan>
+    <tspan x="1270" dy="14">(Docker)</tspan>
+  </text>
+
+  <!-- aGemini: «system» Gemini API -->
+  <g stroke="#000000" stroke-width="1.6" fill="#ffffff">
+    <circle cx="1270" cy="772" r="10"/>
+    <line x1="1270" y1="782" x2="1270" y2="814"/>
+    <line x1="1250" y1="794" x2="1290" y2="794"/>
+    <line x1="1270" y1="814" x2="1252" y2="840"/>
+    <line x1="1270" y1="814" x2="1288" y2="840"/>
+  </g>
+  <text x="1270" y="856" text-anchor="middle" font-size="12" fill="#000000">
+    <tspan x="1270" dy="0">«system»</tspan>
+    <tspan x="1270" dy="14">Gemini API</tspan>
+  </text>
+</svg>
